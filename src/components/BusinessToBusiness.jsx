@@ -186,7 +186,7 @@ export const BusinessToBusiness = () => {
                         style={{ borderColor: `${GOLD}60`, background: 'rgba(0,0,0,0.25)' }}
                     >
                         <span className="w-1.5 h-1.5 rounded-full" style={{ background: GOLD }} />
-                        <span className="text-[8px] font-bold tracking-[0.3em] uppercase" style={{ color: GOLD }}>
+                        <span className="text-[8px] lg:text-xs font-bold tracking-[0.3em] uppercase" style={{ color: GOLD }}>
                             Coordination · Facilitation · Discretion
                         </span>
                     </motion.div>
