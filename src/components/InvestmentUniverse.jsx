@@ -207,7 +207,8 @@ export const InvestmentUniverse = () => {
                 </div>
 
                 <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={animationSettings.container} className="relative z-10 text-center px-6">
-                    <div className="inline-block px-4 py-1 mb-6 border border-[#D4AF37]/50 rounded-full bg-black/20 backdrop-blur-sm">
+                    <div className="inline-flex items-center gap-3 px-4 py-1 mb-6 border border-[#D4AF37]/50 rounded-full bg-black/20 backdrop-blur-sm">
+                        <span className="w-1.5 h-1.5 rounded-full" style={{ background: GOLD }} />
                         <span className="text-[#D4AF37] text-xs font-bold tracking-[0.3em] uppercase">We don’t just manage wealth, We future-proof it.</span>
                     </div>
                     <motion.h1 variants={animationSettings.item} className="text-6xl md:text-9xl mb-8 text-white tracking-tighter leading-[0.95]" style={{ fontFamily: "PT Serif" }}>
