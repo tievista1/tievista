@@ -4,15 +4,25 @@ import { Globe, Database, Layers, TrendingUp, ArrowRight, Zap } from 'lucide-rea
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
+
 gsap.registerPlugin(ScrollTrigger);
+
+const GOLD = '#D4AF37'
+
+const fadeUp = (delay = 0) => ({
+    initial: { opacity: 0, y: 40 },
+    whileInView: { opacity: 1, y: 0 },
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1], delay },
+    viewport: { once: true, margin: '-60px' },
+})
 
 // --- Static Data ---
 const ASSET_CATEGORIES = [
     {
-        id:"Growth",
+        id: "Growth",
         title: "Growth",
         italicTitle: "Assets",
-        subtitle: "EQUITY-FOCUSED STRATEGIES",
+        subtitle: "",
         description: "At TieVista, we build enduring financial success through disciplined, equity-centric investment strategies. Our approach is rooted in long-term growth, backed by rigorous research and thoughtful risk management to generate capital appreciation globally.",
         includes: ["Public Equities", "Equity Mutual Funds (including ELSS)", "Equity PMS", "Equity ETFs"],
         image: "https://c.stocksy.com/a/4L0600/z9/1431274.jpg",
@@ -20,10 +30,10 @@ const ASSET_CATEGORIES = [
         reverse: false
     },
     {
-        id:"Income",
+        id: "Income",
         title: "Income &",
         italicTitle: "Capital Preservation",
-        subtitle: "DEFENSIVE STRUCTURES",
+        subtitle: "",
         description: "We understand that protecting hard-earned capital is as essential as growth. Our Income & Capital Preservation strategies prioritize safety and steady income generation, crafted for investors who seek predictable cash flows and shield their portfolios from undue volatility.",
         includes: ["Debt Mutual Funds", "Debt PMS", "Physical Bonds (Govt, Corp, Credit)", "Fixed Income ETFs"],
         image: "https://images.unsplash.com/photo-1554774853-719586f82d77?auto=format&fit=crop&q=80&w=2000",
@@ -31,10 +41,10 @@ const ASSET_CATEGORIES = [
         reverse: true
     },
     {
-        id:"Private",
+        id: "Private",
         title: "Private &",
         italicTitle: "Alternative Investments",
-        subtitle: "EXCLUSIVE MARKETS",
+        subtitle: "",
         description: "Sophisticated portfolios blend traditional and alternative investments to capture broad market potential while uncovering unique value. We provide access to differentiated opportunities that go beyond conventional public markets to enhance returns and reduce correlation.",
         includes: ["AIFs (Category I, II & III)", "Private Equity & Venture Capital", "Real Estate Opportunities", "Commodities"],
         image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000",
@@ -42,10 +52,10 @@ const ASSET_CATEGORIES = [
         reverse: false
     },
     {
-        id:"Global",
+        id: "Global",
         title: "Global &",
         italicTitle: "GIFT City Solutions",
-        subtitle: "BORDERLESS CAPITAL",
+        subtitle: "",
         description: "In an interconnected world, capital is not confined by geography. We provide seamless access to global markets and India’s premier gateway — GIFT City — offering strategic diversification and structural efficiency for globally minded families and institutions.",
         includes: ["GIFT City PMS & AIFs", "International Mutual Funds", "Global Equities", "Global ETFs"],
         image: "https://cdn.prod.website-files.com/5ded36b5e942e74b13468d23/60917854b0ebb181caf1afcd_00-Header%402x.png",
@@ -63,67 +73,111 @@ const NAV_ELEMENTS = [
 
 // --- Sub-components ---
 
-const CategorySection = ({ cat }) => (
-    <section className={`w-full py-32 border-b border-gray-100 ${cat.reverse ? 'bg-[#FAFAFA]' : 'bg-white'} `}>
-        <div className="container mx-auto px-6 pt-25" id={cat.id}>
-            <div className={`flex flex-col ${cat.reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-16 md:gap-24`}>
+const CategorySection = ({ cat, index }) => {
+    const bg = index % 2 === 0 ? 'bg-white' : 'bg-[#FAFAFA]'
+    const Icon = cat.icon
 
-                {/* Image Section */}
-                <div className="w-full md:w-1/2 h-[60vh] md:h-[70vh] overflow-hidden border border-gray-200 shadow-sm relative group">
-                    <motion.img
-                        initial={{ scale: 1.1, opacity: 0 }}
-                        whileInView={{ scale: 1, opacity: 1 }}
-                        transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
-                        viewport={{ once: true }}
-                        src={cat.image}
-                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-black/5 transition-colors group-hover:bg-transparent" />
-                </div>
+    return (
+        <section id={cat.id} className={`w-full py-28 border-b border-gray-100 ${bg}`}>
+            <div className="container mx-auto px-6 lg:px-16">
+                <div className={`flex flex-col ${cat.reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-16 md:gap-20`}>
 
-                {/* Content Section */}
-                <div className="w-full md:w-1/2">
+                    {/* ── Image ── */}
                     <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        viewport={{ once: true }}
-                        className="max-w-xl text-gray-900"
+                        {...fadeUp(0.1)}
+                        className="w-full md:w-1/2 overflow-hidden relative group"
+                        style={{ aspectRatio: '4/3' }}
                     >
-                        <div className="flex items-center gap-4 mb-8">
-                            <div className="w-12 h-12 flex items-center justify-center bg-black text-white rounded-lg">
-                                <cat.icon size={22} />
-                            </div>
-                            <span className="text-gray-400 text-xs tracking-[0.4em] uppercase">{cat.subtitle}</span>
-                        </div>
-
-                        <h2 className="text-5xl md:text-7xl mb-8 leading-[0.9] tracking-tighter" style={{ fontFamily: "PT Serif" }}>
-                            {cat.title} <span className="text-[#D4AF37] font-light italic">{cat.italicTitle}</span>
-                        </h2>
-
-                        <p className="text-lg text-gray-500 mb-12 leading-relaxed font-light">
-                            {cat.description}
-                        </p>
-
-                        <div className="mb-12">
-                            <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">Institutional Offerings</h4>
-                            {cat.includes.map((item, i) => (
-                                <div key={i} className="flex gap-7  py-5 border-b border-gray-100 group cursor-pointer hover:bg-gray-50 transition-colors px-1">
-                                    <div className="w-10 h-10 rounded-full border border-gray-200 flex items-center justify-center group-hover:border-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-white transition-all">
-                                        <ArrowRight size={18} />
-                                    </div>
-                                    <span className="flex justify-start text-xl font-medium text-gray-800 transition-colors group-hover:text-black">{item}</span>
-                                    
-                                </div>
-                            ))}
-                        </div>
-
+                        <motion.img
+                            initial={{ scale: 1.08 }}
+                            whileInView={{ scale: 1 }}
+                            transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
+                            viewport={{ once: true }}
+                            src={cat.image}
+                            alt={cat.title}
+                            className="w-full h-full object-cover"
+                        />
+                        {/* Gold corner accent */}
+                        <div
+                            className="absolute bottom-0 left-0 w-16 h-16 opacity-80"
+                            style={{ background: `linear-gradient(135deg, ${GOLD} 50%, transparent 50%)` }}
+                        />
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-500" />
+                        {/* Hover overlay */}
+                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-500" />
                     </motion.div>
+
+                    {/* ── Content ── */}
+                    <div className="w-full md:w-1/2">
+                        <motion.div {...fadeUp(0.2)}>
+
+                            {/* Icon + category label */}
+                            <div className="flex items-center gap-3 mb-5">
+                                <div
+                                    className="w-10 h-10 flex items-center justify-center"
+                                    style={{ background: `${GOLD}18` }}
+                                >
+                                    <Icon size={20} color={GOLD} />
+                                </div>
+                                <span className="text-gray-400 text-xs font-semibold tracking-[0.35em] uppercase">
+                                    {cat.label}
+                                </span>
+                            </div>
+
+                            {/* Heading */}
+                            <h2
+                                className="text-5xl md:text-6xl lg:text-7xl mb-6 tracking-tighter leading-tight"
+                                style={{ fontFamily: 'PT Serif, serif' }}
+                            >
+                                {cat.title}{' '}
+                                <span className="italic" style={{ color: GOLD }}>{cat.italicTitle}</span>
+                            </h2>
+
+                            {/* Gold divider */}
+                            <div className="w-12 h-px mb-6" style={{ background: GOLD }} />
+
+                            {/* Description */}
+                            <p className="text-lg text-gray-600 leading-relaxed font-light mb-10">
+                                {cat.description}
+                            </p>
+
+                            {/* Includes list */}
+                            <div>
+                                <p className="text-xs font-semibold text-gray-400 tracking-[0.3em] uppercase mb-4">
+                                    Institutional Offerings
+                                </p>
+                                <div className="space-y-0">
+                                    {cat.includes.map((item, i) => (
+                                        <motion.div
+                                            key={i}
+                                            initial={{ opacity: 0, x: -20 }}
+                                            whileInView={{ opacity: 1, x: 0 }}
+                                            transition={{ duration: 0.5, delay: i * 0.08 }}
+                                            viewport={{ once: true }}
+                                            className="group flex items-center gap-4 py-4 border-b border-gray-100 cursor-default"
+                                        >
+                                            <div
+                                                className="w-9 h-9 rounded-full border flex items-center justify-center shrink-0 transition-all duration-300 group-hover:bg-[#D4AF37] group-hover:border-[#D4AF37] group-hover:text-white"
+                                                style={{ borderColor: '#e5e7eb', color: '#9ca3af' }}
+                                            >
+                                                <ArrowRight size={15} />
+                                            </div>
+                                            <span className="text-base md:text-lg font-light text-gray-700 group-hover:text-black transition-colors">
+                                                {item}
+                                            </span>
+                                        </motion.div>
+                                    ))}
+                                </div>
+                            </div>
+
+                        </motion.div>
+                    </div>
+
                 </div>
             </div>
-        </div>
-    </section>
-);
+        </section>
+    )
+}
 
 // --- Main Component ---
 
@@ -165,18 +219,55 @@ export const InvestmentUniverse = () => {
                 </motion.div>
 
                 {/* Quick Nav Bar */}
-                <div className="absolute bottom-0 left-0 w-full h-[100px] bg-white backdrop-blur-xl border-t border-white/10 flex items-center">
-                    {NAV_ELEMENTS.map((el, i) => (
-                        <a key={i} href={el.href} className="flex-1 h-full flex items-center justify-center text-[10px] lg:text-xl font-medium border-x border-gray-100 hover:bg-[#D4AF37] hover:text-white transition-all duration-300">
-                            {el.title}
-                        </a>
-                    ))}
+                <div className="absolute bottom-0 left-0 w-full bg-white border-t border-gray-100 z-20 flex">
+                    {NAV_ELEMENTS.map((el, i) => {
+                        const Icon = el.icon
+                        return (
+                            <a
+                                key={i}
+                                href={el.href}
+                                className="group relative flex-1 flex flex-col justify-center px-5 py-5 border-r border-gray-100 last:border-r-0 overflow-hidden transition-all duration-300 hover:bg-[#FFFDF5]"
+                            >
+                                {/* Gold top-border reveal on hover */}
+                                <div
+                                    className="absolute top-0 left-0 h-[2px] w-0 group-hover:w-full transition-all duration-500"
+                                    style={{ background: GOLD }}
+                                />
+
+                                {/* Row: index + icon */}
+                                <div className="flex items-center gap-2 mb-1.5">
+                                    <span
+                                        className="text-[10px] font-bold tabular-nums leading-none"
+                                        style={{ color: GOLD, fontFamily: 'PT Serif, serif' }}
+                                    >
+                                        {String(i + 1).padStart(2, '0')}
+                                    </span>
+                                    <Icon
+                                        size={13}
+                                        className="text-gray-400 group-hover:text-[#D4AF37] transition-colors duration-300"
+                                    />
+                                </div>
+
+                                {/* Title */}
+                                <span className="text-[11px] md:text-sm font-semibold text-gray-700 group-hover:text-gray-900 tracking-tight leading-tight transition-colors duration-300 line-clamp-1">
+                                    {el.title}
+                                </span>
+
+                                {/* Slide-in arrow */}
+                                <ArrowRight
+                                    size={13}
+                                    className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                                    style={{ color: GOLD }}
+                                />
+                            </a>
+                        )
+                    })}
                 </div>
             </section>
 
             {/* Asset Category Sections */}
             {ASSET_CATEGORIES.map((cat, i) => (
-                <CategorySection key={i} cat={cat} />
+                <CategorySection key={i} cat={cat} index={i} />
             ))}
 
             {/* Final CTA */}

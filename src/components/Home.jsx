@@ -52,7 +52,7 @@ export const Home = () => {
             title: 'Investment Universe',
             description: 'Personalized, research-backed investment advisory.',
             icon: TrendingUp,
-            href: '#'
+            href: '/investmentuniverse'
         },
         {
             title: 'Services',
@@ -64,7 +64,7 @@ export const Home = () => {
             title: 'NRI Solutions',
             description: 'FDs, remittances, global reporting, and investment guidance.',
             icon: Globe,
-            href: '#'
+            href: '/nrisolutions'
         },
         {
             title: 'Insights',
@@ -208,20 +208,21 @@ export const Home = () => {
                         variants={containerVariants}
                         className="relative z-50 max-w-4xl w-full"
                     >
-                        <motion.h1
+                        <motion.div
                             variants={itemVariants}
                             className="flex justify-center items-center text-5xl md:text-7xl lg:text-7xl mb-6 font-bold tracking-tighter"
                             style={{ fontFamily: 'PT Serif, sans-serif' }}
                         >
-                            <span className="gold-letter mr-1">T</span>
+                            {/* <span className="gold-letter mr-1">T</span>
                             <span className="mr-1">I</span>
                             <span className="">E</span>
                             <span className="gold-letter pb-10 text-9xl">V</span>
                             <span className="relative mr-1">I</span>
                             <span className="mr-1">S</span>
                             <span className="mr-1">T</span>
-                            <span className="mr-1">A</span>
-                        </motion.h1>
+                            <span className="mr-1">A</span> */}
+                            <img className='w-100 h-25 md:h-28 lg:w-150 lg:h-35' src="/TieVistaVerticalLogo.png" alt="" />
+                        </motion.div>
                     </motion.div>
 
                 </div>
@@ -246,7 +247,7 @@ export const Home = () => {
                         className="max-w-4xl w-full"
                     >
                         <motion.h1 variants={itemVariants} className="text-5xl md:text-8xl font-bold mb-6 text-black tracking-tighter" style={{ fontFamily: 'PT Serif, sans-serif' }} >
-                            Trust <span className="font-light italic text-[#D4AF37] ">first</span>
+                            Trust <span className="font-light text-[#D4AF37] ">first</span>
                         </motion.h1>
                         <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-800 mb-8 leading-relaxed font-light">
                             At TieVista, trust is not earned post-engagement — it is the foundation of
@@ -283,7 +284,7 @@ export const Home = () => {
                         className="max-w-4xl w-full z-0"
                     >
                         <motion.h1 variants={itemVariants} className="text-5xl md:text-8xl font-bold mb-6 text-black tracking-tighter" style={{ fontFamily: 'PT Serif, sans-serif' }}>
-                            Transparency <span className="font-light italic text-[#D4AF37]">always</span>
+                            Transparency <span className="font-light text-[#D4AF37]">always</span>
                         </motion.h1>
                         <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-800 mb-8 leading-relaxed font-light">
                             Transparency builds confidence. Confidence builds continuity.
@@ -330,7 +331,7 @@ export const Home = () => {
                         className="max-w-4xl w-full"
                     >
                         <motion.h1 variants={itemVariants} className="text-5xl md:text-8xl font-bold mb-6 text-black tracking-tighter">
-                            Transformation through <span className="font-light italic text-[#D4AF37] ">innovation</span>
+                            Transformation through <span className="font-light text-[#D4AF37] ">innovation</span>
                         </motion.h1>
                         <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-800 mb-8 leading-relaxed font-light">
                             At TieVista, innovation is not about chasing trends — it is about structurally improving how wealth is built, managed, and experienced.
