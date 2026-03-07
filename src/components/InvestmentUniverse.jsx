@@ -130,7 +130,7 @@ const CategorySection = ({ cat, index }) => {
                                 style={{ fontFamily: 'PT Serif, serif' }}
                             >
                                 {cat.title}{' '}
-                                <span className="italic" style={{ color: GOLD }}>{cat.italicTitle}</span>
+                                <span className="" >{cat.italicTitle}</span> {/* italicTitle style={{ color: GOLD }}*/}
                             </h2>
 
                             {/* Gold divider */}

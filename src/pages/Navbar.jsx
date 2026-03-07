@@ -173,7 +173,7 @@ export const Navbar = () => {
             ],
         },
         {
-            label: 'B2B Partnership',
+            label: 'TieVista Partners',
             href: '/b2b',
             hasDropdown: false,
             dropdownItems: [

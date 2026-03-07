@@ -105,7 +105,7 @@ function NarrativeSection({ sec, index }) {
                 style={{ fontFamily: 'PT Serif, serif' }}
               >
                 {heading}{' '}
-                <span className="italic" style={{ color: GOLD }}>{accent}</span>
+                <span className="" >{accent}</span> {/*style={{ color: GOLD }} */}
               </h2>
 
               <div className="w-12 h-px mb-7" style={{ background: GOLD }} />
@@ -167,7 +167,7 @@ export const AboutUs = () => {
             style={{ fontFamily: 'PT Serif, serif' }}
           >
             About{' '}
-            <span className="font-light italic" style={{ color: GOLD }}>Us</span>
+            <span className="font-light" >Us</span> {/*style={{ color: GOLD }} italic*/}
           </motion.h1>
 
           <motion.p
@@ -225,13 +225,13 @@ export const AboutUs = () => {
                   style={{ color: GOLD }}
                 />
 
-                {/* Number — hidden on mobile, visible md+ */}
+                {/* Number — hidden on mobile, visible md+
                 <span
                   className="hidden md:inline text-xs font-bold tabular-nums shrink-0 w-8 text-right"
                   style={{ color: GOLD, fontFamily: 'PT Serif, serif' }}
                 >
                   {String(i + 1).padStart(2, '0')}
-                </span>
+                </span> */}
 
                 {/* Icon bubble */}
                 <div

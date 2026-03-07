@@ -16,7 +16,7 @@ export const Home = () => {
         gsap.fromTo('#text', { x: '100%' }, {
             x: '-100%',
             repeat: -1,
-            duration: 7,
+            duration: 10,
             ease: 'linear'
         })
 
@@ -41,77 +41,7 @@ export const Home = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const scrollContainerRef = useRef(null);
 
-    const solutions = [
-        {
-            title: 'About Us',
-            description: 'Our mission, values and leadership.',
-            icon: Landmark,
-            href: '/aboutus'
-        },
-        {
-            title: 'Investment Universe',
-            description: 'Personalized, research-backed investment advisory.',
-            icon: TrendingUp,
-            href: '/investmentuniverse'
-        },
-        {
-            title: 'Services',
-            description: 'Structuring, legacy planning, and governance.',
-            icon: Users,
-            href: '/services'
-        },
-        {
-            title: 'NRI Solutions',
-            description: 'FDs, remittances, global reporting, and investment guidance.',
-            icon: Globe,
-            href: '/nrisolutions'
-        },
-        {
-            title: 'Insights',
-            description: 'Latest market research, reports, and thought leadership.',
-            icon: FileText,
-            href: '#'
-        },
-        {
-            title: 'Contact',
-            description: 'Get in touch with our advisory team.',
-            icon: Mail,
-            href: '#'
-        }
-    ]
 
-    const whyChooseUs = [
-        {
-            title: 'Advisory-led, Not Product-Pushing',
-            description: 'We prioritize your interests with unbiased, client-first recommendations.',
-            icon: ShieldCheck,
-            isHighlighted: false
-        },
-        {
-            title: 'Research-Driven Product Selection',
-            description: 'Rigorous due diligence ensures only the best investment solutions.',
-            icon: Search,
-            isHighlighted: false
-        },
-        {
-            title: 'Holistic Planning & Structuring',
-            description: 'Comprehensive wealth structuring aligned with your life goals.',
-            icon: UserCheck,
-            isHighlighted: false
-        },
-        {
-            title: 'Multi-Currency Reporting',
-            description: 'Consolidated global portfolio views across all asset classes and geographies.',
-            icon: DollarSign,
-            isHighlighted: false
-        },
-        {
-            title: 'Dedicated Relationship Managers',
-            description: 'Personalized service with direct access to senior wealth advisors.',
-            icon: Award,
-            isHighlighted: false
-        }
-    ]
 
     const testimonials = [
         {
@@ -136,12 +66,7 @@ export const Home = () => {
         }
     ];
 
-    const stats = [
-        { label: "Assets Under Advisory", value: 2.5, prefix: "$", suffix: "B+" },
-        { label: "Clients Served", value: 400, suffix: "+" },
-        { label: "Years of Excellence", value: 15, suffix: "+" },
-        { label: "Client Retention", value: 98, suffix: "%" }
-    ];
+
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -356,93 +281,7 @@ export const Home = () => {
                     </motion.div>
                 </div>
 
-                <div className="min-h-screen w-full flex flex-col items-center justify-center py-20 px-4 sm:px-6 lg:px-8 snap-start max-w-7xl mx-auto">
-                    {/* Header */}
-                    <div className="text-center mb-16">
-                        <h1 className="text-4xl font-medium text-gray-900 mb-6">
-                            Comprehensive Wealth Solutions
-                        </h1>
-                        <p className="text-lg text-gray-500 font-light leading-relaxed max-w-2xl mx-auto px-4">
-                            From investment advisory to family office services, we provide institutional-grade solutions tailored to your financial goals.
-                        </p>
-                    </div>
-
-                    {/* Service Cards (Flexbox) */}
-                    <div className="flex flex-wrap -mx-4 w-full">
-                        {solutions.map((item, index) => (
-                            <div
-                                key={index}
-                                className="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 px-4 mb-8"
-                            >
-                                <div
-                                    className="bg-white border border-gray-100 p-8 flex flex-col items-start transition-all duration-300 min-h-[300px] group hover:bg-[#FFFDF5] hover:border-b-4 hover:border-b-[#D4AF37] hover:shadow-2xl hover:-translate-y-1 h-full"
-                                >
-                                    {/* Icon Container */}
-                                    <div className="w-12 h-12 bg-gray-50 flex items-center justify-center mb-6 group-hover:bg-[#D4AF37] transition-all duration-300">
-                                        <item.icon className="w-5 h-5 text-gray-700 group-hover:text-white transition-colors duration-300" />
-                                    </div>
-
-                                    <h3 className="text-lg font-medium text-gray-900 mb-3">
-                                        {item.title}
-                                    </h3>
-
-                                    <p className="text-sm text-gray-500 font-light leading-relaxed mb-8 grow">
-                                        {item.description}
-                                    </p>
-
-                                    <a
-                                        href={item.href}
-                                        className="flex items-center gap-2 text-sm text-gray-400 group-hover:text-[#D4AF37] transition-colors font-medium"
-                                    >
-                                        Learn more
-                                        <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                                    </a>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Why Clients Choose Us Section */}
-                <div className="min-h-screen w-full snap-start flex flex-col items-center justify-center py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    {/* Header */}
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-medium text-gray-900 mb-6">
-                            Why Clients Choose Us
-                        </h2>
-                        <p className="text-lg text-gray-500 font-light leading-relaxed max-w-2xl mx-auto">
-                            We combine institutional expertise with personalized service to deliver exceptional wealth management outcomes.
-                        </p>
-                    </div>
-
-                    {/* Cards Container */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
-                        {whyChooseUs.map((item, index) => (
-                            <div
-                                key={index}
-                                className="w-full"
-                            >
-                                <div className={`p-8 border transition-all duration-300 min-h-[250px] flex flex-col items-start h-full group
-                                    hover:border-[#D4AF37] shadow-lg hover:-translate-y-1 bg-white`}
-                                >
-                                    {/* Icon Container */}
-                                    <div className={`w-12 h-12 flex items-center justify-center mb-6  group-hover:bg-[#D4AF37] bg-black group-hover:text-white transition-all`}
-                                    >
-                                        <item.icon className="w-5 h-5 text-white group-hover:text-white" />
-                                    </div>
-
-                                    <h3 className="text-lg font-medium text-gray-900 mb-4">
-                                        {item.title}
-                                    </h3>
-
-                                    <p className="text-sm text-gray-500 font-light leading-relaxed">
-                                        {item.description}
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+                
             </div>
         </>
     )

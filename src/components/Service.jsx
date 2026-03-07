@@ -180,7 +180,7 @@ function ServiceSection({ svc, index }) {
                                 style={{ fontFamily: 'PT Serif, serif' }}
                             >
                                 {heading}{' '}
-                                <span className="italic" style={{ color: GOLD }}>{accent}</span>
+                                <span className="" >{accent}</span> {/*style={{ color: GOLD }} italic*/}
                             </h2>
 
                             {/* Gold divider */}
@@ -275,7 +275,7 @@ export const Service = () => {
                         style={{ fontFamily: 'PT Serif, serif' }}
                     >
                         Our{' '}
-                        <span className="font-light italic" style={{ color: GOLD }}>Services</span>
+                        <span className="font-light" >Services</span> {/*style={{ color: GOLD }} italic*/}
                     </motion.h1>
 
                     <motion.p
@@ -304,12 +304,12 @@ export const Service = () => {
                                 style={{ background: GOLD }}
                             />
                             <div className="flex items-center gap-2 mb-1.5">
-                                <span
+                                {/* <span
                                     className="text-[10px] font-bold tabular-nums leading-none"
                                     style={{ color: GOLD, fontFamily: 'PT Serif, serif' }}
                                 >
                                     {String(i + 1).padStart(2, '0')}
-                                </span>
+                                </span> */}
                                 <Icon size={13} className="text-gray-400 group-hover:text-[#D4AF37] transition-colors duration-300" />
                             </div>
                             <span className="text-[11px] md:text-sm font-semibold text-gray-700 group-hover:text-gray-900 tracking-tight leading-tight transition-colors duration-300 line-clamp-1">
@@ -343,7 +343,7 @@ export const Service = () => {
                                 className="text-3xl md:text-4xl tracking-tighter leading-tight mb-6"
                                 style={{ fontFamily: 'PT Serif, serif' }}
                             >
-                                A family-office <span className="italic" style={{ color: GOLD }}>experience</span>
+                                A family-office <span className="">experience</span> {/*style={{ color: GOLD }} italic*/}
                             </h3>
                             <p className="text-lg text-gray-600 font-light leading-relaxed">
                                 TieVista delivers a family-office style experience without acting as a family office providing coordination, visibility, and disciplined investment facilitation, while clients retain full control and decision making authority.
