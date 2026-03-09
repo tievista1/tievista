@@ -172,11 +172,11 @@ export const Home = () => {
                         className="max-w-4xl w-full"
                     >
                         <motion.h1 variants={itemVariants} className="text-5xl md:text-8xl font-bold mb-6 text-black tracking-tighter" style={{ fontFamily: 'PT Serif, sans-serif' }} >
-                            Trust <span className="font-light text-[#D4AF37] ">first</span>
+                            Trust <span className="font-light bg-gradient-to-r from-[#f3d34f] via-[#d59d1c] via-[#f5d958] to-[#e0b12d] bg-clip-text text-transparent ">first</span>
                         </motion.h1>
                         <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-800 mb-8 leading-relaxed font-light">
                             At TieVista, trust is not earned post-engagement — it is the foundation of
-                            engagement. <span className="font-semibold block mt-2 underline decoration-gray-300">Trust is our currency.</span>
+                            engagement. <span className="font-semibold block mt-2 underline decoration-[#D4AF37]">Trust is our currency.</span>
                         </motion.p>
                         <motion.p variants={itemVariants} className="text-lg text-gray-600 mb-10 max-w-2xl font-light">
                             We operate with fiduciary intent, institutional discipline, and long-term alignment
@@ -190,7 +190,7 @@ export const Home = () => {
                                 "Governance-led decision frameworks"
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-3 group">
-                                    <CheckCircle2 size={20} className="text-black group-hover:scale-110 transition-transform" />
+                                    <CheckCircle2 size={20} className="text-[#D4AF37] group-hover:scale-110 transition-transform" />
                                     <span className="text-black font-medium text-lg">{item}</span>
                                 </div>
                             ))}
@@ -209,9 +209,9 @@ export const Home = () => {
                         className="max-w-4xl w-full z-0"
                     >
                         <motion.h1 variants={itemVariants} className="text-5xl md:text-8xl font-bold mb-6 text-black tracking-tighter" style={{ fontFamily: 'PT Serif, sans-serif' }}>
-                            Transparency <span className="font-light text-[#D4AF37]">always</span>
+                            Transparency <span className="font-light bg-gradient-to-r from-[#f3d34f] via-[#d59d1c] via-[#f5d958] to-[#e0b12d] bg-clip-text text-transparent">always</span>
                         </motion.h1>
-                        <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-800 mb-8 leading-relaxed font-light">
+                        <motion.p variants={itemVariants} className="font-semibold block mt-2 underline text-2xl mb-5 decoration-[#D4AF37]" style={{ fontFamily: 'PT Serif, sans-serif' }}>
                             Transparency builds confidence. Confidence builds continuity.
                         </motion.p>
                         <motion.p variants={itemVariants} className="text-lg text-gray-600 mb-10 max-w-2xl font-light">
@@ -226,7 +226,7 @@ export const Home = () => {
                                 "Independent product evaluation",
                                 "Open reporting architecture"
                             ].map((item, i) => (
-                                <div key={i} className="flex items-center gap-2 border-l-2 border-black pl-4 py-1">
+                                <div key={i} className="flex items-center gap-2 border-l-2 border-[#D4AF37] pl-4 py-1">
                                     <span className="text-black font-medium">{item}</span>
                                 </div>
                             ))}
@@ -256,11 +256,11 @@ export const Home = () => {
                         className="max-w-4xl w-full"
                     >
                         <motion.h1 variants={itemVariants} className="text-5xl md:text-8xl font-bold mb-6 text-black tracking-tighter">
-                            Transformation through <span className="font-light text-[#D4AF37] ">innovation</span>
+                            Transformation through <span className="font-light bg-gradient-to-r from-[#f3d34f] via-[#d59d1c] via-[#f5d958] to-[#e0b12d] bg-clip-text text-transparent">innovation</span>
                         </motion.h1>
                         <motion.p variants={itemVariants} className="text-xl md:text-2xl text-gray-800 mb-8 leading-relaxed font-light">
                             At TieVista, innovation is not about chasing trends — it is about structurally improving how wealth is built, managed, and experienced.
-                            True transformation begins with questioning legacy models. <span className="font-semibold block mt-2 underline decoration-gray-300">Traditional wealth management often operates in silos:</span>
+                            True transformation begins with questioning legacy models. <span className="font-semibold block mt-2 underline decoration-[#D4AF37]">Traditional wealth management often operates in silos:</span>
                         </motion.p>
                         <motion.p variants={itemVariants} className="text-lg text-gray-600 mb-10 max-w-2xl font-light">
                             Transformation Through Innovation means  your portfolio is periodically reviewed and refined in alignment with evolving objectives.
@@ -273,7 +273,7 @@ export const Home = () => {
                                 "Static portfolios"
                             ].map((item, i) => (
                                 <div key={i} className="flex items-center gap-3 group">
-                                    <TrendingUp size={20} className="text-black group-hover:scale-110 transition-transform" />
+                                    <TrendingUp size={20} className="text-[#D4AF37] group-hover:scale-110 transition-transform" />
                                     <span className="text-black font-medium text-lg">{item}</span>
                                 </div>
                             ))}
