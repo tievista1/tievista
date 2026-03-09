@@ -143,18 +143,23 @@ Please respond to this enquiry as soon as possible.
                 </p>
               </div>
 
+
               <div className="space-y-8">
                 <div className="flex items-start gap-6 group">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center shrink-0 border border-gray-200 group-hover:bg-[#D4AF37] group-hover:border-[#D4AF37] group-hover:text-white transition-all duration-300">
-                    <Mail size={20} />
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-1">Email Enquiry</h4>
-                    <p className="text-lg font-medium text-gray-800">connect@tievista.com</p>
-                  </div>
+                  <a className='flex items-start gap-6 group' target="_blank" href="https://mail.google.com/mail/u/0/#inbox/FMfcgzQfCDMHbJDLQnzjfQrXtpdWmsWT?compose=CllgCKCHTgqwmLnLdDGDGqZPpjWNgdMRxHRBGHFkvGNDsWlMKlbtnzLBbNqklMcpWRrjLkRQMZL">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center shrink-0 border border-gray-200 group-hover:bg-[#D4AF37] group-hover:border-[#D4AF37] group-hover:text-white transition-all duration-300">
+                      <Mail size={20} />
+                    </div>
+
+                    <div>
+                      <h4 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-1">Email Enquiry</h4>
+                      <p className="text-lg font-medium text-gray-800">connect@tievista.com</p>
+                    </div>
+                  </a>
                 </div>
 
                 <div className="flex items-start gap-6 group">
+                  <a className='flex items-start gap-6 group' target="_blank" href="tel:+917977626003">
                   <div className="w-12 h-12 rounded-full flex items-center justify-center shrink-0 border border-gray-200 group-hover:bg-[#D4AF37] group-hover:border-[#D4AF37] group-hover:text-white transition-all duration-300">
                     <Phone size={20} />
                   </div>
@@ -162,6 +167,20 @@ Please respond to this enquiry as soon as possible.
                     <h4 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-1">Direct Call</h4>
                     <p className="text-lg font-medium text-gray-800">+91 79 7762 6003</p>
                   </div>
+                  </a>
+                </div>
+
+                <div className="flex items-start gap-6 group">
+                  <a className='flex items-start gap-6 group' target="_blank" href="https://www.google.com/maps/place/VIOS+Tower/@19.0398495,72.8765938,17z/data=!3m2!4b1!5s0x3be7c8b4ce9bdb09:0x9689d49015de7535!4m6!3m5!1s0x3be7c8a1c7f00539:0x42fad0973fc21ff3!8m2!3d19.0398444!4d72.8791687!16s%2Fg%2F11q3rgh03h?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center shrink-0 border border-gray-200 group-hover:bg-[#D4AF37] group-hover:border-[#D4AF37] group-hover:text-white transition-all duration-300">
+                      <MapPin size={20} />
+                    </div>
+                    <div>
+                      <h4 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-1">Address</h4>
+                      <p className="text-lg font-medium text-gray-800">IndusArtha Financial Services Pvt. Ltd.</p>
+                      <p className="text-lg font-medium text-gray-800">4rth Floor, AWFIS, VIOS Tower, Wadala, Mumbai 400037</p>
+                    </div>
+                  </a>
                 </div>
 
 

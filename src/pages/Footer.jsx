@@ -9,7 +9,7 @@ export const Footer = () => {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="bg-[#0D0D0D] text-white py-5 lg:py-10 border-t border-gray-800">
+    <footer className="bg-[#0D0D0D] text-white py-5 lg:py-10 border-t border-gray-800 selection:bg-[#D4AF37] selection:text-white">
       <div className=" sm:h-[90vh] lg:h-[80vh]  py-5 mx-auto px-6 lg:px-16">
 
         {/* Main Content Area */}
