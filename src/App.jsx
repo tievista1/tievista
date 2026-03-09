@@ -9,6 +9,7 @@ import { InvestmentUniverse } from './components/InvestmentUniverse'
 import { NriSolutions } from './components/NriSolutions'
 import { Service } from './components/Service'
 import { BusinessToBusiness } from './components/BusinessToBusiness'
+import { Contact } from './components/Contact'
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
@@ -25,6 +26,7 @@ function App() {
           <Route path='nrisolutions' element={<NriSolutions />} />
           <Route path='services' element={<Service />} />
           <Route path='b2b' element={<BusinessToBusiness />} />
+          <Route path='contact' element={<Contact />} />
         </Route>
       </Routes>
 

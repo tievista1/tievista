@@ -206,7 +206,7 @@ export const Navbar = () => {
         {
             label: 'Contact Us',
             href: '/contact',
-            hasDropdown: true,
+            hasDropdown: false,
             dropdownItems: [
                 { label: 'Enquiry Form', href: '/contact/enquiry' },
                 { label: 'Offices', href: '/contact/offices' },
