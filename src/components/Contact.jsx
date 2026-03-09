@@ -352,17 +352,6 @@ Please respond to this enquiry as soon as possible.
         </div>
       </section>
 
-      {/* ── Pre-footer CTA ── */}
-      <section className="py-24 bg-white border-t border-gray-100">
-        <div className="container mx-auto px-6 text-center">
-          <motion.div {...fadeUp()} className="max-w-3xl mx-auto">
-            <h3 className="text-3xl md:text-4xl mb-6 tracking-tight" style={{ fontFamily: 'PT Serif, serif' }}>
-              Designed for <span className="italic" style={{ color: GOLD }}>continuity.</span> Dedicated to you.
-            </h3>
-            <div className="w-16 h-px mx-auto mb-10" style={{ background: GOLD }} />
-          </motion.div>
-        </div>
-      </section>
     </div>
   );
 };
