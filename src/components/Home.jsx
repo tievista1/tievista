@@ -10,7 +10,7 @@ import { useGSAP } from '@gsap/react'
 gsap.registerPlugin(ScrollTrigger);
 
 
- const Home = () => {
+const Home = () => {
 
     useGSAP(() => {
         gsap.fromTo('#text', { x: '100%' }, {
@@ -118,6 +118,8 @@ gsap.registerPlugin(ScrollTrigger);
                         loop
                         muted
                         playsInline
+                        preload="auto"
+                        poster="/hero-thumbnail.jpg"
                         className="absolute inset-0 w-full h-full object-cover z-0"
                     />
 
@@ -281,7 +283,7 @@ gsap.registerPlugin(ScrollTrigger);
                     </motion.div>
                 </div>
 
-                
+
             </div>
         </>
     )
