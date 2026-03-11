@@ -47,7 +47,7 @@ const SERVICES = [
         id: 'coord',
         icon: Network,
         label: '',
-        heading: 'Wealth Growth &',
+        heading: 'Wealth structuring &',
         accent: 'Coordination',
         body: 'Acting as a central coordination point for your financial ecosystem structured engagement alongside your chartered accountants, legal advisors, bankers, trustees and other professionals.',
         bullets: [

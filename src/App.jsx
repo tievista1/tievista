@@ -7,7 +7,7 @@ import { lazy, Suspense } from 'react'
 import { motion } from 'framer-motion'
 import SmoothFollower from './mouseCursor/SmoothFollower'
 import ScrollToTop from './scroll/ScrollToTop'
-import icon from '/icon.png'
+import icon from '/TieVistaLogo.png'
 
 const Home = lazy(() => import("./components/Home"));
 const AboutUs = lazy(() => import("./components/AboutUs"));

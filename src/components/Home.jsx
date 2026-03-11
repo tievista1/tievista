@@ -126,7 +126,7 @@ const Home = () => {
                                 className="flex flex-col items-center gap-6"
                             >
                                 <div className="h-30 w-30">
-                                    <img src="/icon.png" className="h-full w-full animate-pulse" alt="Icon" />
+                                    <img src="/TieVistaLogo.png" className="h-full w-full animate-pulse" alt="Icon" />
                                 </div>
                                 
                             </motion.div>
@@ -284,6 +284,7 @@ const Home = () => {
                 </div>
 
                 {/* Section 3: Transformation */}
+                
                 <div className="h-screen w-full snap-start flex items-center justify-center p-6 md:p-12 border-b border-gray-100" style={{ fontFamily: 'PT Serif, sans-serif' }}>
                     <motion.div
                         initial="hidden"
