@@ -28,10 +28,12 @@ function App() {
         animate={{ opacity: 1 }}
         className="flex flex-col items-center gap-6"
       >
-        <div className="h-30 w-30" >
-          <img src={icon} className="h-full w-full" alt="Incon" />
+        <div className="h-30 w-30">
+          <img src={icon} className="h-full w-full animate-pulse" alt="Icon" />
         </div>
-        <span className="text-[#c9a36b] tracking-[0.4em] uppercase text-[10px] animate-pulse">TieVista</span>
+        <span className="text-[#c9a36b] tracking-[0.4em] uppercase text-[10px] animate-pulse">
+          TieVista
+        </span>
       </motion.div>
     </div>
   );

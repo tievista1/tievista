@@ -111,18 +111,21 @@ const Home = () => {
                 {/* Hero Snap Scroll Section */}
                 <div className="h-[70vh] w-full snap-start relative flex items-center justify-center overflow-hidden border-b border-gray-100">
                     {!videoLoaded && (
-                        <div className="absolute inset-0 bg-black flex items-center justify-center z-10">
-                            <div className="flex flex-col items-center gap-6">
-                                <div className="h-20 w-20">
+                        <div className="fixed inset-0 bg-black z-[200] flex items-center justify-center">
+                            <motion.div
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                className="flex flex-col items-center gap-6"
+                            >
+                                <div className="h-30 w-30">
                                     <img src="/icon.png" className="h-full w-full animate-pulse" alt="Icon" />
                                 </div>
                                 <span className="text-[#c9a36b] tracking-[0.4em] uppercase text-[10px] animate-pulse">
                                     TieVista
                                 </span>
-                            </div>
+                            </motion.div>
                         </div>
                     )}
-
 
                     {/* Background Video */}
                     <video
