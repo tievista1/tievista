@@ -12,6 +12,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
     const [videoLoaded, setVideoLoaded] = useState(false);
+    useEffect(() => {
+        // Force show page after 2s on slow/mobile connections
+        const timeout = setTimeout(() => {
+            setVideoLoaded(true);
+        }, 2000);
+
+        return () => clearTimeout(timeout);
+    }, []);
 
     useGSAP(() => {
         gsap.fromTo('#text', { x: '100%' }, {
@@ -135,7 +143,9 @@ const Home = () => {
                         playsInline
                         preload="auto"
                         poster="/hero-thumbnail.jpg"
-                        onLoadedData={() => setVideoLoaded(true)}
+                        onLoadedMetadata={() => setVideoLoaded(true)}  // ⚡ fastest event
+                        onLoadedData={() => setVideoLoaded(true)}       // fallback event
+                        onCanPlay={() => setVideoLoaded(true)}
                         className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-700 ${videoLoaded ? 'opacity-100' : 'opacity-0'
                             }`}
                     >
