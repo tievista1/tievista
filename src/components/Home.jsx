@@ -135,7 +135,7 @@ const Home = () => {
                         playsInline
                         preload="auto"
                         poster="/hero-thumbnail.jpg"
-                        onLoadedMetadata={() => setVideoLoaded(true)}
+                        onLoadedData={() => setVideoLoaded(true)}
                         className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-700 ${videoLoaded ? 'opacity-100' : 'opacity-0'
                             }`}
                     >
