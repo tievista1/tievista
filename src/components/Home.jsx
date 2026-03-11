@@ -112,17 +112,23 @@ const Home = () => {
 
 
                     {/* Background Video */}
-                    <video autoPlay loop muted playsInline preload="auto"
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        preload="auto"
+                        poster="/hero-thumbnail.jpg"
                         className="absolute inset-0 w-full h-full object-cover z-0"
                     >
                         {/* Mobile - small file */}
                         <source
                             media="(max-width: 768px)"
-                            src="https://res.cloudinary.com/dxlysvpud/video/upload/w_768,h_1024,c_fill,q_auto,f_auto/v1772094729/TieVistaIntro_kbviig.mp4"
+                            src="https://res.cloudinary.com/dxlysvpud/video/upload/w_768,h_1024,c_fill,q_auto:low,f_auto/v1773212606/TieVistaIntroNew_hzve1t.mp4"
                         />
                         {/* Desktop */}
                         <source
-                            src="https://res.cloudinary.com/dxlysvpud/video/upload/w_1920,h_1080,c_fill,q_auto,f_auto/v1772094729/TieVistaIntro_kbviig.mp4"
+                            src="https://res.cloudinary.com/dxlysvpud/video/upload/w_1920,h_1080,c_fill,q_60,f_auto/v1773212606/TieVistaIntroNew_hzve1t.mp4"
                         />
                     </video>
 
