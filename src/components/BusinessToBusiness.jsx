@@ -154,7 +154,7 @@ function PartnershipSection({ p, index }) {
 }
 
 /* ─── Main Component ─── */
-export const BusinessToBusiness = () => {
+ const BusinessToBusiness = () => {
     const heroRef = useRef(null)
     const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] })
     const heroY = useTransform(scrollYProgress, [0, 1], ['0%', '20%'])
@@ -221,3 +221,5 @@ export const BusinessToBusiness = () => {
         </div>
     )
 }
+
+export default BusinessToBusiness;

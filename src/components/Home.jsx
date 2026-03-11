@@ -10,7 +10,7 @@ import { useGSAP } from '@gsap/react'
 gsap.registerPlugin(ScrollTrigger);
 
 
-export const Home = () => {
+ const Home = () => {
 
     useGSAP(() => {
         gsap.fromTo('#text', { x: '100%' }, {
@@ -286,3 +286,5 @@ export const Home = () => {
         </>
     )
 }
+
+export default Home;

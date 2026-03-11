@@ -211,7 +211,7 @@ function ServiceSection({ svc, index }) {
 }
 
 /* ─── Main Component ─── */
-export const NriSolutions = () => {
+const NriSolutions = () => {
     const heroRef = useRef(null)
     const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] })
     const heroY = useTransform(scrollYProgress, [0, 1], ['0%', '20%'])
@@ -353,3 +353,5 @@ export const NriSolutions = () => {
         </div>
     )
 }
+
+export default NriSolutions;

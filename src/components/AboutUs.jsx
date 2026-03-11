@@ -122,7 +122,7 @@ function NarrativeSection({ sec, index }) {
 }
 
 /* ─── Main Component ─── */
-export const AboutUs = () => {
+ const AboutUs = () => {
   const heroRef = useRef(null)
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] })
   const heroY = useTransform(scrollYProgress, [0, 1], ['0%', '20%'])
@@ -323,3 +323,5 @@ export const AboutUs = () => {
     </div>
   )
 }
+
+export default AboutUs;

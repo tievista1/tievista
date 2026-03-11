@@ -25,7 +25,7 @@ const countryCodes = [
   { code: '+81', country: 'JP', label: 'Japan (+81)' },
 ];
 
-export const Contact = () => {
+ const Contact = () => {
   const [submitType, setSubmitType] = useState('mail');
 
   const {
@@ -355,3 +355,5 @@ Please respond to this enquiry as soon as possible.
     </div>
   );
 };
+
+export default Contact;

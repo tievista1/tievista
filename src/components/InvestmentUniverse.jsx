@@ -181,7 +181,7 @@ const CategorySection = ({ cat, index }) => {
 
 // --- Main Component ---
 
-export const InvestmentUniverse = () => {
+ const InvestmentUniverse = () => {
     const animationSettings = {
         container: {
             hidden: { opacity: 0, y: 30 },
@@ -288,3 +288,5 @@ export const InvestmentUniverse = () => {
         </div>
     );
 };
+
+export default InvestmentUniverse;
