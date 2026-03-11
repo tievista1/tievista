@@ -129,7 +129,7 @@ const Home = () => {
                                     <img src="/icon.png" className="h-full w-full animate-pulse" alt="Icon" />
                                 </div>
                                 <span className="text-[#c9a36b] tracking-[0.4em] uppercase text-[10px] animate-pulse">
-                                    TieVistaHome
+                                    TieVista
                                 </span>
                             </motion.div>
                         </div>
