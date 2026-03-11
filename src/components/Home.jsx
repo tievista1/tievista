@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 const Home = () => {
+    const [videoLoaded, setVideoLoaded] = useState(false);
 
     useGSAP(() => {
         gsap.fromTo('#text', { x: '100%' }, {
@@ -109,6 +110,18 @@ const Home = () => {
             <div className='selection:bg-[#D4AF37] selection:text-white'>
                 {/* Hero Snap Scroll Section */}
                 <div className="h-[70vh] w-full snap-start relative flex items-center justify-center overflow-hidden border-b border-gray-100">
+                    {!videoLoaded && (
+                        <div className="absolute inset-0 bg-black flex items-center justify-center z-10">
+                            <div className="flex flex-col items-center gap-6">
+                                <div className="h-20 w-20">
+                                    <img src="/icon.png" className="h-full w-full animate-pulse" alt="Icon" />
+                                </div>
+                                <span className="text-[#c9a36b] tracking-[0.4em] uppercase text-[10px] animate-pulse">
+                                    TieVista
+                                </span>
+                            </div>
+                        </div>
+                    )}
 
 
                     {/* Background Video */}
@@ -119,7 +132,9 @@ const Home = () => {
                         playsInline
                         preload="auto"
                         poster="/hero-thumbnail.jpg"
-                        className="absolute inset-0 w-full h-full object-cover z-0"
+                        onCanPlayThrough={() => setVideoLoaded(true)}
+                        className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-700 ${videoLoaded ? 'opacity-100' : 'opacity-0'
+                            }`}
                     >
                         {/* Mobile - small file */}
                         <source
