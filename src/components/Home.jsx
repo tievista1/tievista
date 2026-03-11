@@ -150,7 +150,7 @@ const Home = () => {
                         {/* Mobile - small file */}
                         <source
                             media="(max-width: 768px)"
-                            src="https://res.cloudinary.com/dxlysvpud/video/upload/w_480,h_854,c_fill,q_40,f_auto,ac_none/v1773212606/TieVistaIntroNew_hzve1t.mp4"
+                            src="https://res.cloudinary.com/dxlysvpud/video/upload/w_480,h_854,c_fill,q_60,f_auto,ac_none/v1773212606/TieVistaIntroNew_hzve1t.mp4"
                         />
                         {/* Desktop */}
                         <source

@@ -31,7 +31,7 @@ function App() {
         <div className="h-30 w-30">
           <img src={icon} className="h-full w-full animate-pulse" alt="Icon" />
         </div>
-        
+
       </motion.div>
     </div>
   );
