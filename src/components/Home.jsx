@@ -112,16 +112,19 @@ const Home = () => {
 
 
                     {/* Background Video */}
-                    <video
-                        src="https://res.cloudinary.com/dxlysvpud/video/upload/v1772094729/TieVistaIntro_kbviig.mp4"
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        preload="auto"
-                        poster="/hero-thumbnail.jpg"
+                    <video autoPlay loop muted playsInline preload="auto"
                         className="absolute inset-0 w-full h-full object-cover z-0"
-                    />
+                    >
+                        {/* Mobile - small file */}
+                        <source
+                            media="(max-width: 768px)"
+                            src="https://res.cloudinary.com/dxlysvpud/video/upload/w_768,h_1024,c_fill,q_auto,f_auto/v1772094729/TieVistaIntro_kbviig.mp4"
+                        />
+                        {/* Desktop */}
+                        <source
+                            src="https://res.cloudinary.com/dxlysvpud/video/upload/w_1920,h_1080,c_fill,q_auto,f_auto/v1772094729/TieVistaIntro_kbviig.mp4"
+                        />
+                    </video>
 
                     <div className='flex justify-center items-center absolute inset-0 z-20 w-full h-full p-4 py-20 md:p-10 lg:p-20 bg-transparent'>
                         <div className='h-full w-full bg-amber-50/60 rounded-3xl md:rounded-4xl'></div>
