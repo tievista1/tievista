@@ -119,7 +119,7 @@ const Home = () => {
                 {/* Hero Snap Scroll Section */}
                 <div className="h-[70vh] w-full snap-start relative flex items-center justify-center overflow-hidden border-b border-gray-100">
                     {!videoLoaded && (
-                        <div className="fixed inset-0 bg-black z-[200] flex items-center justify-center">
+                        <div className="fixed inset-0 bg-white z-[200] flex items-center justify-center">
                             <motion.div
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
@@ -128,9 +128,7 @@ const Home = () => {
                                 <div className="h-30 w-30">
                                     <img src="/icon.png" className="h-full w-full animate-pulse" alt="Icon" />
                                 </div>
-                                <span className="text-[#c9a36b] tracking-[0.4em] uppercase text-[10px] animate-pulse">
-                                    TieVista
-                                </span>
+                                
                             </motion.div>
                         </div>
                     )}
@@ -152,7 +150,7 @@ const Home = () => {
                         {/* Mobile - small file */}
                         <source
                             media="(max-width: 768px)"
-                            src="https://res.cloudinary.com/dxlysvpud/video/upload/w_480,h_854,c_fill,q_30,f_auto,ac_none/v1773212606/TieVistaIntroNew_hzve1t.mp4"
+                            src="https://res.cloudinary.com/dxlysvpud/video/upload/w_480,h_854,c_fill,q_40,f_auto,ac_none/v1773212606/TieVistaIntroNew_hzve1t.mp4"
                         />
                         {/* Desktop */}
                         <source
