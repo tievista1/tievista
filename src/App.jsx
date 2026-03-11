@@ -22,7 +22,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText)
 function App() {
 
   const PageLoader = () => (
-    <div className="fixed inset-0 bg-black z-[200] flex items-center justify-center">
+    <div className="fixed inset-0 bg-white z-[200] flex items-center justify-center">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -31,9 +31,7 @@ function App() {
         <div className="h-30 w-30">
           <img src={icon} className="h-full w-full animate-pulse" alt="Icon" />
         </div>
-        <span className="text-[#c9a36b] tracking-[0.4em] uppercase text-[10px] animate-pulse">
-          TieVista
-        </span>
+        
       </motion.div>
     </div>
   );
