@@ -219,7 +219,7 @@ export const Navbar = () => {
             hasDropdown: true,
             dropdownItems: [
                 { label: 'Mutual Funds', href: 'https://app.tievista.com/wealthspectrum/portal/sign-in' },
-                { label: 'Stocks', href: '/invest-now/stocks' },
+                { label: 'Stocks', href: 'https://tinyurl.com/hbhuvcer' },
                 { label: 'International Investments', href: 'https://portal.kristal.ai/login', target: '_blank' },
             ],
         },
