@@ -94,7 +94,7 @@ function PartnershipSection({ p, index }) {
                                 style={{ fontFamily: 'PT Serif, serif' }}
                             >
                                 {heading}{' '}
-                                <span className="" style={{ color: GOLD }}>{accent}</span>
+                                <span className="gold-text" >{accent}</span>
                             </h2>
 
                             {/* Gold divider */}
@@ -199,7 +199,7 @@ function PartnershipSection({ p, index }) {
                         style={{ fontFamily: 'PT Serif, serif' }}
                     >
                         TieVista{' '}
-                        <span className="font-light" style={{ color: GOLD }} >Partners</span> {/*style={{ color: GOLD }} italic*/}
+                        <span className="font-light gold-text" >Partners</span> {/*style={{ color: GOLD }} italic*/}
                     </motion.h1>
 
                     <motion.p

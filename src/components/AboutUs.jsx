@@ -105,7 +105,7 @@ function NarrativeSection({ sec, index }) {
                 style={{ fontFamily: 'PT Serif, serif' }}
               >
                 {heading}{' '}
-                <span className="" style={{ color: GOLD }} >{accent}</span> {/*style={{ color: GOLD }} */}
+                <span className="gold-text" >{accent}</span> {/*style={{ color: GOLD }} */}
               </h2>
 
               <div className="w-12 h-px mb-7" style={{ background: GOLD }} />
@@ -130,57 +130,7 @@ function NarrativeSection({ sec, index }) {
 
   return (
     <div className="bg-white font-sans selection:bg-[#D4AF37] selection:text-white overflow-x-hidden">
-
-      {/* ── Hero ── */}
-      <section ref={heroRef} className="h-screen w-full relative flex items-center justify-center overflow-hidden">
-        <motion.div style={{ y: heroY }} className="absolute inset-0 z-0 will-change-transform">
-          <img
-            className="h-full w-full object-cover"
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000"
-            alt="TieVista Office"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/45 to-black/80" />
-        </motion.div>
-
-        <motion.div
-          style={{ opacity: heroOpacity }}
-          className="relative z-20 text-center px-6 max-w-5xl mx-auto"
-        >
-          <motion.div
-            initial={{ opacity: 0, y: -16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
-            className="inline-flex items-center gap-3 px-5 py-2 mb-8 border rounded-full backdrop-blur-sm"
-            style={{ borderColor: `${GOLD}60`, background: 'rgba(0,0,0,0.25)' }}
-          >
-            <span className="w-1.5 h-1.5 rounded-full" style={{ background: GOLD }} />
-            <span className="text-xs font-bold tracking-[0.3em] uppercase" style={{ color: GOLD }}>
-              Private Wealth Management
-            </span>
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.65 }}
-            className="text-7xl md:text-[10rem] text-white tracking-tighter leading-[0.9] mb-8"
-            style={{ fontFamily: 'PT Serif, serif' }}
-          >
-            About{' '}
-            <span className="font-light" style={{ color: GOLD }} >Us</span> {/*style={{ color: GOLD }} italic*/}
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.85 }}
-            className="text-xl md:text-2xl text-white/75 font-light max-w-2xl mx-auto leading-relaxed"
-          >
-            Simplifying complexity with care, discretion, and a long-term perspective.
-          </motion.p>
-
-        </motion.div>
-      </section>
+      
 
       {/* ── Narrative Sections ── */}
       {narratives.map((sec, i) => (
@@ -202,7 +152,7 @@ function NarrativeSection({ sec, index }) {
               style={{ fontFamily: 'PT Serif, serif' }}
             >
               What to{' '}
-              <span className="italic" style={{ color: GOLD }}>Expect</span>
+              <span className="gold-text" >Expect</span>
             </h2>
           </motion.div>
 
@@ -218,12 +168,12 @@ function NarrativeSection({ sec, index }) {
                 className="group flex items-center gap-4 lg:gap-8 py-2 lg:py-7 border-b border-gray-100 cursor-default"
               >
 
-                {/* Arrow */}
+                {/* Arrow
                 <ArrowRight
                   size={18}
                   className="shrink-0 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1"
                   style={{ color: GOLD }}
-                />
+                /> */}
 
                 {/* Number — hidden on mobile, visible md+
                 <span
@@ -270,7 +220,7 @@ function NarrativeSection({ sec, index }) {
           aria-hidden
         >
           <span
-            className="text-[18vw] font-bold tracking-tighter leading-none opacity-[0.025] text-white"
+            className="text-[18vw] font-bold tracking-tighter leading-none opacity-[0.025] text-white gold-text"
             style={{ fontFamily: 'PT Serif, serif' }}
           >
             TieVista
@@ -303,7 +253,7 @@ function NarrativeSection({ sec, index }) {
             IndusArtha Financial Services Private Limited,{' '}
             <br className="hidden md:block" />
             known as{' '}
-            <span className="font-semibold" style={{ color: GOLD }}>TieVista</span>
+            <span className="font-semibold gold-text">TieVista</span>
             {' '}— designed to simplify{' '}
             <span className="text-white/60">complexity</span> and provide{' '}
             <span className="text-white/60">clear oversight.</span>

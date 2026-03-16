@@ -118,7 +118,7 @@ Please respond to this enquiry as soon as possible.
             className="text-6xl md:text-8xl text-white tracking-tighter leading-none mb-6"
             style={{ fontFamily: 'PT Serif, serif' }}
           >
-            Get In <span style={{ color: GOLD }}>Touch</span>
+            Get In <span className='gold-text' >Touch</span>
           </h1>
           <p className="text-lg md:text-xl text-white/70 font-light max-w-2xl mx-auto leading-relaxed">
             We are here to assist you with a structured and thoughtful approach to building your legacy.
@@ -135,7 +135,7 @@ Please respond to this enquiry as soon as possible.
             <motion.div {...fadeUp()} className="w-full lg:w-5/12 space-y-12">
               <div>
                 <h2 className="text-4xl md:text-5xl mb-8 tracking-tighter" style={{ fontFamily: 'PT Serif, serif' }}>
-                  Institutional <span style={{ color: GOLD }}>Excellence.</span>
+                  Institutional <span className='gold-text' >Excellence.</span>
                 </h2>
                 <div className="w-12 h-px mb-8" style={{ background: GOLD }} />
                 <p className="text-gray-600 font-light leading-relaxed text-lg">

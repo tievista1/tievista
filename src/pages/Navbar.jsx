@@ -19,20 +19,41 @@ const MOBILE_MENU_VARIANTS = {
 };
 
 // ─── Desktop Dropdown ───────────────────────────────────────────────────────
-const DesktopDropdown = ({ items }) => (
-    <div className="absolute left-0 mt-0 w-64 bg-white shadow-xl border border-gray-100 rounded-sm z-50">
-        {items.map((item, i) => (
-            <Link
-                key={i}
-                to={item.href}
-                {...(item.target ? { target: item.target } : {})}
-                className="block px-6 py-3 text-sm text-gray-600 hover:text-[#D4AF37] hover:bg-gray-50 transition-colors"
-            >
-                {item.label}
-            </Link>
-        ))}
-    </div>
-);
+const DesktopDropdown = ({ items, depth = 0 }) => {
+    const [hoveredItem, setHoveredItem] = useState(null);
+
+    return (
+        <div 
+            className={`absolute bg-white shadow-xl border border-gray-100 rounded-sm z-50 ${depth === 0 ? 'left-0 mt-0 w-64' : 'left-full top-0 w-64'}`}
+            onMouseLeave={() => setHoveredItem(null)}
+        >
+            {items.map((item, i) => (
+                <div 
+                    key={i} 
+                    className="relative group/sub"
+                    onMouseEnter={() => item.hasDropdown && setHoveredItem(item.label)}
+                >
+                    <Link
+                        to={item.href}
+                        {...(item.target ? { target: item.target } : {})}
+                        className="flex items-center justify-between px-6 py-3 text-sm text-gray-600 hover:text-[#D4AF37] hover:bg-gray-50 transition-colors"
+                    >
+                        <span>{item.label}</span>
+                        {item.hasDropdown && (
+                            <ChevronDown
+                                size={14}
+                                className="-rotate-90 text-gray-400 group-hover/sub:text-[#D4AF37]"
+                            />
+                        )}
+                    </Link>
+                    {item.hasDropdown && hoveredItem === item.label && (
+                        <DesktopDropdown items={item.dropdownItems} depth={depth + 1} />
+                    )}
+                </div>
+            ))}
+        </div>
+    );
+};
 
 // ─── Desktop Nav Item ────────────────────────────────────────────────────────
 const DesktopNavItem = ({ item, isActive, onEnter, onLeave }) => (
@@ -64,57 +85,64 @@ const DesktopNavItem = ({ item, isActive, onEnter, onLeave }) => (
 );
 
 // ─── Mobile Nav Item ─────────────────────────────────────────────────────────
-const MobileNavItem = ({ item, isOpen, onToggle, onClose }) => (
-    <div className="border-b border-gray-50 last:border-none">
-        <div className="flex items-center justify-between w-full">
-            <Link
-                to={item.href}
-                onClick={onClose}
-                className="flex-grow py-4 text-[15px] font-medium text-gray-700 hover:text-black hover:bg-gray-50 px-2 rounded-md transition-all"
-            >
-                {item.label}
-            </Link>
-            {item.hasDropdown && (
-                <button
-                    onClick={onToggle}
-                    className="p-4 text-gray-400 hover:text-black transition-colors"
-                    aria-expanded={String(isOpen)}
-                    aria-label={`Toggle ${item.label} submenu`}
-                >
-                    <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
-                        <ChevronDown size={18} />
-                    </motion.div>
-                </button>
-            )}
-        </div>
+const MobileNavItem = ({ item, isOpen, onToggle, onClose, depth = 0 }) => {
+    const [activeSubDropdown, setActiveSubDropdown] = useState(null);
 
-        <AnimatePresence>
-            {item.hasDropdown && isOpen && (
-                <motion.div
-                    variants={DROPDOWN_VARIANTS}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                    className="overflow-hidden"
+    const toggleSubDropdown = (label) => {
+        setActiveSubDropdown(prev => prev === label ? null : label);
+    };
+
+    return (
+        <div className={`border-b border-gray-50 last:border-none ${depth > 0 ? 'border-none' : ''}`}>
+            <div className="flex items-center justify-between w-full">
+                <Link
+                    to={item.href}
+                    onClick={onClose}
+                    className={`flex-grow py-4 text-gray-700 hover:text-black hover:bg-gray-50 px-2 rounded-md transition-all ${depth === 0 ? 'text-[15px] font-medium' : 'text-sm font-normal text-gray-500'}`}
                 >
-                    <div className="pl-6 pb-4 space-y-1 mt-1 border-l-2 ml-2" style={{ borderColor: GOLD }}>
-                        {item.dropdownItems.map((dropItem, i) => (
-                            <Link
-                                key={i}
-                                to={dropItem.href}
-                                {...(dropItem.target ? { target: dropItem.target } : {})}
-                                onClick={onClose}
-                                className="block py-3 text-sm text-gray-500 hover:text-[#D4AF37] transition-colors"
-                            >
-                                {dropItem.label}
-                            </Link>
-                        ))}
-                    </div>
-                </motion.div>
-            )}
-        </AnimatePresence>
-    </div>
-);
+                    {item.label}
+                </Link>
+                {item.hasDropdown && (
+                    <button
+                        onClick={onToggle}
+                        className="p-4 text-gray-400 hover:text-black transition-colors"
+                        aria-expanded={String(isOpen)}
+                        aria-label={`Toggle ${item.label} submenu`}
+                    >
+                        <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
+                            <ChevronDown size={18} />
+                        </motion.div>
+                    </button>
+                )}
+            </div>
+
+            <AnimatePresence>
+                {item.hasDropdown && isOpen && (
+                    <motion.div
+                        variants={DROPDOWN_VARIANTS}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                        className="overflow-hidden"
+                    >
+                        <div className="pl-6 pb-2 space-y-0 mt-1 border-l-2 ml-2" style={{ borderColor: GOLD }}>
+                            {item.dropdownItems.map((dropItem, i) => (
+                                <MobileNavItem
+                                    key={i}
+                                    item={dropItem}
+                                    depth={depth + 1}
+                                    isOpen={activeSubDropdown === dropItem.label}
+                                    onToggle={() => toggleSubDropdown(dropItem.label)}
+                                    onClose={onClose}
+                                />
+                            ))}
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </div>
+    );
+};
 
 // ─── Main Navbar ─────────────────────────────────────────────────────────────
 export const Navbar = () => {
@@ -139,17 +167,6 @@ export const Navbar = () => {
 
     const navItems = useMemo(() => [
         { label: 'Home', href: '/' },
-        {
-            label: 'About Us',
-            href: '/aboutus',
-            hasDropdown: false,
-            dropdownItems: [
-                { label: 'Mission', href: '/aboutus/mission' },
-                { label: 'Differentiators', href: '/aboutus/differentiators' },
-                { label: 'Leadership', href: '/aboutus/leadership' },
-                { label: 'Presence', href: '/aboutus/presence' },
-            ],
-        },
         {
             label: 'Services',
             href: '/services',
@@ -184,43 +201,49 @@ export const Navbar = () => {
             ],
         },
         {
-            label: 'Investment Universe',
-            href: '/investmentuniverse',
-            hasDropdown: true,
-            dropdownItems: [
-                { label: 'Growth Assets', href: '/investmentuniverse#Growth' },
-                { label: 'Income & Capital Preservation', href: '/investmentuniverse#Income' },
-                { label: 'Private & Alternative Investments', href: '/investmentuniverse#Private' },
-                { label: 'Global & GIFT City Solutions', href: '/investmentuniverse#Global' },
-            ],
-        },
-        {
-            label: 'Insights',
-            href: '/insights',
-            hasDropdown: true,
-            dropdownItems: [
-                { label: 'Videos', href: '/insights/videos' },
-                { label: 'Blogs', href: '/insights/blogs' },
-            ],
-        },
-        {
-            label: 'Contact Us',
-            href: '/contact',
+            label: 'Global & GIFT City Solutions',
+            href: '/globalgiftcitysolutions',
             hasDropdown: false,
             dropdownItems: [
-                { label: 'Enquiry Form', href: '/contact/enquiry' },
-                { label: 'Offices', href: '/contact/offices' },
-                { label: 'Social Links', href: '/contact/social' },
+                { label: 'GIFT City PMS & AIFs', href: '/globalgiftcitysolutions/giftcitypmsandaifs' },
+                { label: 'International Mutual Funds', href: '/globalgiftcitysolutions/internationalmutualfunds' },
+                { label: 'Global Equities', href: '/globalgiftcitysolutions/globalequities' },
+                { label: 'Global ETFs', href: '/globalgiftcitysolutions/globaletfs' },
             ],
         },
         {
-            label: 'Invest Now',
-            href: '',
+            label: 'More...',
+            href: '#',
             hasDropdown: true,
             dropdownItems: [
-                { label: 'Mutual Funds', href: 'https://app.tievista.com/wealthspectrum/portal/sign-in' },
-                { label: 'Stocks', href: 'https://tinyurl.com/hbhuvcer' },
-                { label: 'International Investments', href: 'https://portal.kristal.ai/login', target: '_blank' },
+                {
+                    label: 'Investment Universe',
+                    href: '/investmentuniverse',
+                    hasDropdown: true,
+                    dropdownItems: [
+                        { label: 'Growth Assets', href: '/investmentuniverse#Growth' },
+                        { label: 'Income & Capital Preservation', href: '/investmentuniverse#Income' },
+                        { label: 'Private & Alternative Investments', href: '/investmentuniverse#Private' },
+                    ]
+                },
+                {
+                    label: 'Insights',
+                    href: '/insights',
+                    hasDropdown: true,
+                    dropdownItems: [
+                        { label: 'Videos', href: '/insights/videos' },
+                        { label: 'Blogs', href: '/insights/blogs' },
+                    ]
+                },
+                { label: 'Contact Us', href: '/contact' },
+                {
+                    label: 'Invest Now',
+                    href: '',
+                    hasDropdown: true,
+                    dropdownItems: [
+                        { label: 'Mutual Funds', href: 'https://app.tievista.com/wealthspectrum/portal/sign-in' }
+                    ],
+                },
             ],
         },
     ], []);
@@ -375,11 +398,5 @@ export const Navbar = () => {
     );
 };
 
-{/* Home
-    AboutUs
-    Services
-    NRI Sol
-    B2B Patrnership
-    InvestmentUniverse
-    ContactUs
-    */}
+
+

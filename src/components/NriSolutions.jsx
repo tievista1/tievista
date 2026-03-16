@@ -161,7 +161,7 @@ function ServiceSection({ svc, index }) {
                                 style={{ fontFamily: 'PT Serif, serif' }}
                             >
                                 {heading}{' '}
-                                <span className="" style={{ color: GOLD }}>{accent}</span>
+                                <span className="gold-text" >{accent}</span>
                             </h2>
 
                             {/* Gold divider */}
@@ -261,7 +261,7 @@ const NriSolutions = () => {
                         style={{ fontFamily: 'PT Serif, serif' }}
                     >
                         NRI{' '}
-                        <span className="font-light " style={{ color: GOLD }}>Solutions</span>
+                        <span className="font-light gold-text" >Solutions</span>
                     </motion.h1>
 
                     {/* Subtitle */}
@@ -332,7 +332,7 @@ const NriSolutions = () => {
                                 className="text-3xl md:text-4xl tracking-tighter leading-tight mb-5"
                                 style={{ fontFamily: 'PT Serif, serif' }}
                             >
-                                Capital without <span className="" style={{ color: GOLD }}>borders.</span>
+                                Capital without <span className="gold-text" >borders.</span>
                             </h3>
                             <p className="text-lg text-gray-600 font-light leading-relaxed mb-4">
                                 Wealth decisions are no longer confined to a single geography. Assets, incomes, responsibilities, and aspirations often span India, the Middle East, Southeast Asia, Europe, and beyond.

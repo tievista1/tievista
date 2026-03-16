@@ -180,7 +180,7 @@ function ServiceSection({ svc, index }) {
                                 style={{ fontFamily: 'PT Serif, serif' }}
                             >
                                 {heading}{' '}
-                                <span className="" style={{ color: GOLD }} >{accent}</span> {/*style={{ color: GOLD }} italic*/}
+                                <span className="gold-text" >{accent}</span> {/*style={{ color: GOLD }} italic*/}
                             </h2>
 
                             {/* Gold divider */}
@@ -275,7 +275,7 @@ function ServiceSection({ svc, index }) {
                         style={{ fontFamily: 'PT Serif, serif' }}
                     >
                         Our{' '}
-                        <span className="font-light" style={{ color: GOLD }}>Services</span> {/*style={{ color: GOLD }} italic*/}
+                        <span className="font-light gold-text" >Services</span> {/*style={{ color: GOLD }} italic*/}
                     </motion.h1>
 
                     <motion.p

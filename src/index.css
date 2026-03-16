@@ -21,3 +21,10 @@ html {
         2px 2px 0 #D4AF37,
         4px 4px 8px rgba(212, 175, 55, 0.4);
 }
+
+.gold-text {
+  background: linear-gradient(to right, #F3D34F, #D59D1C, #F5D958, #E0B12D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+

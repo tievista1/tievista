@@ -41,7 +41,7 @@ export const Footer = () => {
 
             {/* Column 1 */}
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-[0.3em] mb-6" style={{ color: GOLD }}>
+              <h4 className="text-xs font-bold uppercase tracking-[0.3em] mb-6 gold-text">
                 Quick Links
               </h4>
               <ul className="space-y-4 font-light text-gray-400">

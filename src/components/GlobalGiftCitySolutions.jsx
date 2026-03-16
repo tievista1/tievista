@@ -19,45 +19,19 @@ const fadeUp = (delay = 0) => ({
 // --- Static Data ---
 const ASSET_CATEGORIES = [
     {
-        id: "Growth",
-        title: "Growth",
-        italicTitle: "Assets",
+        id: "Global",
+        title: "Global &",
+        italicTitle: "GIFT City Solutions",
         subtitle: "",
-        description: "At TieVista, we build enduring financial success through disciplined, equity-centric investment strategies. Our approach is rooted in long-term growth, backed by rigorous research and thoughtful risk management to generate capital appreciation globally.",
-        includes: ["Public Equities", "Equity Mutual Funds (including ELSS)", "Equity PMS", "Equity ETFs"],
-        image: "https://c.stocksy.com/a/4L0600/z9/1431274.jpg",
-        icon: TrendingUp,
-        reverse: false
-    },
-    {
-        id: "Income",
-        title: "Income &",
-        italicTitle: "Capital Preservation",
-        subtitle: "",
-        description: "We understand that protecting hard-earned capital is as essential as growth. Our Income & Capital Preservation strategies prioritize safety and steady income generation, crafted for investors who seek predictable cash flows and shield their portfolios from undue volatility.",
-        includes: ["Debt Mutual Funds", "Debt PMS", "Physical Bonds (Govt, Corp, Credit)", "Fixed Income ETFs"],
-        image: "https://images.unsplash.com/photo-1554774853-719586f82d77?auto=format&fit=crop&q=80&w=2000",
-        icon: Database,
+        description: "In an interconnected world, capital is not confined by geography. We provide seamless access to global markets and India’s premier gateway GIFT City offering strategic diversification and structural efficiency for globally minded families and institutions.",
+        includes: ["GIFT City PMS & AIFs", "International Mutual Funds", "Global Equities", "Global ETFs"],
+        image: "https://cdn.prod.website-files.com/5ded36b5e942e74b13468d23/60917854b0ebb181caf1afcd_00-Header%402x.png",
+        icon: Globe,
         reverse: true
-    },
-    {
-        id: "Private",
-        title: "Private &",
-        italicTitle: "Alternative Investments",
-        subtitle: "",
-        description: "Sophisticated portfolios blend traditional and alternative investments to capture broad market potential while uncovering unique value. We provide access to differentiated opportunities that go beyond conventional public markets to enhance returns and reduce correlation.",
-        includes: ["AIFs (Category I, II & III)", "Private Equity & Venture Capital", "Real Estate Opportunities", "Commodities"],
-        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000",
-        icon: Layers,
-        reverse: false
     }
 ];
 
-const NAV_ELEMENTS = [
-    { title: "Growth Assets", icon: TrendingUp, href: "#Growth" },
-    { title: "Income & Capital Preservation", icon: Database, href: "#Income" },
-    { title: "Private & Alternatives", icon: Layers, href: "#Private" },
-];
+
 
 // --- Sub-components ---
 
@@ -169,7 +143,7 @@ const CategorySection = ({ cat, index }) => {
 
 // --- Main Component ---
 
- const InvestmentUniverse = () => {
+ const GlobalGiftCitySolutions = () => {
     const animationSettings = {
         container: {
             hidden: { opacity: 0, y: 30 },
@@ -197,61 +171,15 @@ const CategorySection = ({ cat, index }) => {
                 <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={animationSettings.container} className="relative z-10 text-center px-6">
                     <div className="inline-flex items-center gap-3 px-4 py-1 mb-6 border border-[#D4AF37]/50 rounded-full bg-black/20 backdrop-blur-sm">
                         <span className="w-1.5 h-1.5 rounded-full" style={{ background: GOLD }} />
-                        <span className="text-[#D4AF37] text-xs font-bold tracking-[0.3em] uppercase">We don’t just manage wealth, We future-proof it.</span>
+                        <span className="text-[#D4AF37] text-xs font-bold tracking-[0.3em] uppercase">Global & GIFT City Solutions</span>
                     </div>
                     <motion.h1 variants={animationSettings.item} className="text-6xl md:text-9xl mb-8 text-white tracking-tighter leading-[0.95]" style={{ fontFamily: "PT Serif" }}>
-                        Investment <span className="gold-text ">Universe</span>
+                        Global & GIFT City <span className="gold-text">Solutions</span>
                     </motion.h1>
                     <motion.p variants={animationSettings.item} className="text-xl md:text-2xl text-white/80 font-light max-w-3xl mx-auto leading-relaxed mb-12">
-                        Navigating the complexities of global wealth through bespoke selection, rigorous discipline, and a borderless perspective.
+                        Leveraging GIFT City’s unique regulatory framework to offer tax-efficient, globally diversified investment solutions.
                     </motion.p>
                 </motion.div>
-
-                {/* Quick Nav Bar */}
-                <div className="absolute bottom-0 left-0 w-full bg-white border-t border-gray-100 z-20 flex">
-                    {NAV_ELEMENTS.map((el, i) => {
-                        const Icon = el.icon
-                        return (
-                            <a
-                                key={i}
-                                href={el.href}
-                                className="group relative flex-1 flex flex-col justify-center px-5 py-5 border-r border-gray-100 last:border-r-0 overflow-hidden transition-all duration-300 hover:bg-[#FFFDF5]"
-                            >
-                                {/* Gold top-border reveal on hover */}
-                                <div
-                                    className="absolute top-0 left-0 h-[2px] w-0 group-hover:w-full transition-all duration-500"
-                                    style={{ background: GOLD }}
-                                />
-
-                                {/* Row: index + icon */}
-                                <div className="flex items-center gap-2 mb-1.5">
-                                    {/* <span
-                                        className="text-[10px] font-bold tabular-nums leading-none"
-                                        style={{ color: GOLD, fontFamily: 'PT Serif, serif' }}
-                                    >
-                                        {String(i + 1).padStart(2, '0')}
-                                    </span> */}
-                                    <Icon
-                                        size={13}
-                                        className="text-gray-400 group-hover:text-[#D4AF37] transition-colors duration-300"
-                                    />
-                                </div>
-
-                                {/* Title */}
-                                <span className="text-[11px] md:text-sm font-semibold text-gray-700 group-hover:text-gray-900 tracking-tight leading-tight transition-colors duration-300 line-clamp-1">
-                                    {el.title}
-                                </span>
-
-                                {/* Slide-in arrow */}
-                                <ArrowRight
-                                    size={13}
-                                    className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
-                                    style={{ color: GOLD }}
-                                />
-                            </a>
-                        )
-                    })}
-                </div>
             </section>
 
             {/* Asset Category Sections */}
@@ -277,4 +205,8 @@ const CategorySection = ({ cat, index }) => {
     );
 };
 
-export default InvestmentUniverse;
+export default GlobalGiftCitySolutions;
+
+
+
+

@@ -5,17 +5,16 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { SplitText } from 'gsap/SplitText'
 import { lazy, Suspense } from 'react'
 import { motion } from 'framer-motion'
-import SmoothFollower from './mouseCursor/SmoothFollower'
 import ScrollToTop from './scroll/ScrollToTop'
 import icon from '/TieVistaLogo.png'
 
 const Home = lazy(() => import("./components/Home"));
-const AboutUs = lazy(() => import("./components/AboutUs"));
 const InvestmentUniverse = lazy(() => import("./components/InvestmentUniverse"));
 const NriSolutions = lazy(() => import("./components/NriSolutions"));
 const Service = lazy(() => import("./components/Service"));
 const BusinessToBusiness = lazy(() => import("./components/BusinessToBusiness"));
 const Contact = lazy(() => import("./components/Contact"));
+const GlobalGiftCitySolutions = lazy(() => import("./components/GlobalGiftCitySolutions"));
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
@@ -38,7 +37,6 @@ function App() {
 
   return (
     <>
-      <SmoothFollower />
       <ScrollToTop />
       <Suspense fallback={<PageLoader />}>
 
@@ -46,12 +44,12 @@ function App() {
         <Routes>
           <Route path='/' element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path='aboutus' element={<AboutUs />} />
             <Route path='investmentuniverse' element={<InvestmentUniverse />} />
             <Route path='nrisolutions' element={<NriSolutions />} />
             <Route path='services' element={<Service />} />
             <Route path='b2b' element={<BusinessToBusiness />} />
             <Route path='contact' element={<Contact />} />
+            <Route path='globalgiftcitysolutions' element={<GlobalGiftCitySolutions />} />
           </Route>
         </Routes>
       </Suspense>
