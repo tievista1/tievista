@@ -36,7 +36,7 @@ const SERVICES = [
             'Currency considerations & India allocation within global portfolio',
             'Growth vs. income strategies based on repatriation needs',
         ],
-        img: 'https://images.pexels.com/photos/12969339/pexels-photo-12969339.jpeg',
+        img: 'https://res.cloudinary.com/dr1u4plse/image/upload/v1773740483/GloabeMutual_hf6pzd.png',
         reverse: false,
     },
     {
@@ -332,13 +332,13 @@ const NriSolutions = () => {
                                 className="text-3xl md:text-4xl tracking-tighter leading-tight mb-5"
                                 style={{ fontFamily: 'PT Serif, serif' }}
                             >
-                                Capital without <span className="gold-text" >borders.</span>
+                                Capital beyond <span className="gold-text" >borders.</span>
                             </h3>
                             <p className="text-lg text-gray-600 font-light leading-relaxed mb-4">
                                 Wealth decisions are no longer confined to a single geography. Assets, incomes, responsibilities, and aspirations often span India, the Middle East, Southeast Asia, Europe, and beyond.
                             </p>
                             <p className="text-lg text-gray-600 font-light leading-relaxed">
-                                TieVista highlights the role that India plays within the broader wealth landscape — ensuring your India-side capital is always structured with purpose.
+                                TieVista highlights the role that India plays within the broader wealth landscape ensuring your India-side capital is always structured with purpose.
                             </p>
                         </div>
                     </motion.div>

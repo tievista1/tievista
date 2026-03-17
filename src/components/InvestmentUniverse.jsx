@@ -269,7 +269,7 @@ const CategorySection = ({ cat, index }) => {
                         Future-proof Your <br /> <span className="gold-text italic">Legacy.</span>
                     </h2>
                     <button className="bg-black text-white px-16 py-6 rounded-full font-bold tracking-[0.2em] uppercase text-sm hover:bg-[#D4AF37] transition-all shadow-2xl hover:shadow-[#D4AF37]/40">
-                        Connect With Advisor
+                        Connect With wealth manager
                     </button>
                 </motion.div>
             </section>

@@ -25,7 +25,7 @@ const ASSET_CATEGORIES = [
         subtitle: "",
         description: "In an interconnected world, capital is not confined by geography. We provide seamless access to global markets and India’s premier gateway GIFT City offering strategic diversification and structural efficiency for globally minded families and institutions.",
         includes: ["GIFT City PMS & AIFs", "International Mutual Funds", "Global Equities", "Global ETFs"],
-        image: "https://cdn.prod.website-files.com/5ded36b5e942e74b13468d23/60917854b0ebb181caf1afcd_00-Header%402x.png",
+        image: "https://res.cloudinary.com/dr1u4plse/image/upload/v1773729478/Currency_z4ldbi.png",
         icon: Globe,
         reverse: true
     }
@@ -193,11 +193,11 @@ const CategorySection = ({ cat, index }) => {
                     <Zap className="w-[800px] h-[800px]" />
                 </div>
                 <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} className="text-center z-10 px-6">
-                    <h2 className="text-6xl md:text-9xl font-bold mb-12 leading-[0.9] tracking-tighter text-gray-900 font-serif">
+                    <h2 className="text-6xl md:text-7xl font-bold mb-12 leading-[0.9] tracking-tighter text-gray-900 font-serif">
                         Future-proof Your <br /> <span className="gold-text italic">Legacy.</span>
                     </h2>
                     <button className="bg-black text-white px-16 py-6 rounded-full font-bold tracking-[0.2em] uppercase text-sm hover:bg-[#D4AF37] transition-all shadow-2xl hover:shadow-[#D4AF37]/40">
-                        Connect With Advisor
+                        Connect With wealth manager
                     </button>
                 </motion.div>
             </section>

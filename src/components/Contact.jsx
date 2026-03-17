@@ -25,7 +25,7 @@ const countryCodes = [
   { code: '+81', country: 'JP', label: 'Japan (+81)' },
 ];
 
- const Contact = () => {
+const Contact = () => {
   const [submitType, setSubmitType] = useState('mail');
 
   const {
@@ -107,17 +107,17 @@ Please respond to this enquiry as soon as possible.
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="inline-block px-4 py-1.5 mb-6 border rounded-full backdrop-blur-md"
-            style={{ borderColor: `${GOLD}60`, background: 'rgba(212, 175, 55, 0.1)' }}
           >
-            <span className="text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase text-white">
-              Connect With Us
-            </span>
+            <div className="inline-flex items-center gap-3 px-4 py-1 mb-6 border border-[#D4AF37]/50 rounded-full bg-black/20 backdrop-blur-sm">
+              <span className="w-1.5 h-1.5 rounded-full" style={{ background: GOLD }} />
+              <span className="text-[#D4AF37] text-xs font-bold tracking-[0.3em] uppercase">Connect With Us</span>
+            </div>
           </motion.div>
           <h1
             className="text-6xl md:text-8xl text-white tracking-tighter leading-none mb-6"
             style={{ fontFamily: 'PT Serif, serif' }}
           >
+
             Get In <span className='gold-text' >Touch</span>
           </h1>
           <p className="text-lg md:text-xl text-white/70 font-light max-w-2xl mx-auto leading-relaxed">
@@ -139,7 +139,7 @@ Please respond to this enquiry as soon as possible.
                 </h2>
                 <div className="w-12 h-px mb-8" style={{ background: GOLD }} />
                 <p className="text-gray-600 font-light leading-relaxed text-lg">
-                  Whether you are looking for portfolio management, private wealth advisory, or strategic business insights, our team is ready to provide the oversight you need.
+                  Whether you are looking for portfolio management, private wealth management, or strategic business insights, Feel free to reach out to us.
                 </p>
               </div>
 
@@ -160,13 +160,13 @@ Please respond to this enquiry as soon as possible.
 
                 <div className="flex items-start gap-6 group">
                   <a className='flex items-start gap-6 group' target="_blank" href="tel:+917977626003">
-                  <div className="w-12 h-12 rounded-full flex items-center justify-center shrink-0 border border-gray-200 group-hover:bg-[#D4AF37] group-hover:border-[#D4AF37] group-hover:text-white transition-all duration-300">
-                    <Phone size={20} />
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-1">Direct Call</h4>
-                    <p className="text-lg font-medium text-gray-800">+91 79 7762 6003</p>
-                  </div>
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center shrink-0 border border-gray-200 group-hover:bg-[#D4AF37] group-hover:border-[#D4AF37] group-hover:text-white transition-all duration-300">
+                      <Phone size={20} />
+                    </div>
+                    <div>
+                      <h4 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-1">Direct Call</h4>
+                      <p className="text-lg font-medium text-gray-800">+91 79 7762 6003</p>
+                    </div>
                   </a>
                 </div>
 
@@ -177,8 +177,8 @@ Please respond to this enquiry as soon as possible.
                     </div>
                     <div>
                       <h4 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-1">Address</h4>
-                      <p className="text-lg font-medium text-gray-800">IndusArtha Financial Services Pvt. Ltd.</p>
-                      <p className="text-lg font-medium text-gray-800">4rth Floor, AWFIS, VIOS Tower, Wadala, Mumbai 400037</p>
+                      <p className="text-lg font-medium text-gray-800">TIEVISTA GLOBAL PRIVATE WEALTH,</p>
+                      <p className="text-lg font-medium text-gray-800">4th Floor, AWFIS, VIOS Tower, Wadala, Mumbai 400037</p>
                     </div>
                   </a>
                 </div>

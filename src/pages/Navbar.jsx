@@ -64,7 +64,7 @@ const DesktopNavItem = ({ item, isActive, onEnter, onLeave }) => (
     >
         <Link to={item.href}>
             <button
-                className="flex items-center gap-1 text-[14px] font-normal text-gray-700 hover:text-[#D4AF37] transition-colors hover:cursor-pointer"
+                className="flex items-center gap-1 text-[14px] font-normal text-black hover:text-[#D4AF37] transition-colors hover:cursor-pointer"
                 aria-haspopup={item.hasDropdown ? 'true' : undefined}
                 aria-expanded={item.hasDropdown ? String(isActive) : undefined}
             >
@@ -179,6 +179,17 @@ export const Navbar = () => {
             ],
         },
         {
+            label: 'Allied Services',
+            href: '/b2b',
+            hasDropdown: false,
+            dropdownItems: [
+                { label: 'Family Office Structuring', href: '/b2b/family-office-structuring' },
+                { label: 'Succession & Estate Planning', href: '/b2b/succession-estate-planning' },
+                { label: 'Governance', href: '/b2b/governance' },
+                { label: 'Tax & Repatriation', href: '/b2b/tax-repatriation' },
+            ],
+        },
+        {
             label: 'NRI Solutions',
             href: '/nrisolutions',
             hasDropdown: false,
@@ -187,17 +198,6 @@ export const Navbar = () => {
                 { label: 'Remittance Solutions', href: '/nrisolutions/remittancesolutions' },
                 { label: 'Global Multi-Currency Reporting', href: '/nrisolutions/globalmulticurrencyreporting' },
                 { label: 'Global Investment', href: '/nrisolutions/globalinvestment' },
-            ],
-        },
-        {
-            label: 'TieVista Partners',
-            href: '/b2b',
-            hasDropdown: false,
-            dropdownItems: [
-                { label: 'Family Office Structuring', href: '/b2b/family-office-structuring' },
-                { label: 'Succession & Estate Planning', href: '/b2b/succession-estate-planning' },
-                { label: 'Governance', href: '/b2b/governance' },
-                { label: 'Tax & Repatriation', href: '/b2b/tax-repatriation' },
             ],
         },
         {

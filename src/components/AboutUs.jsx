@@ -122,7 +122,7 @@ function NarrativeSection({ sec, index }) {
 }
 
 /* ─── Main Component ─── */
- const AboutUs = () => {
+const AboutUs = () => {
   const heroRef = useRef(null)
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] })
   const heroY = useTransform(scrollYProgress, [0, 1], ['0%', '20%'])
@@ -130,7 +130,7 @@ function NarrativeSection({ sec, index }) {
 
   return (
     <div className="bg-white font-sans selection:bg-[#D4AF37] selection:text-white overflow-x-hidden">
-      
+
 
       {/* ── Narrative Sections ── */}
       {narratives.map((sec, i) => (
@@ -204,7 +204,7 @@ function NarrativeSection({ sec, index }) {
       </section>
 
       {/* ── Closing Statement (Dark) ── */}
-      <section className="w-full min-h-screen flex items-center justify-center relative overflow-hidden" style={{ background: '#0D0D0D' }}>
+      <section className="w-full h-[20vh] bg-black flex items-center justify-center relative overflow-hidden">
 
         {/* Background texture: subtle gold diagonal lines */}
         <div
@@ -232,7 +232,7 @@ function NarrativeSection({ sec, index }) {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true }}
-          className="relative z-10 text-center px-6 max-w-4xl mx-auto py-24"
+          className="relative z-10 px-6 max-w-4xl mx-auto py-24"
         >
           {/* Gold rule */}
           <motion.div
@@ -244,19 +244,14 @@ function NarrativeSection({ sec, index }) {
             style={{ background: GOLD, transformOrigin: 'left' }}
           />
 
-          <p className="text-sm text-gray-500 tracking-[0.3em] uppercase font-light mb-6">Our Identity</p>
+          <p className="text-sm text-white tracking-[0.3em] uppercase font-light mb-6 gold-text">Our Identity</p>
 
           <h2
-            className="text-3xl md:text-5xl font-light leading-relaxed tracking-tight text-white mb-10"
+            className="text-sm font-light leading-relaxed tracking-tight text-white mb-10"
             style={{ fontFamily: 'PT Serif, serif' }}
           >
-            IndusArtha Financial Services Private Limited,{' '}
-            <br className="hidden md:block" />
-            known as{' '}
-            <span className="font-semibold gold-text">TieVista</span>
-            {' '}— designed to simplify{' '}
-            <span className="text-white/60">complexity</span> and provide{' '}
-            <span className="text-white/60">clear oversight.</span>
+            IndusArtha Financial Services Private Limited,
+            known as TieVista — designed to simplify complexity and provide clear oversight.
           </h2>
 
           <motion.div

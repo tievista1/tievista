@@ -1,7 +1,9 @@
 import React, { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { Globe, Landmark, ArrowRight, ShieldCheck } from 'lucide-react'
+import { Globe, Landmark, ArrowRight, ShieldCheck, Building2,Map } from 'lucide-react'
 
+
+/* ----- BusinessToBusiness -> TieVistaPatners -> Allied Services ----- */
 /* ─── Shared design tokens ─── */
 const GOLD = '#D4AF37'
 
@@ -17,8 +19,8 @@ const PARTNERSHIPS = [
     {
         icon: Globe,
         label: '',
-        heading: 'Global Residency',
-        accent: 'Support Desk',
+        heading: 'Global Mobility &',
+        accent: 'Residency Insights',
         body1: 'For many families and entrepreneurs, wealth today is inseparable from global presence and lifestyle flexibility. TieVista facilitates access to high-level information on global mobility and residency frameworks through carefully selected third-party specialists, helping clients gain perspective on long-term living options, residency environments, and international mobility considerations for themselves and their families. TieVista’s role is limited to coordination and information facilitation and does not extend to immigration, legal, or tax advice.',
         body2: 'These conversations are integrated thoughtfully and, recognising that international living decisions often coincide with business cycles, liquidity events, and multi-generational objectives. By curating access to relevant professionals and simplifying the flow of information, TieVista helps clients navigate complex cross-border considerations with greater clarity and discretion, while clients retain full control over decisions',
         points: [
@@ -31,15 +33,43 @@ const PARTNERSHIPS = [
     {
         icon: Landmark,
         label: '',
-        heading: 'Global Banking',
-        accent: 'Support Desk',
+        heading: 'International Banking',
+        accent: 'Access',
         body1: 'TieVista collaborates with select international banking institutions to facilitate access to information and introductions related to cross-border banking and multi-currency account frameworks for clients with global business or lifestyle needs.',
         body2: 'TieVista’s role is limited to coordination and information facilitation, while all banking assessments, onboarding, documentation, and services are provided directly by the licensed banking institution within its applicable regulatory framework.',
         points: [
             
         ],
         note: 'TieVista\'s role is limited to coordination and information facilitation. All banking assessments, onboarding, documentation, and services are provided directly by the licensed banking institution.',
-        img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1400',
+        img: 'https://plus.unsplash.com/premium_photo-1661757762481-676c2690d8ac?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8QmFua2luZ3xlbnwwfHwwfHx8MA%3D%3D',
+        reverse: true,
+    },
+    {
+        icon: Building2,
+        label: '',
+        heading: 'Real Estate Portfolio',
+        accent: 'Access',
+        body1: 'Real estate continues to play an important role in the long-term portfolios of many investors. TieVista facilitates client access to both physical and financial real estate opportunities, enabling diversified participation in the asset class. Where relevant, we help clients explore opportunities through institutional platforms, curated investment avenues, and regulated financial products linked to real estate, while helping them evaluate these exposures within the broader context of their overall portfolio.',
+        body2: 'Our approach is guided by a focus on portfolio diversification, liquidity considerations, and long-term wealth preservation. By situating real estate exposure within a broader asset allocation framework, we help clients consider how such investments may complement their existing financial holdings and long-term objectives. Through our network and market engagement, clients may gain access to select opportunities and institutional platforms that may not always be readily available to individual investors. Periodic portfolio reviews also help ensure that real estate exposures remain aligned with the client’s evolving financial circumstances, investment horizon, and overall wealth strategy.',
+        points: [
+            
+        ],
+        note: 'TieVista does not provide investment, tax, or legal advice. All real estate opportunities are subject to due diligence, regulatory requirements, and the terms of the respective investment providers. Clients should consult with their own legal and tax advisors before making any investment decisions.',
+        img: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1546&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        reverse: false,
+    },
+    {
+        icon: Map,
+        label: '',
+        heading: 'TieVista’s overseas',
+        accent: 'Structuring solutions',
+        body1: 'For clients with global ambitions, TieVista may facilitate introductions to trusted professional partners across jurisdictions who assist with the establishment of overseas offices or international business presence.',
+        body2: 'For entrepreneurs and globally active families, this may involve connecting clients with the relevant legal, regulatory, and advisory ecosystem that supports cross-border expansion. Such discussions are considered in the broader context of the client’s global business interests and overall wealth objectives, while the underlying advisory services are provided by independent professional firms.',
+        points: [
+            
+        ],
+        note: 'TieVista’s role is limited to coordination and information facilitation. All advisory services are provided by independent professional firms.',
+        img: 'https://images.unsplash.com/photo-1614107151491-6876eecbff89?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         reverse: true,
     },
 ]
@@ -198,8 +228,8 @@ function PartnershipSection({ p, index }) {
                         className="text-6xl md:text-[7rem] text-white tracking-tighter leading-[0.9] mb-8"
                         style={{ fontFamily: 'PT Serif, serif' }}
                     >
-                        TieVista{' '}
-                        <span className="font-light gold-text" >Partners</span> {/*style={{ color: GOLD }} italic*/}
+                        Allied{' '}
+                        <span className="font-light gold-text" >Services</span> {/*style={{ color: GOLD }} italic*/}
                     </motion.h1>
 
                     <motion.p
