@@ -223,7 +223,7 @@ const AboutUs = () => {
             className="text-[18vw] font-bold tracking-tighter leading-none opacity-[0.025] text-white gold-text"
             style={{ fontFamily: 'PT Serif, serif' }}
           >
-            TieVista
+            Tievista
           </span>
         </div>
 
@@ -251,7 +251,7 @@ const AboutUs = () => {
             style={{ fontFamily: 'PT Serif, serif' }}
           >
             IndusArtha Financial Services Private Limited,
-            known as TieVista — designed to simplify complexity and provide clear oversight.
+            known as Tievista - designed to simplify complexity and provide clear oversight.
           </h2>
 
           <motion.div

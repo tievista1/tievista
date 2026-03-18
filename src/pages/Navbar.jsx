@@ -226,24 +226,24 @@ export const Navbar = () => {
                         { label: 'Private & Alternative Investments', href: '/investmentuniverse#Private' },
                     ]
                 },
-                {
-                    label: 'Insights',
-                    href: '/insights',
-                    hasDropdown: true,
-                    dropdownItems: [
-                        { label: 'Videos', href: '/insights/videos' },
-                        { label: 'Blogs', href: '/insights/blogs' },
-                    ]
-                },
+                // {
+                //     label: 'Insights',
+                //     href: '/insights',
+                //     hasDropdown: true,
+                //     dropdownItems: [
+                //         { label: 'Videos', href: '/insights/videos' },
+                //         { label: 'Blogs', href: '/insights/blogs' },
+                //     ]
+                // },
                 { label: 'Contact Us', href: '/contact' },
-                {
-                    label: 'Invest Now',
-                    href: '',
-                    hasDropdown: true,
-                    dropdownItems: [
-                        { label: 'Mutual Funds', href: 'https://app.tievista.com/wealthspectrum/portal/sign-in' }
-                    ],
-                },
+                // {
+                //     label: 'Invest Now',
+                //     href: '',
+                //     hasDropdown: true,
+                //     dropdownItems: [
+                //         { label: 'Mutual Funds', href: 'https://app.tievista.com/wealthspectrum/portal/sign-in' }
+                //     ],
+                // },
             ],
         },
     ], []);

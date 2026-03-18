@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Globe, Database, Layers, TrendingUp, ArrowRight, Zap } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Link } from 'react-router-dom'
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -196,9 +197,11 @@ const CategorySection = ({ cat, index }) => {
                     <h2 className="text-6xl md:text-7xl font-bold mb-12 leading-[0.9] tracking-tighter text-gray-900 font-serif">
                         Future-proof Your <br /> <span className="gold-text italic">Legacy.</span>
                     </h2>
-                    <button className="bg-black text-white px-16 py-6 rounded-full font-bold tracking-[0.2em] uppercase text-sm hover:bg-[#D4AF37] transition-all shadow-2xl hover:shadow-[#D4AF37]/40">
-                        Connect With wealth manager
-                    </button>
+                    <Link to="/contact">
+                        <button className="bg-black text-white px-16 py-6 rounded-full font-bold tracking-[0.2em] uppercase text-sm hover:bg-[#D4AF37] transition-all shadow-2xl hover:shadow-[#D4AF37]/40">
+                            Connect With wealth manager
+                        </button>
+                    </Link>
                 </motion.div>
             </section>
         </div>

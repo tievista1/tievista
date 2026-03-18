@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { Globe, Database, Layers, TrendingUp, ArrowRight, Zap } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Link } from 'react-router-dom'
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -25,7 +26,7 @@ const ASSET_CATEGORIES = [
         subtitle: "",
         description: "At TieVista, we build enduring financial success through disciplined, equity-centric investment strategies. Our approach is rooted in long-term growth, backed by rigorous research and thoughtful risk management to generate capital appreciation globally.",
         includes: ["Public Equities", "Equity Mutual Funds (including ELSS)", "Equity PMS", "Equity ETFs"],
-        image: "https://c.stocksy.com/a/4L0600/z9/1431274.jpg",
+        image: "https://d2hpp4ok8w7j4q.cloudfront.net/assets/Investment-strategies-for-beginners.jpg",
         icon: TrendingUp,
         reverse: false
     },
@@ -36,7 +37,7 @@ const ASSET_CATEGORIES = [
         subtitle: "",
         description: "We understand that protecting hard-earned capital is as essential as growth. Our Income & Capital Preservation strategies prioritize safety and steady income generation, crafted for investors who seek predictable cash flows and shield their portfolios from undue volatility.",
         includes: ["Debt Mutual Funds", "Debt PMS", "Physical Bonds (Govt, Corp, Credit)", "Fixed Income ETFs"],
-        image: "https://images.unsplash.com/photo-1554774853-719586f82d77?auto=format&fit=crop&q=80&w=2000",
+        image: "https://res.cloudinary.com/dr1u4plse/image/upload/v1773829078/IncomePreservation_u3xd62.png",
         icon: Database,
         reverse: true
     },
@@ -265,12 +266,14 @@ const CategorySection = ({ cat, index }) => {
                     <Zap className="w-[800px] h-[800px]" />
                 </div>
                 <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} className="text-center z-10 px-6">
-                    <h2 className="text-6xl md:text-9xl font-bold mb-12 leading-[0.9] tracking-tighter text-gray-900 font-serif">
+                    <h2 className="text-6xl md:text-7xl font-bold mb-12 leading-[0.9] tracking-tighter text-gray-900 font-serif">
                         Future-proof Your <br /> <span className="gold-text italic">Legacy.</span>
                     </h2>
+                    <Link to="/contact">
                     <button className="bg-black text-white px-16 py-6 rounded-full font-bold tracking-[0.2em] uppercase text-sm hover:bg-[#D4AF37] transition-all shadow-2xl hover:shadow-[#D4AF37]/40">
                         Connect With wealth manager
                     </button>
+                    </Link>
                 </motion.div>
             </section>
         </div>

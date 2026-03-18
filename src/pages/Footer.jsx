@@ -65,14 +65,13 @@ export const Footer = () => {
               </h4>
               <ul className="space-y-4 font-light text-white">
                 <li><Link to="/investmentuniverse" className="hover:text-white transition-colors">Investment Universe</Link></li>
-                <li><Link to="/b2b" className="hover:text-white transition-colors">TieVista Partnership</Link></li>
-                <li><Link to="/insights" className="hover:text-white transition-colors">Insights</Link></li>
+                <li><Link to="/b2b" className="hover:text-white transition-colors">Allied Services</Link></li>
+                {/* <li><Link to="/insights" className="hover:text-white transition-colors">Insights</Link></li> */}
                 <li><Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
               </ul>
             </div>
 
           </div>
-
         </div>
 
         {/* Divider */}
@@ -87,11 +86,11 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-[12px] text-white font-light pt-8 border-t border-gray-900">
-          <p>© 2026 Tievista. All rights reserved.</p>
+          <p>© 2025 Tievista. All rights reserved.</p>
           <div className="flex gap-8">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
-            <a href="#" className="hover:text-white transition-colors">Disclosure</a>
+            <Link to="/privacypolicy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
+            
           </div>
         </div>
 

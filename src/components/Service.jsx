@@ -104,7 +104,7 @@ const SERVICES = [
             'Support for governance & succession conversations',
             'Coordination with external professionals on estate structures',
         ],
-        img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=1400',
+        img: 'https://www.oak.group/media/pdjdgwc1/jon-donald-tl.png?width=800&height=500&quality=80&mode=crop&v=1dbeb5c0ea981b0',
         reverse: false,
     },
     {
