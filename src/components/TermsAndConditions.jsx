@@ -62,7 +62,7 @@ const TermsAndConditions = () => {
             </div>
             <div className="pl-14 space-y-4 text-gray-600 font-light leading-relaxed">
               <p>As used herein, “You” or “Your” refers to you individually and any entity on whose behalf you access or use the Website.</p>
-              <p>All references to “IndusArtha,”, “Tievista”, “We,” “Us,” or “Our” refer to IndusArtha Financial Services Pvt. Ltd.</p>
+              <p>All references to “IndusArtha”, “Tievista Global Private Wealth”, “We”, “Us”, or “Our” refer to IndusArtha Financial Services Pvt. Ltd.</p>
               <p>The Website is operated by IndusArtha Financial Services Pvt. Ltd.</p>
             </div>
           </motion.section>

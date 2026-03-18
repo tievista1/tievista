@@ -30,7 +30,7 @@ const PrivacyPolicy = () => {
             Privacy <span className="gold-text">Policy</span>
           </h1>
           <p className="text-xl text-gray-600 font-light leading-relaxed max-w-3xl">
-            IndusArtha Financial Services Pvt. Ltd., its subsidiaries and affiliates (collectively, “IndusArtha,” “Tievista,” “we,” “us,” or “our”) are committed to protecting the privacy and confidentiality of the information entrusted to us.
+            IndusArtha Financial Services Pvt. Ltd., its subsidiaries and affiliates (collectively, “IndusArtha”, “Tievista Global Private Wealth”, “we”, “us”, or “our”) are committed to protecting the privacy and confidentiality of the information entrusted to us.
           </p>
         </motion.div>
 
