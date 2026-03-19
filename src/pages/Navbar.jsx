@@ -212,6 +212,14 @@ export const Navbar = () => {
             ],
         },
         {
+            label: 'TieVista Partners',
+            href: '/partners',
+            hasDropdown: false,
+            dropdownItems: [
+                { label: '', href: '' },
+            ],
+        },
+        {
             label: 'More...',
             href: '#',
             hasDropdown: true,
