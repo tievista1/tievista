@@ -36,7 +36,7 @@ const TermsAndConditions = () => {
             Terms of <span className="gold-text">Use</span>
           </h1>
           <p className="text-xl text-gray-600 font-light leading-relaxed max-w-3xl">
-            IndusArtha Financial Services Pvt. Ltd., its subsidiaries and affiliates (collectively, “IndusArtha”,“Tievista”,  “we”, “us” or “our”), require all visitors to this website and any other websites owned, operated, or controlled by IndusArtha to adhere to the following Terms of Use.
+            IndusArtha Financial Services Pvt. Ltd., its subsidiaries and affiliates (collectively, “IndusArtha”,“TieVista Global Private Wealth”,  “we”, “us” or “our”), require all visitors to this website and any other websites owned, operated, or controlled by IndusArtha to adhere to the following Terms of Use.
           </p>
         </motion.div>
 
@@ -62,7 +62,7 @@ const TermsAndConditions = () => {
             </div>
             <div className="pl-14 space-y-4 text-gray-600 font-light leading-relaxed">
               <p>As used herein, “You” or “Your” refers to you individually and any entity on whose behalf you access or use the Website.</p>
-              <p>All references to “IndusArtha”, “Tievista Global Private Wealth”, “We”, “Us”, or “Our” refer to IndusArtha Financial Services Pvt. Ltd.</p>
+              <p>All references to “IndusArtha”, “TieVista Global Private Wealth”, “We”, “Us”, or “Our” refer to IndusArtha Financial Services Pvt. Ltd.</p>
               <p>The Website is operated by IndusArtha Financial Services Pvt. Ltd.</p>
             </div>
           </motion.section>

@@ -251,7 +251,7 @@ const AboutUs = () => {
             style={{ fontFamily: 'PT Serif, serif' }}
           >
             IndusArtha Financial Services Private Limited,
-            known as Tievista - designed to simplify complexity and provide clear oversight.
+            known as TieVista - designed to simplify complexity and provide clear oversight.
           </h2>
 
           <motion.div

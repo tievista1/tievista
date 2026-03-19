@@ -61,7 +61,7 @@ const PARTNERSHIPS = [
     {
         icon: Map,
         label: '',
-        heading: 'Tievista’s overseas',
+        heading: 'TieVista’s overseas',
         accent: 'Structuring solutions',
         body1: 'For clients with global ambitions, TieVista may facilitate introductions to trusted professional partners across jurisdictions who assist with the establishment of overseas offices or international business presence.',
         body2: 'For entrepreneurs and globally active families, this may involve connecting clients with the relevant legal, regulatory, and advisory ecosystem that supports cross-border expansion. Such discussions are considered in the broader context of the client’s global business interests and overall wealth objectives, while the underlying advisory services are provided by independent professional firms.',

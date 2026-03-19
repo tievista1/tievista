@@ -86,7 +86,7 @@ export const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-[12px] text-white font-light pt-8 border-t border-gray-900">
-          <p>© 2025 Tievista. All rights reserved.</p>
+          <p>© 2025 TieVista. All rights reserved.</p>
           <div className="flex gap-8">
             <Link to="/privacypolicy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
