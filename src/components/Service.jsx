@@ -56,7 +56,7 @@ const SERVICES = [
             'Alignment with bankers, trustees and other professionals',
             'Holistic oversight across all financial relationships',
         ],
-        img: 'https://res.cloudinary.com/dr1u4plse/image/upload/v1773731561/Wealth_tz4ro1.png',
+        img: 'https://res.cloudinary.com/dr1u4plse/image/upload/v1773982108/WealthST_miw9uk.png',
         reverse: true,
     },
     {

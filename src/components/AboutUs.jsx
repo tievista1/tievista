@@ -29,7 +29,7 @@ const narratives = [
     heading: 'Insights into',
     accent: 'Action.',
     body: 'Our engagement begins with a deep understanding of each client\'s context, personal and family objectives, risk preferences, and financial complexity. These insights are translated into a financial risk analysis, compiled into a single page which serves as the foundation for informed decision-making.',
-    img: 'https://images.unsplash.com/flagged/photo-1576485436509-a7d286952b65?q=80&w=1400&auto=format&fit=crop',
+    img: 'https://images.unsplash.com/photo-1507668077129-56e32842fceb?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     reverse: true,
   },
   {
