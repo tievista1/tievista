@@ -104,7 +104,7 @@ const SERVICES = [
             'Support for governance & succession conversations',
             'Coordination with external professionals on estate structures',
         ],
-        img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774253357/Family_ydpimk.png',
+        img: 'https://media.istockphoto.com/id/1851547501/photo/will-lawyer-or-hands-of-couple-with-contract-to-sign-application-or-document-for-life.jpg?s=612x612&w=0&k=20&c=BCiOwQQoEy5rDPfEn0617CZ-JmGbznRUZyhYUE425jI=',
         reverse: false,
     },
     {
