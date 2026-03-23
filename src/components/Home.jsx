@@ -158,7 +158,7 @@ const Home = () => {
                             src="https://res.cloudinary.com/dxlysvpud/video/upload/w_1920,h_1080,c_fill,q_60,f_auto/v1773212606/TieVistaIntroNew_hzve1t.mp4"
                         />
                     </video> */}
-                    <img className='absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-700' src="/Landingpage.png" alt="" />
+                    <img className='absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-700' src="https://res.cloudinary.com/dck5jgfix/image/upload/v1774247093/Landingpage_ixd1ea.png" alt="" />
                     {/* <div className='flex justify-center items-center absolute inset-0 z-20 w-full h-full p-4 py-20 md:p-10 lg:p-20 bg-transparent'>
                         <div className='h-full w-full bg-amber-50/60 rounded-3xl md:rounded-4xl'></div>
                     </div> */}

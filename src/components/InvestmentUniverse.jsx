@@ -26,7 +26,7 @@ const ASSET_CATEGORIES = [
         subtitle: "",
         description: "At TieVista, we build enduring financial success through disciplined, equity-centric investment strategies. Our approach is rooted in long-term growth, backed by rigorous research and thoughtful risk management to generate capital appreciation globally.",
         includes: ["Public Equities", "Equity Mutual Funds (including ELSS)", "Equity PMS", "Equity ETFs"],
-        image: "https://d2hpp4ok8w7j4q.cloudfront.net/assets/Investment-strategies-for-beginners.jpg",
+        image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1774251143/Growth_Assets_pwk5zt.png",
         icon: TrendingUp,
         reverse: false
     },
@@ -37,7 +37,7 @@ const ASSET_CATEGORIES = [
         subtitle: "",
         description: "We understand that protecting hard-earned capital is as essential as growth. Our Income & Capital Preservation strategies prioritize safety and steady income generation, crafted for investors who seek predictable cash flows and shield their portfolios from undue volatility.",
         includes: ["Debt Mutual Funds", "Debt PMS", "Physical Bonds (Govt, Corp, Credit)", "Fixed Income ETFs"],
-        image: "https://res.cloudinary.com/dr1u4plse/image/upload/v1773829078/IncomePreservation_u3xd62.png",
+        image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1774253143/TievistaReserve_vkbvdm.png",
         icon: Database,
         reverse: true
     },
@@ -48,7 +48,7 @@ const ASSET_CATEGORIES = [
         subtitle: "",
         description: "Sophisticated portfolios blend traditional and alternative investments to capture broad market potential while uncovering unique value. We provide access to differentiated opportunities that go beyond conventional public markets to enhance returns and reduce correlation.",
         includes: ["AIFs (Category I, II & III)", "Private Equity & Venture Capital", "Real Estate Opportunities", "Commodities"],
-        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000",
+        image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1774251622/Private_Alternative_Investments_yygtg2.png",
         icon: Layers,
         reverse: false
     }
@@ -191,7 +191,7 @@ const CategorySection = ({ cat, index }) => {
             {/* Hero Section */}
             <section className="h-[90vh] w-full relative flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
-                    <img className="h-full w-full object-cover scale-105" src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/igbn1W_zBxPk/v1/-1x-1.webp" alt="Hero" />
+                    <img className="h-full w-full object-cover scale-105" src="https://res.cloudinary.com/dck5jgfix/image/upload/v1774250145/Global_GIFT_City_Solutions_BG_rndi8p.png" alt="Hero" />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70" />
                 </div>
 

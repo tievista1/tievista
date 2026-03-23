@@ -40,7 +40,7 @@ const SERVICES = [
             'Cross-jurisdictional investment access',
             'Periodic portfolio reviews per evolving goals',
         ],
-        img: 'https://wallpapercave.com/wp/wp8938157.jpg',
+        img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774247982/InvestmentFacilition_fnao70.png',
         reverse: false,
     },
     {
@@ -56,7 +56,7 @@ const SERVICES = [
             'Alignment with bankers, trustees and other professionals',
             'Holistic oversight across all financial relationships',
         ],
-        img: 'https://res.cloudinary.com/dr1u4plse/image/upload/v1773982108/WealthST_miw9uk.png',
+        img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774248111/wealthStruct_sfzsyw.png',
         reverse: true,
     },
     {
@@ -72,7 +72,7 @@ const SERVICES = [
             'Technology-enabled dashboards focused on simplicity',
             'Informed decision-making tools for the whole family',
         ],
-        img: 'https://res.cloudinary.com/dxlysvpud/image/upload/v1772785390/D3_djmo1a.png',
+        img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774248212/Consolidating_Reporting_x5ztle.png',
         reverse: false,
     },
     {
@@ -88,7 +88,7 @@ const SERVICES = [
             'Post-liquidity deployment planning & assistance',
             'Coordination during exits, capital raises, or transitions',
         ],
-        img: 'https://images.unsplash.com/photo-1733040460584-fd693866d0a2?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YnVpbGRpaW5nfGVufDB8fDB8fHww',
+        img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774248322/Entrepreneur-Focused_Support_whweu4.png',
         reverse: true,
     },
     {
@@ -104,7 +104,7 @@ const SERVICES = [
             'Support for governance & succession conversations',
             'Coordination with external professionals on estate structures',
         ],
-        img: 'https://www.oak.group/media/pdjdgwc1/jon-donald-tl.png?width=800&height=500&quality=80&mode=crop&v=1dbeb5c0ea981b0',
+        img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774253357/Family_ydpimk.png',
         reverse: false,
     },
     {

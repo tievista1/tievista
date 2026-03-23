@@ -20,7 +20,7 @@ const narratives = [
     heading: 'A Structured',
     accent: 'Approach.',
     body: 'TieVista is a Private Wealth management organisation serving individuals and families with wealth spanning geographies, asset classes, and generations. We work with UHNIs, HNIs, NRIs, family offices, and entrepreneurs, offering a structured and thoughtful approach to building, managing, and overseeing long-term wealth.',
-    img: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&q=80&w=1400',
+    img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774253165/A_Structured_Approach_cgqbfw.png',
     reverse: false,
   },
   {
@@ -29,7 +29,7 @@ const narratives = [
     heading: 'Insights into',
     accent: 'Action.',
     body: 'Our engagement begins with a deep understanding of each client\'s context, personal and family objectives, risk preferences, and financial complexity. These insights are translated into a financial risk analysis, compiled into a single page which serves as the foundation for informed decision-making.',
-    img: 'https://images.unsplash.com/photo-1507668077129-56e32842fceb?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774246792/InsightsIntoActions_q24uay.png',
     reverse: true,
   },
   {
@@ -38,7 +38,7 @@ const narratives = [
     heading: 'Seasoned',
     accent: 'Excellence.',
     body: 'TieVista brings experience and expertise of seasoned professionals, institutional access, and coordinated execution. We curate investment opportunities across markets, including Portfolio Management Services, Alternate Investment Funds, and GIFT City products in partnership with AMCs in IFSC.',
-    img: 'https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20%281%20of%201%29-5.jpg?q=80&w=1400&auto=format&fit=crop',
+    img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774247758/SeasonalEx_nrlnmh.png',
     reverse: false,
   },
 ]

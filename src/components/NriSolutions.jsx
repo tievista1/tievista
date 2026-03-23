@@ -36,7 +36,7 @@ const SERVICES = [
             'Currency considerations & India allocation within global portfolio',
             'Growth vs. income strategies based on repatriation needs',
         ],
-        img: 'https://res.cloudinary.com/dr1u4plse/image/upload/v1773740483/GloabeMutual_hf6pzd.png',
+        img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774249671/Mutual_Fund_Access_for_NRIs_zw0osx.png',
         reverse: false,
     },
     {
@@ -52,7 +52,7 @@ const SERVICES = [
             'KYC (initial & ongoing), FATCA / CRS declarations',
             'Power of Attorney (POA) investment setups',
         ],
-        img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=1400',
+        img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774249834/NRI_Portfolio_Account_Enablement_p5rnyb.png',
         reverse: true,
     },
     {
@@ -68,7 +68,7 @@ const SERVICES = [
             "Funding children's education & family commitments",
             'Inter generational asset building with periodic reviews',
         ],
-        img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1400',
+        img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774249911/Goal-Based_India_Allocation_efzpp2.png',
         reverse: false,
     },
     {
@@ -84,7 +84,7 @@ const SERVICES = [
             'TDS implications & cash flow planning',
             'Awareness of residency linked tax position changes',
         ],
-        img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1400',
+        img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774250009/Coordinated_Tax_Awareness_kbvgin.png',
         reverse: true,
     },
     {
@@ -100,7 +100,7 @@ const SERVICES = [
             'Consolidated reporting for overseas residents',
             'Portfolio clarity across time zones & family decision-makers',
         ],
-        img: 'https://res.cloudinary.com/dxlysvpud/image/upload/v1772785390/D3_djmo1a.png',
+        img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774248212/Consolidating_Reporting_x5ztle.png',
         reverse: false,
     },
 ]
@@ -227,7 +227,7 @@ const NriSolutions = () => {
                 <motion.div style={{ y: heroY }} className="absolute inset-0 z-0 will-change-transform">
                     <img
                         className="h-full w-full object-cover"
-                        src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&q=80&w=2000"
+                        src="https://res.cloudinary.com/dck5jgfix/image/upload/v1774249569/NRI_Solutions_BG_cr721a.png"
                         alt="NRI Solutions"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80" />

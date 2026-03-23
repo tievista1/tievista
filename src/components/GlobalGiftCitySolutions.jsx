@@ -26,7 +26,7 @@ const ASSET_CATEGORIES = [
         subtitle: "",
         description: "In an interconnected world, capital is not confined by geography. We provide seamless access to global markets and India’s premier gateway GIFT City offering strategic diversification and structural efficiency for globally minded families and institutions.",
         includes: ["GIFT City PMS & AIFs", "International Mutual Funds", "Global Equities", "Global ETFs"],
-        image: "https://res.cloudinary.com/dr1u4plse/image/upload/v1773729478/Currency_z4ldbi.png",
+        image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1774250216/Global_GIFT_City_Solutions_b1ntu3.png",
         icon: Globe,
         reverse: true
     }
@@ -165,7 +165,7 @@ const CategorySection = ({ cat, index }) => {
             {/* Hero Section */}
             <section className="h-[90vh] w-full relative flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
-                    <img className="h-full w-full object-cover scale-105" src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/igbn1W_zBxPk/v1/-1x-1.webp" alt="Hero" />
+                    <img className="h-full w-full object-cover scale-105" src="https://res.cloudinary.com/dck5jgfix/image/upload/v1774250145/Global_GIFT_City_Solutions_BG_rndi8p.png" alt="Hero" />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70" />
                 </div>
 

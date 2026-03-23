@@ -27,7 +27,7 @@ const PARTNERSHIPS = [
             
         ],
         note: 'TieVista\'s role is limited to coordination and information facilitation and does not extend to immigration, legal, or tax advice.',
-        img: 'https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=1400',
+        img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774249122/Global_Mobility_Residency_Insights_rtc1bk.png',
         reverse: false,
     },
     {
@@ -41,7 +41,7 @@ const PARTNERSHIPS = [
             
         ],
         note: 'TieVista\'s role is limited to coordination and information facilitation. All banking assessments, onboarding, documentation, and services are provided directly by the licensed banking institution.',
-        img: 'https://plus.unsplash.com/premium_photo-1661757762481-676c2690d8ac?w=1600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8QmFua2luZ3xlbnwwfHwwfHx8MA%3D%3D',
+        img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774249224/International_Banking_Access_l20von.png',
         reverse: true,
     },
     {
@@ -55,7 +55,7 @@ const PARTNERSHIPS = [
             
         ],
         note: 'TieVista does not provide investment, tax, or legal advice. All real estate opportunities are subject to due diligence, regulatory requirements, and the terms of the respective investment providers. Clients should consult with their own legal and tax advisors before making any investment decisions.',
-        img: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1546&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774249339/Real_Estate_Portfolio_Access_ul9xfh.png',
         reverse: false,
     },
     {
@@ -69,7 +69,7 @@ const PARTNERSHIPS = [
             
         ],
         note: 'Tievista’s role is limited to coordination and information facilitation. All advisory services are provided by independent professional firms.',
-        img: 'https://images.unsplash.com/photo-1614107151491-6876eecbff89?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774249442/TieVista_s_overseas_Structuring_solutions_x8i9mh.png',
         reverse: true,
     },
 ]
@@ -198,7 +198,7 @@ function PartnershipSection({ p, index }) {
                 <motion.div style={{ y: heroY }} className="absolute inset-0 z-0 will-change-transform">
                     <img
                         className="h-full w-full object-cover"
-                        src="https://images.pexels.com/photos/20409388/pexels-photo-20409388.jpeg"
+                        src="https://res.cloudinary.com/dck5jgfix/image/upload/v1774249013/Allied_Services_BG_yc3tmm.png"
                         alt="B2B Partnerships"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/45 to-black/80" />
