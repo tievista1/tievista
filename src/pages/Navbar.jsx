@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo, useRef, useEffect } from 'react';
 import { ChevronDown, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from '/TieVistaLogo.png';
@@ -21,17 +21,35 @@ const MOBILE_MENU_VARIANTS = {
 // ─── Desktop Dropdown ───────────────────────────────────────────────────────
 const DesktopDropdown = ({ items, depth = 0 }) => {
     const [hoveredItem, setHoveredItem] = useState(null);
+    const ref = useRef(null);
+    const [flipLeft, setFlipLeft] = useState(false);
+
+    useEffect(() => {
+        if (ref.current && depth > 0) {
+            const rect = ref.current.getBoundingClientRect();
+            if (rect.right > window.innerWidth) {
+                setFlipLeft(true);
+            }
+        }
+    }, [depth]);
 
     return (
-        <div 
-            className={`absolute bg-white shadow-xl border border-gray-100 rounded-sm z-50 ${depth === 0 ? 'left-0 mt-0 w-64' : 'left-full top-0 w-64'}`}
+        <div
+            ref={ref}
+            className={`absolute bg-white shadow-xl border border-gray-100 rounded-sm z-50 ${
+                depth === 0
+                    ? 'left-0 mt-0 w-64'
+                    : flipLeft
+                        ? 'right-full top-0 w-64'
+                        : 'left-full top-0 w-64'
+            }`}
             onMouseLeave={() => setHoveredItem(null)}
         >
             {items.map((item, i) => (
-                <div 
-                    key={i} 
+                <div
+                    key={i}
                     className="relative group/sub"
-                    onMouseEnter={() => item.hasDropdown && setHoveredItem(item.label)}
+                    onMouseEnter={() => setHoveredItem(item.hasDropdown ? item.label : null)}
                 >
                     <Link
                         to={item.href}
@@ -234,24 +252,7 @@ export const Navbar = () => {
                         { label: 'Private & Alternative Investments', href: '/investmentuniverse#Private' },
                     ]
                 },
-                // {
-                //     label: 'Insights',
-                //     href: '/insights',
-                //     hasDropdown: true,
-                //     dropdownItems: [
-                //         { label: 'Videos', href: '/insights/videos' },
-                //         { label: 'Blogs', href: '/insights/blogs' },
-                //     ]
-                // },
                 { label: 'Contact Us', href: '/contact' },
-                // {
-                //     label: 'Invest Now',
-                //     href: '',
-                //     hasDropdown: true,
-                //     dropdownItems: [
-                //         { label: 'Mutual Funds', href: 'https://app.tievista.com/wealthspectrum/portal/sign-in' }
-                //     ],
-                // },
             ],
         },
     ], []);
@@ -405,6 +406,3 @@ export const Navbar = () => {
         </div>
     );
 };
-
-
-
