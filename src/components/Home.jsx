@@ -12,37 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 const Home = () => {
-    useEffect(() => {
-        // Force show page after 3s on slow/mobile connections
-        const timeout = setTimeout(() => {
-            setVideoLoaded(true);
-        }, 3000);
 
-        return () => clearTimeout(timeout);
-    }, []);
-
-    
-    const goldColor = '#D4AF37';
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const scrollContainerRef = useRef(null);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (scrollContainerRef.current) {
-                const container = scrollContainerRef.current;
-                const nextIndex = (currentIndex + 1) % testimonials.length;
-                const scrollAmount = nextIndex * (container.offsetWidth / (window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1));
-
-                container.scrollTo({
-                    left: scrollAmount,
-                    behavior: 'smooth'
-                });
-                setCurrentIndex(nextIndex);
-            }
-        }, 4000);
-
-        return () => clearInterval(interval);
-    }, [currentIndex, testimonials.length]);
 
     const containerVariants = {
         hidden: { opacity: 0, y: 20 },
