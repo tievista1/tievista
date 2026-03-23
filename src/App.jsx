@@ -31,7 +31,7 @@ function App() {
         className="flex flex-col items-center gap-6"
       >
         <div className="h-30 w-30">
-          <img src={icon} className="h-full w-full animate-pulse" alt="Icon" />
+          <img src={icon} className="h-full w-full animate-pulse" alt="Icon" loading='lazy' />
         </div>
 
       </motion.div>

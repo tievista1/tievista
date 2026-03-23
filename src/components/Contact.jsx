@@ -91,6 +91,7 @@ Please respond to this enquiry as soon as possible.
         <div className="absolute inset-0 z-0">
           <img
             src="https://res.cloudinary.com/dck5jgfix/image/upload/v1774251622/Private_Alternative_Investments_yygtg2.png"
+            loading='lazy'
             alt="Contact TieVista"
             className="w-full h-full object-cover"
           />

@@ -76,6 +76,7 @@ function NarrativeSection({ sec, index }) {
               src={img}
               alt={heading}
               className="w-full h-full object-cover"
+              loading='lazy'
             />
             {/* Gold corner accent */}
             <div

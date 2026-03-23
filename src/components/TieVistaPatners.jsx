@@ -85,7 +85,8 @@ const TieVistaPatners = () => {
           <img 
             className="h-full w-full object-cover scale-105" 
             src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=2000" 
-            alt="Partners Hero" 
+            alt="Partners Hero"
+            loading='lazy'
           />
           <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/40 to-black/80" />
         </div>

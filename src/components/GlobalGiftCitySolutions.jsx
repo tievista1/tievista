@@ -59,6 +59,7 @@ const CategorySection = ({ cat, index }) => {
                             src={cat.image}
                             alt={cat.title}
                             className="w-full h-full object-cover"
+                            loading='lazy'
                         />
                         {/* Gold corner accent */}
                         <div

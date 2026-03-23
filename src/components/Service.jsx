@@ -149,6 +149,7 @@ function ServiceSection({ svc, index }) {
                             src={img}
                             alt={heading}
                             className="w-full h-full object-cover"
+                            loading='lazy'
                         />
                         <div
                             className="absolute bottom-0 left-0 w-16 h-16 opacity-80"
