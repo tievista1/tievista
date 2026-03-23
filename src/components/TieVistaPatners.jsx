@@ -14,7 +14,7 @@ const fadeUp = (delay = 0) => ({
 
 const faqData = [
   {
-    question: "What is the vision behind the TieVista advisor platform?",
+    question: "What is the vision behind the TieVista patners platform?",
     answer: "TieVista has been conceived as a platform where independent Partners can operate with the intellectual depth, institutional discipline, and technological infrastructure typically associated with leading wealth institutions. The objective is to create an ecosystem where thoughtful Partners can elevate the quality of portfolio conversations and deliver a more sophisticated investment experience to their clients.",
     icon: Target
   },
@@ -24,7 +24,7 @@ const faqData = [
     icon: TrendingUp
   },
   {
-    question: "What role does TieVista play in relation to the advisor’s clients?",
+    question: "What role does TieVista play in relation to the partner’s clients?",
     answer: "The advisor remains at the centre of the client relationship. TieVista functions as a strategic platform partner—providing the research orientation, product access, and infrastructure that enable Partners to deliver a more considered and institutional-quality investment experience.",
     icon: Users
   },
@@ -44,7 +44,7 @@ const faqData = [
     icon: Handshake
   },
   {
-    question: "How does TieVista help Partners build enduring advisory franchises?",
+    question: "How does TieVista help Partners build enduring partnership franchises?",
     answer: "By bringing together institutional investment thinking, curated access to a broad mutual fund universe, and modern technology infrastructure, TieVista allows Partners to focus on deepening client relationships while building advisory practices designed for longevity, scale, and generational continuity.",
     icon: Shield
   },
@@ -56,19 +56,19 @@ const faqData = [
 ];
 
 const TieVistaPatners = () => {
-    const animationSettings = {
-        container: {
-            hidden: { opacity: 0, y: 30 },
-            visible: {
-                opacity: 1, y: 0,
-                transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1], staggerChildren: 0.2 }
-            }
-        },
-        item: {
-            hidden: { opacity: 0, y: 20 },
-            visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } }
-        }
-    };
+  const animationSettings = {
+    container: {
+      hidden: { opacity: 0, y: 30 },
+      visible: {
+        opacity: 1, y: 0,
+        transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1], staggerChildren: 0.2 }
+      }
+    },
+    item: {
+      hidden: { opacity: 0, y: 20 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } }
+    }
+  };
 
   const [activeIndex, setActiveIndex] = React.useState(null);
 
@@ -78,52 +78,52 @@ const TieVistaPatners = () => {
 
   return (
     <div className="bg-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-white">
-      
+
       {/* Hero Section */}
       <section className="min-h-screen w-full relative flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            className="h-full w-full object-cover scale-105" 
-            src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=2000" 
+          <img
+            className="h-full w-full object-cover scale-105"
+            src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=2000"
             alt="Partners Hero"
             loading='lazy'
           />
           <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/40 to-black/80" />
         </div>
 
-        <motion.div 
-          initial="hidden" 
-          whileInView="visible" 
-          viewport={{ once: true }} 
-          variants={animationSettings.container} 
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={animationSettings.container}
           className="relative z-10 text-center px-6 pt-24 pb-12"
         >
-          <motion.div 
+          <motion.div
             variants={animationSettings.item}
             className="inline-flex items-center gap-3 px-4 py-1.5 mb-8 border border-[#D4AF37]/40 rounded-full bg-black/30 backdrop-blur-md"
           >
             <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: GOLD }} />
             <span className="text-[#D4AF37] text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase">Empowering Independent Advisors</span>
           </motion.div>
-          <motion.h1 
-            variants={animationSettings.item} 
-            className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl mb-8 text-white tracking-tighter leading-[0.9] md:leading-none" 
+          <motion.h1
+            variants={animationSettings.item}
+            className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl mb-8 text-white tracking-tighter leading-[0.9] md:leading-none"
             style={{ fontFamily: 'PT Serif, serif' }}
           >
             TieVista <span className="gold-text">Partners</span>
           </motion.h1>
-          <motion.p 
-            variants={animationSettings.item} 
+          <motion.p
+            variants={animationSettings.item}
             className="text-lg md:text-xl lg:text-2xl text-white/80 font-light max-w-3xl mx-auto leading-relaxed px-4"
           >
-            A next-generation partnership platform designed to institutionalize independent financial advisory practices globally.
+            A next-generation partnership platform designed to institutionalize independent financial patnership practices globally.
           </motion.p>
         </motion.div>
 
         {/* Scroll indicator overlay */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 opacity-50 flex flex-col items-center gap-2">
-            <span className="text-[10px] text-white/50 uppercase tracking-[0.2em]">Scroll</span>
-            <div className="w-px h-12 bg-linear-to-b from-white/50 to-transparent" />
+          <span className="text-[10px] text-white/50 uppercase tracking-[0.2em]">Scroll</span>
+          <div className="w-px h-12 bg-linear-to-b from-white/50 to-transparent" />
         </div>
       </section>
 
@@ -131,7 +131,7 @@ const TieVistaPatners = () => {
       <section className="py-20 md:py-32 bg-white">
         <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
           <div className="flex flex-col md:flex-row gap-16 md:gap-24">
-            
+
             {/* Left Column: Vision & Digital Ecosystem */}
             <div className="w-full md:w-1/2 space-y-10 md:space-y-12">
               <motion.div {...fadeUp(0)}>
@@ -141,17 +141,28 @@ const TieVistaPatners = () => {
                 </div>
                 <div className="relative pl-6 border-l-2 border-[#D4AF37]/30">
                   <p className="text-2xl md:text-3xl lg:text-4xl text-gray-900 font-serif leading-tight " style={{ fontFamily: 'PT Serif, serif' }}>
-                    "TieVista is envisioned as a growth engine for ambitious advisors, providing access to institutional-grade processes."
+                    "TieVista is building a next-generation partnership platform designed to
+                    empower independent financial partners who aspire to elevate and institutionalise
+                    their practice."
                   </p>
                 </div>
               </motion.div>
 
               <motion.div {...fadeUp(0.1)} className="text-gray-600 font-light leading-relaxed space-y-6 text-base md:text-lg">
                 <p>
-                  The platform provides access to institutional-grade processes, robust operational infrastructure, and a broad product universe, enabling advisors to scale their businesses while maintaining the personal relationships that define independent advisory.
+                  The platform is envisioned as a growth engine for ambitious partners,
+                  providing access to institutional-grade processes, robust operational infrastructure,
+                  and a broad product universe, enabling them to scale their businesses while
+                  maintaining the personal relationships that define independent partnership.
                 </p>
                 <p>
-                  Through a seamless digital onboarding ecosystem, channel partners can onboard clients efficiently while benefiting from structured workflows typically associated with leading wealth institutions.
+                  Through a seamless digital onboarding ecosystem, Channel Partners can
+                  onboard clients efficiently while benefiting from structured workflows and disciplined
+                  processes typically associated with leading wealth institutions. Channel Partners
+                  may also gain access to investment perspectives, interactions with external
+                  fund management teams, and a wider spectrum of opportunities within the regulated
+                  ecosystem, including differentiated and lesser-known strategies that can add
+                  meaningful depth to client portfolios.
                 </p>
               </motion.div>
             </div>
@@ -160,10 +171,19 @@ const TieVistaPatners = () => {
             <div className="w-full md:w-1/2 space-y-10 md:space-y-12 md:mt-12">
               <motion.div {...fadeUp(0.2)} className="text-gray-600 font-light leading-relaxed space-y-6 text-base md:text-lg">
                 <p>
-                  At the heart of the platform is a powerful reporting and portfolio analytics engine, designed to bring institutional-level transparency to client portfolios. Partners can analyze and interpret exposures across multiple dimensions, enabling deeper portfolio discussions.
+                  At the heart of the platform is a powerful reporting and portfolio analytics engine,
+                  designed to bring institutional-level transparency and analytics to client portfolios.
+                  Channel Partners can view, analyse, and present portfolios across multiple
+                  dimensions, enabling deeper portfolio discussions and the ability to slice and
+                  interpret portfolio exposures in numerous meaningful ways.
                 </p>
                 <p>
-                  Our vision is to create an ecosystem where partners can operate with the capabilities of a sophisticated wealth platform while preserving their independence and the trust they have built with their clients.
+                  TieVista’s vision is to create an ecosystem where independent channel
+                  partners can operate with the capabilities and discipline of a sophisticated wealth
+                  platform, while preserving their independence and the trust they have built with their
+                  clients. The partnership model is founded on the principle of fair, transparent, and
+                  long-term alignment, ensuring that channel partners are rewarded equitably
+                  for the value they create and the relationships they nurture.
                 </p>
                 <div className="pt-8 border-t border-gray-100 italic text-sm text-gray-400 leading-relaxed">
                   "The partnership model is founded on the principle of fair, transparent, and long-term alignment, ensuring that channel partners are rewarded equitably for the value they create."
@@ -181,9 +201,9 @@ const TieVistaPatners = () => {
       {/* FAQ Section */}
       <section className="py-20 md:py-32 bg-[#FAFAFA] border-y border-gray-100">
         <div className="container mx-auto px-6 lg:px-16 max-w-4xl">
-          
+
           <motion.div {...fadeUp(0)} className="text-center mb-16 md:mb-24">
-            <h2 
+            <h2
               className="text-4xl sm:text-5xl md:text-7xl tracking-tighter mb-6 leading-none"
               style={{ fontFamily: 'PT Serif, serif' }}
             >
@@ -196,17 +216,17 @@ const TieVistaPatners = () => {
             {faqData.map((item, idx) => {
               const isOpen = activeIndex === idx;
               return (
-                <motion.div 
-                  key={idx} 
+                <motion.div
+                  key={idx}
                   {...fadeUp(0.05 * idx)}
                   className={`bg-white border transition-all duration-500 overflow-hidden ${isOpen ? 'border-[#D4AF37]/50 shadow-2xl shadow-[#D4AF37]/5' : 'border-gray-100'}`}
                 >
-                  <button 
+                  <button
                     onClick={() => toggleAccordion(idx)}
                     className="w-full text-left p-5 sm:p-6 md:p-8 flex items-center justify-between group cursor-pointer"
                   >
                     <div className="flex items-center gap-4 sm:gap-6">
-                      <div 
+                      <div
                         className={`w-10 h-10 sm:w-12 sm:h-12 shrink-0 flex items-center justify-center rounded-lg transition-all duration-500 ${isOpen ? 'bg-[#D4AF37] scale-110' : 'bg-[#D4AF37]/10'}`}
                         style={{ background: isOpen ? GOLD : `${GOLD}15` }}
                       >
