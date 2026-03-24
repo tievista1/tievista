@@ -26,7 +26,7 @@ const ASSET_CATEGORIES = [
         subtitle: "",
         description: "At TieVista, we build enduring financial success through disciplined, equity-centric investment strategies. Our approach is rooted in long-term growth, backed by rigorous research and thoughtful risk management to generate capital appreciation globally.",
         includes: ["Public Equities", "Equity Mutual Funds (including ELSS)", "Equity PMS", "Equity ETFs"],
-        image: "https://res.cloudinary.com/dr1u4plse/image/upload/v1774343982/GrowthAsset_cfvuf4.png",
+        image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1774346035/GrowthAsset_yffmlk.png",
         icon: TrendingUp,
         reverse: false
     },

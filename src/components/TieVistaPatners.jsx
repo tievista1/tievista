@@ -84,7 +84,7 @@ const TieVistaPatners = () => {
         <div className="absolute inset-0 z-0">
           <img
             className="h-full w-full object-cover scale-105"
-            src="https://res.cloudinary.com/dr1u4plse/image/upload/v1774345198/TieVista_Patners_BG_klclly.png"
+            src="https://res.cloudinary.com/dck5jgfix/image/upload/v1774346041/TieVista_Patners_BG_ms1cll.png"
             alt="Partners Hero"
             loading='lazy'
           />
