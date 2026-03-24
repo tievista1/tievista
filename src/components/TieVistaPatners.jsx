@@ -103,7 +103,7 @@ const TieVistaPatners = () => {
             className="inline-flex items-center gap-3 px-4 py-1.5 mb-8 border border-[#D4AF37]/40 rounded-full bg-black/30 backdrop-blur-md"
           >
             <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: GOLD }} />
-            <span className="text-[#D4AF37] text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase">Empowering Independent Advisors</span>
+            <span className="text-[#D4AF37] text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase">Empowering Independent Partners</span>
           </motion.div>
           <motion.h1
             variants={animationSettings.item}
