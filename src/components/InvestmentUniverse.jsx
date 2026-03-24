@@ -37,7 +37,7 @@ const ASSET_CATEGORIES = [
         subtitle: "",
         description: "We understand that protecting hard-earned capital is as essential as growth. Our Income & Capital Preservation strategies prioritize safety and steady income generation, crafted for investors who seek predictable cash flows and shield their portfolios from undue volatility.",
         includes: ["Debt Mutual Funds", "Debt PMS", "Physical Bonds (Govt, Corp, Credit)", "Fixed Income ETFs"],
-        image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1774253143/TievistaReserve_vkbvdm.png",
+        image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1774352512/Income_Capital_Preservation_gryvit.png",
         icon: Database,
         reverse: true
     },
