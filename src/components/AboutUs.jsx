@@ -20,7 +20,7 @@ const narratives = [
     heading: 'A Structured',
     accent: 'Approach.',
     body: 'TieVista is a Private Wealth management organisation serving individuals and families with wealth spanning geographies, asset classes, and generations. We work with UHNIs, HNIs, NRIs, family offices, and entrepreneurs, offering a structured and thoughtful approach to building, managing, and overseeing long-term wealth.',
-    img: 'https://media.istockphoto.com/id/1160802331/photo/businessmen-teamwork-brainstorming-discuss-the-investment.jpg?s=612x612&w=0&k=20&c=LszWqLsXM5Zq7Kt0hXM65-PofeV7A4O87NCq0wFGtpo=',
+    img: 'https://res.cloudinary.com/dr1u4plse/image/upload/v1774345333/A_Structured_Approach_q0uszs.png',
     reverse: false,
   },
   {
