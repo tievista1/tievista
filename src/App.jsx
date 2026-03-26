@@ -18,6 +18,7 @@ const GlobalGiftCitySolutions = lazy(() => import("./components/GlobalGiftCitySo
 const PrivacyPolicy = lazy(() => import("./components/PrivacyPolicy"));
 const TermsAndConditions = lazy(() => import("./components/TermsAndConditions"));
 const TieVistaPatners = lazy(() => import("./components/TieVistaPatners"));
+const NotFound = lazy(() => import("./components/NotFound"));
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
@@ -56,6 +57,7 @@ function App() {
             <Route path='privacypolicy' element={<PrivacyPolicy />} />
             <Route path='terms' element={<TermsAndConditions />} />
             <Route path='partners' element={<TieVistaPatners />} />
+            <Route path='*' element={<NotFound />} />
           </Route>
         </Routes>
       </Suspense>
