@@ -35,11 +35,15 @@ const Home = () => {
     return (
         <>
             <div className='selection:bg-[#D4AF37] selection:text-white'>
+
+                {/* Hidden SEO H1 */}
+                <h1 className="sr-only">TieVista</h1>
+
                 {/* Hero Snap Scroll Section */}
                 <div className="h-[100vh] w-full snap-start relative flex items-center justify-center overflow-hidden border-b border-gray-100">
-                    
+
                     <img className='absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-700' src="https://res.cloudinary.com/dck5jgfix/image/upload/v1774247093/Landingpage_ixd1ea.png" alt="LandingPage" loading='lazy' />
-                    
+
 
                     {/* Content */}
                     <motion.div
@@ -56,7 +60,7 @@ const Home = () => {
                         >
                             {/* <img className='w-100 h-25 md:h-28 lg:w-150 lg:h-35' src="/TieVistaVerticalLogo.png" alt="" /> */}
                             <div className='flex flex-col'>
-                            <h1 className='text-black font-light lg:text-7xl text-5xl '>Beyond Wealth, Towards Legacy</h1>
+                                <h1 className='text-black font-light lg:text-7xl text-5xl '>Beyond Wealth, Towards Legacy</h1>
                             </div>
 
                         </motion.div>
