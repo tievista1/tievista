@@ -81,7 +81,7 @@ export const Footer = () => {
         {/* Disclaimer Section */}
         <div className="mb-10">
           <p className="text-[12px]  leading-relaxed text-white text-justify md:text-left">
-            Mutual fund investments are subject to market risks. Please read the scheme information and other related documents carefully before investing. Past performance is not indicative of future returns. Please consider your specific investment requirements before choosing a fund,or designing a portfolio that suits your needs. IndusArtha financial services private limited, (with ARN code342010 and APRN code 07336) makes no warranties or representations, express or implied, on products offered through the platform. It accepts no liability for any damages or losses, however caused, in connection with the use of, or on the reliance of its product or related services. Terms and conditions of the website are applicable.
+            Mutual fund investments are subject to market risks. Please read the scheme information and other related documents carefully before investing. Past performance is not indicative of future returns. Please consider your specific investment requirements before choosing a fund,or designing a portfolio that suits your needs. IndusArtha financial services private limited, (with ARN code 342010 and APRN code 07336) makes no warranties or representations, express or implied, on products offered through the platform. It accepts no liability for any damages or losses, however caused, in connection with the use of, or on the reliance of its product or related services. Terms and conditions of the website are applicable.
           </p>
         </div>
 

@@ -76,7 +76,7 @@ const DesktopDropdown = ({ items, depth = 0 }) => {
 // ─── Desktop Nav Item ────────────────────────────────────────────────────────
 const DesktopNavItem = ({ item, isActive, onEnter, onLeave }) => (
     <div
-        className="relative group"
+        className="relative group" style={{ fontFamily: 'PT Serif, serif' }}
         onMouseEnter={() => item.hasDropdown && onEnter(item.label)}
         onMouseLeave={onLeave}
     >
@@ -112,7 +112,7 @@ const MobileNavItem = ({ item, isOpen, onToggle, onClose, depth = 0 }) => {
 
     return (
         <div className={`border-b border-gray-50 last:border-none ${depth > 0 ? 'border-none' : ''}`}>
-            <div className="flex items-center justify-between w-full">
+            <div className="flex items-center justify-between w-full" style={{ fontFamily: 'PT Serif, serif' }}>
                 <Link
                     to={item.href}
                     onClick={onClose}
@@ -238,6 +238,14 @@ export const Navbar = () => {
             ],
         },
         {
+            label: 'Insights',
+            href: '/',
+            hasDropdown: true,
+            dropdownItems: [
+                { label: 'Blogs', href: '/blogs' },
+            ],
+        },
+        {
             label: 'More...',
             href: '#',
             hasDropdown: true,
@@ -261,7 +269,7 @@ export const Navbar = () => {
 
     return (
         <div className="w-full sticky top-0 z-[100] shadow-sm">
-            <nav className="bg-white border-b w-full border-gray-100 px-4 sm:px-8 lg:px-12 xl:px-20">
+            <nav className=" bg-white border-b w-full border-gray-100 px-4 sm:px-8 lg:px-12 xl:px-20">
                 <div className="max-w-[1600px] mx-auto">
                     <div className="flex justify-between items-center h-15 space-x-6">
 

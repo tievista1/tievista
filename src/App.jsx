@@ -19,6 +19,8 @@ const PrivacyPolicy = lazy(() => import("./components/PrivacyPolicy"));
 const TermsAndConditions = lazy(() => import("./components/TermsAndConditions"));
 const TieVistaPatners = lazy(() => import("./components/TieVistaPatners"));
 const NotFound = lazy(() => import("./components/NotFound"));
+const Blogs = lazy(() => import("./components/blogs/Blogs"));
+const DeclutteringtheNoiseAround = lazy(() => import("./components/blogs/DeclutteringtheNoiseAround"));
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
@@ -57,6 +59,10 @@ function App() {
             <Route path='privacypolicy' element={<PrivacyPolicy />} />
             <Route path='terms' element={<TermsAndConditions />} />
             <Route path='partners' element={<TieVistaPatners />} />
+            
+            <Route path='blogs' element={<Blogs />} />
+            <Route path='blogs/decluttering-the-noise-around' element={<DeclutteringtheNoiseAround />} />
+
             <Route path='*' element={<NotFound />} />
           </Route>
         </Routes>
