@@ -170,7 +170,7 @@ function ServiceSection({ svc, index }) {
                                 >
                                     <Icon size={20} color={GOLD} />
                                 </div>
-                                <span className="text-gray-400 text-xs font-semibold tracking-[0.35em] uppercase">
+                                <span className="text-black text-xs font-semibold tracking-[0.35em] uppercase" style={{fontFamily:'PT Serif, serif'}}>
                                     {label}
                                 </span>
                             </div>
@@ -188,13 +188,13 @@ function ServiceSection({ svc, index }) {
                             <div className="w-12 h-px mb-6" style={{ background: GOLD }} />
 
                             {/* Body */}
-                            <p className="text-lg text-gray-600 leading-relaxed font-light mb-10">
+                            <p className="text-lg text-black leading-relaxed font-light mb-10" style={{fontFamily:'PT Serif,serif'}}>
                                 {body}
                             </p>
 
                             {/* Bullets */}
                             <div>
-                                <p className="text-xs font-semibold text-gray-400 tracking-[0.3em] uppercase mb-4">
+                                <p className="text-xs font-semibold text-black tracking-[0.3em] uppercase mb-4" style={{fontFamily:'PT Serif, serif'}}>
                                     Key Offerings
                                 </p>
                                 <div className="space-y-0">
@@ -209,11 +209,11 @@ function ServiceSection({ svc, index }) {
                                         >
                                             <div
                                                 className="w-9 h-9 rounded-full border flex items-center justify-center shrink-0 transition-all duration-300 group-hover:bg-[#D4AF37] group-hover:border-[#D4AF37] group-hover:text-white"
-                                                style={{ borderColor: '#e5e7eb', color: '#9ca3af' }}
+                                                style={{ borderColor: '#000000', color: '#000000' }}
                                             >
                                                 <ArrowRight size={15} />
                                             </div>
-                                            <span className="text-base md:text-lg font-light text-gray-700 group-hover:text-black transition-colors">
+                                            <span className="text-base md:text-lg font-light text-black group-hover:text-black transition-colors" style={{fontFamily:'PT Serif,serif'}}>
                                                 {item}
                                             </span>
                                         </motion.div>
@@ -284,8 +284,9 @@ function ServiceSection({ svc, index }) {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.9, delay: 0.8 }}
                         className="text-xl md:text-2xl text-white font-light max-w-3xl mx-auto leading-relaxed"
+                        style={{fontFamily:'PT Serif,serif'}}
                     >
-                        Beyond portfolio management — a complete blend of wealth consolidation, governance, succession, and tech-enabled insights for complex, multi-jurisdictional wealth.
+                        Beyond portfolio management - a complete blend of wealth consolidation, governance, succession, and tech-enabled insights for complex, multi-jurisdictional wealth.
                     </motion.p>
                 </motion.div>
             </section>
@@ -313,7 +314,7 @@ function ServiceSection({ svc, index }) {
                                 </span> */}
                                 <Icon size={13} className="text-gray-400 group-hover:text-[#D4AF37] transition-colors duration-300" />
                             </div>
-                            <span className="text-[11px] md:text-sm font-semibold text-gray-700 group-hover:text-gray-900 tracking-tight leading-tight transition-colors duration-300 line-clamp-1">
+                            <span className="text-[11px] md:text-sm font-semibold text-black group-hover:text-black tracking-tight leading-tight transition-colors duration-300 line-clamp-1" style={{fontFamily:'PT Serif, serif'}}>
                                 {nav.label}
                             </span>
                             <ArrowRight
@@ -346,7 +347,7 @@ function ServiceSection({ svc, index }) {
                             >
                                 A family-office <span className="">experience</span> {/*style={{ color: GOLD }} italic*/}
                             </h3>
-                            <p className="text-lg text-gray-600 font-light leading-relaxed">
+                            <p className="text-lg text-black font-light leading-relaxed" style={{fontFamily:'PT Serif,serif'}}>
                                 TieVista delivers a family-office style experience without acting as a family office providing coordination, visibility, and disciplined investment facilitation, while clients retain full control and decision making authority.
                             </p>
                         </div>

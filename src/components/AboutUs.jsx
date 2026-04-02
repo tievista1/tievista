@@ -37,7 +37,7 @@ const narratives = [
     label: '',
     heading: 'Seasoned',
     accent: 'Excellence.',
-    body: 'TieVista brings experience and expertise of seasoned professionals, institutional access, and coordinated execution. We investment opportunities across markets, including Portfolio Management Services, Alternate Investment Funds, and GIFT City products offered by financial institutions in GIFT City.',
+    body: 'TieVista brings experience and expertise of seasoned professionals, institutional access, and coordinated execution. We offer investment opportunities across markets, including Portfolio Management Services, Alternate Investment Funds, and GIFT City products offered by financial institutions in GIFT City.',
     img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774247758/SeasonalEx_nrlnmh.png',
     reverse: false,
   },
@@ -111,7 +111,7 @@ function NarrativeSection({ sec, index }) {
 
               <div className="w-12 h-px mb-7" style={{ background: GOLD }} />
 
-              <p className="text-lg text-gray-600 leading-relaxed font-light">
+              <p className="text-lg text-black leading-relaxed" style={{fontFamily:'PT Serif, serif'}}>
                 {body}
               </p>
             </motion.div>
@@ -146,7 +146,7 @@ const AboutUs = () => {
           <motion.div {...fadeUp()} className="mb-10">
             <div className="flex items-center gap-3 mb-5">
               <div className="w-10 h-px" style={{ background: GOLD }} />
-              <span className="text-xs font-semibold tracking-[0.35em] uppercase text-gray-400">Partnership</span>
+              <span className="text-xs font-semibold tracking-[0.35em] uppercase text-black" style={{fontFamily:'PT Serif, serif'}}>Partnership</span>
             </div>
             <h2
               className="text-5xl md:text-7xl tracking-tighter leading-none"
@@ -187,13 +187,13 @@ const AboutUs = () => {
                 {/* Icon bubble */}
                 <div
                   className="w-11 h-11 rounded-full border flex items-center justify-center shrink-0 transition-all duration-300 group-hover:border-[#D4AF37] group-hover:bg-[#D4AF37] group-hover:text-white"
-                  style={{ borderColor: '#e5e7eb', color: '#9ca3af' }}
+                  style={{ borderColor: '#000000', color: '#000000' }}
                 >
                   <Icon size={18} />
                 </div>
 
                 {/* Text */}
-                <span className="text-lg md:text-xl font-light text-gray-700 group-hover:text-black transition-colors leading-relaxed flex-1">
+                <span className="text-lg md:text-xl font-light text-black group-hover:text-black transition-colors leading-relaxed flex-1" style={{fontFamily:'PT Serif, serif'}}>
                   {text}
                 </span>
 
