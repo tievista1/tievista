@@ -49,7 +49,7 @@ const expectations = [
   { text: 'Access to institutional-grade investment opportunities', icon: Globe },
   { text: 'Integrated support across investments, banking, taxation, and governance', icon: ShieldCheck },
   { text: 'Consolidated portfolio reporting through a single, unified dashboard', icon: Landmark },
-  { text: 'Strategic advisory support for entrepreneurs across growth, transactions, and legacy planning', icon: Users },
+  { text: 'Strategic support for entrepreneurs across growth, transactions, and legacy planning', icon: Users },
 ]
 
 /* ─── NarrativeSection ─── */

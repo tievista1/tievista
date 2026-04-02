@@ -49,10 +49,10 @@ const SERVICES = [
         label: '',
         heading: 'Building Wealth &',
         accent: 'Coordination',
-        body: 'Acting as a central coordination point for your financial ecosystem structured engagement alongside your chartered accountants, legal advisors, bankers, trustees and other professionals.',
+        body: 'Acting as a central coordination point for your financial ecosystem, structured engagement alongside your chartered accountants, legal teams, bankers, trustees and other professionals.',
         bullets: [
             'Central coordination across your entire financial ecosystem',
-            'Structured engagement with CAs, legal, and banking advisors',
+            'Structured engagement with CAs, legal, and banking teams',
             'Alignment with bankers, trustees and other professionals',
             'Holistic oversight across all financial relationships',
         ],
