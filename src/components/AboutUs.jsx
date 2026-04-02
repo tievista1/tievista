@@ -37,7 +37,7 @@ const narratives = [
     label: '',
     heading: 'Seasoned',
     accent: 'Excellence.',
-    body: 'TieVista brings experience and expertise of seasoned professionals, institutional access, and coordinated execution. We curate investment opportunities across markets, including Portfolio Management Services, Alternate Investment Funds, and GIFT City products offered by financial institutions in GIFT City.',
+    body: 'TieVista brings experience and expertise of seasoned professionals, institutional access, and coordinated execution. We investment opportunities across markets, including Portfolio Management Services, Alternate Investment Funds, and GIFT City products offered by financial institutions in GIFT City.',
     img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774247758/SeasonalEx_nrlnmh.png',
     reverse: false,
   },
