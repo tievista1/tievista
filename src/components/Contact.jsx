@@ -121,7 +121,7 @@ Please respond to this enquiry as soon as possible.
 
             Get In <span className='gold-text' >Touch</span>
           </h1>
-          <p className="text-lg md:text-xl text-white/70 font-light max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-white font-light max-w-2xl mx-auto leading-relaxed">
             We are here to assist you with a structured and thoughtful approach to building your legacy.
           </p>
         </motion.div>
@@ -139,7 +139,7 @@ Please respond to this enquiry as soon as possible.
                   Institutional <span className='gold-text' >Excellence.</span>
                 </h2>
                 <div className="w-12 h-px mb-8" style={{ background: GOLD }} />
-                <p className="text-gray-600 font-light leading-relaxed text-lg">
+                <p className="text-black font-light leading-relaxed text-lg">
                   Whether you are looking for portfolio management, private wealth management, or strategic business insights, Feel free to reach out to us.
                 </p>
               </div>
@@ -153,7 +153,7 @@ Please respond to this enquiry as soon as possible.
                     </div>
 
                     <div>
-                      <h4 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-1">Email Enquiry</h4>
+                      <h4 className="text-xs font-bold tracking-widest uppercase text-black mb-1" style={{fontFamily:'PT Serif,serif'}}>Email Enquiry</h4>
                       <p className="text-lg font-medium text-gray-800">connect@tievista.com</p>
                     </div>
                   </a>
@@ -165,8 +165,8 @@ Please respond to this enquiry as soon as possible.
                       <Phone size={20} />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-1">Direct Call</h4>
-                      <p className="text-lg font-medium text-gray-800">+91 79 7762 6003</p>
+                      <h4 className="text-xs font-bold tracking-widest uppercase text-black mb-1" style={{fontFamily:'PT Serif,serif'}}>Direct Call</h4>
+                      <p className="text-lg font-medium text-gray-800">+91 91679 15651</p>
                     </div>
                   </a>
                 </div>
@@ -177,7 +177,7 @@ Please respond to this enquiry as soon as possible.
                       <MapPin size={20} />
                     </div>
                     <div>
-                      <h4 className="text-xs font-bold tracking-widest uppercase text-gray-400 mb-1">Address</h4>
+                      <h4 className="text-xs font-bold tracking-widest uppercase text-black mb-1" style={{fontFamily:'PT Serif,serif'}}>Address</h4>
                       <p className="text-lg font-medium text-gray-800">TIEVISTA GLOBAL PRIVATE WEALTH,</p>
                       <p className="text-lg font-medium text-gray-800">4th Floor, AWFIS, VIOS Tower, Wadala, Mumbai 400037</p>
                     </div>
@@ -195,13 +195,14 @@ Please respond to this enquiry as soon as possible.
                   <div className="flex flex-col md:flex-row gap-6">
                     {/* First Name */}
                     <div className="flex-1 space-y-2">
-                      <label className="text-[10px] font-bold tracking-widest uppercase text-gray-400 ml-1">First Name</label>
+                      <label className="text-[10px] font-bold tracking-widest uppercase text-black ml-1" style={{fontFamily:'PT Serif,serif'}}>First Name</label>
                       <div className="relative group">
                         <User className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-300 group-focus-within:text-[#D4AF37] transition-colors" size={18} />
                         <input
                           {...register('firstName', { required: 'First Name is required' })}
                           placeholder="Your First Name"
                           className={`w-full bg-gray-50 border ${errors.firstName ? 'border-red-300' : 'border-gray-100'} focus:border-[#D4AF37] focus:ring-0 rounded-xl px-12 py-4 text-gray-700 outline-none transition-all`}
+                          style={{fontFamily:'PT Serif,serif'}}
                         />
                       </div>
                       {errors.firstName && <p className="text-xs text-red-500 mt-1 ml-1">{errors.firstName.message}</p>}
@@ -209,13 +210,14 @@ Please respond to this enquiry as soon as possible.
 
                     {/* Last Name */}
                     <div className="flex-1 space-y-2">
-                      <label className="text-[10px] font-bold tracking-widest uppercase text-gray-400 ml-1">Last Name</label>
+                      <label className="text-[10px] font-bold tracking-widest uppercase text-black ml-1" style={{fontFamily:'PT Serif,serif'}}>Last Name</label>
                       <div className="relative group">
                         <User className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-300 group-focus-within:text-[#D4AF37] transition-colors" size={18} />
                         <input
                           {...register('lastName', { required: 'Last Name is required' })}
                           placeholder="Your Last Name"
                           className={`w-full bg-gray-50 border ${errors.lastName ? 'border-red-300' : 'border-gray-100'} focus:border-[#D4AF37] focus:ring-0 rounded-xl px-12 py-4 text-gray-700 outline-none transition-all`}
+                          style={{fontFamily:'PT Serif,serif'}}
                         />
                       </div>
                       {errors.lastName && <p className="text-xs text-red-500 mt-1 ml-1">{errors.lastName.message}</p>}
@@ -224,7 +226,7 @@ Please respond to this enquiry as soon as possible.
 
                   {/* Email */}
                   <div className="space-y-2">
-                    <label className="text-[10px] font-bold tracking-widest uppercase text-gray-400 ml-1">Email Address</label>
+                    <label className="text-[10px] font-bold tracking-widest uppercase text-black ml-1" style={{fontFamily:'PT Serif,serif'}}>Email Address</label>
                     <div className="relative group">
                       <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-300 group-focus-within:text-[#D4AF37] transition-colors" size={18} />
                       <input
@@ -238,6 +240,7 @@ Please respond to this enquiry as soon as possible.
                         placeholder="email@example.com"
                         className={`w-full bg-gray-50 border ${errors.email ? 'border-red-300' : 'border-gray-100'} focus:border-[#D4AF37] focus:ring-0 rounded-xl px-12 py-4 text-gray-700 outline-none transition-all`}
                         type="email"
+                        style={{fontFamily:'PT Serif,serif'}}
                       />
                     </div>
                     {errors.email && <p className="text-xs text-red-500 mt-1 ml-1">{errors.email.message}</p>}
@@ -245,7 +248,7 @@ Please respond to this enquiry as soon as possible.
 
                   {/* Phone with Country Code */}
                   <div className="space-y-2">
-                    <label className="text-[10px] font-bold tracking-widest uppercase text-gray-400 ml-1">Phone Number</label>
+                    <label className="text-[10px] font-bold tracking-widest uppercase text-black ml-1" style={{fontFamily:'PT Serif,serif'}}>Phone Number</label>
                     <div className="flex gap-3">
                       {/* Country Code Select */}
                       <div className="relative w-25 md:w-35 shrink-0 group">
@@ -278,6 +281,7 @@ Please respond to this enquiry as soon as possible.
                           placeholder="Phone Number"
                           className={`w-full bg-gray-50 border ${errors.phone ? 'border-red-300' : 'border-gray-100'} focus:border-[#D4AF37] focus:ring-0 rounded-xl px-12 py-4 text-gray-700 outline-none transition-all`}
                           type="tel"
+                          style={{fontFamily:'PT Serif,serif'}}
                         />
                       </div>
                     </div>
@@ -286,7 +290,7 @@ Please respond to this enquiry as soon as possible.
 
                   {/* Enquiry Textbox */}
                   <div className="space-y-2">
-                    <label className="text-[10px] font-bold tracking-widest uppercase text-gray-400 ml-1">Enquiry</label>
+                    <label className="text-[10px] font-bold tracking-widest uppercase text-black ml-1" style={{fontFamily:'PT Serif,serif'}}>Enquiry</label>
                     <div className="relative group">
                       <MessageSquare className="absolute left-4 top-6 text-gray-300 group-focus-within:text-[#D4AF37] transition-colors" size={18} />
                       <textarea
@@ -294,6 +298,7 @@ Please respond to this enquiry as soon as possible.
                         placeholder="How can we assist you?"
                         rows={5}
                         className={`w-full bg-gray-50 border ${errors.enquiry ? 'border-red-300' : 'border-gray-100'} focus:border-[#D4AF37] focus:ring-0 rounded-xl px-12 py-4 text-gray-700 outline-none transition-all resize-none`}
+                        style={{fontFamily:'PT Serif,serif'}}
                       />
                     </div>
                     {errors.enquiry && <p className="text-xs text-red-500 mt-1 ml-1">{errors.enquiry.message}</p>}
@@ -307,7 +312,7 @@ Please respond to this enquiry as soon as possible.
                       disabled={isSubmitting}
                       type="submit"
                       className="w-1/2 relative overflow-hidden group py-4 rounded-xl font-bold tracking-widest text-xs uppercase text-white transition-all duration-300 disabled:bg-gray-400"
-                      style={{ background: isSubmitting ? '#9ca3af' : GOLD }}
+                      style={{ background: isSubmitting ? '#9ca3af' : GOLD,fontFamily:'PT Serif,serif' }}
                     >
                       <span className="relative z-10 flex items-center justify-center gap-3">
                         {isSubmitting && submitType === 'mail' ? (
@@ -329,7 +334,7 @@ Please respond to this enquiry as soon as possible.
                       disabled={isSubmitting}
                       type="submit"
                       className="w-1/2 relative overflow-hidden group py-4 rounded-xl font-bold tracking-widest text-xs uppercase text-white transition-all duration-300 disabled:bg-gray-400"
-                      style={{ background: isSubmitting ? '#9ca3af' : '#25D366' }} // Green for WhatsApp
+                      style={{ background: isSubmitting ? '#9ca3af' : '#25D366',fontFamily:'PT Serif,serif' }} // Green for WhatsApp
                     >
                       <span className="relative z-10 flex items-center justify-center gap-3">
                         {isSubmitting && submitType === 'whatsapp' ? (

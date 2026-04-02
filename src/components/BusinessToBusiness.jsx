@@ -49,7 +49,7 @@ const PARTNERSHIPS = [
         label: '',
         heading: 'Real Estate Portfolio',
         accent: 'Access',
-        body1: 'Real estate continues to play an important role in the long-term portfolios of many investors. TieVista facilitates client access to both physical and financial real estate opportunities, enabling diversified participation in the asset class. Where relevant, we help clients explore opportunities through institutional platforms, curated investment avenues, and regulated financial products linked to real estate, while helping them evaluate these exposures within the broader context of their overall portfolio.',
+        body1: 'Real estate continues to play an important role in the long-term portfolios of many investors. TieVista facilitates client access to both physical and financial real estate opportunities, enabling diversified participation in the asset class. Where relevant, we help clients explore opportunities through institutional platforms, investment avenues, and regulated financial products linked to real estate, while helping them evaluate these exposures within the broader context of their overall portfolio.',
         body2: 'Our approach is guided by a focus on portfolio diversification, liquidity considerations, and long-term wealth preservation. By situating real estate exposure within a broader asset allocation framework, we help clients consider how such investments may complement their existing financial holdings and long-term objectives. Through our network and market engagement, clients may gain access to select opportunities and institutional platforms that may not always be readily available to individual investors. Periodic portfolio reviews also help ensure that real estate exposures remain aligned with the client’s evolving financial circumstances, investment horizon, and overall wealth strategy.',
         points: [
             
@@ -237,7 +237,7 @@ function PartnershipSection({ p, index }) {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.9, delay: 0.8 }}
-                        className="text-xl md:text-2xl text-white/75 font-light max-w-2xl mx-auto leading-relaxed"
+                        className="text-xl md:text-2xl text-white font-light max-w-2xl mx-auto leading-relaxed"
                     >
                         Curating access to global specialists so your clients navigate cross-border complexity with greater clarity and discretion.
                     </motion.p>

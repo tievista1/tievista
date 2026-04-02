@@ -178,7 +178,7 @@ const CategorySection = ({ cat, index }) => {
                     <motion.h1 variants={animationSettings.item} className="text-6xl md:text-9xl mb-8 text-white tracking-tighter leading-[0.95]" style={{ fontFamily: "PT Serif" }}>
                         Global & GIFT City <span className="gold-text">Solutions</span>
                     </motion.h1>
-                    <motion.p variants={animationSettings.item} className="text-xl md:text-2xl text-white/80 font-light max-w-3xl mx-auto leading-relaxed mb-12">
+                    <motion.p variants={animationSettings.item} className="text-xl md:text-2xl text-white font-light max-w-3xl mx-auto leading-relaxed mb-12">
                         Leveraging GIFT City’s unique regulatory framework to offer tax-efficient, globally diversified investment solutions.
                     </motion.p>
                 </motion.div>

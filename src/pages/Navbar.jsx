@@ -239,7 +239,7 @@ export const Navbar = () => {
         },
         {
             label: 'Insights',
-            href: '/',
+            href: '#',
             hasDropdown: true,
             dropdownItems: [
                 { label: 'Blogs', href: '/blogs' },

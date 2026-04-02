@@ -47,7 +47,7 @@ const SERVICES = [
         id: 'coord',
         icon: Network,
         label: '',
-        heading: 'Wealth structuring &',
+        heading: 'Building Wealth &',
         accent: 'Coordination',
         body: 'Acting as a central coordination point for your financial ecosystem structured engagement alongside your chartered accountants, legal advisors, bankers, trustees and other professionals.',
         bullets: [
@@ -283,7 +283,7 @@ function ServiceSection({ svc, index }) {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.9, delay: 0.8 }}
-                        className="text-xl md:text-2xl text-white/75 font-light max-w-3xl mx-auto leading-relaxed"
+                        className="text-xl md:text-2xl text-white font-light max-w-3xl mx-auto leading-relaxed"
                     >
                         Beyond portfolio management — a complete blend of wealth consolidation, governance, succession, and tech-enabled insights for complex, multi-jurisdictional wealth.
                     </motion.p>

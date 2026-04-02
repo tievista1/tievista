@@ -14,12 +14,12 @@ const fadeUp = (delay = 0) => ({
 
 const faqData = [
   {
-    question: "What is the vision behind the TieVista patners platform?",
+    question: "What is the vision behind the TieVista partners platform?",
     answer: "TieVista has been conceived as a platform where independent Partners can operate with the intellectual depth, institutional discipline, and technological infrastructure typically associated with leading wealth institutions. The objective is to create an ecosystem where thoughtful Partners can elevate the quality of portfolio conversations and deliver a more sophisticated investment experience to their clients.",
     icon: Target
   },
   {
-    question: "How does TieVista support Partners in navigating markets?",
+    question: "How does TieVista support partners in navigating markets?",
     answer: "TieVista follows a structured investment framework that studies evolving macro cycles, market valuations, liquidity conditions, and relative opportunities across asset classes and market capitalisation segments. Through this disciplined approach, our Partners gain access to curated investment perspectives that help inform portfolio positioning as market environments evolve.",
     icon: TrendingUp
   },
@@ -34,17 +34,17 @@ const faqData = [
     icon: BarChart3
   },
   {
-    question: "What distinguishes Partners who partner with TieVista?",
+    question: "What distinguishes partners who partner with TieVista?",
     answer: "TieVista partners with Partners who believe wealth management is a long-term craft—one built on trust, disciplined thinking, and enduring client relationships. The platform attracts Partners who aspire to operate with the standards and professionalism associated with leading wealth institutions.",
     icon: Star
   },
   {
-    question: "How does TieVista approach alignment with partner Partners?",
+    question: "How does TieVista approach alignment with partner partners?",
     answer: "TieVista believes that meaningful partnerships are built on transparency, respect, and fair alignment of interests. The platform follows a transparent and equitable framework designed to ensure Partners are appropriately recognised for the relationships they nurture and the value they create for clients.",
     icon: Handshake
   },
   {
-    question: "How does TieVista help Partners build enduring partnership franchises?",
+    question: "How does TieVista help partners build enduring partnership franchises?",
     answer: "By bringing together institutional investment thinking, curated access to a broad mutual fund universe, and modern technology infrastructure, TieVista allows Partners to focus on deepening client relationships while building advisory practices designed for longevity, scale, and generational continuity.",
     icon: Shield
   },
@@ -114,7 +114,7 @@ const TieVistaPatners = () => {
           </motion.h1>
           <motion.p
             variants={animationSettings.item}
-            className="text-lg md:text-xl lg:text-2xl text-white/80 font-light max-w-3xl mx-auto leading-relaxed px-4"
+            className="text-lg md:text-xl lg:text-2xl text-white font-light max-w-3xl mx-auto leading-relaxed px-4"
           >
             A next-generation partnership platform designed to institutionalize independent financial patnership practices globally.
           </motion.p>
@@ -189,7 +189,7 @@ const TieVistaPatners = () => {
                   "The partnership model is founded on the principle of fair, transparent, and long-term alignment, ensuring that channel partners are rewarded equitably for the value they create."
                 </div>
                 <p className="text-[11px] uppercase tracking-wider text-gray-300">
-                  All client recommendations remain the responsibility of the respective partner and the client.
+                  All client recommendations remain the responsibility of the respective partner and the client, In-accordance with applicable regulatory requirements
                 </p>
               </motion.div>
             </div>

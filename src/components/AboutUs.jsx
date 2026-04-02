@@ -37,7 +37,7 @@ const narratives = [
     label: '',
     heading: 'Seasoned',
     accent: 'Excellence.',
-    body: 'TieVista brings experience and expertise of seasoned professionals, institutional access, and coordinated execution. We curate investment opportunities across markets, including Portfolio Management Services, Alternate Investment Funds, and GIFT City products in partnership with AMCs in IFSC.',
+    body: 'TieVista brings experience and expertise of seasoned professionals, institutional access, and coordinated execution. We curate investment opportunities across markets, including Portfolio Management Services, Alternate Investment Funds, and GIFT City products offered by financial institutions in GIFT City.',
     img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774247758/SeasonalEx_nrlnmh.png',
     reverse: false,
   },
@@ -204,67 +204,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* ── Closing Statement (Dark) ── */}
-      <section className="w-full h-[20vh] bg-black flex items-center justify-center relative overflow-hidden">
 
-        {/* Background texture: subtle gold diagonal lines */}
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: 'repeating-linear-gradient(45deg, #D4AF37 0px, #D4AF37 1px, transparent 1px, transparent 40px)',
-          }}
-        />
-
-        {/* Large ghost text */}
-        <div
-          className="absolute inset-0 flex items-center justify-center select-none pointer-events-none overflow-hidden"
-          aria-hidden
-        >
-          <span
-            className="text-[18vw] font-bold tracking-tighter leading-none opacity-[0.025] text-white gold-text"
-            style={{ fontFamily: 'PT Serif, serif' }}
-          >
-            Tievista
-          </span>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          viewport={{ once: true }}
-          className="relative z-10 px-6 max-w-4xl mx-auto py-24"
-        >
-          {/* Gold rule */}
-          <motion.div
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="w-16 h-px mx-auto mb-10"
-            style={{ background: GOLD, transformOrigin: 'left' }}
-          />
-
-          <p className="text-sm text-white tracking-[0.3em] uppercase font-light mb-6 gold-text">Our Identity</p>
-
-          <h2
-            className="text-sm font-light leading-relaxed tracking-tight text-white mb-10"
-            style={{ fontFamily: 'PT Serif, serif' }}
-          >
-            IndusArtha Financial Services Private Limited,
-            known as TieVista - designed to simplify complexity and provide clear oversight.
-          </h2>
-
-          <motion.div
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            viewport={{ once: true }}
-            className="w-16 h-px mx-auto"
-            style={{ background: `${GOLD}60`, transformOrigin: 'right' }}
-          />
-        </motion.div>
-      </section>
 
     </div>
   )

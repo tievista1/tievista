@@ -30,7 +30,7 @@ const PrivacyPolicy = () => {
             Privacy <span className="gold-text">Policy</span>
           </h1>
           <p className="text-xl text-gray-600 font-light leading-relaxed max-w-3xl">
-            IndusArtha Financial Services Pvt. Ltd., its subsidiaries and affiliates (collectively, “IndusArtha”, “TieVista Global Private Wealth”, “we”, “us”, or “our”) are committed to protecting the privacy and confidentiality of the information entrusted to us.
+            IndusArtha Financial Services Pvt. Ltd., its subsidiaries and affiliates (collectively, “IndusArtha”, “TieVista”, “we”, “us”, or “our”) are committed to protecting the privacy and confidentiality of the information entrusted to us.
           </p>
         </motion.div>
 
@@ -326,6 +326,10 @@ const PrivacyPolicy = () => {
                 <div className="flex items-start gap-4">
                   <Mail size={18} color={GOLD} className="mt-1 shrink-0" />
                   <a href="mailto:connect@tievista.com" className="hover:text-black transition-colors">connect@tievista.com</a>
+                </div>
+                <div className="flex items-start gap-4">
+                  <Phone size={18} color={GOLD} className="mt-1 shrink-0" />
+                  <a href="tel:+919167915651" className="hover:text-black transition-colors">+91 91679 15651</a>
                 </div>
               </div>
             </div>

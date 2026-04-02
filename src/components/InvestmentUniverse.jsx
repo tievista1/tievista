@@ -204,7 +204,7 @@ const CategorySection = ({ cat, index }) => {
                     <motion.h1 variants={animationSettings.item} className="text-6xl md:text-9xl mb-8 text-white tracking-tighter leading-[0.95]" style={{ fontFamily: "PT Serif" }}>
                         Investment <span className="gold-text ">Universe</span>
                     </motion.h1>
-                    <motion.p variants={animationSettings.item} className="text-xl md:text-2xl text-white/80 font-light max-w-3xl mx-auto leading-relaxed mb-12">
+                    <motion.p variants={animationSettings.item} className="text-xl md:text-2xl text-white font-light max-w-3xl mx-auto leading-relaxed mb-12">
                         Navigating the complexities of global wealth through bespoke selection, rigorous discipline, and a borderless perspective.
                     </motion.p>
                 </motion.div>

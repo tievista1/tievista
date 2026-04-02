@@ -270,7 +270,7 @@ const NriSolutions = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.9, delay: 0.8 }}
-                        className="text-xl md:text-2xl text-white/75 font-light max-w-3xl mx-auto leading-relaxed"
+                        className="text-xl md:text-2xl text-white font-light max-w-3xl mx-auto leading-relaxed"
                     >
                         As Indian families become increasingly global, TieVista ensures your India-side capital is structured with intent, discipline, and long-term alignment.
                     </motion.p>

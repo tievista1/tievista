@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Mail, Linkedin, Twitter, Instagram } from 'lucide-react'
 import logo from '/TieVistaLogo.png'
+import { motion } from 'framer-motion'
 
 const GOLD = '#D4AF37'
 
@@ -9,10 +10,72 @@ export const Footer = () => {
 
   return (
     <footer className="bg-black text-white py-5 lg:py-10 border-t border-gray-800 selection:bg-[#D4AF37] selection:text-white">
-      <div className=" sm:h-[90vh] lg:h-[80vh]  py-5 mx-auto px-6 lg:px-16">
+
+      <section className="w-full min-h-[20vh] bg-black flex items-center justify-center relative overflow-hidden py-8">
+
+        {/* Background texture: subtle gold diagonal lines */}
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: 'repeating-linear-gradient(45deg, #D4AF37 0px, #D4AF37 1px, transparent 1px, transparent 40px)',
+          }}
+        />
+
+        {/* Large ghost text */}
+        <div
+          className="absolute inset-0 flex items-center justify-center select-none pointer-events-none overflow-hidden"
+          aria-hidden
+        >
+          <span
+            className="text-[18vw] font-bold tracking-tighter leading-none opacity-[0.025] text-white gold-text"
+            style={{ fontFamily: 'PT Serif, serif' }}
+          >
+            Tievista
+          </span>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          viewport={{ once: true }}
+          className="relative z-10 px-6 max-w-4xl mx-auto"
+        >
+          {/* Gold rule */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="w-16 h-px mx-auto mb-10"
+            style={{ background: GOLD, transformOrigin: 'left' }}
+          />
+
+          <p className="text-sm text-white tracking-[0.3em] uppercase font-light mb-6 gold-text">Our Identity</p>
+
+          <h2
+            className="text-sm font-light leading-relaxed tracking-tight text-white mb-10"
+            style={{ fontFamily: 'PT Serif, serif' }}
+          >
+            IndusArtha Financial Services Private Limited,
+            known as TieVista - designed to simplify complexity and provide clear oversight.
+          </h2>
+
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="w-16 h-px mx-auto"
+            style={{ background: `${GOLD}60`, transformOrigin: 'right' }}
+          />
+        </motion.div>
+      </section>
+
+      <div className="py-5 mx-auto px-6 lg:px-16">
 
         {/* Main Content Area */}
-        <div className=" flex flex-wrap gap-10 lg:gap-20 mb-16">
+        <div className="flex flex-wrap gap-10 lg:gap-20 mb-16">
 
           {/* Brand Section */}
           <div className="flex-1 min-w-[280px]">
@@ -27,15 +90,15 @@ export const Footer = () => {
             <div className="flex gap-4 mt-8 ">
               <a href="https://www.linkedin.com/company/tievista/" className="flex gap-2 group">
                 <div className='w-10 h-10 rounded-full border border-white flex items-center justify-center text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37] transition-all'>
-                <Linkedin size={18} /> 
+                  <Linkedin size={18} />
                 </div>
-              <h6 className='flex justify-center items-center text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37] transition-all font-light text-sm'> LinkedIn</h6>
-                
+                <h6 className='flex justify-center items-center text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37] transition-all font-light text-sm'> LinkedIn</h6>
+
               </a>
-              
+
               <a href="https://mail.google.com/mail/u/0/#inbox/FMfcgzQfCDMHbJDLQnzjfQrXtpdWmsWT?compose=CllgCKCHTgqwmLnLdDGDGqZPpjWNgdMRxHRBGHFkvGNDsWlMKlbtnzLBbNqklMcpWRrjLkRQMZL" className="flex gap-2 group">
                 <div className='w-10 h-10 rounded-full border border-white flex items-center justify-center text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37] transition-all'>
-                  <Mail size={18} /> 
+                  <Mail size={18} />
                 </div>
                 <h6 className='flex justify-center items-center text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37] transition-all font-light text-sm'>Email</h6>
               </a>
@@ -91,7 +154,7 @@ export const Footer = () => {
           <div className="flex gap-8">
             <Link to="/privacypolicy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
-            
+
           </div>
         </div>
 
