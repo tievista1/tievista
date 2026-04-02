@@ -51,7 +51,7 @@ export const Footer = () => {
             style={{ background: GOLD, transformOrigin: 'left' }}
           />
 
-          <p className="text-sm text-white tracking-[0.3em] uppercase font-light mb-6 gold-text">Our Identity</p>
+          <p className="text-sm text-white tracking-[0.3em] uppercase font-bold mb-6 ">Our Identity</p>
 
           <h2
             className="text-sm font-light leading-relaxed tracking-tight text-white mb-10"
