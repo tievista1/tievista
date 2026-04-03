@@ -125,18 +125,18 @@ function PartnershipSection({ p, index }) {
                                 style={{ fontFamily: 'PT Serif, serif' }}
                             >
                                 {heading}{' '}
-                                <span className="gold-text" >{accent}</span>
+                                <span className="gold-text" style={{ fontFamily: 'PT Serif, serif' }}>{accent}</span>
                             </h2>
 
                             {/* Gold divider */}
                             <div className="w-12 h-px mb-6" style={{ background: GOLD }} />
 
                             {/* Body1 */}
-                            <p className="text-lg text-gray-600 leading-relaxed font-light mb-8">
+                            <p className="text-lg text-black leading-relaxed font-light mb-8" style={{fontFamily:'PT Serif,serif'}}>
                                 {body1}
                             </p>
                             {/* Body2 */}
-                            <p className="text-lg text-gray-600 leading-relaxed font-light mb-8">
+                            <p className="text-lg text-black leading-relaxed font-light mb-8" style={{fontFamily:'PT Serif,serif'}}>
                                 {body2}
                             </p>
 
@@ -157,7 +157,7 @@ function PartnershipSection({ p, index }) {
                                         >
                                             <ArrowRight size={13} />
                                         </div>
-                                        <span className="text-base font-light text-gray-700 group-hover:text-black transition-colors">
+                                        <span className="text-base font-light text-black group-hover:text-black transition-colors" style={{fontFamily:'PT Serif,serif'}}>
                                             {item}
                                         </span>
                                     </motion.div>
@@ -170,7 +170,7 @@ function PartnershipSection({ p, index }) {
                                 style={{ borderColor: GOLD, background: `${GOLD}08` }}
                             >
                                 <ShieldCheck size={16} className="shrink-0 mt-0.5" style={{ color: GOLD }} />
-                                <p className="text-sm text-gray-500 font-light leading-relaxed italic">
+                                <p className="text-sm text-black font-light leading-relaxed" style={{fontFamily:'PT Serif,serif'}}>
                                     {note}
                                 </p>
                             </div>
@@ -217,7 +217,7 @@ function PartnershipSection({ p, index }) {
                         style={{ borderColor: `${GOLD}60`, background: 'rgba(0,0,0,0.25)' }}
                     >
                         <span className="w-1.5 h-1.5 rounded-full" style={{ background: GOLD }} />
-                        <span className="text-[8px] lg:text-xs font-bold tracking-[0.3em] uppercase" style={{ color: GOLD }}>
+                        <span className="text-[8px] lg:text-xs font-bold tracking-[0.3em] uppercase" style={{ color: GOLD, fontFamily: 'PT Serif, serif' }}>
                             Coordination · Facilitation · Discretion
                         </span>
                     </motion.div>
@@ -238,6 +238,7 @@ function PartnershipSection({ p, index }) {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.9, delay: 0.8 }}
                         className="text-xl md:text-2xl text-white font-light max-w-2xl mx-auto leading-relaxed"
+                        style={{ fontFamily: 'PT Serif, serif' }}
                     >
                         Curating access to global specialists so your clients navigate cross-border complexity with greater clarity and discretion.
                     </motion.p>
