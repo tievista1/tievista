@@ -160,7 +160,7 @@ Please respond to this enquiry as soon as possible.
                 </div>
 
                 <div className="flex items-start gap-6 group">
-                  <a className='flex items-start gap-6 group' target="_blank" href="tel:+917977626003">
+                  <a className='flex items-start gap-6 group' target="_blank" href="tel:+919167915651">
                     <div className="w-12 h-12 rounded-full flex items-center justify-center shrink-0 border border-gray-200 group-hover:bg-[#D4AF37] group-hover:border-[#D4AF37] group-hover:text-white transition-all duration-300">
                       <Phone size={20} />
                     </div>
