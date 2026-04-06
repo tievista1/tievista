@@ -151,7 +151,7 @@ function ServiceSection({ svc, index }) {
                                 >
                                     <Icon size={20} color={GOLD} />
                                 </div>
-                                <span className="text-gray-400 text-xs font-semibold tracking-[0.35em] uppercase">
+                                <span className="text-black text-xs font-semibold tracking-[0.35em] uppercase" style={{ fontFamily: 'PT Serif, serif' }}>
                                     {label}
                                 </span>
                             </div>
@@ -169,13 +169,13 @@ function ServiceSection({ svc, index }) {
                             <div className="w-12 h-px mb-6" style={{ background: GOLD }} />
 
                             {/* Body */}
-                            <p className="text-lg text-gray-600 leading-relaxed font-light mb-10">
+                            <p className="text-lg text-black leading-relaxed font-light mb-10" style={{ fontFamily: 'PT Serif, serif' }}>
                                 {body}
                             </p>
 
                             {/* Bullet list */}
                             <div>
-                                <p className="text-xs font-semibold text-gray-400 tracking-[0.3em] uppercase mb-4">
+                                <p className="text-xs font-semibold text-black uppercase mb-4" style={{ fontFamily: 'PT Serif, serif' }}>
                                     Key Offerings
                                 </p>
                                 <div className="space-y-0">
@@ -187,14 +187,15 @@ function ServiceSection({ svc, index }) {
                                             transition={{ duration: 0.5, delay: i * 0.08 }}
                                             viewport={{ once: true }}
                                             className="group flex items-center gap-4 py-4 border-b border-gray-100 cursor-default"
+                                            style={{ fontFamily: 'PT Serif, serif' }}
                                         >
                                             <div
                                                 className="w-9 h-9 rounded-full border flex items-center justify-center shrink-0 transition-all duration-300 group-hover:bg-[#D4AF37] group-hover:border-[#D4AF37] group-hover:text-white"
-                                                style={{ borderColor: '#e5e7eb', color: '#9ca3af' }}
+                                                style={{ borderColor: '#000000', color: '#000000' }}
                                             >
                                                 <ArrowRight size={15} />
                                             </div>
-                                            <span className="text-base md:text-lg font-light text-gray-700 group-hover:text-black transition-colors">
+                                            <span className="text-base md:text-lg font-light text-black group-hover:text-black transition-colors">
                                                 {item}
                                             </span>
                                         </motion.div>
@@ -248,7 +249,7 @@ const NriSolutions = () => {
                         style={{ borderColor: `${GOLD}60`, background: 'rgba(0,0,0,0.25)' }}
                     >
                         <span className="w-1.5 h-1.5 rounded-full" style={{ background: GOLD }} />
-                        <span className="text-xs font-bold tracking-[0.3em] uppercase" style={{ color: GOLD }}>
+                        <span className="text-xs font-bold tracking-[0.3em] uppercase" style={{ color: GOLD, fontFamily: 'PT Serif, serif' }}>
                             Your trusted India-side investment partner
                         </span>
                     </motion.div>
@@ -271,6 +272,7 @@ const NriSolutions = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.9, delay: 0.8 }}
                         className="text-xl md:text-2xl text-white font-light max-w-3xl mx-auto leading-relaxed"
+                        style={{ fontFamily: 'PT Serif, serif' }}
                     >
                         As Indian families become increasingly global, TieVista ensures your India-side capital is structured with intent, discipline, and long-term alignment.
                     </motion.p>
@@ -285,6 +287,7 @@ const NriSolutions = () => {
                                 key={i}
                                 href={nav.href}
                                 className="group relative flex-1 flex flex-col justify-center px-4 py-5 border-r border-gray-100 last:border-r-0 overflow-hidden transition-all duration-300 hover:bg-[#FFFDF5]"
+                                style={{ fontFamily: 'PT Serif, serif' }}
                             >
                                 {/* Gold top-border reveal */}
                                 <div
@@ -335,10 +338,10 @@ const NriSolutions = () => {
                             >
                                 Capital beyond <span className="gold-text" >borders.</span>
                             </h3>
-                            <p className="text-lg text-gray-600 font-light leading-relaxed mb-4">
+                            <p className="text-lg text-black font-light leading-relaxed mb-4" style={{ fontFamily: 'PT Serif, serif' }}>
                                 Wealth decisions are no longer confined to a single geography. Assets, incomes, responsibilities, and aspirations often span India, the Middle East, Southeast Asia, Europe, and beyond.
                             </p>
-                            <p className="text-lg text-gray-600 font-light leading-relaxed">
+                            <p className="text-lg text-black font-light leading-relaxed" style={{ fontFamily: 'PT Serif, serif' }}>
                                 TieVista highlights the role that India plays within the broader wealth landscape ensuring your India-side capital is always structured with purpose.
                             </p>
                         </div>
