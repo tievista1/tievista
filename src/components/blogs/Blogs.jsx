@@ -124,7 +124,7 @@ const Blogs = () => {
                                         <div className=' flex flex-col p-6 pt-4'>
                                             <div className='flex items-center gap-2 mb-3'>
                                                 <Calendar className='size-3' style={{ color: GOLD }} />
-                                                <span className='text-[9px] font-semibold tracking-[0.25em] uppercase text-gray-400'>
+                                                <span className='text-[9px] font-semibold tracking-[0.25em] uppercase text-black' style={{ fontFamily: 'PT Serif, serif' }}>
                                                     {blog.date}
                                                 </span>
                                             </div>
