@@ -129,13 +129,13 @@ const Blogs = () => {
                                                 </span>
                                             </div>
 
-                                            <p className='text-gray-600 text-sm font-light mb-6'>
+                                            <p className='text-black text-sm font-light mb-6' style={{ fontFamily: 'PT Serif, serif' }}>
                                                 {blog.description}
                                             </p>
 
                                             <a
                                                 href={blog.url}
-                                                className='inline-flex items-center gap-2 text-[11px] font-bold tracking-widest uppercase text-[#D4AF37] group/link mt-auto'
+                                                className='inline-flex items-center gap-2 text-[11px] font-bold tracking-widest uppercase text-[#D4AF37] group/link mt-auto' style={{ fontFamily: 'PT Serif, serif' }}
                                             >
                                                 Read More
                                                 <ArrowRight className='size-3 transition-transform duration-300 group-hover/link:translate-x-1' />
@@ -153,7 +153,7 @@ const Blogs = () => {
                             animate={{ opacity: 1 }}
                             className='flex flex-col items-center justify-center py-24'
                         >
-                            <p className='text-gray-400 font-light mb-4'>No insights found matching "{searchTerm}"</p>
+                            <p className='text-black font-light mb-4' style={{ fontFamily: 'PT Serif, serif' }}>No insights found matching "{searchTerm}"</p>
                             <button
                                 onClick={() => setSearchTerm('')}
                                 className='text-sm uppercase tracking-widest'
