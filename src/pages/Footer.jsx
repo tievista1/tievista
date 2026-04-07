@@ -51,7 +51,7 @@ export const Footer = () => {
             style={{ background: GOLD, transformOrigin: 'left' }}
           />
 
-          <p className="text-sm text-white tracking-[0.3em] uppercase font-bold mb-6 ">Our Identity</p>
+          <p className="text-sm text-white tracking-[0.3em] uppercase font-bold mb-6 " style={{ fontFamily: 'PT Serif, serif' }}>Our Identity</p>
 
           <h2
             className="text-sm font-light leading-relaxed tracking-tight text-white mb-10"
@@ -92,7 +92,7 @@ export const Footer = () => {
                 <div className='w-10 h-10 rounded-full border border-white flex items-center justify-center text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37] transition-all'>
                   <Linkedin size={18} />
                 </div>
-                <h6 className='flex justify-center items-center text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37] transition-all font-light text-sm'> LinkedIn</h6>
+                <h6 className='flex justify-center items-center text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37] transition-all font-light text-sm' style={{ fontFamily: 'PT Serif, serif' }}> LinkedIn</h6>
 
               </a>
 
@@ -100,7 +100,7 @@ export const Footer = () => {
                 <div className='w-10 h-10 rounded-full border border-white flex items-center justify-center text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37] transition-all'>
                   <Mail size={18} />
                 </div>
-                <h6 className='flex justify-center items-center text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37] transition-all font-light text-sm'>Email</h6>
+                <h6 className='flex justify-center items-center text-white group-hover:border-[#D4AF37] group-hover:text-[#D4AF37] transition-all font-light text-sm' style={{ fontFamily: 'PT Serif, serif' }}>Email</h6>
               </a>
             </div>
           </div>
@@ -110,28 +110,28 @@ export const Footer = () => {
 
             {/* Column 1 */}
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-[0.3em] mb-6 gold-text">
+              <h4 className="text-xs font-bold uppercase tracking-[0.3em] mb-6 gold-text" style={{ fontFamily: 'PT Serif, serif' }}>
                 Quick Links
               </h4>
               <ul className="space-y-4 font-light text-white">
-                <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
-                <li><Link to="/aboutus" className="hover:text-white transition-colors">About Us</Link></li>
-                <li><Link to="/services" className="hover:text-white transition-colors">Services</Link></li>
-                <li><Link to="/nrisolutions" className="hover:text-white transition-colors">NRI Solutions</Link></li>
-                <li><Link to="/partners" className="hover:text-white transition-colors">TieVista Partners</Link></li>
+                <li><Link to="/" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Home</Link></li>
+                <li><Link to="/aboutus" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>About Us</Link></li>
+                <li><Link to="/services" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Services</Link></li>
+                <li><Link to="/nrisolutions" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>NRI Solutions</Link></li>
+                <li><Link to="/partners" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>TieVista Partners</Link></li>
               </ul>
             </div>
 
             {/* Column 2 */}
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-[0.3em] mb-6" style={{ color: GOLD }}>
+              <h4 className="text-xs font-bold uppercase tracking-[0.3em] mb-6" style={{ color: GOLD, fontFamily: 'PT Serif, serif' }}>
                 Solutions
               </h4>
               <ul className="space-y-4 font-light text-white">
-                <li><Link to="/investmentuniverse" className="hover:text-white transition-colors">Investment Universe</Link></li>
-                <li><Link to="/b2b" className="hover:text-white transition-colors">Allied Services</Link></li>
+                <li><Link to="/investmentuniverse" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Investment Universe</Link></li>
+                <li><Link to="/b2b" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Allied Services</Link></li>
                 {/* <li><Link to="/insights" className="hover:text-white transition-colors">Insights</Link></li> */}
-                <li><Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
+                <li><Link to="/contact" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Contact Us</Link></li>
               </ul>
             </div>
 
@@ -143,17 +143,17 @@ export const Footer = () => {
 
         {/* Disclaimer Section */}
         <div className="mb-10">
-          <p className="text-[12px]  leading-relaxed text-white text-justify md:text-left">
+          <p className="text-[12px]  leading-relaxed text-white text-justify md:text-left" style={{ fontFamily: 'PT Serif, serif' }}>
             Mutual fund investments are subject to market risks. Please read the scheme information and other related documents carefully before investing. Past performance is not indicative of future returns. Please consider your specific investment requirements before choosing a fund,or designing a portfolio that suits your needs. IndusArtha financial services private limited, (with ARN code 342010 and APRN code 07336) makes no warranties or representations, express or implied, on products offered through the platform. It accepts no liability for any damages or losses, however caused, in connection with the use of, or on the reliance of its product or related services. Terms and conditions of the website are applicable.
           </p>
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-[12px] text-white font-light pt-8 border-t border-gray-900">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-[12px] text-white font-light pt-8 border-t border-gray-900" style={{ fontFamily: 'PT Serif, serif' }}>
           <p>© 2025 TieVista. All rights reserved.</p>
           <div className="flex gap-8">
-            <Link to="/privacypolicy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-white transition-colors">Terms of Use</Link>
+            <Link to="/privacypolicy" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Terms of Use</Link>
 
           </div>
         </div>
