@@ -127,13 +127,13 @@ const CategorySection = ({ cat, index }) => {
                             <div className="w-12 h-px mb-6" style={{ background: GOLD }} />
 
                             {/* Description */}
-                            <p className="text-lg text-gray-600 leading-relaxed font-light mb-10">
+                            <p className="text-lg text-black leading-relaxed font-light mb-10" style={{ fontFamily: 'PT Serif, serif' }}>
                                 {cat.description}
                             </p>
 
                             {/* Includes list */}
                             <div>
-                                <p className="text-xs font-semibold text-gray-400 tracking-[0.3em] uppercase mb-4">
+                                <p className="text-xs font-semibold text-black uppercase mb-4" style={{ fontFamily: 'PT Serif, serif' }}>
                                     Institutional Offerings
                                 </p>
                                 <div className="space-y-0">
@@ -148,11 +148,11 @@ const CategorySection = ({ cat, index }) => {
                                         >
                                             <div
                                                 className="w-9 h-9 rounded-full border flex items-center justify-center shrink-0 transition-all duration-300 group-hover:bg-[#D4AF37] group-hover:border-[#D4AF37] group-hover:text-white"
-                                                style={{ borderColor: '#e5e7eb', color: '#9ca3af' }}
+                                                style={{ borderColor: 'black', color: 'black' }}
                                             >
                                                 <ArrowRight size={15} />
                                             </div>
-                                            <span className="text-base md:text-lg font-light text-gray-700 group-hover:text-black transition-colors">
+                                            <span className="text-base md:text-lg font-light text-black group-hover:text-black transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>
                                                 {item}
                                             </span>
                                         </motion.div>
@@ -171,7 +171,7 @@ const CategorySection = ({ cat, index }) => {
 
 // --- Main Component ---
 
- const InvestmentUniverse = () => {
+const InvestmentUniverse = () => {
     const animationSettings = {
         container: {
             hidden: { opacity: 0, y: 30 },
@@ -199,12 +199,12 @@ const CategorySection = ({ cat, index }) => {
                 <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={animationSettings.container} className="relative z-10 text-center px-6">
                     <div className="inline-flex items-center gap-3 px-4 py-1 mb-6 border border-[#D4AF37]/50 rounded-full bg-black/20 backdrop-blur-sm">
                         <span className="w-1.5 h-1.5 rounded-full" style={{ background: GOLD }} />
-                        <span className="text-[#D4AF37] text-xs font-bold tracking-[0.3em] uppercase">We don’t just manage wealth, We future-proof it.</span>
+                        <span className="text-[#D4AF37] text-xs font-bold tracking-[0.3em] uppercase" style={{ fontFamily: 'PT Serif, serif' }}>We don’t just manage wealth, We future-proof it.</span>
                     </div>
                     <motion.h1 variants={animationSettings.item} className="text-6xl md:text-9xl mb-8 text-white tracking-tighter leading-[0.95]" style={{ fontFamily: "PT Serif" }}>
                         Investment <span className="gold-text ">Universe</span>
                     </motion.h1>
-                    <motion.p variants={animationSettings.item} className="text-xl md:text-2xl text-white font-light max-w-3xl mx-auto leading-relaxed mb-12">
+                    <motion.p variants={animationSettings.item} className="text-xl md:text-2xl text-white font-light max-w-3xl mx-auto leading-relaxed mb-12" style={{ fontFamily: 'PT Serif, serif' }}>
                         Navigating the complexities of global wealth through bespoke selection, rigorous discipline, and a borderless perspective.
                     </motion.p>
                 </motion.div>
@@ -222,7 +222,7 @@ const CategorySection = ({ cat, index }) => {
                                 {/* Gold top-border reveal on hover */}
                                 <div
                                     className="absolute top-0 left-0 h-[2px] w-0 group-hover:w-full transition-all duration-500"
-                                    style={{ background: GOLD }}
+                                    style={{ background: GOLD, fontFamily: 'PT Serif, serif' }}
                                 />
 
                                 {/* Row: index + icon */}
@@ -240,7 +240,7 @@ const CategorySection = ({ cat, index }) => {
                                 </div>
 
                                 {/* Title */}
-                                <span className="text-[11px] md:text-sm font-semibold text-gray-700 group-hover:text-gray-900 tracking-tight leading-tight transition-colors duration-300 line-clamp-1">
+                                <span className="text-[11px] md:text-sm font-semibold text-black group-hover:text-black tracking-tight leading-tight transition-colors duration-300 line-clamp-1">
                                     {el.title}
                                 </span>
 
@@ -271,9 +271,9 @@ const CategorySection = ({ cat, index }) => {
                         Future-proof Your <br /> <span className="gold-text italic">Legacy.</span>
                     </h2>
                     <Link to="/contact">
-                    <button className="bg-black text-white px-16 py-6 rounded-full font-bold tracking-[0.2em] uppercase text-sm hover:bg-[#D4AF37] transition-all shadow-2xl hover:shadow-[#D4AF37]/40">
-                        Connect With wealth manager
-                    </button>
+                        <button className="bg-black text-white px-16 py-6 rounded-full font-bold uppercase text-sm hover:bg-[#D4AF37] transition-all shadow-2xl hover:shadow-[#D4AF37]/40" style={{ fontFamily: 'PT Serif, serif' }}>
+                            Connect With wealth manager
+                        </button>
                     </Link>
                 </motion.div>
             </section>
