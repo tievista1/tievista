@@ -21,7 +21,7 @@ const PrivacyPolicy = () => {
         <motion.div {...fadeUp(0)} className="mb-20">
           <div className="flex items-center gap-3 mb-5">
             <div className="w-10 h-px" style={{ background: GOLD }} />
-            <span className="text-xs font-semibold tracking-[0.35em] uppercase text-gray-400">Legal</span>
+            <span className="text-xs font-semibold tracking-[0.35em] uppercase text-black" style={{ fontFamily: 'PT Serif, serif' }}>Legal</span>
           </div>
           <h1
             className="text-5xl md:text-7xl tracking-tighter leading-none mb-8"
