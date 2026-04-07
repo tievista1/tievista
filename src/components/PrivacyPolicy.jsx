@@ -16,26 +16,26 @@ const PrivacyPolicy = () => {
   return (
     <div className="bg-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-white pt-32 pb-20">
       <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
-        
+
         {/* Header Header */}
         <motion.div {...fadeUp(0)} className="mb-20">
           <div className="flex items-center gap-3 mb-5">
             <div className="w-10 h-px" style={{ background: GOLD }} />
             <span className="text-xs font-semibold tracking-[0.35em] uppercase text-gray-400">Legal</span>
           </div>
-          <h1 
+          <h1
             className="text-5xl md:text-7xl tracking-tighter leading-none mb-8"
             style={{ fontFamily: 'PT Serif, serif' }}
           >
             Privacy <span className="gold-text">Policy</span>
           </h1>
-          <p className="text-xl text-gray-600 font-light leading-relaxed max-w-3xl">
+          <p className="text-xl text-black font-light leading-relaxed max-w-3xl" style={{ fontFamily: 'PT Serif, serif' }}>
             IndusArtha Financial Services Pvt. Ltd., its subsidiaries and affiliates (collectively, “IndusArtha”, “TieVista”, “we”, “us”, or “our”) are committed to protecting the privacy and confidentiality of the information entrusted to us.
           </p>
         </motion.div>
 
         {/* Intro Text */}
-        <motion.div {...fadeUp(0.1)} className="mb-16 prose prose-lg prose-gray max-w-none text-gray-600 font-light leading-relaxed">
+        <motion.div {...fadeUp(0.1)} className="mb-16 prose prose-lg prose-gray max-w-none text-black font-light leading-relaxed" style={{ fontFamily: 'PT Serif, serif' }}>
           <p>
             This Privacy Policy explains how we collect, use, disclose, store, and safeguard information obtained through our website(s), digital platforms, applications, and services (collectively, the “Website”).
           </p>
@@ -45,7 +45,7 @@ const PrivacyPolicy = () => {
         </motion.div>
 
         <div className="space-y-16">
-          
+
           {/* Section 1: Scope */}
           <motion.section {...fadeUp(0.2)}>
             <div className="flex items-center gap-4 mb-6">
@@ -54,9 +54,9 @@ const PrivacyPolicy = () => {
               </div>
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-black" style={{ fontFamily: 'PT Serif, serif' }}>1. Scope of This Policy</h2>
             </div>
-            <div className="pl-14 space-y-4 text-gray-600 font-light leading-relaxed">
+            <div className="pl-14 space-y-4 text-black font-light leading-relaxed" style={{ fontFamily: 'PT Serif, serif' }}>
               <p>This Privacy Policy applies to:</p>
-              <ul className="list-disc pl-5 space-y-2">
+              <ul className="list-disc pl-5 space-y-2" style={{ fontFamily: 'PT Serif, serif' }}>
                 <li>Visitors to our Website</li>
                 <li>Users submitting inquiries, applications, or forms</li>
                 <li>Clients and prospective clients engaging with our services online</li>
@@ -73,13 +73,13 @@ const PrivacyPolicy = () => {
               </div>
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-black" style={{ fontFamily: 'PT Serif, serif' }}>2. Information We Collect</h2>
             </div>
-            <div className="pl-14 space-y-8 text-gray-600 font-light leading-relaxed">
+            <div className="pl-14 space-y-8 text-black font-light leading-relaxed" style={{ fontFamily: 'PT Serif, serif' }}>
               <div>
                 <h3 className="text-xl font-medium text-black mb-3">a. Personal Information</h3>
                 <p className="mb-3">We may collect personal information including, but not limited to:</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {[
-                    "Full name", "Email address", "Mobile number", 
+                    "Full name", "Email address", "Mobile number",
                     "Residential or mailing address", "PAN, Aadhaar, or other KYC-related identifiers",
                     "Date of birth", "Employment, income, or financial details",
                     "Any information voluntarily submitted through forms"
@@ -117,11 +117,11 @@ const PrivacyPolicy = () => {
               </div>
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-black" style={{ fontFamily: 'PT Serif, serif' }}>3. Purpose of Information Collection</h2>
             </div>
-            <div className="pl-14 text-gray-600 font-light leading-relaxed">
+            <div className="pl-14 text-black font-light leading-relaxed" style={{ fontFamily: 'PT Serif, serif' }} >
               <p className="mb-4">We collect and use information for the following purposes:</p>
               <ul className="space-y-3">
                 {[
-                  "To provide and manage financial services", 
+                  "To provide and manage financial services",
                   "To comply with KYC, AML, and regulatory obligations",
                   "To respond to inquiries and service requests",
                   "To process applications and onboarding",
@@ -147,7 +147,7 @@ const PrivacyPolicy = () => {
               </div>
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-black" style={{ fontFamily: 'PT Serif, serif' }}>4. Cookies & Tracking Technologies</h2>
             </div>
-            <div className="pl-14 text-gray-600 font-light leading-relaxed">
+            <div className="pl-14 text-black font-light leading-relaxed" style={{ fontFamily: 'PT Serif, serif' }}>
               <p className="mb-4">Our Website may use cookies, web beacons, and similar technologies to:</p>
               <ul className="list-disc pl-5 space-y-2 mb-4">
                 <li>Enhance functionality</li>
@@ -166,7 +166,7 @@ const PrivacyPolicy = () => {
               </div>
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-black" style={{ fontFamily: 'PT Serif, serif' }}>5. Information Sharing & Disclosure</h2>
             </div>
-            <div className="pl-14 text-gray-600 font-light leading-relaxed space-y-4">
+            <div className="pl-14 text-black font-light leading-relaxed space-y-4" style={{ fontFamily: 'PT Serif, serif' }}>
               <p className="font-medium text-black">We do not sell, rent, or trade personal information.</p>
               <p>Information may be shared only:</p>
               <ul className="space-y-3">
@@ -194,7 +194,7 @@ const PrivacyPolicy = () => {
               </div>
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-black" style={{ fontFamily: 'PT Serif, serif' }}>6. Data Security</h2>
             </div>
-            <div className="pl-14 text-gray-600 font-light leading-relaxed">
+            <div className="pl-14 text-black font-light leading-relaxed" style={{ fontFamily: 'PT Serif, serif' }}>
               <p className="mb-4">We maintain reasonable administrative, technical, and physical safeguards to protect information against unauthorized access, loss, misuse, or alteration.</p>
               <p className="text-gray-500">While we strive to protect your information, no system can be guaranteed to be 100% secure.</p>
             </div>
@@ -208,7 +208,7 @@ const PrivacyPolicy = () => {
               </div>
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-black" style={{ fontFamily: 'PT Serif, serif' }}>7. Data Retention</h2>
             </div>
-            <div className="pl-14 text-gray-600 font-light leading-relaxed">
+            <div className="pl-14 text-black font-light leading-relaxed" style={{ fontFamily: 'PT Serif, serif' }}>
               <p>We retain personal information only for as long as necessary to fulfill the purposes outlined in this Policy, comply with legal/regulatory obligations, and resolve disputes.</p>
             </div>
           </motion.section>
@@ -221,7 +221,7 @@ const PrivacyPolicy = () => {
               </div>
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-black" style={{ fontFamily: 'PT Serif, serif' }}>8. User Rights</h2>
             </div>
-            <div className="pl-14 space-y-4 text-gray-600 font-light leading-relaxed">
+            <div className="pl-14 space-y-4 text-black font-light leading-relaxed" style={{ fontFamily: 'PT Serif, serif' }}>
               <p>Subject to applicable laws, you may:</p>
               <ul className="list-disc pl-5 space-y-2">
                 <li>Request access to your personal information</li>
@@ -241,7 +241,7 @@ const PrivacyPolicy = () => {
               </div>
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-black" style={{ fontFamily: 'PT Serif, serif' }}>9. Third-Party Websites</h2>
             </div>
-            <div className="pl-14 text-gray-600 font-light leading-relaxed">
+            <div className="pl-14 text-black font-light leading-relaxed" style={{ fontFamily: 'PT Serif, serif' }}>
               <p>Our Website may contain links to third-party websites. IndusArtha is not responsible for the privacy practices or content of such external sites. We encourage you to review their policies separately.</p>
             </div>
           </motion.section>
@@ -254,7 +254,7 @@ const PrivacyPolicy = () => {
               </div>
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-black" style={{ fontFamily: 'PT Serif, serif' }}>10. Children’s Privacy</h2>
             </div>
-            <div className="pl-14 text-gray-600 font-light leading-relaxed">
+            <div className="pl-14 text-black font-light leading-relaxed" style={{ fontFamily: 'PT Serif, serif' }}>
               <p>Our Website is not intended for individuals under the age of 18. We do not knowingly collect personal information from minors.</p>
             </div>
           </motion.section>
@@ -267,7 +267,7 @@ const PrivacyPolicy = () => {
               </div>
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-black" style={{ fontFamily: 'PT Serif, serif' }}>11. Regulatory Compliance</h2>
             </div>
-            <div className="pl-14 text-gray-600 font-light leading-relaxed">
+            <div className="pl-14 text-black font-light leading-relaxed" style={{ fontFamily: 'PT Serif, serif' }}>
               <p className="mb-4">IndusArtha complies with applicable Indian laws, including:</p>
               <ul className="list-disc pl-5 space-y-2">
                 <li>Information Technology Act, 2000</li>
@@ -285,7 +285,7 @@ const PrivacyPolicy = () => {
               </div>
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-black" style={{ fontFamily: 'PT Serif, serif' }}>12. Changes to This Privacy Policy</h2>
             </div>
-            <div className="pl-14 text-gray-600 font-light leading-relaxed">
+            <div className="pl-14 text-black font-light leading-relaxed" style={{ fontFamily: 'PT Serif, serif' }}>
               <p>We reserve the right to update or modify this Privacy Policy at any time without prior notice. Changes will be effective immediately upon posting. Continued use of the Website constitutes acceptance of the revised Policy.</p>
             </div>
           </motion.section>
@@ -298,7 +298,7 @@ const PrivacyPolicy = () => {
               </div>
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-black" style={{ fontFamily: 'PT Serif, serif' }}>13. Consent</h2>
             </div>
-            <div className="pl-14 text-gray-600 font-light leading-relaxed space-y-4">
+            <div className="pl-14 text-black font-light leading-relaxed space-y-4" style={{ fontFamily: 'PT Serif, serif' }}>
               <p>By using our Website or submitting information, you:</p>
               <ul className="list-disc pl-5 space-y-2">
                 <li>Consent to the collection, use, and processing of your information as described herein</li>
@@ -315,7 +315,7 @@ const PrivacyPolicy = () => {
               </div>
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-black" style={{ fontFamily: 'PT Serif, serif' }}>14. Contact Information</h2>
             </div>
-            <div className="pl-14 text-gray-600 font-light leading-relaxed">
+            <div className="pl-14 text-black font-light leading-relaxed space-y-4" style={{ fontFamily: 'PT Serif, serif' }}>
               <p className="mb-6">For questions, concerns, or requests related to this Privacy Policy or data handling practices, please contact:</p>
               <div className="space-y-4 bg-[#FAFAFA] p-8  border border-gray-100">
                 <p className="font-semibold text-black mb-4">TIEVISTA GLOBAL PRIVATE WEALTH</p>
