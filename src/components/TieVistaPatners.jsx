@@ -103,7 +103,7 @@ const TieVistaPatners = () => {
             className="inline-flex items-center gap-3 px-4 py-1.5 mb-8 border border-[#D4AF37]/40 rounded-full bg-black/30 backdrop-blur-md"
           >
             <span className="w-1.5 h-1.5 rounded-full" style={{ background: GOLD }} />
-            <span className="text-[#D4AF37] text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase">Empowering Independent Partners</span>
+            <span className="text-[#D4AF37] text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase" style={{ fontFamily: 'PT Serif, serif' }}>Empowering Independent Partners</span>
           </motion.div>
           <motion.h1
             variants={animationSettings.item}
@@ -114,7 +114,7 @@ const TieVistaPatners = () => {
           </motion.h1>
           <motion.p
             variants={animationSettings.item}
-            className="text-lg md:text-xl lg:text-2xl text-white font-light max-w-3xl mx-auto leading-relaxed px-4"
+            className="text-lg md:text-xl lg:text-2xl text-white font-light max-w-3xl mx-auto leading-relaxed px-4" style={{ fontFamily: 'PT Serif, serif' }}
           >
             A next-generation partnership platform designed to institutionalize independent financial patnership practices globally.
           </motion.p>
@@ -148,7 +148,7 @@ const TieVistaPatners = () => {
                 </div>
               </motion.div>
 
-              <motion.div {...fadeUp(0.1)} className="text-gray-600 font-light leading-relaxed space-y-6 text-base md:text-lg">
+              <motion.div {...fadeUp(0.1)} className="text-black font-light leading-relaxed space-y-6 text-base md:text-lg" style={{ fontFamily: 'PT Serif, serif' }}>
                 <p>
                   The platform is envisioned as a growth engine for ambitious partners,
                   providing access to institutional-grade processes, robust operational infrastructure,
@@ -169,7 +169,7 @@ const TieVistaPatners = () => {
 
             {/* Right Column: Analytics & Alignment */}
             <div className="w-full md:w-1/2 space-y-10 md:space-y-12 md:mt-12">
-              <motion.div {...fadeUp(0.2)} className="text-gray-600 font-light leading-relaxed space-y-6 text-base md:text-lg">
+              <motion.div {...fadeUp(0.2)} className="text-black font-light leading-relaxed space-y-6 text-base md:text-lg" style={{ fontFamily: 'PT Serif, serif' }}>
                 <p>
                   At the heart of the platform is a powerful reporting and portfolio analytics engine,
                   designed to bring institutional-level transparency and analytics to client portfolios.
@@ -185,10 +185,10 @@ const TieVistaPatners = () => {
                   long-term alignment, ensuring that channel partners are rewarded equitably
                   for the value they create and the relationships they nurture.
                 </p>
-                <div className="pt-8 border-t border-gray-100 italic text-sm text-gray-400 leading-relaxed">
+                <div className="pt-8 border-t border-gray-100 text-sm text-black leading-relaxed" style={{ fontFamily: 'PT Serif, serif' }}>
                   "The partnership model is founded on the principle of fair, transparent, and long-term alignment, ensuring that channel partners are rewarded equitably for the value they create."
                 </div>
-                <p className="text-[11px] uppercase tracking-wider text-gray-300">
+                <p className="text-[11px] uppercase tracking-wider text-black" style={{ fontFamily: 'PT Serif, serif' }}>
                   All client recommendations remain the responsibility of the respective partner and the client, In-accordance with applicable regulatory requirements
                 </p>
               </motion.div>
@@ -232,7 +232,7 @@ const TieVistaPatners = () => {
                       >
                         <item.icon className={`transition-colors duration-500 ${isOpen ? 'text-white' : 'text-[#D4AF37]'}`} size={isOpen ? 22 : 20} />
                       </div>
-                      <h3 className={`text-sm sm:text-lg md:text-xl font-semibold tracking-tight transition-colors duration-300 ${isOpen ? 'text-black' : 'text-gray-800'}`}>
+                      <h3 className={`text-sm sm:text-lg md:text-xl font-semibold tracking-tight transition-colors duration-300 ${isOpen ? 'text-black' : 'text-black'}`} style={{ fontFamily: 'PT Serif, serif' }}>
                         {item.question}
                       </h3>
                     </div>
@@ -251,7 +251,7 @@ const TieVistaPatners = () => {
                       >
                         <div className="px-5 pb-8 sm:px-6 sm:pb-8 md:px-8 md:pb-10 pt-0 sm:ml-18 md:ml-18 pr-6 sm:pr-12">
                           <div className="w-full h-px bg-gray-50 mb-6" />
-                          <p className="text-gray-600 font-light leading-relaxed text-sm sm:text-base md:text-lg whitespace-pre-line">
+                          <p className="text-black font-light leading-relaxed text-sm sm:text-base md:text-lg whitespace-pre-line" style={{ fontFamily: 'PT Serif, serif' }}>
                             {item.answer}
                           </p>
                         </div>
