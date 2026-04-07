@@ -196,7 +196,7 @@ const PrivacyPolicy = () => {
             </div>
             <div className="pl-14 text-black font-light leading-relaxed" style={{ fontFamily: 'PT Serif, serif' }}>
               <p className="mb-4">We maintain reasonable administrative, technical, and physical safeguards to protect information against unauthorized access, loss, misuse, or alteration.</p>
-              <p className="text-gray-500">While we strive to protect your information, no system can be guaranteed to be 100% secure.</p>
+              <p className="">While we strive to protect your information, no system can be guaranteed to be 100% secure.</p>
             </div>
           </motion.section>
 
