@@ -115,7 +115,6 @@ export const Footer = () => {
               </h4>
               <ul className="space-y-4 font-light text-white">
                 <li><Link to="/" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Home</Link></li>
-                <li><Link to="/aboutus" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>About Us</Link></li>
                 <li><Link to="/services" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Services</Link></li>
                 <li><Link to="/nrisolutions" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>NRI Solutions</Link></li>
                 <li><Link to="/partners" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>TieVista Partners</Link></li>

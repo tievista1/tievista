@@ -137,7 +137,7 @@ const TieVistaPatners = () => {
               <motion.div {...fadeUp(0)}>
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-px" style={{ background: GOLD }} />
-                  <span className="text-[10px] md:text-xs font-semibold tracking-[0.35em] uppercase text-gray-400">Mission</span>
+                  <span className="text-[10px] md:text-xs font-semibold tracking-[0.35em] uppercase text-black" style={{ fontFamily: 'PT Serif, serif' }}>Mission</span>
                 </div>
                 <div className="relative pl-6 border-l-2 border-[#D4AF37]/30">
                   <p className="text-2xl md:text-3xl lg:text-4xl text-gray-900 font-serif leading-tight " style={{ fontFamily: 'PT Serif, serif' }}>
