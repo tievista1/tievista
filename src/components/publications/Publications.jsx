@@ -11,8 +11,8 @@ const Publications = () => {
     const publications = [
         {
             id: 1,
-            title: "VISTA",
-            goldtitle: "EDGE",
+            title: "",
+            goldtitle: "",
             description: "MONTHLY UPDATE",
             img: "https://res.cloudinary.com/dck5jgfix/image/upload/v1775732548/March_2026_foixjy.png",
             url: "https://drive.google.com/uc?export=download&id=1sBlq8NylKUpYCLFdZRVvalqO5CY2WKFi",
@@ -49,7 +49,7 @@ const Publications = () => {
                             className='flex items-center gap-4'
                         >
                             <h1 className='text-lg sm:text-xl md:text-2xl text-white font-bold tracking-tight mb-0 flex items-center gap-2' style={{ fontFamily: 'PT Serif, serif' }}>
-                                INSIGHTS & <span className='gold-text'>PUBLICATIONS</span>
+                                VISTA <span className='gold-text'>EDGE</span>
                             </h1>
                             <div className='hidden md:block w-px h-6 bg-white/20' />
                         </motion.div>
@@ -103,7 +103,7 @@ const Publications = () => {
                                             className='group flex flex-col bg-white border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 w-full md:w-[360px] '
                                         >
                                             {/* Header Text - Tightened */}
-                                            <div className='flex flex-col p-6 pb-2'>
+                                            {/* <div className='flex flex-col p-6 pb-2'>
                                                 <h3
                                                     className='text-3xl md:text-4xl font-bold leading-tight flex flex-wrap gap-2'
                                                     style={{ fontFamily: 'PT Serif, serif' }}
@@ -111,22 +111,15 @@ const Publications = () => {
                                                     <span className='text-black block mb-0.5'>{publication.title}</span>
                                                     <span className='gold-text block'>{publication.goldtitle}</span>
                                                 </h3>
-                                            </div>
+                                            </div> */}
 
-                                            <div className=' flex flex-col p-6 pt-4'>
-                                                <div className='flex items-center gap-2'>
-                                                    <Calendar className='size-3' style={{ color: GOLD }} />
-                                                    <span className='text-sm font-semibold tracking-[0.25em] uppercase text-black' style={{ fontFamily: 'PT Serif, serif' }}>
-                                                        {publication.date}
-                                                    </span>
-                                                </div>
-                                            </div>
+                                            
 
                                             {/* Image Container - 1:1 Aspect Ratio (now 360px based) */}
-                                            <div className='relative w-full h-30 sm:h-50 md:h-40 overflow-hidden bg-gray-50'>
-                                                <div className='relative w-full h-30 sm:h-50 md:h-40 overflow-hidden bg-gray-50'>
+                                            <div className='relative w-full aspect-square overflow-hidden bg-gray-50'>
+                                                <div className='relative w-full aspect-square overflow-hidden bg-gray-50'>
                                                     <img
-                                                        src={publication.img || 'https://images.unsplash.com/photo-1454165833767-1314389bcdb8?q=80&w=1000'}
+                                                        src={ 'https://res.cloudinary.com/dck5jgfix/image/upload/v1775736199/VistaEdge_qgnb88.png'}
                                                         alt={publication.title}
                                                         className='absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-95 group-hover:opacity-100'
                                                     />
@@ -141,10 +134,16 @@ const Publications = () => {
                                             {/* Content Area - Optimized for visibility */}
                                             <div className=' flex flex-col p-6 pt-4'>
 
-
-                                                <p className='text-black text-sm md:text-base font-light mb-6 line-clamp-3 md:line-clamp-none' style={{ fontFamily: 'PT Serif, serif' }}>
+                                                <p className='text-black text-sm md:text-base font-light mb-2 line-clamp-3 md:line-clamp-none' style={{ fontFamily: 'PT Serif, serif' }}>
                                                     {publication.description}
                                                 </p>
+
+                                                <div className='flex items-center gap-2 mb-6'>
+                                                    <Calendar className='size-3' style={{ color: GOLD }} />
+                                                    <span className='text-sm font-semibold tracking-[0.25em] uppercase text-black' style={{ fontFamily: 'PT Serif, serif' }}>
+                                                        {publication.date}
+                                                    </span>
+                                                </div>
 
                                                 <a
                                                     onClick={() => handleDownload(publication.url)}
