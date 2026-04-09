@@ -243,6 +243,7 @@ export const Navbar = () => {
             hasDropdown: true,
             dropdownItems: [
                 { label: 'Blogs', href: '/blogs' },
+                { label: 'Publications', href: '/publications' },
             ],
         },
         {

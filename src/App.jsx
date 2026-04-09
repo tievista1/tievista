@@ -21,6 +21,7 @@ const TieVistaPatners = lazy(() => import("./components/TieVistaPatners"));
 const NotFound = lazy(() => import("./components/NotFound"));
 const Blogs = lazy(() => import("./components/blogs/Blogs"));
 const DeclutteringtheNoiseAround = lazy(() => import("./components/blogs/DeclutteringtheNoiseAround"));
+const Publications = lazy(() => import("./components/publications/Publications"));
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
@@ -62,6 +63,8 @@ function App() {
             
             <Route path='blogs' element={<Blogs />} />
             <Route path='blogs/decluttering-the-noise-around' element={<DeclutteringtheNoiseAround />} />
+
+            <Route path='publications' element={<Publications />} />
 
             <Route path='*' element={<NotFound />} />
           </Route>
