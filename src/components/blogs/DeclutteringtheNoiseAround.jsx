@@ -22,7 +22,7 @@ const DeclutteringtheNoiseAround = () => {
     const heroOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
     return (
         <>
-            <div className='min-h-screen w-full' style={{ fontFamily: "PT Serif,serif" }}>
+            <div className='min-h-screen w-full selection:text-white selection:bg-[#D4AF37]' style={{ fontFamily: "PT Serif,serif" }}>
                 <section ref={heroRef} className="h-60 w-full relative flex items-center justify-center overflow-hidden">
 
                     {/* Parallax Background */}

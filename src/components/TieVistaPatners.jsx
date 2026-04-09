@@ -141,7 +141,7 @@ const TieVistaPatners = () => {
                 </div>
                 <div className="relative pl-6 border-l-2 border-[#D4AF37]/30">
                   <p className="text-2xl md:text-3xl lg:text-4xl text-gray-900 font-serif leading-tight " style={{ fontFamily: 'PT Serif, serif' }}>
-                    "TieVista is building a next-generation partnership platform designed to
+                    "TieVista is a next-generation partnership platform designed to
                     empower independent financial partners who aspire to elevate and institutionalise
                     their practice."
                   </p>
