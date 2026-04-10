@@ -114,10 +114,10 @@ export const Footer = () => {
                 Quick Links
               </h4>
               <ul className="space-y-4 font-light text-white">
-                <li><Link to="/" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Home</Link></li>
-                <li><Link to="/services" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Services</Link></li>
-                <li><Link to="/nrisolutions" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>NRI Solutions</Link></li>
-                <li><Link to="/partners" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>TieVista Partners</Link></li>
+                <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
+                <li><Link to="/services" className="hover:text-white transition-colors">Services</Link></li>
+                <li><Link to="/nrisolutions" className="hover:text-white transition-colors">NRI Solutions</Link></li>
+                <li><Link to="/partners" className="hover:text-white transition-colors">TieVista Partners</Link></li>
               </ul>
             </div>
 
@@ -127,10 +127,10 @@ export const Footer = () => {
                 Solutions
               </h4>
               <ul className="space-y-4 font-light text-white">
-                <li><Link to="/investmentuniverse" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Investment Universe</Link></li>
-                <li><Link to="/b2b" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Allied Services</Link></li>
+                <li><Link to="/investmentuniverse" className="hover:text-white transition-colors">Investment Universe</Link></li>
+                <li><Link to="/b2b" className="hover:text-white transition-colors">Allied Services</Link></li>
                 {/* <li><Link to="/insights" className="hover:text-white transition-colors">Insights</Link></li> */}
-                <li><Link to="/contact" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Contact Us</Link></li>
+                <li><Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
               </ul>
             </div>
 
