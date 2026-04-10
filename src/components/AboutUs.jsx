@@ -111,7 +111,7 @@ function NarrativeSection({ sec, index }) {
 
               <div className="w-12 h-px mb-7" style={{ background: GOLD }} />
 
-              <p className="text-lg text-black leading-relaxed" style={{fontFamily:'PT Serif, serif'}}>
+              <p className="text-lg text-black leading-relaxed">
                 {body}
               </p>
             </motion.div>
@@ -146,7 +146,7 @@ const AboutUs = () => {
           <motion.div {...fadeUp()} className="mb-10">
             <div className="flex items-center gap-3 mb-5">
               <div className="w-10 h-px" style={{ background: GOLD }} />
-              <span className="text-xs font-semibold tracking-[0.35em] uppercase text-black" style={{fontFamily:'PT Serif, serif'}}>Partnership</span>
+              <span className="text-xs font-semibold tracking-[0.35em] uppercase text-black" style={{ fontFamily: 'PT Serif, serif' }}>Partnership</span>
             </div>
             <h2
               className="text-5xl md:text-7xl tracking-tighter leading-none"
@@ -193,7 +193,7 @@ const AboutUs = () => {
                 </div>
 
                 {/* Text */}
-                <span className="text-lg md:text-xl font-light text-black group-hover:text-black transition-colors leading-relaxed flex-1" style={{fontFamily:'PT Serif, serif'}}>
+                <span className="text-lg md:text-xl font-light text-black group-hover:text-black transition-colors leading-relaxed flex-1">
                   {text}
                 </span>
 
