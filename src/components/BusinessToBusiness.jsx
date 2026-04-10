@@ -132,11 +132,11 @@ function PartnershipSection({ p, index }) {
                             <div className="w-12 h-px mb-6" style={{ background: GOLD }} />
 
                             {/* Body1 */}
-                            <p className="text-lg text-black leading-relaxed font-light mb-8" style={{fontFamily:'PT Serif,serif'}}>
+                            <p className="text-lg text-black leading-relaxed font-light mb-8">
                                 {body1}
                             </p>
                             {/* Body2 */}
-                            <p className="text-lg text-black leading-relaxed font-light mb-8" style={{fontFamily:'PT Serif,serif'}}>
+                            <p className="text-lg text-black leading-relaxed font-light mb-8">
                                 {body2}
                             </p>
 
@@ -238,7 +238,7 @@ function PartnershipSection({ p, index }) {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.9, delay: 0.8 }}
                         className="text-xl md:text-2xl text-white font-light max-w-2xl mx-auto leading-relaxed"
-                        style={{ fontFamily: 'PT Serif, serif' }}
+                        
                     >
                         Curating access to global specialists so your clients navigate cross-border complexity with greater clarity and discretion.
                     </motion.p>
