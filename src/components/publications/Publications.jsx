@@ -114,7 +114,7 @@ const Publications = () => {
                                                 </h3>
                                             </div> */}
 
-
+                                            
 
                                             {/* Image Container - 1:1 Aspect Ratio (now 360px based) */}
                                             <div className='relative w-full  overflow-hidden bg-gray-50'>
