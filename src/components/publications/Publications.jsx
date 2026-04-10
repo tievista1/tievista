@@ -101,7 +101,7 @@ const Publications = () => {
                                             viewport={{ once: true }}
                                             whileHover={{ y: -10 }}
                                             className='group flex flex-col bg-white border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 w-full md:w-[270px] '
-                                        >
+                                        > 
                                             {/* Header Text - Tightened */}
                                             {/* <div className='flex flex-col p-6 pb-2'>
                                                 <h3
