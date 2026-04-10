@@ -100,11 +100,12 @@ const Publications = () => {
                                             transition={{ duration: 0.5, delay: idx * 0.1 }}
                                             viewport={{ once: true }}
                                             whileHover={{ y: -10 }}
-                                            className='group flex flex-col bg-white border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 w-full md:w-[360px] '
+                                            className='group flex flex-col bg-white border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 w-full md:w-[270px] '
                                         >
                                             {/* Header Text - Tightened */}
                                             {/* <div className='flex flex-col p-6 pb-2'>
                                                 <h3
+                                                KHUSI
                                                     className='text-3xl md:text-4xl font-bold leading-tight flex flex-wrap gap-2'
                                                     style={{ fontFamily: 'PT Serif, serif' }}
                                                 >
@@ -113,13 +114,13 @@ const Publications = () => {
                                                 </h3>
                                             </div> */}
 
-                                            
+
 
                                             {/* Image Container - 1:1 Aspect Ratio (now 360px based) */}
-                                            <div className='relative w-full aspect-square overflow-hidden bg-gray-50'>
+                                            <div className='relative w-full  overflow-hidden bg-gray-50'>
                                                 <div className='relative w-full aspect-square overflow-hidden bg-gray-50'>
                                                     <img
-                                                        src={ 'https://res.cloudinary.com/dck5jgfix/image/upload/v1775736199/VistaEdge_qgnb88.png'}
+                                                        src={'https://res.cloudinary.com/dck5jgfix/image/upload/v1775802420/Publications_mjzwlt.png'}
                                                         alt={publication.title}
                                                         className='absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-95 group-hover:opacity-100'
                                                     />
@@ -132,22 +133,22 @@ const Publications = () => {
                                             </div>
 
                                             {/* Content Area - Optimized for visibility */}
-                                            <div className=' flex flex-col p-6 pt-4'>
+                                            <div className=' flex flex-col p-6 pt-4 '>
 
-                                                <p className='text-black text-sm md:text-base font-light mb-2 line-clamp-3 md:line-clamp-none' style={{ fontFamily: 'PT Serif, serif' }}>
+                                                <p className='text-black text-[16px] md:[20px] font-semibold mb-2 line-clamp-3 md:line-clamp-none' style={{ fontFamily: 'PT Serif, serif' }}>
                                                     {publication.description}
                                                 </p>
 
                                                 <div className='flex items-center gap-2 mb-6'>
                                                     <Calendar className='size-3' style={{ color: GOLD }} />
-                                                    <span className='text-sm font-semibold tracking-[0.25em] uppercase text-black' style={{ fontFamily: 'PT Serif, serif' }}>
+                                                    <span className='text-[12px] font-semibold tracking-[0.25em] uppercase text-black' style={{ fontFamily: 'PT Serif, serif' }}>
                                                         {publication.date}
                                                     </span>
                                                 </div>
 
                                                 <a
                                                     onClick={() => handleDownload(publication.url)}
-                                                    className='inline-flex items-center gap-2 text-[11px] font-bold tracking-widest uppercase text-[#D4AF37] group/link mt-auto' style={{ fontFamily: 'PT Serif, serif' }}
+                                                    className='ml-auto inline-flex items-center gap-2 text-[12px] font-bold tracking-widest uppercase text-[#D4AF37] group/link mt-auto' style={{ fontFamily: 'PT Serif, serif' }}
                                                 >
                                                     Download
                                                     <ArrowRight className='size-3 transition-transform duration-300 group-hover/link:translate-x-1' />
