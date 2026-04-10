@@ -135,20 +135,20 @@ const Publications = () => {
                                             {/* Content Area - Optimized for visibility */}
                                             <div className=' flex flex-col p-6 pt-4 '>
 
-                                                <p className='text-black text-[16px] md:[20px] font-semibold mb-2 line-clamp-3 md:line-clamp-none' style={{ fontFamily: 'PT Serif, serif' }}>
+                                                <p className='text-black text-[16px] md:[20px] font-semibold mb-2 line-clamp-3 md:line-clamp-none'>
                                                     {publication.description}
                                                 </p>
 
                                                 <div className='flex items-center gap-2 mb-6'>
                                                     <Calendar className='size-3' style={{ color: GOLD }} />
-                                                    <span className='text-[12px] font-semibold tracking-[0.25em] uppercase text-black' style={{ fontFamily: 'PT Serif, serif' }}>
+                                                    <span className='text-[12px] font-semibold tracking-[0.25em] uppercase text-black'>
                                                         {publication.date}
                                                     </span>
                                                 </div>
 
                                                 <a
                                                     onClick={() => handleDownload(publication.url)}
-                                                    className='ml-auto inline-flex items-center gap-2 text-[12px] font-bold tracking-widest uppercase text-[#D4AF37] group/link mt-auto' style={{ fontFamily: 'PT Serif, serif' }}
+                                                    className='ml-auto inline-flex items-center gap-2 text-[12px] font-bold tracking-widest uppercase text-[#D4AF37] group/link mt-auto'
                                                 >
                                                     Download
                                                     <ArrowRight className='size-3 transition-transform duration-300 group-hover/link:translate-x-1' />
@@ -166,7 +166,7 @@ const Publications = () => {
                                 animate={{ opacity: 1 }}
                                 className='flex flex-col items-center justify-center py-24'
                             >
-                                <p className='text-black font-light mb-4' style={{ fontFamily: 'PT Serif, serif' }}>No insights found matching "{searchTerm}"</p>
+                                <p className='text-black font-light mb-4'>No insights found matching "{searchTerm}"</p>
                                 <button
                                     onClick={() => setSearchTerm('')}
                                     className='text-sm uppercase tracking-widest'
