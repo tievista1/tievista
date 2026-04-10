@@ -49,7 +49,7 @@ const Publications = () => {
                             className='flex items-center gap-4'
                         >
                             <h1 className='text-lg sm:text-xl md:text-2xl text-white font-bold tracking-tight mb-0 flex items-center gap-2' style={{ fontFamily: 'PT Serif, serif' }}>
-                                VISTA <span className='gold-text'>EDGE</span>
+                                VIST <span className='gold-text'>EDGE</span>
                             </h1>
                             <div className='hidden md:block w-px h-6 bg-white/20' />
                         </motion.div>
