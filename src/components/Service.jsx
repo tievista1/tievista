@@ -188,7 +188,7 @@ function ServiceSection({ svc, index }) {
                             <div className="w-12 h-px mb-6" style={{ background: GOLD }} />
 
                             {/* Body */}
-                            <p className="text-lg text-black leading-relaxed font-light mb-10" style={{fontFamily:'PT Serif,serif'}}>
+                            <p className="text-lg text-black leading-relaxed font-light mb-10">
                                 {body}
                             </p>
 
@@ -213,7 +213,7 @@ function ServiceSection({ svc, index }) {
                                             >
                                                 <ArrowRight size={15} />
                                             </div>
-                                            <span className="text-base md:text-lg font-light text-black group-hover:text-black transition-colors" style={{fontFamily:'PT Serif,serif'}}>
+                                            <span className="text-base md:text-lg font-light text-black group-hover:text-black transition-colors">
                                                 {item}
                                             </span>
                                         </motion.div>
@@ -284,7 +284,7 @@ function ServiceSection({ svc, index }) {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.9, delay: 0.8 }}
                         className="text-xl md:text-2xl text-white font-light max-w-3xl mx-auto leading-relaxed"
-                        style={{fontFamily:'PT Serif,serif'}}
+                        
                     >
                         Beyond portfolio management - a complete blend of wealth consolidation, governance, succession, and tech-enabled insights for complex, multi-jurisdictional wealth.
                     </motion.p>
@@ -347,7 +347,7 @@ function ServiceSection({ svc, index }) {
                             >
                                 A family-office <span className="">experience</span> {/*style={{ color: GOLD }} italic*/}
                             </h3>
-                            <p className="text-lg text-black font-light leading-relaxed" style={{fontFamily:'PT Serif,serif'}}>
+                            <p className="text-lg text-black font-light leading-relaxed" >
                                 TieVista delivers a family-office style experience without acting as a family office providing coordination, visibility, and disciplined investment facilitation, while clients retain full control and decision making authority.
                             </p>
                         </div>
