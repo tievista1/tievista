@@ -114,7 +114,7 @@ const TieVistaPatners = () => {
           </motion.h1>
           <motion.p
             variants={animationSettings.item}
-            className="text-lg md:text-xl lg:text-2xl text-white font-light max-w-3xl mx-auto leading-relaxed px-4" style={{ fontFamily: 'PT Serif, serif' }}
+            className="text-lg md:text-xl lg:text-2xl text-white font-light max-w-3xl mx-auto leading-relaxed px-4"
           >
             A next-generation partnership platform designed to institutionalize independent financial patnership practices globally.
           </motion.p>
@@ -148,7 +148,7 @@ const TieVistaPatners = () => {
                 </div>
               </motion.div>
 
-              <motion.div {...fadeUp(0.1)} className="text-black font-light leading-relaxed space-y-6 text-base md:text-lg" style={{ fontFamily: 'PT Serif, serif' }}>
+              <motion.div {...fadeUp(0.1)} className="text-black font-light leading-relaxed space-y-6 text-base md:text-lg">
                 <p>
                   The platform is envisioned as a growth engine for ambitious partners,
                   providing access to institutional-grade processes, robust operational infrastructure,
@@ -169,7 +169,7 @@ const TieVistaPatners = () => {
 
             {/* Right Column: Analytics & Alignment */}
             <div className="w-full md:w-1/2 space-y-10 md:space-y-12 md:mt-12">
-              <motion.div {...fadeUp(0.2)} className="text-black font-light leading-relaxed space-y-6 text-base md:text-lg" style={{ fontFamily: 'PT Serif, serif' }}>
+              <motion.div {...fadeUp(0.2)} className="text-black font-light leading-relaxed space-y-6 text-base md:text-lg">
                 <p>
                   At the heart of the platform is a powerful reporting and portfolio analytics engine,
                   designed to bring institutional-level transparency and analytics to client portfolios.
@@ -251,7 +251,7 @@ const TieVistaPatners = () => {
                       >
                         <div className="px-5 pb-8 sm:px-6 sm:pb-8 md:px-8 md:pb-10 pt-0 sm:ml-18 md:ml-18 pr-6 sm:pr-12">
                           <div className="w-full h-px bg-gray-50 mb-6" />
-                          <p className="text-black font-light leading-relaxed text-sm sm:text-base md:text-lg whitespace-pre-line" style={{ fontFamily: 'PT Serif, serif' }}>
+                          <p className="text-black font-light leading-relaxed text-sm sm:text-base md:text-lg whitespace-pre-line">
                             {item.answer}
                           </p>
                         </div>
