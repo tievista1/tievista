@@ -169,7 +169,7 @@ function ServiceSection({ svc, index }) {
                             <div className="w-12 h-px mb-6" style={{ background: GOLD }} />
 
                             {/* Body */}
-                            <p className="text-lg text-black leading-relaxed font-light mb-10" style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className="text-lg text-black leading-relaxed font-light mb-10">
                                 {body}
                             </p>
 
@@ -187,7 +187,7 @@ function ServiceSection({ svc, index }) {
                                             transition={{ duration: 0.5, delay: i * 0.08 }}
                                             viewport={{ once: true }}
                                             className="group flex items-center gap-4 py-4 border-b border-gray-100 cursor-default"
-                                            style={{ fontFamily: 'PT Serif, serif' }}
+                                            
                                         >
                                             <div
                                                 className="w-9 h-9 rounded-full border flex items-center justify-center shrink-0 transition-all duration-300 group-hover:bg-[#D4AF37] group-hover:border-[#D4AF37] group-hover:text-white"
@@ -272,7 +272,7 @@ const NriSolutions = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.9, delay: 0.8 }}
                         className="text-xl md:text-2xl text-white font-light max-w-3xl mx-auto leading-relaxed"
-                        style={{ fontFamily: 'PT Serif, serif' }}
+                        
                     >
                         As Indian families become increasingly global, TieVista ensures your India-side capital is structured with intent, discipline, and long-term alignment.
                     </motion.p>
@@ -338,10 +338,10 @@ const NriSolutions = () => {
                             >
                                 Capital beyond <span className="gold-text" >borders.</span>
                             </h3>
-                            <p className="text-lg text-black font-light leading-relaxed mb-4" style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className="text-lg text-black font-light leading-relaxed mb-4" >
                                 Wealth decisions are no longer confined to a single geography. Assets, incomes, responsibilities, and aspirations often span India, the Middle East, Southeast Asia, Europe, and beyond.
                             </p>
-                            <p className="text-lg text-black font-light leading-relaxed" style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className="text-lg text-black font-light leading-relaxed" >
                                 TieVista highlights the role that India plays within the broader wealth landscape ensuring your India-side capital is always structured with purpose.
                             </p>
                         </div>
