@@ -127,7 +127,7 @@ const CategorySection = ({ cat, index }) => {
                             <div className="w-12 h-px mb-6" style={{ background: GOLD }} />
 
                             {/* Description */}
-                            <p className="text-lg text-black leading-relaxed font-light mb-10" style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className="text-lg text-black leading-relaxed font-light mb-10">
                                 {cat.description}
                             </p>
 
@@ -152,7 +152,7 @@ const CategorySection = ({ cat, index }) => {
                                             >
                                                 <ArrowRight size={15} />
                                             </div>
-                                            <span className="text-base md:text-lg font-light text-black group-hover:text-black transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>
+                                            <span className="text-base md:text-lg font-light text-black group-hover:text-black transition-colors">
                                                 {item}
                                             </span>
                                         </motion.div>
@@ -204,7 +204,7 @@ const InvestmentUniverse = () => {
                     <motion.h1 variants={animationSettings.item} className="text-6xl md:text-9xl mb-8 text-white tracking-tighter leading-[0.95]" style={{ fontFamily: "PT Serif" }}>
                         Investment <span className="gold-text ">Universe</span>
                     </motion.h1>
-                    <motion.p variants={animationSettings.item} className="text-xl md:text-2xl text-white font-light max-w-3xl mx-auto leading-relaxed mb-12" style={{ fontFamily: 'PT Serif, serif' }}>
+                    <motion.p variants={animationSettings.item} className="text-xl md:text-2xl text-white font-light max-w-3xl mx-auto leading-relaxed mb-12">
                         Navigating the complexities of global wealth through bespoke selection, rigorous discipline, and a borderless perspective.
                     </motion.p>
                 </motion.div>
@@ -271,7 +271,7 @@ const InvestmentUniverse = () => {
                         Future-proof Your <br /> <span className="gold-text italic">Legacy.</span>
                     </h2>
                     <Link to="/contact">
-                        <button className="bg-black text-white px-16 py-6 rounded-full font-bold uppercase text-sm hover:bg-[#D4AF37] transition-all shadow-2xl hover:shadow-[#D4AF37]/40" style={{ fontFamily: 'PT Serif, serif' }}>
+                        <button className="bg-black text-white px-16 py-6 rounded-full font-bold uppercase text-sm hover:bg-[#D4AF37] transition-all shadow-2xl hover:shadow-[#D4AF37]/40">
                             Connect With wealth manager
                         </button>
                     </Link>
