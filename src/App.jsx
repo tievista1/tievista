@@ -8,6 +8,7 @@ import { motion } from 'framer-motion'
 import ScrollToTop from './scroll/ScrollToTop'
 import icon from '/TieVistaLogo.png'
 
+
 const Home = lazy(() => import("./components/Home"));
 const InvestmentUniverse = lazy(() => import("./components/InvestmentUniverse"));
 const NriSolutions = lazy(() => import("./components/NriSolutions"));
@@ -22,6 +23,8 @@ const NotFound = lazy(() => import("./components/NotFound"));
 const Blogs = lazy(() => import("./components/blogs/Blogs"));
 const DeclutteringtheNoiseAround = lazy(() => import("./components/blogs/DeclutteringtheNoiseAround"));
 const Publications = lazy(() => import("./components/publications/Publications"));
+const BankDetails = lazy(() => import("./components/BankDetails"));
+const PartnersSignup = lazy(() => import("./components/PartnersSignup"));
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
@@ -60,6 +63,9 @@ function App() {
             <Route path='privacypolicy' element={<PrivacyPolicy />} />
             <Route path='terms' element={<TermsAndConditions />} />
             <Route path='partners' element={<TieVistaPatners />} />
+            <Route path='partnersignup' element={<PartnersSignup/>} />
+            <Route path='bankdetails' element={<BankDetails />} />
+
             
             <Route path='blogs' element={<Blogs />} />
             <Route path='blogs/decluttering-the-noise-around' element={<DeclutteringtheNoiseAround />} />
