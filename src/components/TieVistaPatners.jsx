@@ -2,6 +2,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Target, TrendingUp, Users, BarChart3, Star, Handshake, Shield, ClipboardCheck, ArrowRight, Zap, Globe, Database, Layers, ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const GOLD = '#D4AF37';
 
@@ -56,6 +57,7 @@ const faqData = [
 ];
 
 const TieVistaPatners = () => {
+  const navigate = useNavigate();
   const animationSettings = {
     container: {
       hidden: { opacity: 0, y: 30 },
@@ -191,6 +193,8 @@ const TieVistaPatners = () => {
                 <p className="text-[11px] uppercase tracking-wider text-black" style={{ fontFamily: 'PT Serif, serif' }}>
                   All client recommendations remain the responsibility of the respective partner and the client, In-accordance with applicable regulatory requirements
                 </p>
+
+                <button className="bg-[#d4af37] text-white cursor-pointer px-6 py-3 rounded mt-4" onClick={() => navigate("/partnersignup")}>Register as Partner</button>
               </motion.div>
             </div>
 
