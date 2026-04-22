@@ -7,6 +7,7 @@ import PoppinsBold from "../fonts/Poppins-Bold.ttf";
 import PoppinsItalic from "../fonts/Poppins-Italic.ttf";
 import PTSerifRegular from "../fonts/PTSerif-Regular.ttf";
 import PTSerifBold from "../fonts/PTSerif-Bold.ttf";
+import axios from "axios";
 
 // Register custom fonts for PDF
 Font.register({
@@ -447,6 +448,11 @@ const AgreementPDF = ({ data }) => {
     );
 };
 
+const AUTH_CONFIG = {
+    headers: {
+        Authorization: "Basic " + btoa("admin:tievista@123")
+    }
+};
 
 
 const PatnersSignup = () => {
@@ -545,32 +551,109 @@ const PatnersSignup = () => {
     };
 
     // Submissions Handlers
-    const getUserRegister = (data) => {
-        console.log("User Registration Data:", data);
-        setShowIdentity(true);
-        setTimeout(() => {
-            const element = document.getElementById("identity-details");
-            element?.scrollIntoView({ behavior: "smooth", block: "start" });
-        }, 100);
+    const getUserRegister = async (data) => {
+        try {
+            console.log("User Registration Data:", data);
+            
+            // Map to backend snake_case
+            const payload = {
+                entity_name: data.entityName,
+                entity_type: data.entityType,
+                address: data.address,
+                contact_no: data.phone,
+                email: data.email
+            };
+
+            const response = await axios.post("https://partnerregistration.duckdns.org/api/partners/register", payload, AUTH_CONFIG);
+            
+            if (response.status === 201 || response.status === 200) {
+                setMasterData(prev => ({ ...prev, ...data }));
+                setShowIdentity(true);
+                setTimeout(() => {
+                    const element = document.getElementById("identity-details");
+                    element?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }, 100);
+            }
+        } catch (error) {
+            console.error("Initial registration failed:", error);
+            if (error.response?.status === 409) {
+                // Partner exists, just proceed to next step but sync masterData
+                alert("Partner already exists. Resuming registration...");
+                setMasterData(prev => ({ ...prev, ...data, ...error.response.data.partner }));
+                setShowIdentity(true);
+            } else {
+                alert("Registration failed: " + (error.response?.data?.error || error.message));
+            }
+        }
     };
 
-    const getPan = (data) => {
-        console.log("Identity (PAN/DOB) Data:", data);
-        alert("PAN Details captured!");
+    const getPan = async (data) => {
+        try {
+            console.log("Identity (PAN/DOB) Data:", data);
+            
+            const identifier = masterData.email || masterData.phone;
+            const payload = {
+                dob: data.dob,
+                pan_no: data.pan
+            };
+
+            await axios.put(`https://partnerregistration.duckdns.org/api/partners/update/${identifier}`, payload, AUTH_CONFIG);
+            
+            setMasterData(prev => ({ ...prev, ...data }));
+            alert("PAN Details synced!");
+        } catch (error) {
+            console.error("Identity update failed:", error);
+            alert("Failed to sync identity details.");
+        }
     };
 
-    const getRegulatory = (data) => {
-        console.log("Regulatory Data:", data);
-        setShowBankDetails(true);
+    const getRegulatory = async (data) => {
+        try {
+            console.log("Regulatory Data:", data);
+            
+            const identifier = masterData.email || masterData.phone;
+            const payload = {
+                arn: data.arn || null,
+                euin_arn: data.euinARN || null,
+                aprn: data.aprn || null,
+                euin_aprn: data.euinAprn || null
+            };
+
+            await axios.put(`https://partnerregistration.duckdns.org/api/partners/update/${identifier}`, payload, AUTH_CONFIG);
+            
+            setMasterData(prev => ({ ...prev, ...data }));
+            setShowBankDetails(true);
+        } catch (error) {
+            console.error("Regulatory update failed:", error);
+            alert("Failed to sync regulatory details.");
+        }
     };
 
-    const getBankDetails = (data) => {
-        const finalData = {
-            ...data,
-            gstin: data.gstin?.trim() ? data.gstin.trim() : "0"
-        };
-        console.log("Bank details submitted:", finalData);
-        setShowAgreement(true);
+    const getBankDetails = async (data) => {
+        try {
+            const finalBankData = {
+                ...data,
+                gstin: data.gstin?.trim() ? data.gstin.trim() : "0",
+                cin_no: data.cin || "0"
+            };
+            console.log("Bank details submitted:", finalBankData);
+
+            const identifier = masterData.email || masterData.phone;
+            const payload = {
+                bank_account_no: finalBankData.bankAccountNo,
+                ifsc_code: finalBankData.ifscCode,
+                gst_in: finalBankData.gstin,
+                cin_no: finalBankData.cin_no
+            };
+
+            await axios.put(`https://partnerregistration.duckdns.org/api/partners/update/${identifier}`, payload, AUTH_CONFIG);
+            
+            setMasterData(prev => ({ ...prev, ...finalBankData }));
+            setShowAgreement(true);
+        } catch (error) {
+            console.error("Bank details update failed:", error);
+            alert("Failed to sync bank details.");
+        }
     };
 
     const handleDownloadPdf = async (autoContinue = false) => {
