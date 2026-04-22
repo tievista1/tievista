@@ -501,6 +501,7 @@ const PatnersSignup = () => {
     const [showAgreement, setShowAgreement] = useState(false);
     const [isAgreed, setIsAgreed] = useState(false);
     const [isGeneratingPdf, setIsGeneratingPdf] = useState(false);
+    const [masterData, setMasterData] = useState({});
 
     // Watchers for validation/behavior
     const phoneValue = watchReg("phone");
