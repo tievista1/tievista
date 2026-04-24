@@ -562,7 +562,8 @@ const PatnersSignup = () => {
                 entity_type: data.entityType,
                 address: data.address,
                 contact_no: data.phone,
-                email: data.email
+                email: data.email,
+                password: data.password
             };
 
             const response = await axios.post("https://partnerregistration.duckdns.org/api/partners/register", payload, AUTH_CONFIG);
