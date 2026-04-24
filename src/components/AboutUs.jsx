@@ -58,7 +58,7 @@ function NarrativeSection({ sec, index }) {
   const bg = index % 2 === 0 ? 'bg-white' : 'bg-[#FAFAFA]'
 
   return (
-    <section className={`w-full py-28 border-b border-gray-100 ${bg}`}>
+    <section className={`w-full py-14 border-b border-gray-100 ${bg}`}>
       <div className="container mx-auto px-6 lg:px-16">
         <div className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-16 md:gap-20`}>
 
@@ -193,7 +193,7 @@ const AboutUs = () => {
                 </div>
 
                 {/* Text */}
-                <span className="text-lg md:text-xl font-light text-black group-hover:text-black transition-colors leading-relaxed flex-1">
+                <span className="text-lg md:text-xl text-black group-hover:text-black transition-colors leading-relaxed flex-1">
                   {text}
                 </span>
 

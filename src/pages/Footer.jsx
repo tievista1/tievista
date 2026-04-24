@@ -108,6 +108,19 @@ export const Footer = () => {
           {/* Navigation Columns */}
           <div className="flex flex-wrap gap-12 lg:gap-24">
 
+            <div>
+              <h4 className="text-xs font-bold uppercase tracking-[0.3em] mb-6 gold-text" style={{ fontFamily: 'PT Serif, serif' }}>
+                Investment Partners
+              </h4>
+              <ul className="space-y-4 font-light text-white">
+                <li><Link to="/investmentpartners/mutualfunds" className="hover:text-white transition-colors">Mutual Funds</Link></li>
+                <li><Link to="/investmentpartners/pms" className="hover:text-white transition-colors">PMS</Link></li>
+                <li><Link to="/investmentpartners/aif" className="hover:text-white transition-colors">AIFS</Link></li>
+                <li><Link to="/investmentpartners/giftcity" className="hover:text-white transition-colors">GIFT City</Link></li>
+                <li><Link to="/investmentpartners/privatecredit" className="hover:text-white transition-colors">Private Credit</Link></li>
+              </ul>
+            </div>
+
             {/* Column 1 */}
             <div>
               <h4 className="text-xs font-bold uppercase tracking-[0.3em] mb-6 gold-text" style={{ fontFamily: 'PT Serif, serif' }}>
@@ -120,6 +133,9 @@ export const Footer = () => {
                 <li><Link to="/partners" className="hover:text-white transition-colors">TieVista Partners</Link></li>
               </ul>
             </div>
+
+            {/* Quick Link 2 */}
+            
 
             {/* Column 2 */}
             <div>

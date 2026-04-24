@@ -1238,7 +1238,7 @@ const PatnersSignup = () => {
                                                 pattern: { value: phoneRegex, message: "Invalid 10-digit number" },
                                             })}
                                             onBlur={handlePhoneBlur}
-                                            className={`flex-1 px-4 py-3 border rounded focus:border-[#d4af37] outline-none transition-all placeholder:text-gray-300 text-sm text-black ${errorsReg.phone ? "border-red-500" : "border-gray-300"
+                                            className={`flex-1 py-3 border rounded focus:border-[#d4af37] outline-none transition-all placeholder:text-gray-300 text-sm text-black ${errorsReg.phone ? "border-red-500" : "border-gray-300"
                                                 }`}
                                             maxLength={10}
                                         />
@@ -1305,7 +1305,7 @@ const PatnersSignup = () => {
 
                                 {/* NEXT Button */}
                                 {!showIdentity && (
-                                    <div className="pt-6 flex justify-center">
+                                    <div className="py-15 flex justify-center my-3.5">
                                         <button
                                             type="submit"
                                             className="w-full max-w-xs py-3.5 rounded-lg shadow-md transition-all font-bold text-sm tracking-widest uppercase bg-gradient-to-r from-[#e5bc4b] via-[#d4af37] to-[#b78628] text-white hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"

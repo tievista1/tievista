@@ -131,7 +131,7 @@ function ServiceSection({ svc, index }) {
     const bg = index % 2 === 0 ? 'bg-white' : 'bg-[#FAFAFA]'
 
     return (
-        <section id={id} className={`w-full py-28 border-b border-gray-100 ${bg}`}>
+        <section id={id} className={`w-full py-14 border-b border-gray-100 ${bg}`}>
             <div className="container mx-auto px-6 lg:px-16">
                 <div className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-16 md:gap-20`}>
 

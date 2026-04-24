@@ -208,6 +208,14 @@ export const Navbar = () => {
             ],
         },
         {
+            label: 'TieVista Partners',
+            href: '/partners',
+            hasDropdown: false,
+            dropdownItems: [
+                { label: '', href: '' },
+            ],
+        },
+        {
             label: 'NRI Solutions',
             href: '/nrisolutions',
             hasDropdown: false,
@@ -229,14 +237,7 @@ export const Navbar = () => {
                 { label: 'Global ETFs', href: '/globalgiftcitysolutions/globaletfs' },
             ],
         },
-        {
-            label: 'TieVista Partners',
-            href: '/partners',
-            hasDropdown: false,
-            dropdownItems: [
-                { label: '', href: '' },
-            ],
-        },
+        
         {
             label: 'Insights',
             href: '#',

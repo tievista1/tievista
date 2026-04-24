@@ -26,6 +26,12 @@ const Publications = lazy(() => import("./components/publications/Publications")
 const BankDetails = lazy(() => import("./components/BankDetails"));
 const PartnersSignup = lazy(() => import("./components/PartnersSignup"));
 
+const MutualFunds = lazy(() => import("./components/products/MutualFunds"));
+const PMS = lazy(() => import("./components/products/PMS"));
+const AIF = lazy(() => import("./components/products/AIF"));
+const GiftCity = lazy(() => import("./components/products/GiftCity"));
+const PrivateCredit = lazy(() => import("./components/products/PrivateCredit"));
+
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
 function App() {
@@ -66,9 +72,15 @@ function App() {
             <Route path='partnersignup' element={<PartnersSignup/>} />
             <Route path='bankdetails' element={<BankDetails />} />
 
-            
+            {/* BLOGS */}
             <Route path='blogs' element={<Blogs />} />
             <Route path='blogs/decluttering-the-noise-around' element={<DeclutteringtheNoiseAround />} />
+
+            <Route path='investmentpartners/mutualfunds' element={<MutualFunds/>}/>
+            <Route path='investmentpartners/pms' element={<PMS/>}/>
+            <Route path='investmentpartners/aif' element={<AIF/>}/>
+            <Route path='investmentpartners/giftcity' element={<GiftCity/>}/>
+            <Route path='investmentpartners/privatecredit' element={<PrivateCredit/>}/>
 
             <Route path='publications' element={<Publications />} />
 
