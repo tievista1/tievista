@@ -199,7 +199,7 @@ function PartnershipSection({ p, index }) {
                 <motion.div style={{ y: heroY }} className="absolute inset-0 z-0 will-change-transform">
                     <img
                         className="h-full w-full object-cover"
-                        src="https://res.cloudinary.com/dck5jgfix/image/upload/v1774249013/Allied_Services_BG_yc3tmm.png"
+                        src="https://res.cloudinary.com/dck5jgfix/image/upload/v1777033100/AlliendServices_kq8s4v.png"
                         alt="B2B Partnerships"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/45 to-black/80" />
