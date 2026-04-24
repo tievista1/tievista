@@ -1226,7 +1226,7 @@ const PatnersSignup = () => {
                                     <label className="text-[14px] font-medium text-black tracking-wide uppercase" style={{ fontFamily: "'Poppins', sans-serif" }}>
                                         CONTACT NO<span className="text-red-500">*</span>
                                     </label>
-                                    <div className="flex gap-3">
+                                    <div className="flex gap-2">
                                         <div className="relative w-24 flex-shrink-0">
                                             <select className="w-full px-4 py-3 border border-gray-300 rounded appearance-none focus:border-[#d4af37] outline-none bg-white text-sm text-black">
                                                 <option>+91</option>
@@ -1239,7 +1239,7 @@ const PatnersSignup = () => {
                                                 pattern: { value: phoneRegex, message: "Invalid 10-digit number" },
                                             })}
                                             onBlur={handlePhoneBlur}
-                                            className={`flex-1 py-3 border rounded focus:border-[#d4af37] outline-none transition-all placeholder:text-gray-300 text-sm text-black ${errorsReg.phone ? "border-red-500" : "border-gray-300"
+                                            className={`flex-1 px-2 py-3 border rounded focus:border-[#d4af37] outline-none transition-all placeholder:text-gray-300 text-sm text-black ${errorsReg.phone ? "border-red-500" : "border-gray-300"
                                                 }`}
                                             maxLength={10}
                                         />
