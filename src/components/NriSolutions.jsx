@@ -52,7 +52,7 @@ const SERVICES = [
             'KYC (initial & ongoing), FATCA / CRS declarations',
             'Power of Attorney (POA) investment setups',
         ],
-        img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774249834/NRI_Portfolio_Account_Enablement_p5rnyb.png',
+        img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1777033380/NRI_Portfolio_Management_ps0nmq.png',
         reverse: true,
     },
     {

@@ -88,7 +88,7 @@ const SERVICES = [
             'Post-liquidity deployment planning & assistance',
             'Coordination during exits, capital raises, or transitions',
         ],
-        img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774248322/Entrepreneur-Focused_Support_whweu4.png',
+        img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1777033002/Entureprenure_wr5be7.png',
         reverse: true,
     },
     {

@@ -26,7 +26,7 @@ const ASSET_CATEGORIES = [
         subtitle: "",
         description: "In an interconnected world, capital is not confined by geography. We provide seamless access to global markets and India’s premier gateway GIFT City offering strategic diversification and structural efficiency for globally minded families and institutions.",
         includes: ["GIFT City PMS & AIFs", "International Mutual Funds", "Global Equities", "Global ETFs"],
-        image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1774250216/Global_GIFT_City_Solutions_b1ntu3.png",
+        image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1777033286/GlobalGiftCity_xyr0cq.png",
         icon: Globe,
         reverse: true
     }
