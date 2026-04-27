@@ -139,7 +139,7 @@ const TieVistaPatners = () => {
               <motion.div {...fadeUp(0)}>
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-px" style={{ background: GOLD }} />
-                  <span className="text-[10px] md:text-xs font-semibold tracking-[0.35em] uppercase text-black" style={{ fontFamily: 'PT Serif, serif' }}>Mission</span>
+                  <span className="text-[10px] md:text-xs font-normal tracking-[0.35em]  text-black">Mission</span>
                 </div>
                 <div className="relative pl-6 border-l-2 border-[#D4AF37]/30">
                   <p className="text-2xl md:text-3xl lg:text-4xl text-gray-900 font-serif leading-tight " style={{ fontFamily: 'PT Serif, serif' }}>
@@ -187,10 +187,10 @@ const TieVistaPatners = () => {
                   long-term alignment, ensuring that channel partners are rewarded equitably
                   for the value they create and the relationships they nurture.
                 </p>
-                <div className="pt-8 border-t border-gray-100 text-sm text-black leading-relaxed" style={{ fontFamily: 'PT Serif, serif' }}>
+                <div className="pt-8 border-t border-gray-100 text-sm text-black leading-relaxed">
                   "The partnership model is founded on the principle of fair, transparent, and long-term alignment, ensuring that channel partners are rewarded equitably for the value they create."
                 </div>
-                <p className="text-[11px] uppercase tracking-wider text-black" style={{ fontFamily: 'PT Serif, serif' }}>
+                <p className="text-[11px] uppercase tracking-wider text-black">
                   All client recommendations remain the responsibility of the respective partner and the client, In-accordance with applicable regulatory requirements
                 </p>
 
@@ -236,7 +236,7 @@ const TieVistaPatners = () => {
                       >
                         <item.icon className={`transition-colors duration-500 ${isOpen ? 'text-white' : 'text-[#D4AF37]'}`} size={isOpen ? 22 : 20} />
                       </div>
-                      <h3 className={`text-sm sm:text-lg md:text-xl font-semibold tracking-tight transition-colors duration-300 ${isOpen ? 'text-black' : 'text-black'}`} style={{ fontFamily: 'PT Serif, serif' }}>
+                      <h3 className={`text-sm sm:text-lg md:text-xl font-normal tracking-tight transition-colors duration-300 ${isOpen ? 'text-black' : 'text-black'}`} style={{ fontFamily: 'PT Serif, serif' }}>
                         {item.question}
                       </h3>
                     </div>
