@@ -42,7 +42,7 @@ const Home = () => {
                 {/* Hero Snap Scroll Section */}
                 <div className="h-[100vh] w-full snap-start relative flex items-center justify-center overflow-hidden border-b border-gray-100">
 
-                    <img className='absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-700' src="https://res.cloudinary.com/dck5jgfix/image/upload/v1774247093/Landingpage_ixd1ea.png" alt="LandingPage" loading='lazy' />
+                    <img className='absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-700' src="https://res.cloudinary.com/dck5jgfix/image/upload/v1777033664/HomeBG_jbaa4u.png" alt="LandingPage" loading='lazy' />
 
 
                     {/* Content */}
