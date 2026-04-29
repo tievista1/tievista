@@ -689,6 +689,7 @@ const PatnersSignup = () => {
             if (autoContinue) {
                 setShowAgreement(false);
             }
+            alert("Welcome To TieVista!");
 
         } catch (error) {
             console.error("PDF generation failed:", error);

@@ -232,7 +232,7 @@ export const Navbar = () => {
                         </Link>
 
                         {/* Desktop Nav */}
-                        <div className="hidden xl:flex items-center space-x-6">
+                        <div className="hidden xl:flex items-center space-x-20">
                             {navItems.map((item, i) => (
                                 <DesktopNavItem
                                     key={i}
