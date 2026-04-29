@@ -1144,7 +1144,7 @@ const PatnersSignup = () => {
                                         Registration
                                     </span>
                                 </h2>
-                                <p className="text-gray-500 text-sm md:text-base lg:text-lg" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                <p className="text-black text-sm md:text-base lg:text-lg" style={{ fontFamily: "'Poppins', sans-serif" }}>
                                     Welcome to TieVista Partner Network
                                 </p>
                                 <div className="mt-8 border-b border-gray-200 w-full"></div>

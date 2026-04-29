@@ -10,7 +10,7 @@ import icon from '/TieVistaLogo.png'
 
 
 const Home = lazy(() => import("./components/Home"));
-const InvestmentUniverse = lazy(() => import("./components/InvestmentUniverse"));
+const InvestmentAccess = lazy(() => import("./components/InvestmentAccess"));
 const NriSolutions = lazy(() => import("./components/NriSolutions"));
 const Service = lazy(() => import("./components/Service"));
 const BusinessToBusiness = lazy(() => import("./components/BusinessToBusiness"));
@@ -60,7 +60,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path='investmentuniverse' element={<InvestmentUniverse />} />
+            <Route path='investmentaccess' element={<InvestmentAccess />} />
             <Route path='nrisolutions' element={<NriSolutions />} />
             <Route path='services' element={<Service />} />
             <Route path='b2b' element={<BusinessToBusiness />} />

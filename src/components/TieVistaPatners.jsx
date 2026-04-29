@@ -233,7 +233,7 @@ const TieVistaPatners = () => {
                       >
                         <div className="px-6 pb-8 sm:px-8 sm:pb-10 pt-0 ml-10 pr-6 sm:pr-12">
                           <div className="w-full h-px bg-gray-50 mb-6" />
-                          <p className="text-gray-600 font-light leading-relaxed text-sm sm:text-base md:text-lg whitespace-pre-line">
+                          <p className="text-gray-600 font-light leading-relaxed text-sm sm:text-base md:text-lg whitespace-pre-line" style={{ fontFamily: "'Poppins', sans-serif" }}>
                             {item.answer}
                           </p>
                         </div>

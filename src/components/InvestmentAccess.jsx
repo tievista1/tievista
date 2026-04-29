@@ -127,7 +127,7 @@ const CategorySection = ({ cat, index }) => {
                             <div className="w-12 h-px mb-6" style={{ background: GOLD }} />
 
                             {/* Description */}
-                            <p className="text-lg text-black leading-relaxed font-light mb-10">
+                            <p className="text-lg text-black leading-relaxed font-light mb-10" style={{ fontFamily: "'Poppins', sans-serif" }}>
                                 {cat.description}
                             </p>
 
@@ -152,7 +152,7 @@ const CategorySection = ({ cat, index }) => {
                                             >
                                                 <ArrowRight size={15} />
                                             </div>
-                                            <span className="text-base md:text-lg font-light text-black group-hover:text-black transition-colors">
+                                            <span className="text-base md:text-lg font-light text-black group-hover:text-black transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
                                                 {item}
                                             </span>
                                         </motion.div>
@@ -171,7 +171,7 @@ const CategorySection = ({ cat, index }) => {
 
 // --- Main Component ---
 
-const InvestmentUniverse = () => {
+const InvestmentAccess = () => {
     const animationSettings = {
         container: {
             hidden: { opacity: 0, y: 30 },
@@ -240,7 +240,7 @@ const InvestmentUniverse = () => {
                                 </div>
 
                                 {/* Title */}
-                                <span className="text-[11px] md:text-sm font-semibold text-black group-hover:text-black tracking-tight leading-tight transition-colors duration-300 line-clamp-1">
+                                <span className="text-[11px] md:text-sm font-semibold text-black group-hover:text-black tracking-tight leading-tight transition-colors duration-300 line-clamp-1" >
                                     {el.title}
                                 </span>
 
@@ -281,4 +281,4 @@ const InvestmentUniverse = () => {
     );
 };
 
-export default InvestmentUniverse;
+export default InvestmentAccess;

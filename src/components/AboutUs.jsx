@@ -111,7 +111,7 @@ function NarrativeSection({ sec, index }) {
 
               <div className="w-12 h-px mb-7" style={{ background: GOLD }} />
 
-              <p className="text-lg text-black leading-relaxed">
+              <p className="text-lg text-black leading-relaxed" style={{ fontFamily: "'Poppins', sans-serif" }}>
                 {body}
               </p>
             </motion.div>
@@ -193,7 +193,7 @@ const AboutUs = () => {
                 </div>
 
                 {/* Text */}
-                <span className="text-lg md:text-xl text-black group-hover:text-black transition-colors leading-relaxed flex-1">
+                <span className="text-lg md:text-xl text-black group-hover:text-black transition-colors leading-relaxed flex-1" style={{ fontFamily: "'Poppins', sans-serif" }}>
                   {text}
                 </span>
 

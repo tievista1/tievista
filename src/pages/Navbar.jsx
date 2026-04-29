@@ -204,12 +204,12 @@ export const Navbar = () => {
         },
         {
             label: 'Investment Access',
-            href: '/investmentuniverse',
+            href: '/investmentaccess',
             hasDropdown: false,
             dropdownItems: [
-                { label: 'Growth Assets', href: '/investmentuniverse#Growth' },
-                { label: 'Income & Capital Preservation', href: '/investmentuniverse#Income' },
-                { label: 'Private & Alternative Investments', href: '/investmentuniverse#Private' },
+                { label: 'Growth Assets', href: '/investmentaccess#Growth' },
+                { label: 'Income & Capital Preservation', href: '/investmentaccess#Income' },
+                { label: 'Private & Alternative Investments', href: '/investmentaccess#Private' },
             ],
         },
     ], []);
