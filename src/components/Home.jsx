@@ -51,18 +51,16 @@ const Home = () => {
                         whileInView="visible"
                         viewport={{ once: false, amount: 0.5 }}
                         variants={containerVariants}
-                        className="relative h-full top-60 left-10 z-50   w-full"
+                        className="relative h-full w-full flex items-end justify-start pl-10 pb-10 z-50"
                     >
                         <motion.div
                             variants={itemVariants}
-                            className="flex justify-start items-center text-5xl md:text-7xl lg:text-9xl mb-6 font-bold tracking-tighter"
+                            className="text-5xl md:text-7xl lg:text-9xl font-bold tracking-tighter"
                             style={{ fontFamily: 'PT Serif, sans-serif' }}
                         >
-                            {/* <img className='w-100 h-25 md:h-28 lg:w-150 lg:h-35' src="/TieVistaVerticalLogo.png" alt="" /> */}
-                            <div className='flex flex-col'>
-                                <h1 className='text-white font-light lg:text-7xl text-5xl '>Beyond Wealth, Towards Legacy</h1>
-                            </div>
-
+                            <h1 className="text-white font-light lg:text-7xl text-5xl">
+                                Beyond Wealth, Towards Legacy
+                            </h1>
                         </motion.div>
                     </motion.div>
 

@@ -8,6 +8,7 @@ import PoppinsItalic from "../fonts/Poppins-Italic.ttf";
 import PTSerifRegular from "../fonts/PTSerif-Regular.ttf";
 import PTSerifBold from "../fonts/PTSerif-Bold.ttf";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 // Register custom fonts for PDF
 Font.register({
@@ -138,6 +139,8 @@ const pdfStyles = StyleSheet.create({
         paddingTop: 8,
     }
 });
+
+
 
 
 const AgreementPDF = ({ data }) => {
@@ -657,6 +660,8 @@ const PatnersSignup = () => {
         }
     };
 
+    const navigate = useNavigate();
+
     const handleDownloadPdf = async (autoContinue = false) => {
         setIsGeneratingPdf(true);
 
@@ -689,6 +694,8 @@ const PatnersSignup = () => {
                 setShowAgreement(false);
             }
             alert("Welcome To TieVista!");
+            navigate("/");
+            
 
         } catch (error) {
             console.error("PDF generation failed:", error);

@@ -281,4 +281,4 @@ const InvestmentAccess = () => {
     );
 };
 
-export default InvestmentAccess;
+export default InvestmentAccess   ;
