@@ -129,6 +129,8 @@ export const Footer = () => {
               <ul className="space-y-4 font-light text-white">
                 <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
                 <li><Link to="/partners" className="hover:text-white transition-colors">TieVista Partners</Link></li>
+                <li><Link to="/investmentaccess" className="hover:text-white transition-colors">Investment Access</Link></li>
+
               </ul>
             </div>
 
@@ -136,15 +138,15 @@ export const Footer = () => {
             
 
             {/* Column 2 */}
-            <div>
+            {/* <div>
               <h4 className="text-xs font-bold uppercase tracking-[0.3em] mb-6" style={{ color: GOLD, fontFamily: 'PT Serif, serif' }}>
                 Solutions
               </h4>
               <ul className="space-y-4 font-light text-white">
-                <li><Link to="/investmentuniverse" className="hover:text-white transition-colors">Investment Access</Link></li>
-                {/* <li><Link to="/insights" className="hover:text-white transition-colors">Insights</Link></li> */}
+                <li><Link to="/investmentaccess" className="hover:text-white transition-colors">Investment Access</Link></li>
+                <li><Link to="/insights" className="hover:text-white transition-colors">Insights</Link></li> 
               </ul>
-            </div>
+            </div> */}
 
           </div>
         </div>
