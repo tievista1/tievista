@@ -555,7 +555,7 @@ const PatnersSignup = () => {
     const getUserRegister = async (data) => {
         try {
             console.log("User Registration Data:", data);
-            
+
             // Map to backend snake_case
             const payload = {
                 entity_name: data.entityName,
@@ -563,11 +563,10 @@ const PatnersSignup = () => {
                 address: data.address,
                 contact_no: data.phone,
                 email: data.email,
-                password: data.password
             };
 
             const response = await axios.post("https://partnerregistration.duckdns.org/api/partners/register", payload, AUTH_CONFIG);
-            
+
             if (response.status === 201 || response.status === 200) {
                 setMasterData(prev => ({ ...prev, ...data }));
                 setShowIdentity(true);
@@ -592,7 +591,7 @@ const PatnersSignup = () => {
     const getPan = async (data) => {
         try {
             console.log("Identity (PAN/DOB) Data:", data);
-            
+
             const identifier = masterData.email || masterData.phone;
             const payload = {
                 dob: data.dob,
@@ -600,7 +599,7 @@ const PatnersSignup = () => {
             };
 
             await axios.put(`https://partnerregistration.duckdns.org/api/partners/update/${identifier}`, payload, AUTH_CONFIG);
-            
+
             setMasterData(prev => ({ ...prev, ...data }));
             alert("PAN Details synced!");
         } catch (error) {
@@ -612,7 +611,7 @@ const PatnersSignup = () => {
     const getRegulatory = async (data) => {
         try {
             console.log("Regulatory Data:", data);
-            
+
             const identifier = masterData.email || masterData.phone;
             const payload = {
                 arn: data.arn || null,
@@ -622,7 +621,7 @@ const PatnersSignup = () => {
             };
 
             await axios.put(`https://partnerregistration.duckdns.org/api/partners/update/${identifier}`, payload, AUTH_CONFIG);
-            
+
             setMasterData(prev => ({ ...prev, ...data }));
             setShowBankDetails(true);
         } catch (error) {
@@ -649,7 +648,7 @@ const PatnersSignup = () => {
             };
 
             await axios.put(`https://partnerregistration.duckdns.org/api/partners/update/${identifier}`, payload, AUTH_CONFIG);
-            
+
             setMasterData(prev => ({ ...prev, ...finalBankData }));
             setShowAgreement(true);
         } catch (error) {
@@ -1139,8 +1138,11 @@ const PatnersSignup = () => {
                     <div className="w-1/2 overflow-y-auto px-8 lg:px-12 py-12 flex justify-center">
                         <div className="w-full max-w-lg">
                             <div className="mb-10 text-center">
-                                <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-[#1a1a1a] mb-2 font-bold tracking-tight">
-                                    Partner Registration
+                                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1a1a1a] mb-2 " style={{ fontFamily: "PT Serif, serif" }}>
+                                    Partner{' '}
+                                    <span className="font-bold gold-text">
+                                        Registration
+                                    </span>
                                 </h2>
                                 <p className="text-gray-500 text-sm md:text-base lg:text-lg" style={{ fontFamily: "'Poppins', sans-serif" }}>
                                     Welcome to TieVista Partner Network
@@ -1265,44 +1267,6 @@ const PatnersSignup = () => {
                                             }`}
                                     />
                                     {errorsReg.email && <p className="text-[10px] text-red-500 mt-1 font-medium">{errorsReg.email.message}</p>}
-                                </div>
-
-
-
-                                {/* Password */}
-                                <div className="space-y-1.5">
-                                    <label className="text-[14px] font-medium text-black tracking-wide uppercase" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                                        PASSWORD<span className="text-red-500">*</span>
-                                    </label>
-                                    <input
-                                        type="password"
-                                        {...registerReg("password", {
-                                            required: "Password is required",
-                                            pattern: { value: passwordRegex, message: "Start with Capital, 8+ chars, mix of number & symbol, no spaces" },
-                                        })}
-                                        className={`w-full px-4 py-3 border rounded focus:border-[#d4af37] outline-none transition-all text-sm text-black ${errorsReg.password ? "border-red-500" : "border-gray-300"
-                                            }`}
-                                    />
-                                    {errorsReg.password && <p className="text-[10px] text-red-500 mt-1 font-medium">{errorsReg.password.message}</p>}
-                                </div>
-
-                                {/* Confirm Password */}
-                                <div className="space-y-1.5">
-                                    <label className="text-[14px] font-medium text-black tracking-wide uppercase" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                                        CONFIRM PASSWORD<span className="text-red-500">*</span>
-                                    </label>
-                                    <input
-                                        type="password"
-                                        {...registerReg("confirmPassword", {
-                                            required: "Please confirm password",
-                                            validate: (val) => watchReg("password") === val || "Passwords do not match",
-                                        })}
-                                        className={`w-full px-4 py-3 border rounded focus:border-[#d4af37] outline-none transition-all text-sm text-black ${errorsReg.confirmPassword ? "border-red-500" : "border-gray-300"
-                                            }`}
-                                    />
-                                    {errorsReg.confirmPassword && (
-                                        <p className="text-[10px] text-red-500 mt-1 font-medium">{errorsReg.confirmPassword.message}</p>
-                                    )}
                                 </div>
 
                                 {/* NEXT Button */}

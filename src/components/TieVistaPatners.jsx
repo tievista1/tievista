@@ -87,7 +87,7 @@ const TieVistaPatners = () => {
         <div className="absolute inset-0 z-0">
           <img
             className="h-full w-full object-cover scale-105"
-            src="https://res.cloudinary.com/dck5jgfix/image/upload/v1774346041/TieVista_Patners_BG_ms1cll.png"
+            src="https://res.cloudinary.com/dck5jgfix/image/upload/v1777033100/AlliendServices_kq8s4v.png"
             alt="Partners Hero"
             loading='lazy'
           />
@@ -123,126 +123,103 @@ const TieVistaPatners = () => {
           </motion.p>
         </motion.div>
 
-        {/* Scroll indicator overlay */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 opacity-50 flex flex-col items-center gap-2">
-          <span className="text-[10px] text-white/50 uppercase tracking-[0.2em]">Scroll</span>
-          <div className="w-px h-12 bg-linear-to-b from-white/50 to-transparent" />
-        </div>
+        
       </section>
 
       {/* Main Content Section */}
-      <section className="py-20 md:py-32 bg-white">
-        <div className="container mx-auto px-6 lg:px-16 max-w-5xl">
-          <div className="flex flex-col md:flex-row gap-16 md:gap-24">
+      <section className="py-10 md:py-32 bg-white">
+        <div className="container mx-auto px-6 lg:px-16 max-w-9xl">
+          {/* Register Button */}
+          <div className="flex justify-center mb-16 md:mb-24">
+            <Link
+              to="/partnersignup"
+              className="inline-flex items-center gap-2 px-8 py-3 rounded-lg text-white font-medium transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg group"
+              style={{
+                background: 'linear-gradient(135deg, #F3C35B 0%, #D4AF37 50%, #B8860B 100%)',
+                boxShadow: '0 10px 20px -5px rgba(212, 175, 55, 0.3)'
+              }}
+            >
+              Register as Partner <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
 
-            {/* Left Column: Vision & Digital Ecosystem */}
-            <div className="w-full md:w-1/2 space-y-10 md:space-y-12">
-              <motion.div {...fadeUp(0)}>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-px" style={{ background: GOLD }} />
-                  <span className="text-[10px] md:text-xs font-normal tracking-[0.35em]  text-black">Mission</span>
-                </div>
-                <div className="relative pl-6 border-l-2 border-[#D4AF37]/30">
-                  <p className="text-2xl md:text-3xl lg:text-4xl text-gray-900 font-serif leading-tight " style={{ fontFamily: 'PT Serif, serif' }}>
-                    "TieVista is a next-generation partnership platform designed to
-                    empower independent financial partners who aspire to elevate and institutionalise
-                    their practice."
-                  </p>
-                </div>
-              </motion.div>
+          {/* Content Flex Container */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-20">
+            {/* Left Text */}
+            <motion.div
+              {...fadeUp(0.2)}
+              className="w-full md:w-[55%] relative pl-6 md:pl-10"
+            >
+              <div 
+                className="absolute left-0 top-2 bottom-2 w-[1px]" 
+                style={{ background: GOLD, opacity: 0.8 }}
+              />
+              <p 
+                className="text-2xl md:text-3xl lg:text-[38px] text-gray-900 leading-[1.3]"
+                style={{ fontFamily: 'PT Serif, serif' }}
+              >
+                "TieVista is a next-generation partnership platform designed to empower independent financial partners who aspire to elevate and institutionalise their practice."
+              </p>
+            </motion.div>
 
-              <motion.div {...fadeUp(0.1)} className="text-black font-light leading-relaxed space-y-6 text-base md:text-lg">
-                <p>
-                  The platform is envisioned as a growth engine for ambitious partners,
-                  providing access to institutional-grade processes, robust operational infrastructure,
-                  and a broad product universe, enabling them to scale their businesses while
-                  maintaining the personal relationships that define independent partnership.
-                </p>
-                <p>
-                  Through a seamless digital onboarding ecosystem, Channel Partners can
-                  onboard clients efficiently while benefiting from structured workflows and disciplined
-                  processes typically associated with leading wealth institutions. Channel Partners
-                  may also gain access to investment perspectives, interactions with external
-                  fund management teams, and a wider spectrum of opportunities within the regulated
-                  ecosystem, including differentiated and lesser-known strategies that can add
-                  meaningful depth to client portfolios.
-                </p>
-              </motion.div>
-            </div>
-
-            {/* Right Column: Analytics & Alignment */}
-            <div className="w-full md:w-1/2 space-y-10 md:space-y-12 md:mt-12">
-              <motion.div {...fadeUp(0.2)} className="text-black font-light leading-relaxed space-y-6 text-base md:text-lg">
-                <p>
-                  At the heart of the platform is a powerful reporting and portfolio analytics engine,
-                  designed to bring institutional-level transparency and analytics to client portfolios.
-                  Channel Partners can view, analyse, and present portfolios across multiple
-                  dimensions, enabling deeper portfolio discussions and the ability to slice and
-                  interpret portfolio exposures in numerous meaningful ways.
-                </p>
-                <p>
-                  TieVista’s vision is to create an ecosystem where independent channel
-                  partners can operate with the capabilities and discipline of a sophisticated wealth
-                  platform, while preserving their independence and the trust they have built with their
-                  clients. The partnership model is founded on the principle of fair, transparent, and
-                  long-term alignment, ensuring that channel partners are rewarded equitably
-                  for the value they create and the relationships they nurture.
-                </p>
-                <div className="pt-8 border-t border-gray-100 text-sm text-black leading-relaxed">
-                  "The partnership model is founded on the principle of fair, transparent, and long-term alignment, ensuring that channel partners are rewarded equitably for the value they create."
-                </div>
-                <p className="text-[11px] uppercase tracking-wider text-black">
-                  All client recommendations remain the responsibility of the respective partner and the client, In-accordance with applicable regulatory requirements
-                </p>
-
-                <button className="bg-[#d4af37] text-white cursor-pointer px-6 py-3 rounded mt-4" onClick={() => navigate("/partnersignup")}>Register as Partner</button>
-              </motion.div>
-            </div>
-
+            {/* Right Image */}
+            <motion.div
+              {...fadeUp(0.4)}
+              className="w-full md:w-[42%] relative"
+            >
+              <div className="relative overflow-hidden shadow-xl">
+                <img
+                  src="https://res.cloudinary.com/dck5jgfix/image/upload/v1777449624/TievistaPartner2_lkqhns.png"
+                  alt="Financial Partnership"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 md:py-32 bg-[#FAFAFA] border-y border-gray-100">
-        <div className="container mx-auto px-6 lg:px-16 max-w-4xl">
+      <section className="py-20 md:py-32 bg-white border-y border-gray-100">
+        <div className="container mx-auto px-6 lg:px-16 max-w-6xl">
 
           <motion.div {...fadeUp(0)} className="text-center mb-16 md:mb-24">
             <h2
-              className="text-4xl sm:text-5xl md:text-7xl tracking-tighter mb-6 leading-none"
+              className="text-4xl sm:text-5xl md:text-6xl tracking-tight mb-2 text-gray-900"
               style={{ fontFamily: 'PT Serif, serif' }}
             >
-              Frequently Asked <span className="gold-text">Questions</span>
+              Frequently Asked
             </h2>
-            <div className="w-20 h-px bg-[#D4AF37] mx-auto opacity-60" />
+            <h2
+              className="text-4xl sm:text-5xl md:text-6xl tracking-tight mb-6 gold-text"
+              style={{ fontFamily: 'PT Serif, serif' }}
+            >
+              Questions
+            </h2>
+            <div className="w-16 h-px bg-[#D4AF37] mx-auto opacity-60" />
           </motion.div>
 
-          <div className="space-y-4">
+          <div className="space-y-6">
             {faqData.map((item, idx) => {
               const isOpen = activeIndex === idx;
               return (
                 <motion.div
                   key={idx}
                   {...fadeUp(0.05 * idx)}
-                  className={`bg-white border transition-all duration-500 overflow-hidden ${isOpen ? 'border-[#D4AF37]/50 shadow-2xl shadow-[#D4AF37]/5' : 'border-gray-100'}`}
+                  className={`bg-white border transition-all duration-300 overflow-hidden ${isOpen ? 'border-[#D4AF37]/30 shadow-xl' : 'border-gray-100'}`}
                 >
                   <button
                     onClick={() => toggleAccordion(idx)}
-                    className="w-full text-left p-5 sm:p-6 md:p-8 flex items-center justify-between group cursor-pointer"
+                    className="w-full text-left p-6 sm:p-8 flex items-center justify-between group cursor-pointer"
                   >
-                    <div className="flex items-center gap-4 sm:gap-6">
-                      <div
-                        className={`w-10 h-10 sm:w-12 sm:h-12 shrink-0 flex items-center justify-center rounded-lg transition-all duration-500 ${isOpen ? 'bg-[#D4AF37] scale-110' : 'bg-[#D4AF37]/10'}`}
-                        style={{ background: isOpen ? GOLD : `${GOLD}15` }}
-                      >
-                        <item.icon className={`transition-colors duration-500 ${isOpen ? 'text-white' : 'text-[#D4AF37]'}`} size={isOpen ? 22 : 20} />
-                      </div>
-                      <h3 className={`text-sm sm:text-lg md:text-xl font-normal tracking-tight transition-colors duration-300 ${isOpen ? 'text-black' : 'text-black'}`} style={{ fontFamily: 'PT Serif, serif' }}>
+                    <div className="flex items-center gap-6">
+                      <div className="w-1.5 h-1.5 rounded-full bg-black shrink-0" />
+                      <h3 className="text-lg sm:text-xl md:text-[22px] font-normal text-gray-800 leading-tight" style={{ fontFamily: 'PT Serif, serif' }}>
                         {item.question}
                       </h3>
                     </div>
                     <div className={`transition-transform duration-500 shrink-0 ml-4 ${isOpen ? 'rotate-180' : 'rotate-0'}`}>
-                      <ChevronDown size={18} className={isOpen ? 'text-[#D4AF37]' : 'text-gray-400'} />
+                      <ChevronDown size={20} className={isOpen ? 'text-[#D4AF37]' : 'text-gray-400'} />
                     </div>
                   </button>
 
@@ -254,9 +231,9 @@ const TieVistaPatners = () => {
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                       >
-                        <div className="px-5 pb-8 sm:px-6 sm:pb-8 md:px-8 md:pb-10 pt-0 sm:ml-18 md:ml-18 pr-6 sm:pr-12">
+                        <div className="px-6 pb-8 sm:px-8 sm:pb-10 pt-0 ml-10 pr-6 sm:pr-12">
                           <div className="w-full h-px bg-gray-50 mb-6" />
-                          <p className="text-black font-light leading-relaxed text-sm sm:text-base md:text-lg whitespace-pre-line">
+                          <p className="text-gray-600 font-light leading-relaxed text-sm sm:text-base md:text-lg whitespace-pre-line">
                             {item.answer}
                           </p>
                         </div>
@@ -267,6 +244,38 @@ const TieVistaPatners = () => {
               );
             })}
           </div>
+
+        </div>
+      </section>
+
+      {/* OUR Vision */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="container mx-auto px-6 lg:px-16 max-w-6xl text-center">
+          
+          {/* Title with Gold Lines */}
+          <motion.div 
+            {...fadeUp(0)}
+            className="flex items-center justify-center gap-6 md:gap-12 mb-16"
+          >
+            <div className="h-[1px] bg-[#D4AF37] flex-1 max-w-[150px] md:max-w-[250px] opacity-60" />
+            <span className="text-gray-900 text-xs md:text-sm font-medium tracking-[0.2em] uppercase whitespace-nowrap">
+              Our Vision
+            </span>
+            <div className="h-[1px] bg-[#D4AF37] flex-1 max-w-[150px] md:max-w-[250px] opacity-60" />
+          </motion.div>
+
+          {/* Vision Quote */}
+          <motion.div 
+            {...fadeUp(0.2)}
+            className="max-w-5xl mx-auto"
+          >
+            <p 
+              className="text-2xl md:text-4xl lg:text-[42px] text-gray-800 italic leading-[1.4] text-justify"
+              style={{ fontFamily: 'PT Serif, serif' }}
+            >
+              "The partnership model is founded on the principle of fair, transparent, and long-term alignment, ensuring that channel partners are rewarded equitably for the value <span className='md:ml-100'>they create."</span>
+            </p>
+          </motion.div>
 
         </div>
       </section>
