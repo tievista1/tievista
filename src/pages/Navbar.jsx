@@ -186,28 +186,6 @@ export const Navbar = () => {
     const navItems = useMemo(() => [
         { label: 'Home', href: '/' },
         {
-            label: 'Services',
-            href: '/services',
-            hasDropdown: false,
-            dropdownItems: [
-                { label: 'Family Office Structuring', href: '/services/family-office-structuring' },
-                { label: 'Succession & Estate Planning', href: '/services/succession-estate-planning' },
-                { label: 'Governance', href: '/services/governance' },
-                { label: 'Tax & Repatriation', href: '/services/tax-repatriation' },
-            ],
-        },
-        {
-            label: 'Allied Services',
-            href: '/b2b',
-            hasDropdown: false,
-            dropdownItems: [
-                { label: 'Family Office Structuring', href: '/b2b/family-office-structuring' },
-                { label: 'Succession & Estate Planning', href: '/b2b/succession-estate-planning' },
-                { label: 'Governance', href: '/b2b/governance' },
-                { label: 'Tax & Repatriation', href: '/b2b/tax-repatriation' },
-            ],
-        },
-        {
             label: 'TieVista Partners',
             href: '/partners',
             hasDropdown: false,
@@ -215,29 +193,6 @@ export const Navbar = () => {
                 { label: '', href: '' },
             ],
         },
-        {
-            label: 'NRI Solutions',
-            href: '/nrisolutions',
-            hasDropdown: false,
-            dropdownItems: [
-                { label: 'NRI Fixed Deposits', href: '/nrisolutions/nrifixeddeposits' },
-                { label: 'Remittance Solutions', href: '/nrisolutions/remittancesolutions' },
-                { label: 'Global Multi-Currency Reporting', href: '/nrisolutions/globalmulticurrencyreporting' },
-                { label: 'Global Investment', href: '/nrisolutions/globalinvestment' },
-            ],
-        },
-        {
-            label: 'Global & GIFT City Solutions',
-            href: '/globalgiftcitysolutions',
-            hasDropdown: false,
-            dropdownItems: [
-                { label: 'GIFT City PMS & AIFs', href: '/globalgiftcitysolutions/giftcitypmsandaifs' },
-                { label: 'International Mutual Funds', href: '/globalgiftcitysolutions/internationalmutualfunds' },
-                { label: 'Global Equities', href: '/globalgiftcitysolutions/globalequities' },
-                { label: 'Global ETFs', href: '/globalgiftcitysolutions/globaletfs' },
-            ],
-        },
-        
         {
             label: 'Insights',
             href: '#',
@@ -248,21 +203,13 @@ export const Navbar = () => {
             ],
         },
         {
-            label: 'More...',
-            href: '#',
-            hasDropdown: true,
+            label: 'Investment Access',
+            href: '/investmentuniverse',
+            hasDropdown: false,
             dropdownItems: [
-                {
-                    label: 'Investment Universe',
-                    href: '/investmentuniverse',
-                    hasDropdown: true,
-                    dropdownItems: [
-                        { label: 'Growth Assets', href: '/investmentuniverse#Growth' },
-                        { label: 'Income & Capital Preservation', href: '/investmentuniverse#Income' },
-                        { label: 'Private & Alternative Investments', href: '/investmentuniverse#Private' },
-                    ]
-                },
-                { label: 'Contact Us', href: '/contact' },
+                { label: 'Growth Assets', href: '/investmentuniverse#Growth' },
+                { label: 'Income & Capital Preservation', href: '/investmentuniverse#Income' },
+                { label: 'Private & Alternative Investments', href: '/investmentuniverse#Private' },
             ],
         },
     ], []);

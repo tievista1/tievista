@@ -4,6 +4,7 @@ import { Target, TrendingUp, Users, BarChart3, Star, Handshake, Shield, Clipboar
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
+
 const GOLD = '#D4AF37';
 
 const fadeUp = (delay = 0) => ({
