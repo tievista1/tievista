@@ -108,9 +108,7 @@ export const Footer = () => {
           </div>
 
 
-          <a href='https://docs.google.com/spreadsheets/d/1LUaC-L_qcPlNQnT6idMsbTEcp4VFEFay/export?format=xlsx' className='relative z-30 md:top-10 lg:top-41 text-white font-light' style={{ fontFamily: 'PT Serif, serif' }}>
-            Download CSV
-          </a>
+          
 
           {/* Navigation Columns */}
           <div className="flex flex-wrap gap-12 lg:gap-24">
@@ -125,21 +123,22 @@ export const Footer = () => {
                 <li><Link to="/services" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Services</Link></li>
                 <li><Link to="/nrisolutions" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>NRI Solutions</Link></li>
                 <li><Link to="/partners" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>TieVista Partners</Link></li>
+                <li><Link to="/investmentuniverse" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Investment Universe</Link></li>
+                {/* <li><Link to="/b2b" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Allied Services</Link></li> */}
+                {/* <li><Link to="/insights" className="hover:text-white transition-colors">Insights</Link></li> */}
+                <li><Link to="/contact" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Contact Us</Link></li>
               </ul>
             </div>
 
-            {/* Column 2 */}
+            {/* Column 2
             <div>
               <h4 className="text-xs font-bold uppercase tracking-[0.3em] mb-6" style={{ color: GOLD, fontFamily: 'PT Serif, serif' }}>
                 Solutions
               </h4>
               <ul className="space-y-4 font-light text-white">
-                <li><Link to="/investmentuniverse" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Investment Universe</Link></li>
-                <li><Link to="/b2b" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Allied Services</Link></li>
-                {/* <li><Link to="/insights" className="hover:text-white transition-colors">Insights</Link></li> */}
-                <li><Link to="/contact" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Contact Us</Link></li>
+                
               </ul>
-            </div>
+            </div> */}
 
           </div>
         </div>
@@ -160,6 +159,7 @@ export const Footer = () => {
           <div className="flex gap-8">
             <Link to="/privacypolicy" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Privacy Policy</Link>
             <Link to="/terms" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Terms of Use</Link>
+            <a href="https://docs.google.com/spreadsheets/d/1WfMZxhjV2KQYqx9q458ylRMYRCnCHzKI/export?format=xlsx" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Product List</a>
 
           </div>
         </div>

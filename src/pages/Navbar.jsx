@@ -196,17 +196,17 @@ export const Navbar = () => {
                 { label: 'Tax & Repatriation', href: '/services/tax-repatriation' },
             ],
         },
-        {
-            label: 'Allied Services',
-            href: '/b2b',
-            hasDropdown: false,
-            dropdownItems: [
-                { label: 'Family Office Structuring', href: '/b2b/family-office-structuring' },
-                { label: 'Succession & Estate Planning', href: '/b2b/succession-estate-planning' },
-                { label: 'Governance', href: '/b2b/governance' },
-                { label: 'Tax & Repatriation', href: '/b2b/tax-repatriation' },
-            ],
-        },
+        // {
+        //     label: 'Allied Services',
+        //     href: '/b2b',
+        //     hasDropdown: false,
+        //     dropdownItems: [
+        //         { label: 'Family Office Structuring', href: '/b2b/family-office-structuring' },
+        //         { label: 'Succession & Estate Planning', href: '/b2b/succession-estate-planning' },
+        //         { label: 'Governance', href: '/b2b/governance' },
+        //         { label: 'Tax & Repatriation', href: '/b2b/tax-repatriation' },
+        //     ],
+        // },
         {
             label: 'NRI Solutions',
             href: '/nrisolutions',
@@ -218,17 +218,17 @@ export const Navbar = () => {
                 { label: 'Global Investment', href: '/nrisolutions/globalinvestment' },
             ],
         },
-        {
-            label: 'Global & GIFT City Solutions',
-            href: '/globalgiftcitysolutions',
-            hasDropdown: false,
-            dropdownItems: [
-                { label: 'GIFT City PMS & AIFs', href: '/globalgiftcitysolutions/giftcitypmsandaifs' },
-                { label: 'International Mutual Funds', href: '/globalgiftcitysolutions/internationalmutualfunds' },
-                { label: 'Global Equities', href: '/globalgiftcitysolutions/globalequities' },
-                { label: 'Global ETFs', href: '/globalgiftcitysolutions/globaletfs' },
-            ],
-        },
+        // {
+        //     label: 'Global & GIFT City Solutions',
+        //     href: '/globalgiftcitysolutions',
+        //     hasDropdown: false,
+        //     dropdownItems: [
+        //         { label: 'GIFT City PMS & AIFs', href: '/globalgiftcitysolutions/giftcitypmsandaifs' },
+        //         { label: 'International Mutual Funds', href: '/globalgiftcitysolutions/internationalmutualfunds' },
+        //         { label: 'Global Equities', href: '/globalgiftcitysolutions/globalequities' },
+        //         { label: 'Global ETFs', href: '/globalgiftcitysolutions/globaletfs' },
+        //     ],
+        // },
         {
             label: 'TieVista Partners',
             href: '/partners',

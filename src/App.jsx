@@ -12,9 +12,9 @@ const Home = lazy(() => import("./components/Home"));
 const InvestmentUniverse = lazy(() => import("./components/InvestmentUniverse"));
 const NriSolutions = lazy(() => import("./components/NriSolutions"));
 const Service = lazy(() => import("./components/Service"));
-const BusinessToBusiness = lazy(() => import("./components/BusinessToBusiness"));
+// const BusinessToBusiness = lazy(() => import("./components/BusinessToBusiness"));
 const Contact = lazy(() => import("./components/Contact"));
-const GlobalGiftCitySolutions = lazy(() => import("./components/GlobalGiftCitySolutions"));
+// const GlobalGiftCitySolutions = lazy(() => import("./components/GlobalGiftCitySolutions"));
 const PrivacyPolicy = lazy(() => import("./components/PrivacyPolicy"));
 const TermsAndConditions = lazy(() => import("./components/TermsAndConditions"));
 const TieVistaPatners = lazy(() => import("./components/TieVistaPatners"));
@@ -54,9 +54,9 @@ function App() {
             <Route path='investmentuniverse' element={<InvestmentUniverse />} />
             <Route path='nrisolutions' element={<NriSolutions />} />
             <Route path='services' element={<Service />} />
-            <Route path='b2b' element={<BusinessToBusiness />} />
+            {/* <Route path='b2b' element={<BusinessToBusiness />} /> */}
             <Route path='contact' element={<Contact />} />
-            <Route path='globalgiftcitysolutions' element={<GlobalGiftCitySolutions />} />
+            {/* <Route path='globalgiftcitysolutions' element={<GlobalGiftCitySolutions />} /> */}
             <Route path='privacypolicy' element={<PrivacyPolicy />} />
             <Route path='terms' element={<TermsAndConditions />} />
             <Route path='partners' element={<TieVistaPatners />} />

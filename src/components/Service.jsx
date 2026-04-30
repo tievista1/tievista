@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import {
     TrendingUp, Network, LayoutDashboard, Lightbulb,
-    Users, Handshake, ArrowRight, Shield
+    Users, Handshake, ArrowRight, Shield, Globe
 } from 'lucide-react'
 
 /* ─── Shared design tokens ─── */
@@ -123,6 +123,23 @@ const SERVICES = [
         img: 'https://res.cloudinary.com/dr1u4plse/image/upload/v1773741196/RelationModel_nwwjt6.png',
         reverse: true,
     },
+    {
+        id: 'Global',
+        icon: Globe,
+        label: '',
+        heading: 'Global &',
+        accent: 'GIFT City Solutions',
+        body: 'In an interconnected world, capital is not confined by geography. We provide seamless access to global markets and India’s premier gateway GIFT City offering strategic diversification and structural efficiency for globally minded families and institutions.',
+        bullets: [
+            "GIFT City PMS & AIFs",
+            "International Mutual Funds",
+            "Global Equities",
+            "Global ETFs"
+        ],
+        img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1777033286/GlobalGiftCity_xyr0cq.png',
+        reverse: false,
+    },
+    
 ]
 
 /* ─── ServiceSection sub-component ─── */
