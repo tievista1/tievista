@@ -1481,7 +1481,7 @@ const PatnersSignup = () => {
                                     <label className="text-[14px] font-medium text-black tracking-wide uppercase">Bank Name</label>
                                     <input
                                         {...registerBank("bankName", {
-                                            pattern: { value: /^[a-zA-Z]+$/, message: "Invalid Bank Name" }
+                                            pattern: { value: /^[a-zA-Z]+(?:\s[a-zA-Z]+)*$/, message: "Invalid Bank Name" }
                                         })}
                                         maxLength={15}
                                         onChange={(e) => setValueBank("bankName", e.target.value.toUpperCase())}
