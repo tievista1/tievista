@@ -105,11 +105,6 @@ export const Footer = () => {
             </div>
           </div>
 
-
-          <a href='https://docs.google.com/spreadsheets/d/1LUaC-L_qcPlNQnT6idMsbTEcp4VFEFay/export?format=xlsx' className='relative z-30 md:top-10 lg:top-41 text-white font-light' style={{ fontFamily: 'PT Serif, serif' }}>
-            Download CSV
-          </a>
-
           {/* Navigation Columns */}
           <div className="flex flex-wrap gap-12 lg:gap-24">
 
@@ -172,7 +167,7 @@ export const Footer = () => {
           <div className="flex gap-8">
             <Link to="/privacypolicy" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Privacy Policy</Link>
             <Link to="/terms" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Terms of Use</Link>
-
+            <a href="https://docs.google.com/spreadsheets/d/1LUaC-L_qcPlNQnT6idMsbTEcp4VFEFay/export?format=xlsx" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Product List</a>
           </div>
         </div>
 
