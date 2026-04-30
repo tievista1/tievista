@@ -105,6 +105,11 @@ export const Footer = () => {
             </div>
           </div>
 
+
+          <a href='https://docs.google.com/spreadsheets/d/1LUaC-L_qcPlNQnT6idMsbTEcp4VFEFay/export?format=xlsx' className='relative z-30 md:top-10 lg:top-41 text-white font-light' style={{ fontFamily: 'PT Serif, serif' }}>
+            Download CSV
+          </a>
+
           {/* Navigation Columns */}
           <div className="flex flex-wrap gap-12 lg:gap-24">
 
