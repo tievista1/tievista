@@ -11,6 +11,8 @@ export const Footer = () => {
   return (
     <footer className="bg-black text-white py-5 lg:py-10 border-t border-gray-800 selection:bg-[#D4AF37] selection:text-white">
 
+
+
       <section className="w-full min-h-[20vh] bg-black flex items-center justify-center relative overflow-hidden py-8">
 
         {/* Background texture: subtle gold diagonal lines */}
@@ -104,6 +106,11 @@ export const Footer = () => {
               </a>
             </div>
           </div>
+
+
+          <a href='https://docs.google.com/spreadsheets/d/1LUaC-L_qcPlNQnT6idMsbTEcp4VFEFay/export?format=xlsx' className='relative z-30 md:top-10 lg:top-41 text-white font-light' style={{ fontFamily: 'PT Serif, serif' }}>
+            Download CSV
+          </a>
 
           {/* Navigation Columns */}
           <div className="flex flex-wrap gap-12 lg:gap-24">
