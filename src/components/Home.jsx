@@ -27,11 +27,6 @@ const Home = () => {
         }
     };
 
-    const itemVariants = {
-        hidden: { opacity: 0, y: 10 },
-        visible: { opacity: 1, y: 0 }
-    };
-
     return (
         <>
             <div className='selection:bg-[#D4AF37] selection:text-white'>
@@ -44,17 +39,15 @@ const Home = () => {
 
                     <img className='absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-700' src="https://res.cloudinary.com/dck5jgfix/image/upload/v1777033664/HomeBG_jbaa4u.png" alt="LandingPage" loading='lazy' />
 
-
                     {/* Content */}
                     <motion.div
-                        initial="hidden"
+                        initial="visible"
                         whileInView="visible"
                         viewport={{ once: false, amount: 0.5 }}
                         variants={containerVariants}
-                        className="relative h-full w-full flex items-end justify-start pl-10 pb-10 z-50"
+                        className="relative h-full w-full flex top-160 md:top-120 justify-start pl-10 pb-10 z-50"
                     >
                         <motion.div
-                            variants={itemVariants}
                             className="text-5xl md:text-7xl lg:text-9xl font-bold tracking-tighter"
                             style={{ fontFamily: 'PT Serif, sans-serif' }}
                         >
@@ -65,9 +58,7 @@ const Home = () => {
                     </motion.div>
 
                 </div>
-
                 <AboutUs />
-
             </div>
         </>
     )

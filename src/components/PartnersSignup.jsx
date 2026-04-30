@@ -637,8 +637,6 @@ const PatnersSignup = () => {
         try {
             const finalBankData = {
                 ...data,
-                gstin: data.gstin?.trim() ? data.gstin.trim() : "0",
-                cin_no: data.cin || "0"
             };
             console.log("Bank details submitted:", finalBankData);
 
@@ -646,8 +644,7 @@ const PatnersSignup = () => {
             const payload = {
                 bank_account_no: finalBankData.bankAccountNo,
                 ifsc_code: finalBankData.ifscCode,
-                gst_in: finalBankData.gstin,
-                cin_no: finalBankData.cin_no
+                bank_name: finalBankData.bankName,
             };
 
             await axios.put(`https://partnerregistration.duckdns.org/api/partners/update/${identifier}`, payload, AUTH_CONFIG);
@@ -1461,7 +1458,7 @@ const PatnersSignup = () => {
                                     )}
                                 </div>
 
-                                {(entityTypeValue === "pvt-ltd" || entityTypeValue === "public-ltd") && (
+                                {/* {(entityTypeValue === "pvt-ltd" || entityTypeValue === "public-ltd") && (
                                     <div className="space-y-1.5">
                                         <label className="text-[14px] font-medium text-black tracking-wide uppercase">CIN<span className="text-red-500">*</span></label>
                                         <input
@@ -1478,21 +1475,21 @@ const PatnersSignup = () => {
                                             <p className="text-[10px] text-red-500 mt-1 font-medium">{errorsBank.cin.message}</p>
                                         )}
                                     </div>
-                                )}
+                                )} */}
 
                                 <div className="space-y-1.5">
-                                    <label className="text-[14px] font-medium text-black tracking-wide uppercase">GSTIN</label>
+                                    <label className="text-[14px] font-medium text-black tracking-wide uppercase">Bank Name</label>
                                     <input
-                                        {...registerBank("gstin", {
-                                            pattern: { value: /^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/, message: "Invalid GSTIN format (e.g., 33AAACI1607G2Z5)" }
+                                        {...registerBank("bankName", {
+                                            pattern: { value: /^[a-zA-Z]+$/, message: "Invalid Bank Name" }
                                         })}
                                         maxLength={15}
-                                        onChange={(e) => setValueBank("gstin", e.target.value.toUpperCase())}
+                                        onChange={(e) => setValueBank("bankName", e.target.value.toUpperCase())}
                                         className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-sm uppercase text-black"
-                                        placeholder="33AAACI1607G2Z5 (Optional)"
+                                        placeholder="Bank Name"
                                     />
-                                    {errorsBank.gstin && (
-                                        <p className="text-[10px] text-red-500 mt-1 font-medium">{errorsBank.gstin.message}</p>
+                                    {errorsBank.bankName && (
+                                        <p className="text-[10px] text-red-500 mt-1 font-medium">{errorsBank.bankName.message}</p>
                                     )}
                                 </div>
 
