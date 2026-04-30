@@ -1483,7 +1483,7 @@ const PatnersSignup = () => {
                                         {...registerBank("bankName", {
                                             pattern: { value: /^[a-zA-Z\s]+$/, message: "Invalid Bank Name" }
                                         })}
-                                        maxLength={15}
+                                        maxLength={150}
                                         onChange={(e) => setValueBank("bankName", e.target.value.toUpperCase())}
                                         className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-sm uppercase text-black"
                                         placeholder="Bank Name"
