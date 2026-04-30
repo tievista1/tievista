@@ -1058,7 +1058,7 @@ const PatnersSignup = () => {
                             </div>
 
                             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-end gap-4 overflow-hidden">
-                                {/* <button
+                                <button
                                     onClick={() => handleDownloadPdf(false)}
                                     disabled={!isAgreed || isGeneratingPdf}
                                     className={`w-full sm:w-auto px-8 py-2.5 border border-black rounded text-xs font-bold flex items-center justify-center gap-2 transition-colors uppercase ${isGeneratingPdf
@@ -1069,7 +1069,7 @@ const PatnersSignup = () => {
                                 >
                                     <Download size={16} />
                                     Download Agreement
-                                </button> */}
+                                </button>
                                 <button
                                     disabled={!isAgreed || isGeneratingPdf}
                                     onClick={() => handleDownloadPdf(true)}
