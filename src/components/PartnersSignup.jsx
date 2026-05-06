@@ -1298,7 +1298,7 @@ const PatnersSignup = () => {
                                     <form onSubmit={handleSubmitPan(getPan)} className="space-y-6">
                                         {/* PAN */}
                                         <div className="space-y-1.5">
-                                            <label className="text-[14px] font-medium text-black tracking-wide uppercase">PAN <span className="text-red-500">*</span></label>
+                                            <label className="text-[14px] font-medium text-black tracking-wide uppercase">PAN<span className="text-red-500">*</span></label>
                                             <input
                                                 {...registerPan("pan", {
                                                     required: "PAN required",
@@ -1360,7 +1360,7 @@ const PatnersSignup = () => {
                                     <form onSubmit={handleSubmitRegulatory(getRegulatory)} className="space-y-6 pt-4">
                                         {/* Regulatory Details Title */}
                                         <div className="pt-8 space-y-4">
-                                            <h3 className="text-sm font-bold text-gray-800 tracking-widest uppercase">REGULATORY DETAILS</h3>
+                                            <h3 className="text-sm font-bold text-gray-800 tracking-widest uppercase">REGULATORY DETAILS<span className="text-red-500">*</span></h3>
                                             <div className="border-b border-gray-200 w-full"></div>
                                         </div>
 
