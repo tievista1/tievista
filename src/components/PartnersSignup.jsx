@@ -1337,7 +1337,7 @@ const PatnersSignup = () => {
                                                 onChange={(e) => setIsAuthorized(e.target.checked)}
                                             />
                                             <label htmlFor="auth-check" className="text-[11px] text-gray-600 leading-relaxed cursor-pointer select-none">
-                                                I Authorize TieVista Global Private Wealth (IndusArtha Financial Services Private Limited) to fetch my KYC data from KRA for the purpose of availing Financial Products Distribution service and to become a registered partner with TieVista Global Private Wealth (IndusArtha Financial Services Private Limited).
+                                                I Authorize TieVista (IndusArtha Financial Services Private Limited) to view my KYC data from KRA for the purpose of availing Financial Products Distribution service and to become a registered partner with TieVista (IndusArtha Financial Services Private Limited).
                                             </label>
                                         </div>
 
@@ -1351,7 +1351,7 @@ const PatnersSignup = () => {
                                                     : "bg-gray-100 text-gray-400 cursor-not-allowed"
                                                     }`}
                                             >
-                                                Fetch Data
+                                                View Data
                                             </button>
                                         </div>
                                     </form>
@@ -1364,44 +1364,65 @@ const PatnersSignup = () => {
                                             <div className="border-b border-gray-200 w-full"></div>
                                         </div>
 
-                                        <div className="grid grid-cols-2 gap-4">
-                                            <input
-                                                {...registerRegulatory("arn", {
-                                                    pattern: arnRegex,
-                                                    maxLength: { value: 6, message: "ARN must be 6 digits" }
-                                                })}
-                                                placeholder="ARN (6 digits)"
-                                                maxLength={6}
-                                                className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-sm text-black"
-                                            />
-                                            <input
-                                                {...registerRegulatory("euinARN", {
-                                                    pattern: euinRegex,
-                                                    maxLength: { value: 6, message: "EUIN must be 6 characters" }
-                                                })}
-                                                placeholder="EUIN (E12345)"
-                                                maxLength={6}
-                                                className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-sm text-black"
-                                            />
-                                            <input
-                                                {...registerRegulatory("aprn", {
-                                                    pattern: aprnRegex,
-                                                    maxLength: { value: 5, message: "APRN must be 5 digits" }
-                                                })}
-                                                placeholder="APRN (5 digits)"
-                                                maxLength={5}
-                                                className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-sm text-black"
-                                            />
-                                            <input
-                                                {...registerRegulatory("euinAprn", {
-                                                    pattern: euinRegex,
-                                                    maxLength: { value: 6, message: "EUIN must be 6 characters" }
-                                                })}
-                                                placeholder="EUIN (APRN)"
-                                                maxLength={6}
-                                                className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-sm text-black"
-                                            />
+                                        <div className="flex flex-col gap-4">
+                                            <div className="flex gap-4 w-full">
+                                                <div className="flex-1 flex flex-col">
+                                                    <input
+                                                        {...registerRegulatory("arn", {
+                                                            required : "ARN is required",
+                                                            pattern: arnRegex,
+                                                            maxLength: { value: 6, message: "ARN must be 6 digits" }
+                                                        })}
+                                                        placeholder="ARN (6 digits)"
+                                                        maxLength={6}
+                                                        className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-sm text-black"
+                                                    />
+                                                    {errorsRegulatory.arn && <p className="text-red-500 text-xs mt-2">{errorsRegulatory.arn.message}</p>}
+                                                </div>
+                                                <div className="flex-1 flex flex-col">
+                                                    <input
+                                                        {...registerRegulatory("euinARN", {
+                                                            required : "EUIN is required example E12345",
+                                                            pattern: euinRegex,
+                                                            maxLength: { value: 6, message: "EUIN must be 6 characters" }
+                                                        })}
+                                                        placeholder="EUIN (ARN)"
+                                                        maxLength={6}
+                                                        className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-sm text-black"
+                                                    />
+                                                    {errorsRegulatory.euinARN && <p className="text-red-500 text-xs mt-2">{errorsRegulatory.euinARN.message}</p>}
+                                                </div>
+                                            </div>
+                                            <div className="flex gap-4 w-full">
+                                                <div className="flex-1 flex flex-col">
+                                                    <input
+                                                        {...registerRegulatory("aprn", {
+                                                            required : "APRN is required",
+                                                            pattern: aprnRegex,
+                                                            maxLength: { value: 5, message: "APRN must be 5 digits" }
+                                                        })}
+                                                        placeholder="APRN (5 digits)"
+                                                        maxLength={5}
+                                                        className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-sm text-black"
+                                                    />
+                                                    {errorsRegulatory.aprn && <p className="text-red-500 text-xs mt-2">{errorsRegulatory.aprn.message}</p>}
+                                                </div>
+                                                <div className="flex-1 flex flex-col">
+                                                    <input
+                                                        {...registerRegulatory("euinAprn", {
+                                                            required : "EUIN is required example E12345",
+                                                            pattern: euinRegex,
+                                                            maxLength: { value: 6, message: "EUIN must be 6 characters" }
+                                                        })}
+                                                        placeholder="EUIN (APRN)"
+                                                        maxLength={6}
+                                                        className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-sm text-black"
+                                                    />
+                                                    {errorsRegulatory.euinAprn && <p className="text-red-500 text-xs mt-2">{errorsRegulatory.euinAprn.message}</p>}
+                                                </div>
+                                            </div>
                                         </div>
+                                        
 
                                         {/* PROCEED Button */}
                                         <div className="pt-10 flex justify-center pb-12">
