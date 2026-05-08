@@ -17,7 +17,16 @@ const Publications = () => {
             img: "https://res.cloudinary.com/dck5jgfix/image/upload/v1775732548/March_2026_foixjy.png",
             url: "https://drive.google.com/uc?export=download&id=1sBlq8NylKUpYCLFdZRVvalqO5CY2WKFi",
             date: "March, 2026"
-        }
+        },
+        {
+            id: 2,
+            title: "",
+            goldtitle: "",
+            description: "MONTHLY UPDATE",
+            img: "https://res.cloudinary.com/dck5jgfix/image/upload/v1775732548/March_2026_foixjy.png",
+            url: "https://drive.google.com/uc?export=download&id=1rF2G1Y8aIcWwUUGAzbtpaTaMN3fdbL0Y",
+            date: "April, 2026"
+        },
     ]
 
     const filteredPublications = useMemo(() => {
