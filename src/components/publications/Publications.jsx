@@ -112,18 +112,6 @@ const Publications = () => {
                                             className='group flex flex-col bg-white border border-gray-100 overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 w-full md:w-[270px] '
                                         >
                                             {/* Header Text - Tightened */}
-                                            {/* <div className='flex flex-col p-6 pb-2'>
-                                                <h3
-                                                KHUSI
-                                                    className='text-3xl md:text-4xl font-bold leading-tight flex flex-wrap gap-2'
-                                                    style={{ fontFamily: 'PT Serif, serif' }}
-                                                >
-                                                    <span className='text-black block mb-0.5'>{publication.title}</span>
-                                                    <span className='gold-text block'>{publication.goldtitle}</span>
-                                                </h3>
-                                            </div> */}
-
-                                            
 
                                             {/* Image Container - 1:1 Aspect Ratio (now 360px based) */}
                                             <div className='relative w-full  overflow-hidden bg-gray-50'>
