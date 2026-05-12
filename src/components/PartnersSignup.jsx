@@ -499,6 +499,7 @@ const PatnersSignup = () => {
     const agreementRef = useRef(null);
 
     const [showIdentity, setShowIdentity] = useState(false);
+    const [showRegulatory, setShowRegulatory] = useState(false);
     const [showBankDetails, setShowBankDetails] = useState(false);
     const [isAuthorized, setIsAuthorized] = useState(false);
     const [showAgreement, setShowAgreement] = useState(false);
@@ -573,10 +574,6 @@ const PatnersSignup = () => {
             if (response.status === 201 || response.status === 200) {
                 setMasterData(prev => ({ ...prev, ...data }));
                 setShowIdentity(true);
-                setTimeout(() => {
-                    const element = document.getElementById("identity-details");
-                    element?.scrollIntoView({ behavior: "smooth", block: "start" });
-                }, 100);
             }
         } catch (error) {
             console.error("Initial registration failed:", error);
@@ -604,6 +601,7 @@ const PatnersSignup = () => {
             await axios.put(`https://partnerregistration.duckdns.org/api/partners/update/${identifier}`, payload, AUTH_CONFIG);
 
             setMasterData(prev => ({ ...prev, ...data }));
+            setShowRegulatory(true);
             alert("PAN Details synced!");
         } catch (error) {
             console.error("Identity update failed:", error);
@@ -1135,13 +1133,13 @@ const PatnersSignup = () => {
             {/* Right Form Section - Implementing Slider */}
             <div className="flex-1 bg-white overflow-hidden flex flex-col scrollbar-hide">
                 <div
-                    className={`flex w-[200%] h-screen scrollbar-hide transition-transform duration-700 ease-in-out ${showBankDetails ? "-translate-x-1/2" : "translate-x-0"
+                    className={`flex w-[400%] h-screen scrollbar-hide transition-transform duration-700 ease-in-out ${showBankDetails ? "-translate-x-3/4" : showRegulatory ? "-translate-x-2/4" : showIdentity ? "-translate-x-1/4" : "translate-x-0"
                         }`}
                 >
-                    {/* Step 1: Registration (NEXT -> FETCH -> PROCEED) */}
-                    <div className="w-1/2 overflow-y-auto px-8 lg:px-12 py-12 flex justify-center">
+                    {/* Step 1: Registration (Basic Details) */}
+                    <div className="w-1/4 overflow-y-auto px-8 lg:px-12 py-8 flex justify-center">
                         <div className="w-full max-w-lg">
-                            <div className="mb-10 text-center">
+                            <div className="mb-0 text-center">
                                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1a1a1a] mb-2 " style={{ fontFamily: "PT Serif, serif" }}>
                                     Partner{' '}
                                     <span className="font-bold gold-text">
@@ -1154,7 +1152,7 @@ const PatnersSignup = () => {
                                 <div className="mt-8 border-b border-gray-200 w-full"></div>
                             </div>
 
-                            <form onSubmit={handleSubmitReg(getUserRegister)} className="space-y-6">
+                            <form onSubmit={handleSubmitReg(getUserRegister)} className="space-y-0">
                                 {/* Name of Entity */}
                                 <div className="space-y-1.5">
                                     <label className="text-[14px] font-medium text-black tracking-wide uppercase" style={{ fontFamily: "'Poppins', sans-serif" }}>
@@ -1275,7 +1273,7 @@ const PatnersSignup = () => {
 
                                 {/* NEXT Button */}
                                 {!showIdentity && (
-                                    <div className="py-15 flex justify-center my-3.5">
+                                    <div className="py-5 flex justify-center my-3.5">
                                         <button
                                             type="submit"
                                             className="w-full max-w-xs py-3.5 rounded-lg shadow-md transition-all font-bold text-sm tracking-widest uppercase bg-gradient-to-r from-[#e5bc4b] via-[#d4af37] to-[#b78628] text-white hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
@@ -1285,10 +1283,14 @@ const PatnersSignup = () => {
                                     </div>
                                 )}
                             </form>
+                        </div>
+                    </div>
 
-                            {/* Identity & Regulatory Section */}
+                    {/* Step 2: Identity Details */}
+                    <div className="w-1/4 overflow-y-auto px-8 lg:px-12 py-8 flex justify-center">
+                        <div className="w-full max-w-lg">
                             {showIdentity && (
-                                <div id="identity-details" className="pt-8 space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
+                                <div id="identity-details" className="pt-8 space-y-8 duration-700">
                                     <div className="space-y-4">
                                         <h3 className="text-sm font-bold text-gray-800 tracking-widest uppercase">IDENTITY DETAILS</h3>
                                         <div className="border-b border-gray-200 w-full"></div>
@@ -1355,11 +1357,18 @@ const PatnersSignup = () => {
                                             </button>
                                         </div>
                                     </form>
+                                </div>
+                            )}
+                        </div>
+                    </div>
 
-                                    {/* Form 3: Regulatory Details */}
-                                    <form onSubmit={handleSubmitRegulatory(getRegulatory)} className="space-y-6 pt-4">
-                                        {/* Regulatory Details Title */}
-                                        <div className="pt-8 space-y-4">
+                    {/* Step 3: Regulatory Details */}
+                    <div className="w-1/4 overflow-y-auto px-8 lg:px-12 py-8 flex justify-center">
+                        <div className="w-full max-w-lg">
+                            {showRegulatory && (
+                                <div id="regulatory-details" className="pt-8 space-y-8 duration-700">
+                                    <form onSubmit={handleSubmitRegulatory(getRegulatory)} className="space-y-6">
+                                        <div className="space-y-4">
                                             <h3 className="text-sm font-bold text-gray-800 tracking-widest uppercase">REGULATORY DETAILS<span className="text-red-500">*</span></h3>
                                             <div className="border-b border-gray-200 w-full"></div>
                                         </div>
@@ -1422,9 +1431,7 @@ const PatnersSignup = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        
 
-                                        {/* PROCEED Button */}
                                         <div className="pt-10 flex justify-center pb-12">
                                             <button
                                                 type="submit"
@@ -1439,8 +1446,8 @@ const PatnersSignup = () => {
                         </div>
                     </div>
 
-                    {/* Step 2: Bank Details Form */}
-                    <div className="w-1/2 h-full px-8 lg:px-12 py-12 flex flex-col justify-center items-center overflow-hidden">
+                    {/* Step 4: Bank Details Form */}
+                    <div className="w-1/4 h-full px-8 lg:px-12 py-12 flex flex-col justify-center items-center overflow-hidden">
                         <div className="w-full max-w-lg">
                             <div className="mb-10 text-center">
                                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-[#1a1a1a] mb-2 font-bold tracking-tight">
