@@ -1142,7 +1142,7 @@ const PatnersSignup = () => {
                             <div className="mb-0 text-center">
                                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#1a1a1a] mb-2 " style={{ fontFamily: "PT Serif, serif" }}>
                                     Partner{' '}
-                                    <span className="font-bold gold-text">
+                                    <span className="font-bold text-black">
                                         Registration
                                     </span>
                                 </h2>
@@ -1450,10 +1450,10 @@ const PatnersSignup = () => {
                     <div className="w-1/4 h-full px-8 lg:px-12 py-12 flex flex-col justify-center items-center overflow-hidden">
                         <div className="w-full max-w-lg">
                             <div className="mb-10 text-center">
-                                <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-[#1a1a1a] mb-2 font-bold tracking-tight">
+                                <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] mb-2 font-bold tracking-tight" style={{ fontFamily: PTSerifRegular }}>
                                     Bank Details
                                 </h2>
-                                <p className="text-gray-500 text-sm md:text-base lg:text-lg">Enter your bank account information</p>
+                                <p className="text-black text-sm md:text-base lg:text-lg" style={{ fontFamily: PoppinsRegular }}>Enter your bank account information</p>
                                 <div className="mt-8 border-b border-gray-200 w-full"></div>
                             </div>
 
