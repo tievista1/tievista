@@ -430,8 +430,8 @@ const AgreementPDF = ({ data }) => {
                     <View style={pdfStyles.signatureBlock}>
                         <Text style={pdfStyles.signatureLabel}>For Primary Distributor</Text>
                         <View>
-                            <Text style={pdfStyles.signatureValue}>IndusArtha Financial Services Pvt Ltd</Text>
-                            <Text style={pdfStyles.signatureSubText}>Authorised Signatory: Mr. Muddasani Narender Reddy</Text>
+                            <Text style={pdfStyles.signatureValue}>INDUSARTHA FINANCIAL SERVICES PRIVATE LIMITED</Text>
+                            <Text style={pdfStyles.signatureSubText}>Authorised Signatory: MR. MUDDASANI NARENDER REDDY</Text>
                         </View>
                     </View>
 
@@ -1019,10 +1019,10 @@ const PatnersSignup = () => {
                                     <p className="font-bold text-black">For Primary Distributor</p>
                                     <div>
                                         <p className="font-bold text-black text-base">
-                                            IndusArtha Financial Services Pvt Ltd
+                                            INDUSARTHA FINANCIAL SERVICES PRIVATE LIMITED
                                         </p>
                                         <p className="text-black">
-                                            Authorised Signatory: Mr. Muddasani Narender Reddy
+                                            Authorised Signatory: MR. MUDDASANI NARENDER REDDY
                                         </p>
                                     </div>
                                 </div>
