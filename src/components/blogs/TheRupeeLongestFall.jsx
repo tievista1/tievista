@@ -61,7 +61,7 @@ const TheRupeeLongestFall = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
                             className="text-3xl md:text-4xl text-white tracking-tight leading-tight"
-                            style={{ fontFamily: 'PT Serif, serif' }}
+                            style={{ fontFamily: 'Laura, serif' }}
                         >
                             <h1 className='md:text-4xl text-3xl font-bold'>{blog.title}</h1>{' '}
                             <h1 className="md:text-4xl text-3xl gold-text font-bold">{blog.goldtitle}</h1>
@@ -90,10 +90,10 @@ const TheRupeeLongestFall = () => {
                                     { value: "$20.6B", label: "Total FII Outflows Jan-Apr 2026" }
                                 ].map((stat, idx) => (
                                     <div key={idx} className={`p-8 flex flex-col items-center text-center flex-1 border border-gray-300 ${idx !== 0 ? 'md:border-l' : ''} w-full md:w-1/3`}>
-                                        <span className='text-3xl lg:text-5xl font-bold mb-2' style={{ color: GOLD, fontFamily: 'PT Serif, serif' }}>
+                                        <span className='text-3xl lg:text-5xl font-bold mb-2' style={{ color: GOLD, fontFamily: 'Laura, serif' }}>
                                             {stat.value}
                                         </span>
-                                        <span className='text-[10px] lg:text-xs font-bold text-gray-500 uppercase tracking-widest leading-relaxed max-w-[140px]' style={{ fontFamily: 'PT Serif, serif' }}>
+                                        <span className='text-[10px] lg:text-xs font-medium text-gray-500 uppercase tracking-widest leading-relaxed max-w-[140px]' style={{ fontFamily: 'Poppins, serif' }}>
                                             {stat.label}
                                         </span>
                                     </div>
@@ -106,7 +106,7 @@ const TheRupeeLongestFall = () => {
                             <h3 className='text-lg md:text-xl font-bold uppercase tracking-widest mb-6' style={{ color: GOLD, fontFamily: 'PT Serif, serif' }}>
                                 EXECUTIVE SUMMARY
                             </h3>
-                            <ul className='space-y-4 text-sm md:text-base text-gray-800 font-serif leading-relaxed' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <ul className='space-y-4 text-sm md:text-base text-gray-800 font-serif leading-relaxed' style={{ fontFamily: 'Poppins, serif' }}>
                                 <li className='flex items-start gap-3'>
                                     <span className='size-1.5 rounded-full bg-[#D4AF37] mt-2 shrink-0' />
                                     <span>INR hit a new record low of ₹96.05 on May 15, 2026, down ~10% in FY26 - one of the sharpest annual decline in years</span>
@@ -135,7 +135,7 @@ const TheRupeeLongestFall = () => {
                         </div>
 
                         <div className='mt-4 text-[10px] text-gray-500 font-bold uppercase tracking-widest' style={{ fontFamily: 'PT Serif,serif' }}>
-                            Source: <span className='text-blue-600 underline cursor-pointer'><a href="https://timesofindia.indiatimes.com" target='_blank'>Times of India</a></span>, <span className='text-blue-600 underline cursor-pointer'><a href="https://www.republicworld.com" target='_blank'>Republic World</a></span>
+                            Source: <span className='text-blue-600 underline cursor-pointer'><a href="https://timesofindia.indiatimes.com/business/india-business/rupee-tumbles-9-88-in-fy26-worst-annual-fall-in-14-years-what-lies-ahead/articleshow/129906881.cms" target='_blank'>Times of India</a></span>, <span className='text-blue-600 underline cursor-pointer'><a href="https://www.republicworld.com/business/fii-outflows-2026-india-stock-market-record-selloff-dii-support" target='_blank'>Republic World</a></span>
                         </div>
                     </div>
 
@@ -156,7 +156,7 @@ const TheRupeeLongestFall = () => {
                         </h2>
 
                         {/* Description */}
-                        <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                        <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                             The Indian rupee has steadily depreciated since independence but 2026 marks a sharp acceleration 
                             in the pace of depreciation particularly since 2024. With the Iran conflict amplifying existing structural 
                             pressures, ₹100 per dollar is now being priced in options markets. 
@@ -177,7 +177,7 @@ const TheRupeeLongestFall = () => {
                                         <span className='text-[10px] md:text-xs font-bold text-gray-400 uppercase tracking-widest mb-1' style={{ fontFamily: 'PT Serif, serif' }}>
                                             {stat.year}
                                         </span>
-                                        <span className='text-2xl md:text-3xl font-bold' style={{ color: stat.color || 'black', fontFamily: 'PT Serif, serif' }}>
+                                        <span className='text-2xl md:text-3xl font-medium' style={{ color: stat.color || 'black', fontFamily: 'Poppins, serif' }}>
                                             {stat.value}
                                         </span>
                                     </div>
@@ -187,11 +187,11 @@ const TheRupeeLongestFall = () => {
 
                         {/* Source */}
                         <div className='text-[10px] text-gray-500 font-bold uppercase tracking-widest' style={{ fontFamily: 'PT Serif,serif' }}>
-                            Source: <span className='text-black underline cursor-pointer font-bold'><a href="#" target='_blank'>ICICI Report</a></span>
+                            Source: <span className='text-black underline cursor-pointer font-bold'><a href="https://www.icicidirect.com/research/equity/finace/impact-of-usd-inr-exchange-rates-on-indian-markets" target='_blank'>ICICI Report</a></span>
                         </div>
 
                         {/* Conclusion Paragraph */}
-                        <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif pt-4' style={{ fontFamily: 'PT Serif, serif' }}>
+                        <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif pt-4' style={{ fontFamily: 'Poppins, serif' }}>
                             To understand the severity: the rupee took 43 years to move from ₹1 to ₹45. It took another 14 years to 
                             reach ₹83. But the journey from ₹83 to ₹96.05 has happened in less than two years, highlighting a 
                             much faster phase of depreciation than earlier cycles. In FY2025–26 alone, it reached 6%.
@@ -214,7 +214,7 @@ const TheRupeeLongestFall = () => {
                             <h2 className='text-3xl md:text-4xl font-bold text-black' style={{ fontFamily: 'PT Serif, serif' }}>
                                 Why the Rupee Keeps Falling - The Real Drivers
                             </h2>
-                            <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                 Currency movements are driven by multiple factors. The rupee’s current weakness reflects a mix of 
                                 structural pressures and short-term shocks, creating sustained downward pressure. 
                             </p>
@@ -224,7 +224,7 @@ const TheRupeeLongestFall = () => {
                         <div className='bg-[#FFF5F5] border-l-4 border-[#E53E3E] p-8 md:p-10 space-y-8'>
                             <div className='space-y-4'>
                                 <h4 className='text-xl font-bold text-black' style={{ fontFamily: 'PT Serif, serif' }}>The Oil Shock</h4>
-                                <p className='text-sm md:text-base text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                                <p className='text-sm md:text-base text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                     Brent surged above $116/barrel by early May 2026 up ~60% year-to-date before falling 
                                     sharply toward $101 on May 7 as US-Iran ceasefire negotiations advanced. Volatility remains 
                                     high with no final deal signed. Higher crude prices widen the trade deficit, increasing net USD 
@@ -235,7 +235,7 @@ const TheRupeeLongestFall = () => {
                             </div>
                             <div className='space-y-4'>
                                 <h4 className='text-xl font-bold text-black' style={{ fontFamily: 'PT Serif, serif' }}>FII Outflows</h4>
-                                <p className='text-sm md:text-base text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                                <p className='text-sm md:text-base text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                     FII selling continued in April, with a further ₹60,847 crore (~$6.5 billion) withdrawn. 
                                     Cumulative FII outflows in the first four months of 2026 surpassed $20 billion exceeding the 
                                     entire 2025 calendar year outflow of $18.9 billion. For the first time, FII ownership in Indian 
@@ -244,7 +244,7 @@ const TheRupeeLongestFall = () => {
                                     and to select emerging markets like South Korea, Taiwan, China, Thailand, and Brazil.
                                 </p>
                             </div>
-                            <p className='text-sm md:text-base text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className='text-sm md:text-base text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                 Indian equities continue to trade at a premium to broader emerging markets, with MSCI 
                                 India at about 20.45x forward P/E versus MSCI Emerging Markets at about 12.05x Forward P/E, 
                                 while MSCI China and South Korea trade at meaningfully lower valuations. This valuation 
@@ -256,7 +256,7 @@ const TheRupeeLongestFall = () => {
                         {/* Red Box: Structural Gaps */}
                         <div className='bg-[#FFF5F5] border-l-4 border-[#E53E3E] p-8 md:p-10 space-y-6'>
                             <h4 className='text-xl font-bold text-black' style={{ fontFamily: 'PT Serif, serif' }}>India's structural/outlook gaps</h4>
-                            <ul className='space-y-4 text-sm md:text-base text-gray-800 font-serif leading-relaxed' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <ul className='space-y-4 text-sm md:text-base text-gray-800 font-serif leading-relaxed' style={{ fontFamily: 'Poppins, serif' }}>
                                 <li className='flex items-start gap-4'>
                                     <div className='size-1.5 rounded-full border border-gray-400 mt-2 shrink-0' />
                                     <span>Current account deficit: ~1.3% GDP ($13.2B Q3FY26), manageable but oil-vulnerable.</span>
@@ -283,7 +283,7 @@ const TheRupeeLongestFall = () => {
                         <div className='bg-[#FDFBF7] border-l-4 border-[#D4AF37] p-8 md:p-10 space-y-8'>
                             <div className='space-y-4'>
                                 <h4 className='text-xl font-bold text-black' style={{ fontFamily: 'PT Serif, serif' }}>Trade Deficit</h4>
-                                <p className='text-sm md:text-base text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                                <p className='text-sm md:text-base text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                     India's trade deficit was $27.1B in February 2026, driven by higher crude oil and gold imports. 
                                     It narrowed sharply to $20.67B in March 2026 a nine-month low and well below market 
                                     expectations of $32.75B as exports rebounded and oil/gold imports fell. However, the full
@@ -294,7 +294,7 @@ const TheRupeeLongestFall = () => {
                             </div>
                             <div className='space-y-4'>
                                 <h4 className='text-xl font-bold text-black' style={{ fontFamily: 'PT Serif, serif' }}>Inflation Differential</h4>
-                                <p className='text-sm md:text-base text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                                <p className='text-sm md:text-base text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                     India’s persistent inflation differential of 2–3% above the US, contributes to gradual currency 
                                     depreciation over time (PPP effect).
                                 </p>
@@ -305,7 +305,7 @@ const TheRupeeLongestFall = () => {
                         <div className='bg-[#FFF5F5] border-l-4 border-[#E53E3E] p-8 md:p-10 space-y-8'>
                             <div className='space-y-4'>
                                 <h4 className='text-xl font-bold text-black' style={{ fontFamily: 'PT Serif, serif' }}>US Trade / Tariff Headwind</h4>
-                                <p className='text-sm md:text-base text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                                <p className='text-sm md:text-base text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                     Tariff uncertainty continues to weigh on exports. The February 2026 US-India interim trade 
                                     deal reduced US reciprocal tariffs from 50% to ~18% providing partial relief to sectors 
                                     including textiles & apparel, gems & jewellery, leather, engineering goods, and auto 
@@ -314,7 +314,7 @@ const TheRupeeLongestFall = () => {
                             </div>
                             <div className='space-y-4'>
                                 <h4 className='text-xl font-bold text-black' style={{ fontFamily: 'PT Serif, serif' }}>Gulf Remittance Risk</h4>
-                                <p className='text-sm md:text-base text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                                <p className='text-sm md:text-base text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                     India received $135.4B in remittances in FY25, with Gulf nations (UAE, Saudi Arabia, Qatar) 
                                     supplying ~38% ($51B). Gulf disruptions from the Iran conflict threaten this vital dollar inflow, 
                                     tightening supply and pressuring the rupee.
@@ -324,7 +324,7 @@ const TheRupeeLongestFall = () => {
 
                         {/* Sources */}
                         <div className='text-[10px] text-gray-500 font-bold uppercase tracking-widest leading-relaxed pt-4' style={{ fontFamily: 'PT Serif,serif' }}>
-                            Source: <span className='text-blue-600 underline cursor-pointer'><a href="#">Money Control</a></span>, <span className='text-blue-600 underline cursor-pointer'><a href="#">Economic Times</a></span>, <span className='text-blue-600 underline cursor-pointer'><a href="#">Reuters</a></span>, <span className='text-blue-600 underline cursor-pointer'><a href="#">MSCI</a></span>, <span className='text-blue-600 underline cursor-pointer'><a href="#">Whitehouse Factsheet</a></span>, <span className='text-blue-600 underline cursor-pointer'><a href="#">Business Standard</a></span>
+                            Source: <span className='text-blue-600 underline cursor-pointer'><a href="https://www.moneycontrol.com/news/business/india-s-goods-trade-deficit-narrows-to-20-7-billion-in-march-13889594.html">Money Control</a></span>, <span className='text-blue-600 underline cursor-pointer'><a href="https://economictimes.indiatimes.com/news/economy/foreign-trade/india-trade-deficit-at-27-1-billion-in-february-tariff-uncertainty-iran-conflict-loom/articleshow/129603951.cms">Economic Times</a></span>, <span className='text-blue-600 underline cursor-pointer'><a href="https://www.reuters.com/world/india/foreign-investors-flee-indian-assets-record-pace-oil-shock-pummel-rupee-2026-03-27/">Reuters</a></span>, <span className='text-blue-600 underline cursor-pointer'><a href="https://www.msci.com/documents/10199/1ad792ce-3199-445c-8be3-f2a035ac782d">MSCI</a></span>, <span className='text-blue-600 underline cursor-pointer'><a href="https://www.whitehouse.gov/fact-sheets/2026/02/fact-sheet-the-united-states-and-india-announce-historic-trade-deal/">Whitehouse Factsheet</a></span>, <span className='text-blue-600 underline cursor-pointer'><a href="https://www.business-standard.com/markets/news/fpis-pull-out-60-847-crore-in-april-2026-outflows-hit-1-92-trillion-126050100171_1.html">Business Standard</a></span>
                         </div>
                     </div>
 
@@ -344,19 +344,19 @@ const TheRupeeLongestFall = () => {
                             <h2 className='text-3xl md:text-4xl font-bold text-black' style={{ fontFamily: 'PT Serif, serif' }}>
                                 How the Iran Conflict Turbocharged Existing Weakness
                             </h2>
-                            <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                 The rupee was already under pressure before February 28, 2026, having been one of Asia’s weakest 
                                 currencies in FY26 and falling about 9.9% through that fiscal year. Foreign portfolio outflows stayed 
                                 heavy, while higher oil prices and trade uncertainty kept USD demand elevated. 
                             </p>
-                            <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                 The April 2026 US-Iran ceasefire eased the risk of outright escalation, but Strait of Hormuz disruptions 
                                 persisted and the US briefly launched ‘Project Freedom’ to secure vessel passage before pausing it as 
                                 talks advanced. Oil prices spiked above $116/barrel before easing sharply on May 6, yet the INR still 
                                 faces structural pressure from India’s dependence on imported oil. 
                             </p>
                             <div className='text-[10px] text-gray-500 font-bold uppercase tracking-widest leading-relaxed pt-2' style={{ fontFamily: 'PT Serif,serif' }}>
-                                Source: <span className='text-blue-600 underline cursor-pointer'><a href="#">Economics Times</a></span>, <span className='text-blue-600 underline cursor-pointer'><a href="#">CNN News</a></span>
+                                Source: <span className='text-blue-600 underline cursor-pointer'><a href="https://economictimes.indiatimes.com/markets/forex/forex-news/rupee-tops-asias-worst-performers-list-with-9-9-slide-in-fy26/articleshow/129938831.cms">Economics Times</a></span>, <span className='text-blue-600 underline cursor-pointer'><a href="https://edition.cnn.com/2026/05/05/energy/oil-price-highest-in-2026-intl-hnk">CNN News</a></span>
                             </div>
                         </div>
 
@@ -366,7 +366,7 @@ const TheRupeeLongestFall = () => {
                                 <h3 className='text-xl md:text-2xl font-bold text-black' style={{ fontFamily: 'PT Serif, serif' }}>
                                     USD/INR Exchange Rate - The Accelerating Fall
                                 </h3>
-                                <div className='flex items-center gap-4 text-xs text-gray-500' style={{ fontFamily: 'PT Serif, serif' }}>
+                                <div className='flex items-center gap-4 text-xs text-gray-500' style={{ fontFamily: 'Poppins, serif' }}>
                                     <div className='flex items-center gap-1'><span className='text-[#D4AF37]'>◆</span> = Normal,</div>
                                     <div className='flex items-center gap-1'><span className='text-[#E53E3E]'>◆</span> = Record Low,</div>
                                     <div className='flex items-center gap-1'><span className='text-[#38A169]'>◆</span> = RBI Bounce</div>
@@ -533,31 +533,31 @@ const TheRupeeLongestFall = () => {
                             </div>
 
                             <div className='text-[10px] text-gray-500 font-bold uppercase tracking-widest pt-2' style={{ fontFamily: 'PT Serif,serif' }}>
-                                Source: <span className='text-black underline cursor-pointer'><a href="#">Bloomberg</a></span>, <span className='text-black underline cursor-pointer'><a href="#">HDFC Fund</a></span>
+                                Source: <span className='text-black underline cursor-pointer'><a href="https://www.bloomberg.com/news/articles/2026-04-01/usd-inr-india-s-rupee-seen-sliding-to-100-per-dollar-as-oil-prices-surge">Bloomberg</a></span>, <span className='text-black underline cursor-pointer'><a href="https://www.hdfcfund.com/learn/deep-dives/tuesday-talking-point/why-indian-rupee-depreciating-against-us-dollar">HDFC Fund</a></span>
                             </div>
 
                         {/* Channels & Effects */}
                         <div className='space-y-6 pt-10'>
-                            <p className='text-base md:text-lg text-gray-800 font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className='text-base md:text-lg text-gray-800 font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                 The shock transmits through three key channels:
                             </p>
-                            <ol className='list-decimal list-inside space-y-4 text-base md:text-lg text-gray-800 font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <ol className='list-decimal list-inside space-y-4 text-base md:text-lg text-gray-800 font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                 <li className='pl-2'>Higher crude prices raise India's import bill, widen the trade deficit, and increase demand for dollars.</li>
                                 <li className='pl-2'>Rising energy costs add to inflation, constraining monetary policy flexibility and limiting INR support.</li>
                                 <li className='pl-2'>Global investors turn cautious, leading to capital outflows.</li>
                             </ol>
-                            <p className='text-base md:text-lg text-gray-800 font-serif pt-2' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className='text-base md:text-lg text-gray-800 font-serif pt-2' style={{ fontFamily: 'Poppins, serif' }}>
                                 These effects reinforce each other, creating a cycle that keeps the rupee under pressure until oil prices stabilise.
                             </p>
                         </div>
 
                         {/* Pull Quote */}
                         <div className='bg-[#FDFBF7] border-l-4 border-[#D4AF37] p-8 md:p-10 my-8'>
-                            <p className='text-lg md:text-xl font-serif text-gray-800 leading-relaxed' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className='text-lg md:text-xl font-serif text-gray-800 leading-relaxed' style={{ fontFamily: 'Poppins, serif' }}>
                                 “The dollar-rupee forwards curve is the steepest since 2020, showing that FX traders see 
                                 the Indian currency staying weak for an extended period.”
                             </p>
-                            <p className='text-sm text-gray-400 mt-4 font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className='text-sm text-gray-400 mt-4 font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                 - Mark Cranfield, Markets Live Strategist, Bloomberg
                             </p>
                         </div>
@@ -579,12 +579,12 @@ const TheRupeeLongestFall = () => {
                             <h2 className='text-3xl md:text-4xl font-bold text-black' style={{ fontFamily: 'PT Serif, serif' }}>
                                 Five Interventions. One Brief Bounce. And Then Reality.
                             </h2>
-                            <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                 RBI intervention has addressed symptoms rather than structural causes, slowing the pace of 
                                 depreciation at key moments, but leaving the underlying demand-supply imbalance in the currency 
                                 market unresolved. 
                             </p>
-                            <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                 The Reserve Bank intervened actively across this period, deploying what NDTV described as one of its 
                                 most significant intervention phases in recent years. The rupee's biggest single-day gain in 12 years 
                                 (a ~1.3% jump to ₹93.53 on a single Thursday) followed these measures. The move proved temporary; 
@@ -602,7 +602,7 @@ const TheRupeeLongestFall = () => {
                                         <th className='p-4 text-sm font-bold uppercase tracking-wider'>Objective & Outcome</th>
                                     </tr>
                                 </thead>
-                                <tbody className='text-sm text-gray-800 font-serif'>
+                                <tbody className='text-sm text-gray-800 font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                     {[
                                         { measure: "$100M cap on bank FX positions", outcome: "Forces banks to unwind large rupee bets; triggered a sharp short squeeze." },
                                         { measure: "Ban on rupee NDFs (offshore)", outcome: "Cuts offshore arbitrage route between onshore/offshore price gaps." },
@@ -619,12 +619,12 @@ const TheRupeeLongestFall = () => {
                             </table>
                         </div>
                         <div className='text-[10px] text-gray-500 font-bold uppercase tracking-widest pt-2' style={{ fontFamily: 'PT Serif,serif' }}>
-                            Source: <span className='text-blue-600 underline cursor-pointer'><a href="#">Bloomberg</a></span>, <span className='text-blue-600 underline cursor-pointer'><a href="#">NDTV</a></span>
+                            Source: <span className='text-blue-600 underline cursor-pointer'><a href="https://www.moneycontrol.com/news/currency/india-s-forex-reserves-drop-7-billion-to-709-76-billion-rbi-13866232.html">Bloomberg</a></span>, <span className='text-blue-600 underline cursor-pointer'><a href="https://www.reuters.com/world/india/indias-forex-reserves-sufficient-not-matter-concern-rbi-governor-says-2026-04-08/">NDTV</a></span>
                         </div>
 
                         {/* Reserves Section */}
                         <div className='space-y-6 pt-6'>
-                            <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                 The RBI has continued to use reserves as a buffer, with spot-market intervention cited at a net $50.8 
                                 billion from April 2025 to January 2026. India’s foreign exchange reserves were about $697.1 billion as 
                                 of April 3, 2026, rose to $703.3 billion by April 17, 2026, and were described by the government as 
@@ -641,12 +641,12 @@ const TheRupeeLongestFall = () => {
                             <h4 className='text-sm font-bold uppercase tracking-widest text-[#D4AF37] mb-6'>
                                 THE LIMITS OF INTERVENTION
                             </h4>
-                            <p className='text-lg md:text-xl font-serif text-gray-800 leading-relaxed' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className='text-lg md:text-xl font-serif text-gray-800 leading-relaxed' style={{ fontFamily: 'Poppins, serif' }}>
                                 "100 per dollar is no longer a tail risk, it is a credible stress scenario if current conditions 
                                 persist. The latest measures look more like short-term stabilisation tools than a structural 
                                 solution."
                             </p>
-                            <p className='text-sm text-gray-400 mt-6 font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className='text-sm text-gray-400 mt-6 font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                 -Ahmed Azzam, Head of Financial Market Research, Equiti Group
                             </p>
                         </div>
@@ -668,7 +668,7 @@ const TheRupeeLongestFall = () => {
                             <h2 className='text-3xl md:text-4xl font-bold text-black' style={{ fontFamily: 'PT Serif, serif' }}>
                                 The Sector Split
                             </h2>
-                            <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                 Not everyone suffers when the rupee falls. Currency movements create winners and losers across 
                                 India’s listed market and understanding sector impact is as important as understanding the macro 
                                 drivers.
@@ -692,7 +692,7 @@ const TheRupeeLongestFall = () => {
                                         { title: "Metal Exporters", desc: "Steel, aluminium globally USD-priced, higher INR realisations." }
                                     ].map((item, idx) => (
                                         <div key={idx} className='p-6 hover:bg-gray-50 transition-colors'>
-                                            <p className='text-sm md:text-base font-serif text-gray-800 leading-relaxed' style={{ fontFamily: 'PT Serif, serif' }}>
+                                            <p className='text-sm md:text-base font-serif text-gray-800 leading-relaxed' style={{ fontFamily: 'Poppins, serif' }}>
                                                 <span className='font-bold'>{item.title}:</span> {item.desc}
                                             </p>
                                         </div>
@@ -729,7 +729,7 @@ const TheRupeeLongestFall = () => {
                             <h4 className='text-sm font-bold uppercase tracking-widest text-[#D4AF37] mb-6'>
                                 POSITIONING IN A WEAK RUPEE ENVIRONMENT
                             </h4>
-                            <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                 In a falling rupee environment, exporters (such as IT and pharma) and domestic-focused 
                                 defensives primarily FMCG and healthcare tend to be relatively better positioned. 
                                 International exposure can act as a natural hedge, as global assets rise in rupee terms 
@@ -741,7 +741,7 @@ const TheRupeeLongestFall = () => {
 
                         {/* Source */}
                         <div className='text-[10px] text-gray-500 font-bold uppercase tracking-widest pt-2' style={{ fontFamily: 'PT Serif,serif' }}>
-                            Source: <span className='text-blue-600 underline cursor-pointer'><a href="#">ICICI Report</a></span>, <span className='text-blue-600 underline cursor-pointer'><a href="#">Bajaj Finserv</a></span>
+                            Source: <span className='text-blue-600 underline cursor-pointer'><a href="https://www.icicidirect.com/research/equity/finace/impact-of-usd-inr-exchange-rates-on-indian-markets">ICICI Report</a></span>, <span className='text-blue-600 underline cursor-pointer'><a href="https://www.bajajfinserv.in/usd-vs-inr-why-indian-rupee-falling-against-us-dollar">Bajaj Finserv</a></span>
                         </div>
                     </div>
 
@@ -761,7 +761,7 @@ const TheRupeeLongestFall = () => {
                             <h2 className='text-3xl md:text-4xl font-bold text-black' style={{ fontFamily: 'PT Serif, serif' }}>
                                 A Number Once Unthinkable. Now a Market Probability.
                             </h2>
-                            <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                 As of early May 2026, Bloomberg-linked market moves show USD/INR trading near record highs around 
                                 95.4, but the April 8 ceasefire, easing oil prices, and RBI currency measures likely reduced the market-
                                 implied probability of a move to ₹100/USD versus late-April levels. These probabilities are market-
@@ -775,7 +775,7 @@ const TheRupeeLongestFall = () => {
                                 Options-implied probability by date (Bloomberg data, as of Early April 2026)
                             </h3>
                             <div className='w-full border border-gray-300 bg-white p-6 relative mt-4'>
-                                <h4 className='text-center text-lg font-serif mb-8' style={{ fontFamily: 'PT Serif, serif' }}>
+                                <h4 className='text-center text-lg font-serif mb-8' style={{ fontFamily: 'Poppins, serif' }}>
                                     Market Probability of USD/INR Reaching ₹100
                                 </h4>
                                 <div className='relative h-[250px] w-full flex pr-4'>
@@ -804,16 +804,16 @@ const TheRupeeLongestFall = () => {
                                             { label: 'By year-end 2026', val: 41, color: '#7B341E' }
                                         ].map((bar, i) => (
                                             <div key={i} className='relative w-16 md:w-24 h-full flex flex-col justify-end items-center z-10 group'>
-                                                <div className='absolute -top-6 text-xs font-bold text-gray-800' style={{ top: `calc(${100 - (bar.val/50)*100}% - 24px)` }}>
+                                                <span className='text-xs font-bold text-gray-800 mb-2'>
                                                     {bar.val}%
-                                                </div>
+                                                </span>
                                                 <motion.div
-                                                    initial={{ scaleY: 0 }}
-                                                    whileInView={{ scaleY: 1 }}
+                                                    initial={{ height: 0 }}
+                                                    whileInView={{ height: `${(bar.val / 50) * 100}%` }}
                                                     viewport={{ once: true }}
-                                                    transition={{ duration: 0.6, delay: i * 0.15, type: 'spring' }}
-                                                    className='w-full origin-bottom'
-                                                    style={{ height: `${(bar.val / 50) * 100}%`, backgroundColor: bar.color }}
+                                                    transition={{ duration: 1, ease: 'easeOut', delay: i * 0.1 }}
+                                                    className='w-full shadow-sm'
+                                                    style={{ backgroundColor: bar.color }}
                                                 />
                                             </div>
                                         ))}
@@ -828,13 +828,13 @@ const TheRupeeLongestFall = () => {
                                 </div>
                             </div>
                             <div className='text-[10px] text-gray-500 font-bold uppercase tracking-widest pt-2' style={{ fontFamily: 'PT Serif,serif' }}>
-                                Source: <span className='text-black underline cursor-pointer'><a href="#">Bloomberg</a></span>
+                                Source: <span className='text-black underline cursor-pointer'><a href="https://www.bloomberg.com/news/articles/2026-04-01/usd-inr-india-s-rupee-seen-sliding-to-100-per-dollar-as-oil-prices-surge">Bloomberg</a></span>
                             </div>
                         </div>
 
                         {/* Narrative */}
                         <div className='space-y-6 pt-6'>
-                            <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                 India retains important structural strengths. Forex reserves remain high at about $698.5 billion as of 
                                 late April 2026, still providing a sizable external buffer, while official reporting has described reserve 
                                 adequacy as roughly 11 months of import cover. The banking system is also well capitalised, with SCB 
@@ -842,7 +842,7 @@ const TheRupeeLongestFall = () => {
                                 instability. Current rupee pressure is therefore mostly external rather than a sign of domestic stress.
                             </p>
                             <div className='text-[10px] text-gray-500 font-bold uppercase tracking-widest pt-2' style={{ fontFamily: 'PT Serif,serif' }}>
-                                Source: <span className='text-black underline cursor-pointer'><a href="#">Trading Economics</a></span>
+                                Source: <span className='text-black underline cursor-pointer'><a href="https://tradingeconomics.com/india/foreign-exchange-reserves">Trading Economics</a></span>
                             </div>
                         </div>
 
@@ -858,7 +858,7 @@ const TheRupeeLongestFall = () => {
 
                                 <div className='relative h-[250px] w-full flex pr-4'>
                                     {/* Y-axis */}
-                                    <div className='flex flex-col justify-between h-full text-xs text-gray-500 font-bold pr-4 w-14 text-right'>
+                                    <div className='flex flex-col justify-between h-full text-[13px] text-gray-500 font-medium pr-4 w-16 text-right'>
                                         <span>$800B</span>
                                         <span>$600B</span>
                                         <span>$400B</span>
@@ -868,42 +868,26 @@ const TheRupeeLongestFall = () => {
 
                                     {/* Chart Area */}
                                     <div className='relative flex-1' id='forex-chart-area'>
-                                        {/* Horizontal grid lines at each Y tick */}
-                                        {[0, 25, 50, 75, 100].map((pct) => (
-                                            <div
-                                                key={pct}
-                                                className='absolute w-full'
-                                                style={{ top: `${pct}%`, height: '1px', background: '#E5E7EB' }}
-                                            />
-                                        ))}
+                                        {/* Horizontal baseline at 100% (Y=0) extending left below Y-axis */}
+                                        <div
+                                            className='absolute'
+                                            style={{ top: '100%', left: '-64px', width: 'calc(100% + 64px)', height: '1px', background: '#E5E7EB' }}
+                                        />
 
                                         {/* SVG — uses 1000×250 coordinate space, stretched to fill container */}
-                                        {/* Y: 0=top=$800B, 250=bottom=$0B  →  val_px = (800 - val) / 800 * 250 */}
-                                        {/* X: 8 evenly-spaced columns across 0–1000               */}
                                         <svg
                                             className='absolute inset-0 w-full h-full'
                                             viewBox='0 0 1000 250'
                                             preserveAspectRatio='none'
                                         >
-                                            {/* Golden line
-                                                Data:
-                                                  1991 → ~$5B   x=0,    y=(800-5)/800*250   = 248
-                                                  2000 → ~$37B  x=143,  y=(800-37)/800*250  = 238
-                                                  2008 → ~$200B x=286,  y=(800-200)/800*250 = 188
-                                                  2013 → ~$230B x=429,  y=(800-230)/800*250 = 178
-                                                  2021 → ~$633B x=571,  y=(800-633)/800*250 = 52
-                                                  2024 → ~$650B x=714,  y=(800-650)/800*250 = 47
-                                                  Feb26→ ~$728B x=857,  y=(800-728)/800*250 = 23
-                                                  Apr26→ ~$698B x=1000, y=(800-698)/800*250 = 32
-                                            */}
                                             <motion.polyline
                                                 initial={{ pathLength: 0 }}
                                                 whileInView={{ pathLength: 1 }}
                                                 viewport={{ once: true }}
                                                 transition={{ duration: 2, ease: 'easeInOut' }}
                                                 fill='none'
-                                                stroke='#EAB308'
-                                                strokeWidth='5'
+                                                stroke='#FFC000'
+                                                strokeWidth='4'
                                                 strokeLinecap='round'
                                                 strokeLinejoin='round'
                                                 points='0,248 143,238 286,188 429,178 571,52 714,47 857,23 1000,32'
@@ -919,24 +903,23 @@ const TheRupeeLongestFall = () => {
                                             style={{
                                                 position: 'absolute',
                                                 left: '85.7%',
-                                                top: `${(800 - 728) / 800 * 100}%`,
-                                                width: '18px',
-                                                height: '18px',
+                                                top: `${(800 - 754) / 800 * 100}%`,
+                                                width: '16px',
+                                                height: '16px',
                                                 borderRadius: '50%',
-                                                background: '#A16207',
+                                                background: '#B8900D',
                                                 transform: 'translate(-50%, -50%)',
                                             }}
                                         >
                                             <div style={{
                                                 position: 'absolute',
-                                                top: '-26px',
+                                                top: '-24px',
                                                 left: '50%',
                                                 transform: 'translateX(-50%)',
-                                                fontSize: '11px',
-                                                fontWeight: 700,
-                                                color: '#374151',
+                                                fontSize: '13px',
+                                                fontWeight: 500,
+                                                color: '#4B5563',
                                                 whiteSpace: 'nowrap',
-                                                fontFamily: 'PT Serif, serif',
                                             }}>
                                                 $728B
                                             </div>
@@ -951,24 +934,23 @@ const TheRupeeLongestFall = () => {
                                             style={{
                                                 position: 'absolute',
                                                 left: '100%',
-                                                top: `${(800 - 698) / 800 * 100}%`,
-                                                width: '18px',
-                                                height: '18px',
+                                                top: `${(800 - 720) / 800 * 100}%`,
+                                                width: '16px',
+                                                height: '16px',
                                                 borderRadius: '50%',
-                                                background: '#C2410C',
+                                                background: '#C25114',
                                                 transform: 'translate(-50%, -50%)',
                                             }}
                                         >
                                             <div style={{
                                                 position: 'absolute',
-                                                top: '-26px',
+                                                top: '-24px',
                                                 left: '50%',
                                                 transform: 'translateX(-50%)',
-                                                fontSize: '11px',
-                                                fontWeight: 700,
-                                                color: '#374151',
+                                                fontSize: '13px',
+                                                fontWeight: 500,
+                                                color: '#4B5563',
                                                 whiteSpace: 'nowrap',
-                                                fontFamily: 'PT Serif, serif',
                                             }}>
                                                 $698B
                                             </div>
@@ -976,21 +958,18 @@ const TheRupeeLongestFall = () => {
                                     </div>
                                 </div>
 
-                                {/* X-axis labels */}
-                                <div className='flex ml-14 text-[10px] text-gray-500 font-bold mt-2 justify-between'>
-                                    <span>'1991</span>
-                                    <span>'2000</span>
-                                    <span>'2008</span>
-                                    <span>'2013</span>
-                                    <span>'2021</span>
-                                    <span>'2024</span>
-                                    <span>'Feb-26</span>
-                                    <span>Apr-26</span>
+                                {/* X-axis labels (Absolutely positioned for exact alignment) */}
+                                <div className='relative ml-16 h-6 mt-4'>
+                                    {['\'1991', '\'2000', '\'2008', '\'2013', '\'2021', '\'2024', '\'Feb-26', 'Apr-26'].map((label, idx) => (
+                                        <div key={label} className='absolute' style={{ left: `${(idx / 7) * 100}%`, transform: 'translateX(-50%)' }}>
+                                            <span className='text-[13px] text-gray-500 font-medium whitespace-nowrap'>{label}</span>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
 
                             <div className='text-[10px] text-gray-500 font-bold uppercase tracking-widest pt-2' style={{ fontFamily: 'PT Serif, serif' }}>
-                                Source: <span className='text-black underline cursor-pointer'><a href='#'>Reuters</a></span>
+                                Source: <span className='text-black underline cursor-pointer'><a href='https://www.reuters.com/world/india/india-forex-reserves-adequate-cushion-against-external-shocks-cenbank-report-2026-03-23/'>Reuters</a></span>
                             </div>
                             <p className='text-base md:text-lg text-gray-800 leading-relaxed font-serif pt-2' style={{ fontFamily: 'PT Serif, serif' }}>
                                 Despite recent drawdown, reserves remain near historic highs, providing a cushion against external shocks.
@@ -1002,28 +981,28 @@ const TheRupeeLongestFall = () => {
                             <h3 className='text-xl md:text-2xl font-bold text-black' style={{ fontFamily: 'PT Serif, serif' }}>
                                 Possible Scenarios for the Rupee
                             </h3>
-                            <p className='text-sm italic text-gray-600 pb-2' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className='text-sm italic text-gray-600 pb-2' style={{ fontFamily: 'Poppins, serif' }}>
                                 Scenario triggers reflect conditions as of recent ceasefire developments. These are illustrative conditions, not forecasts.
                             </p>
                             
-                            <div className='grid grid-cols-1 md:grid-cols-3 border border-gray-200'>
+                            <div className='grid grid-cols-1 md:grid-cols-3 border border-gray-200' style={{fontFamily: 'Poppins, serif'}}>
                                 {/* BEAR CASE */}
-                                <div className='flex flex-col border-b md:border-b-0 md:border-r border-gray-200'>
+                                <div className='flex flex-col border-b md:border-b-0 md:border-r border-gray-200' >
                                     <div className='bg-[#FEE2E2] p-3 border-b border-gray-200'>
                                         <h4 className='text-xs font-bold text-gray-800 uppercase tracking-wider'>
                                             BEAR CASE
                                         </h4>
                                     </div>
-                                    <div className='p-4 space-y-4 flex-1'>
-                                        <div>
-                                            <h5 className='font-bold text-sm text-black mb-2'>War Re-escalates → ₹100+ risk</h5>
-                                            <p className='text-xs text-gray-800 font-serif leading-relaxed'>
+                                    <div className='p-4 space-y-4 flex-1' style={{fontFamily: 'Poppins, serif'}}>
+                                        <div style={{fontFamily: 'Poppins, serif'}}>
+                                            <h5 className='font-bold text-sm text-black mb-2' style={{fontFamily: 'Poppins, serif'}}>War Re-escalates → ₹100+ risk</h5>
+                                            <p className='text-xs text-gray-800 font-serif leading-relaxed' style={{fontFamily: 'Poppins, serif'}}>
                                                 If the ceasefire breaks down and crude re-spikes, USD/INR could test ₹100, driven by renewed oil pressure and capital outflows.
                                             </p>
                                         </div>
-                                        <div>
-                                            <h6 className='text-[10px] font-bold uppercase tracking-wider mb-2'>TRIGGERS</h6>
-                                            <ul className='list-disc pl-4 text-xs text-gray-800 font-serif space-y-1.5'>
+                                        <div style={{fontFamily: 'Poppins, serif'}}>
+                                            <h6 className='text-[10px] font-bold uppercase tracking-wider mb-2' style={{fontFamily: 'Poppins, serif'}}>TRIGGERS</h6>
+                                            <ul className='list-disc pl-4 text-xs text-gray-800 font-serif space-y-1.5' style={{fontFamily: 'Poppins, serif'}}>
                                                 <li>Ceasefire fails; crude rebounds above $110-$115/barrel</li>
                                                 <li>FII outflows accelerate beyond</li>
                                                 <li>Fed leaves rates unchanged in June and delays cuts</li>
@@ -1034,22 +1013,22 @@ const TheRupeeLongestFall = () => {
                                 </div>
 
                                 {/* BASE CASE */}
-                                <div className='flex flex-col border-b md:border-b-0 md:border-r border-gray-200'>
-                                    <div className='bg-[#FFEDD5] p-3 border-b border-gray-200'>
-                                        <h4 className='text-xs font-bold text-gray-800 uppercase tracking-wider'>
+                                <div className='flex flex-col border-b md:border-b-0 md:border-r border-gray-200' style={{fontFamily: 'Poppins, serif'}}>
+                                    <div className='bg-[#FFEDD5] p-3 border-b border-gray-200' style={{fontFamily: 'Poppins, serif'}}>
+                                        <h4 className='text-xs font-bold text-gray-800 uppercase tracking-wider' style={{fontFamily: 'Poppins, serif'}}>
                                             BASE CASE
                                         </h4>
                                     </div>
-                                    <div className='p-4 space-y-4 flex-1'>
-                                        <div>
-                                            <h5 className='font-bold text-sm text-black mb-2'>Tension Ease, Rupee stays soft</h5>
-                                            <p className='text-xs text-gray-800 font-serif leading-relaxed'>
+                                    <div className='p-4 space-y-4 flex-1' style={{fontFamily: 'Poppins, serif'}}>
+                                        <div style={{fontFamily: 'Poppins, serif'}}>
+                                            <h5 className='font-bold text-sm text-black mb-2' style={{fontFamily: 'Poppins, serif'}}>Tension Ease, Rupee stays soft</h5>
+                                            <p className='text-xs text-gray-800 font-serif leading-relaxed' style={{fontFamily: 'Poppins, serif'}}>
                                                 Even if geopolitical risks fade, the rupee may remain under pressure from FII selling, the trade deficit, and RBI intervention.
                                             </p>
                                         </div>
-                                        <div>
-                                            <h6 className='text-[10px] font-bold uppercase tracking-wider mb-2'>TRIGGERS</h6>
-                                            <ul className='list-disc pl-4 text-xs text-gray-800 font-serif space-y-1.5'>
+                                        <div style={{fontFamily: 'Poppins, serif'}}>
+                                            <h6 className='text-[10px] font-bold uppercase tracking-wider mb-2' style={{fontFamily: 'Poppins, serif'}}>TRIGGERS</h6>
+                                            <ul className='list-disc pl-4 text-xs text-gray-800 font-serif space-y-1.5' style={{fontFamily: 'Poppins, serif'}}>
                                                 <li>Crude stabilises in the range bound of $95–$110</li>
                                                 <li>FII selling moderates; DII flows absorb pressure</li>
                                                 <li>US-India trade deal remains in force</li>
@@ -1060,22 +1039,22 @@ const TheRupeeLongestFall = () => {
                                 </div>
 
                                 {/* BULL CASE */}
-                                <div className='flex flex-col'>
-                                    <div className='bg-[#DCFCE7] p-3 border-b border-gray-200'>
-                                        <h4 className='text-xs font-bold text-gray-800 uppercase tracking-wider'>
+                                <div className='flex flex-col' style={{fontFamily: 'Poppins, serif'}}>
+                                    <div className='bg-[#DCFCE7] p-3 border-b border-gray-200' style={{fontFamily: 'Poppins, serif'}}>
+                                        <h4 className='text-xs font-bold text-gray-800 uppercase tracking-wider' style={{fontFamily: 'Poppins, serif'}}>
                                             BULL CASE
                                         </h4>
                                     </div>
-                                    <div className='p-4 space-y-4 flex-1'>
-                                        <div>
-                                            <h5 className='font-bold text-sm text-black mb-2'>India-US Trade Deal Stabilises</h5>
-                                            <p className='text-xs text-gray-800 font-serif leading-relaxed'>
+                                    <div className='p-4 space-y-4 flex-1' style={{fontFamily: 'Poppins, serif'}}>
+                                        <div style={{fontFamily: 'Poppins, serif'}}>
+                                            <h5 className='font-bold text-sm text-black mb-2' style={{fontFamily: 'Poppins, serif'}}>India-US Trade Deal Stabilises</h5>
+                                            <p className='text-xs text-gray-800 font-serif leading-relaxed' style={{fontFamily: 'Poppins, serif'}}>
                                                 A lasting ceasefire, softer oil, and stronger inflows could help the rupee stabilise below recent highs, requiring external improvement.
                                             </p>
                                         </div>
-                                        <div>
-                                            <h6 className='text-[10px] font-bold uppercase tracking-wider mb-2'>TRIGGERS</h6>
-                                            <ul className='list-disc pl-4 text-xs text-gray-800 font-serif space-y-1.5'>
+                                        <div style={{fontFamily: 'Poppins, serif'}}>
+                                            <h6 className='text-[10px] font-bold uppercase tracking-wider mb-2' style={{fontFamily: 'Poppins, serif'}}>TRIGGERS</h6>
+                                            <ul className='list-disc pl-4 text-xs text-gray-800 font-serif space-y-1.5' style={{fontFamily: 'Poppins, serif'}}>
                                                 <li>Oil retreats on ceasefire or demand destruction</li>
                                                 <li>Fed delivers 2+ cuts in H2 2026</li>
                                                 <li>FII flows return on EM re-rating</li>
@@ -1086,29 +1065,29 @@ const TheRupeeLongestFall = () => {
                                 </div>
                             </div>
                             <div className='text-[10px] text-gray-500 font-bold uppercase tracking-widest pt-2' style={{ fontFamily: 'PT Serif,serif' }}>
-                                Source: <span className='text-blue-600 underline cursor-pointer'><a href="#">Reuters</a></span>, <span className='text-blue-600 underline cursor-pointer'><a href="#">Business Standard</a></span>, <span className='text-blue-600 underline cursor-pointer'><a href="#">Reuters</a></span>
+                                Source: <span className='text-blue-600 underline cursor-pointer'><a href="https://www.reuters.com/world/india/indian-rupee-hits-record-low-mideast-war-rattles-markets-stokes-economic-risks-2026-03-04/">Reuters</a></span>, <span className='text-blue-600 underline cursor-pointer'><a href="https://www.business-standard.com/markets/news/fpis-pull-out-60-847-crore-in-april-2026-outflows-hit-1-92-trillion-126050100171_1.html">Business Standard</a></span>, <span className='text-blue-600 underline cursor-pointer'><a href="https://www.reuters.com/business/energy/us-crude-eases-1-traders-weigh-supply-risks-2026-05-04/">Reuters</a></span>
                             </div>
                         </div>
 
                         {/* Market Implications */}
-                        <div className='bg-[#FDFBF7] border-l-4 border-[#D4AF37] p-8 md:p-10 my-10'>
-                            <h4 className='text-sm font-bold uppercase tracking-widest text-[#D4AF37] mb-6'>
+                        <div className='bg-[#FDFBF7] border-l-4 border-[#D4AF37] p-8 md:p-10 my-10' style={{fontFamily: 'Poppins, serif'}}>
+                            <h4 className='text-sm font-bold uppercase tracking-widest text-[#D4AF37] mb-6' style={{fontFamily: 'PT Serif, serif'}}>
                                 MARKET IMPLICATIONS
                             </h4>
-                            <ol className='list-decimal pl-4 space-y-4 text-sm md:text-base text-gray-800 font-serif leading-relaxed' style={{ fontFamily: 'PT Serif, serif' }}>
-                                <li>In prior INR depreciation cycles, companies with USD revenues - IT services, pharma exporters, specialty chemicals have historically experienced natural earnings support as the rupee weakens.</li>
-                                <li>Import-intensive businesses - aviation, oil marketing companies, and companies with significant dollar-denominated input costs have historically faced margin compression in the same periods.</li>
-                                <li>Companies with natural hedges (dollar revenues broadly matching dollar costs) have shown more stable earnings through currency stress relative to purely domestic peers.</li>
-                                <li>Historically, foreign assets have tended to rise in INR terms during periods of rupee weakness, reflecting currency translation effects.</li>
+                            <ol className='list-decimal pl-4 space-y-4 text-sm md:text-base text-gray-800 font-serif leading-relaxed' style={{ fontFamily: 'Poppins, serif' }}>
+                                <li style={{fontFamily: 'Poppins, serif'}}>In prior INR depreciation cycles, companies with USD revenues - IT services, pharma exporters, specialty chemicals have historically experienced natural earnings support as the rupee weakens.</li>
+                                <li style={{fontFamily: 'Poppins, serif'}}>Import-intensive businesses - aviation, oil marketing companies, and companies with significant dollar-denominated input costs have historically faced margin compression in the same periods.</li>
+                                <li style={{fontFamily: 'Poppins, serif'}}>Companies with natural hedges (dollar revenues broadly matching dollar costs) have shown more stable earnings through currency stress relative to purely domestic peers.</li>
+                                <li style={{fontFamily: 'Poppins, serif'}}>Historically, foreign assets have tended to rise in INR terms during periods of rupee weakness, reflecting currency translation effects.</li>
                             </ol>
                         </div>
 
                         {/* Final Quote */}
                         <div className='text-center space-y-2 mb-16'>
-                            <p className='text-lg md:text-xl font-serif text-gray-800 leading-relaxed' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className='text-lg md:text-[18px] font-serif text-gray-800 leading-relaxed' style={{ fontFamily: 'Poppins, serif' }}>
                                 “The rupee will turn one day, but it won’t be dictated by the RBI - it’ll be determined by markets”
                             </p>
-                            <p className='text-xs text-gray-400 font-serif' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className='text-xs text-gray-400 font-serif' style={{ fontFamily: 'Poppins, serif' }}>
                                 — Nick Twidale, AT Global Markets (Bloomberg, April 2026)
                             </p>
                         </div>
@@ -1116,13 +1095,13 @@ const TheRupeeLongestFall = () => {
                         {/* Disclaimer */}
                         <div className='border-t border-gray-200 pt-8 space-y-4'>
                             <h4 className='font-bold text-sm text-black'>Disclaimer</h4>
-                            <p className='text-xs italic text-gray-600 font-serif leading-relaxed' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className='text-xs italic text-black font-serif leading-relaxed' style={{ fontFamily: 'PT Serif, serif' }}>
                                 Mutual fund investments are subject to market risks. Please read the scheme information and other 
                                 related documents carefully before investing. Past performance is not indicative of future returns. 
                                 Please consider your specific investment requirements before choosing a fund or designing a portfolio 
                                 that suits your needs.
                             </p>
-                            <p className='text-xs italic text-gray-600 font-serif leading-relaxed' style={{ fontFamily: 'PT Serif, serif' }}>
+                            <p className='text-xs italic text-black font-serif leading-relaxed' style={{ fontFamily: 'PT Serif, serif' }}>
                                 TieVista is the brand name of IndusArtha Financial Services Private Limited, (with ARN code 342010 
                                 and APRN code 07336) makes no warranties or representations, express or implied, on products offered 
                                 through the platform. It accepts no liability for any damages or losses, however caused, in connection 
