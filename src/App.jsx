@@ -22,6 +22,7 @@ const TieVistaPatners = lazy(() => import("./components/TieVistaPatners"));
 const NotFound = lazy(() => import("./components/NotFound"));
 const Blogs = lazy(() => import("./components/blogs/Blogs"));
 const DeclutteringtheNoiseAround = lazy(() => import("./components/blogs/DeclutteringtheNoiseAround"));
+const TheRupeesLongestFall = lazy(() => import("./components/blogs/TheRupeeLongestFall"));
 const Publications = lazy(() => import("./components/publications/Publications"));
 const BankDetails = lazy(() => import("./components/BankDetails"));
 const PartnersSignup = lazy(() => import("./components/PartnersSignup"));
@@ -75,6 +76,7 @@ function App() {
             {/* BLOGS */}
             <Route path='blogs' element={<Blogs />} />
             <Route path='blogs/decluttering-the-noise-around' element={<DeclutteringtheNoiseAround />} />
+            <Route path='blogs/the-rupees-longest-fall' element={<TheRupeesLongestFall />} />
 
             <Route path='investmentpartners/mutualfunds' element={<MutualFunds/>}/>
             <Route path='investmentpartners/pms' element={<PMS/>}/>
