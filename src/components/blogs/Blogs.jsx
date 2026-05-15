@@ -16,6 +16,15 @@ const Blogs = () => {
             url: "/blogs/decluttering-the-noise-around",
             date: "March 28, 2026"
         },
+        {
+            id: 2,
+            title: "The Rupee's Longest Fall:",
+            goldtitle: "From ₹1 to ₹95 and Counting",
+            description: "The Indian rupee has steadily depreciated since independence but 2026 marks a sharp acceleration in the pace of...",
+            img: "https://res.cloudinary.com/dr1u4plse/image/upload/v1774960590/US_CRISIS_bpyyrp.png",
+            url: "/blogs/the-rupees-longest-fall",
+            date: "May 15, 2026"
+        },
 
     ]
 
@@ -100,7 +109,7 @@ const Blogs = () => {
                                                 style={{ fontFamily: 'PT Serif, serif' }}
                                             >
                                                 <span className='text-black block mb-0.5'>{blog.title}</span>
-                                                <span className='gold-text block'>{blog.goldtitle}</span>
+                                                <span className='gold-text block' style={{fontFamily:'Lora, Serif'}}>{blog.goldtitle}</span>
                                             </h3>
                                         </div>
 
