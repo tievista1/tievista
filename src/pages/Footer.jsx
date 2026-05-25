@@ -156,8 +156,11 @@ export const Footer = () => {
 
         {/* Disclaimer Section */}
         <div className="mb-10">
+          <p className="text-[12px] mb-4 leading-relaxed text-white text-justify md:text-left" style={{ fontFamily: 'PT Serif, serif' }}>
+            Mutual fund investments are subject to market risks. Please read the scheme information and other related documents carefully before investing. Past performance is not indicative of future returns. Please consider your specific investment requirements before choosing a fund,or designing a portfolio that suits your needs. IndusArtha financial services private limited, (with ARN code 342010, APRN code 07336, AP Registration Number NSE - AP3022007993 AND BSE - AP01668101176514) makes no warranties or representations, express or implied, on products offered through the platform. It accepts no liability for any damages or losses, however caused, in connection with the use of, or on the reliance of its product or related services. Terms and conditions of the website are applicable.
+          </p>
           <p className="text-[12px]  leading-relaxed text-white text-justify md:text-left" style={{ fontFamily: 'PT Serif, serif' }}>
-            Mutual fund investments are subject to market risks. Please read the scheme information and other related documents carefully before investing. Past performance is not indicative of future returns. Please consider your specific investment requirements before choosing a fund,or designing a portfolio that suits your needs. IndusArtha financial services private limited, (with ARN code 342010 and APRN code 07336) makes no warranties or representations, express or implied, on products offered through the platform. It accepts no liability for any damages or losses, however caused, in connection with the use of, or on the reliance of its product or related services. Terms and conditions of the website are applicable.
+              “Product Manufacturer/ Service Provider” shall mean issuer of security or the entity/ person executing the actions to offer the defined services.
           </p>
         </div>
 

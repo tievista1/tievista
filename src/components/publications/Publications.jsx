@@ -24,7 +24,7 @@ const Publications = () => {
             goldtitle: "",
             description: "MONTHLY UPDATE",
             img: "https://res.cloudinary.com/dck5jgfix/image/upload/v1775732548/March_2026_foixjy.png",
-            url: "https://drive.google.com/uc?export=download&id=1rF2G1Y8aIcWwUUGAzbtpaTaMN3fdbL0Y",
+            url: "https://drive.google.com/uc?export=download&id=1THnT4o4rO41n7Z_txoYJA9uPO8JTL9Pq",
             date: "April, 2026"
         },
     ]
