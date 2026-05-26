@@ -135,7 +135,7 @@ export const Footer = () => {
             </div>
 
             {/* Quick Link 2 */}
-            
+
 
             {/* Column 2 */}
             {/* <div>
@@ -160,20 +160,24 @@ export const Footer = () => {
             Mutual fund investments are subject to market risks. Please read the scheme information and other related documents carefully before investing. Past performance is not indicative of future returns. Please consider your specific investment requirements before choosing a fund,or designing a portfolio that suits your needs. IndusArtha financial services private limited, (with ARN code 342010, APRN code 07336, AP Registration Number NSE - AP3022007993 AND BSE - AP01668101176514) makes no warranties or representations, express or implied, on products offered through the platform. It accepts no liability for any damages or losses, however caused, in connection with the use of, or on the reliance of its product or related services. Terms and conditions of the website are applicable.
           </p>
           <p className="text-[12px]  leading-relaxed text-white text-justify md:text-left" style={{ fontFamily: 'PT Serif, serif' }}>
-              “Product Manufacturer/ Service Provider” shall mean issuer of security or the entity/ person executing the actions to offer the defined services.
+            “Product Manufacturer/ Service Provider” shall mean issuer of security or the entity/ person executing the actions to offer the defined services.
           </p>
         </div>
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-[12px] text-white font-light pt-8 border-t border-gray-900" style={{ fontFamily: 'PT Serif, serif' }}>
-          <p>© 2025 TieVista. All rights reserved.</p>
-          <div className="flex gap-8">
-            <Link to="/privacypolicy" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Terms of Use</Link>
-            <a href="https://docs.google.com/spreadsheets/d/1LUaC-L_qcPlNQnT6idMsbTEcp4VFEFay/export?format=xlsx" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Product List</a>
+          <p>® 2026 TieVista. All rights reserved.</p>
+          <div className='gap-2 flex flex-col' >
+            <div className="flex gap-8">
+              <Link to="/privacypolicy" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Privacy Policy</Link>
+              <Link to="/terms" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Terms of Use</Link>
+            </div>
+            <div className="flex gap-8">
+              <a href="https://docs.google.com/spreadsheets/d/1LUaC-L_qcPlNQnT6idMsbTEcp4VFEFay/export?format=xlsx" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Product List</a>
+              <Link to="/account-closure" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Account Closure</Link>
+            </div>
           </div>
         </div>
-
       </div>
     </footer>
   )

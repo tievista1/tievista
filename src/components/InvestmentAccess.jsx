@@ -24,7 +24,7 @@ const ASSET_CATEGORIES = [
         title: "Growth",
         italicTitle: "Assets",
         subtitle: "",
-        description: "At TieVista, we build enduring financial success through disciplined, equity-centric investment strategies. Our approach is rooted in long-term growth, backed by rigorous research and thoughtful risk management to generate capital appreciation globally.",
+        description: "At TieVista, we build enduring financial success through disciplined, equity-centric investment strategies. Our approach is rooted in long-term growth and thoughtful risk management to generate capital appreciation globally.",
         includes: ["Public Equities", "Equity Mutual Funds (including ELSS)", "Equity PMS", "Equity ETFs"],
         image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1774346035/GrowthAsset_yffmlk.png",
         icon: TrendingUp,
@@ -47,7 +47,7 @@ const ASSET_CATEGORIES = [
         italicTitle: "Alternative Investments",
         subtitle: "",
         description: "Sophisticated portfolios blend traditional and alternative investments to capture broad market potential while uncovering unique value. We provide access to differentiated opportunities that go beyond conventional public markets to enhance returns and reduce correlation.",
-        includes: ["AIFs (Category I, II & III)", "Private Equity & Venture Capital", "Real Estate Opportunities", "Commodities"],
+        includes: ["AIFs (Category I, II & III)", "Venture Capital", "Real Estate Opportunities", "Commodities"],
         image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1774251622/Private_Alternative_Investments_yygtg2.png",
         icon: Layers,
         reverse: false

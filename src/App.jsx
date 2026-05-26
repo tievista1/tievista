@@ -26,6 +26,7 @@ const TheRupeesLongestFall = lazy(() => import("./components/blogs/TheRupeeLonge
 const Publications = lazy(() => import("./components/publications/Publications"));
 const BankDetails = lazy(() => import("./components/BankDetails"));
 const PartnersSignup = lazy(() => import("./components/PartnersSignup"));
+const AccountClosure = lazy(() => import("./components/AccountClosure"));
 
 const MutualFunds = lazy(() => import("./components/products/MutualFunds"));
 const PMS = lazy(() => import("./components/products/PMS"));
@@ -72,6 +73,7 @@ function App() {
             <Route path='partners' element={<TieVistaPatners />} />
             <Route path='partnersignup' element={<PartnersSignup/>} />
             <Route path='bankdetails' element={<BankDetails />} />
+            <Route path='account-closure' element={<AccountClosure />} />
 
             {/* BLOGS */}
             <Route path='blogs' element={<Blogs />} />
