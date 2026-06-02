@@ -47,7 +47,7 @@ const faqData = [
   },
   {
     question: "How does TieVista help partners build enduring partnership franchises?",
-    answer: "By bringing together institutional investment thinking, curated access to a broad mutual fund universe, and modern technology infrastructure, TieVista allows Partners to focus on deepening client relationships while building advisory practices designed for longevity, scale, and generational continuity.",
+    answer: "By bringing together institutional investment thinking, facilitating access to a wide spectrum, and modern technology infrastructure, TieVista allows Partners to focus on deepening client relationships while building advisory practices designed for longevity, scale, and generational continuity.",
     icon: Shield
   },
   {
