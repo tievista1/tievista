@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
-import { Send, CheckCircle2, ChevronDown, Download, FileText, X, Phone, Mail } from "lucide-react";
-import { Document, Page, Text, View, StyleSheet, pdf, Image, Font } from "@react-pdf/renderer";
+import { Send, CheckCircle2, ChevronDown, Download, FileText, X, Phone, Mail, Globe } from "lucide-react";
+import { Document, Page, Text, View, StyleSheet, pdf, Image, Font, Svg, Path, Circle, Rect } from "@react-pdf/renderer";
 import PoppinsRegular from "../fonts/Poppins-Regular.ttf";
 import PoppinsBold from "../fonts/Poppins-Bold.ttf";
 import PoppinsItalic from "../fonts/Poppins-Italic.ttf";
@@ -9,6 +9,7 @@ import PTSerifRegular from "../fonts/PTSerif-Regular.ttf";
 import PTSerifBold from "../fonts/PTSerif-Bold.ttf";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import GradientPhone from "./GradientPhone"
 
 // Register custom fonts for PDF
 Font.register({
@@ -44,7 +45,7 @@ const pdfStyles = StyleSheet.create({
         marginTop: 10,
         marginBottom: 15,
         flexDirection: 'row',
-        justifyContent: 'left',
+        justifyContent: 'space-between',
         alignItems: 'center',
     },
     logo: {
@@ -150,7 +151,37 @@ const AgreementPDF = ({ data }) => {
         <Document>
             <Page size="A4" style={pdfStyles.page}>
                 <View style={pdfStyles.header}>
-                    <Image src={window.location.origin + "/TieVistaLogo.png"} style={pdfStyles.logo} />
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <Image src={window.location.origin + "/icon.png"} style={{ height: 55, width: 55, objectFit: 'contain' }} />
+                        <View style={{ flexDirection: 'column', position: 'relative', height: 55, justifyContent: 'center' }}>
+                            <Image src={window.location.origin + "/TieVistaVerticalLogo.png"} style={{ height: 16, width: 85, objectFit: 'contain' }} />
+                            <Text style={{ position: 'absolute', top: 35, left: 16, fontSize: 6.5, fontWeight: 'light', fontFamily: 'Poppins' }}>Global Private Wealth</Text>
+                        </View>
+                    </View>
+                    
+                    <View style={{ flexDirection: 'column', alignItems: 'flex-start', gap: 4 }}>
+                        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
+                            <Svg viewBox="0 0 24 24" width={10} height={10} fill="#ffffff" stroke="#e5bc4b" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" style={{ transform: "rotate(135deg)" }}>
+                                <Path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </Svg>
+                            <Text style={{ fontSize: 10, color: 'black' }}>+91 9885424473</Text>
+                        </View>
+                        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
+                            <Svg viewBox="0 0 24 24" width={10} height={10} fill="#ffffff" stroke="#e5bc4b" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                                <Rect width="20" height="16" x="2" y="4" rx="2" />
+                                <Path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                            </Svg>
+                            <Text style={{ fontSize: 10, color: 'black' }}>narender.reddy@tievista.com</Text>
+                        </View>
+                        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
+                            <Svg viewBox="0 0 24 24" width={10} height={10} fill="#ffffff" stroke="#e5bc4b" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                                <Circle cx="12" cy="12" r="10" />
+                                <Path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                <Path d="M2 12h20" />
+                            </Svg>
+                            <Text style={{ fontSize: 10, color: 'black' }}>TieVista.com</Text>
+                        </View>
+                    </View>
                 </View>
 
                 <View style={pdfStyles.titleContainer}>
@@ -170,7 +201,7 @@ const AgreementPDF = ({ data }) => {
                     </Text>
                     <Text style={pdfStyles.heading}>AND</Text>
                     <Text style={pdfStyles.paragraph}>
-                        <Text style={pdfStyles.bold}>{entityName}</Text>, <Text style={pdfStyles.italic}>having its principal place of business at</Text> {address} <Text style={pdfStyles.italic}>and engaged in the business of financial product marketing and client relationship management (hereinafter referred to as the "Sub-Distributor", which expression shall unless repugnant to the context include its successors and permitted assigns). The sub-distributor holds ARN</Text> <Text style={pdfStyles.bold}>{arn}</Text> <Text style={pdfStyles.italic}>and APRN</Text> <Text style={pdfStyles.bold}>{aprn}</Text>.
+                        <Text style={pdfStyles.bold}>{entityName}</Text>, <Text style={pdfStyles.italic}>having its principal place of business at</Text> {address} <Text style={pdfStyles.italic}>and engaged in the business of financial product marketing and client relationship management (hereinafter referred to as the "Sub-Distributor", which expression shall unless repugnant to the context include its successors and permitted assigns). The sub-distributor holds ARN –</Text> <Text style={pdfStyles.bold}>{arn}</Text> <Text style={pdfStyles.italic}>and APRN -</Text> <Text style={pdfStyles.bold}>{aprn}</Text>.
                     </Text>
                     <Text >
                         The Principal Distributor and the Sub-Distributor are hereinafter collectively referred to as the <Text style={pdfStyles.bold}>"Parties"</Text> and individually as a <Text style={pdfStyles.bold}>"Party"</Text>.
@@ -240,19 +271,37 @@ const AgreementPDF = ({ data }) => {
                         <Text style={pdfStyles.paragraph}>3.2.1 Subject to the terms and conditions of this Agreement, the Principal Distributor may permit the Sub-Distributor to undertake client sourcing, solicitation support and distribution support activities on a sub-contracted basis in relation to Portfolio Management Services ("PMS Products") offered by portfolio managers registered with the Securities and Exchange Board of India.</Text>
                         <Text style={pdfStyles.paragraph}>3.2.2 For the purposes of this Agreement, such activities shall be undertaken strictly in the nature of sub-contracted client sourcing and facilitation services, including identification and introduction of prospective clients and coordination of onboarding processes, and shall not in any manner constitute portfolio management services, investment advisory services or discretionary management of client portfolios.</Text>
                         <Text style={pdfStyles.paragraph}>3.2.3 The Sub-Distributor shall undertake such PMS distribution related activities only in accordance with the regulatory framework prescribed under the SEBI (Portfolio Managers) Regulations, 2020 and other applicable SEBI circulars and guidelines.</Text>
-                        <Text style={pdfStyles.paragraph}>3.2.4 Without prejudice to the generality of the foregoing, the following conditions shall apply: (a) The Sub-Distributor may introduce prospective clients interested in PMS Products to the Principal Distributor or to portfolio managers specifically approved by the Principal Distributor. (b) The Sub-Distributor shall undertake any marketing, solicitation or client introduction activity relating to PMS Products only after obtaining prior written approval from the Principal Distributor. (c) Such approval may specify the portfolio manager, product category, scope of marketing activities and commission arrangements applicable to the Sub-Distributor. (d) The Sub-Distributor acknowledges that its role in relation to PMS Products shall be limited to marketing support, client introduction, facilitation of meetings and administrative coordination between prospective clients and the Principal Distributor or the relevant portfolio manager. (e) The Sub-Distributor shall not represent itself as: (i) a portfolio manager; (ii) an investment adviser registered with SEBI; (iii) an authorised investment manager or portfolio management entity; or (iv) an entity authorised to provide investment advice or portfolio allocation recommendations. (f) The Sub-Distributor shall not: 1. provide discretionary investment advice relating to PMS Products; 2. recommend specific portfolio strategies or investment allocations; 3. execute investment decisions on behalf of clients; 4. collect or hold client funds or securities. (g) The final decision regarding acceptance of a client, execution of the portfolio management agreement and management of the investment portfolio shall rest solely with the relevant portfolio manager. (h) All documentation relating to PMS investments, including portfolio management agreements, risk disclosure documentation and client onboarding documentation, shall be executed directly between the client and the portfolio manager in accordance with the provisions of the SEBI (Portfolio Managers) Regulations, 2020. (i) The Sub-Distributor shall ensure that all communications made to prospective clients in relation to PMS Products are accurate, fair and not misleading and are consistent with disclosures prescribed by applicable regulatory authorities.</Text>
+                        <Text style={pdfStyles.paragraph}>3.2.4 Without prejudice to the generality of the foregoing, the following conditions shall apply: (a) The Sub-Distributor may introduce prospective clients interested in PMS Products to the Principal Distributor or to portfolio managers specifically approved by the Principal Distributor. (b) The Sub-Distributor shall undertake any marketing, solicitation or client introduction activity relating to PMS Products only after obtaining prior written approval from the Principal Distributor. (c) Such approval may specify the portfolio manager, product category, scope of marketing activities and commission arrangements applicable to the Sub-Distributor. (d) The Sub-Distributor acknowledges that its role in relation to PMS Products shall be limited to marketing support, client introduction, facilitation of meetings and administrative coordination between prospective clients and the Principal Distributor or the relevant portfolio manager. (e) The Sub-Distributor shall not represent itself as: (i) a portfolio manager; (ii) an investment adviser registered with SEBI; (iii) an authorised investment manager or portfolio management entity; or (iv) an entity authorised to provide investment advice or portfolio allocation recommendations. (f) The Sub-Distributor shall not: 1. provide discretionary investment advice relating to PMS Products; 2. recommend specific portfolio strategies or investment allocations; 3. execute investment decisions on behalf of clients; 4. collect or hold client funds or securities. (g) The final decision regarding acceptance of a client, execution of the portfolio management agreement and management of the investment portfolio shall rest solely with the relevant portfolio manager. (h) All documentation relating to PMS investments, including portfolio management agreements, risk disclosure documents and client onboarding documentation, shall be executed directly between the client and the portfolio manager in accordance with the provisions of the SEBI (Portfolio Managers) Regulations, 2020. (i) The Sub-Distributor shall ensure that all communications made to prospective clients in relation to PMS Products are accurate, fair and not misleading and are consistent with disclosures prescribed by applicable regulatory authorities.</Text>
                         <Text style={pdfStyles.paragraph}>The Parties hereby acknowledge and agree that the Sub-Distributor shall act solely in the capacity of a sub-contracted client sourcing and distribution support intermediary for the limited purpose of identifying and introducing prospective clients and facilitating preliminary coordination in relation to PMS Products. The Sub-Distributor shall not hold itself out as an authorised representative, agent or affiliate of any portfolio manager.</Text>
+                    </View>
+
+                    <Text style={pdfStyles.subHeading}>3.3 Appointment for AIF Marketing and Sub-Distributorship Activities</Text>
+                    <View style={{ gap: 4 }}>
+                        <Text style={pdfStyles.paragraph}>3.3.1 Subject to the terms and conditions of this Agreement, the Principal Distributor may permit the Sub-Distributor to undertake client sourcing, solicitation support and distribution support activities on a sub-contracted basis in relation to Alternative Investment Funds ("AIF Offerings") offered by the investment managers of AIFs which are registered with the Securities and Exchange Board of India.</Text>
+                        <Text style={pdfStyles.paragraph}>3.3.2 For the purposes of this Agreement, such activities shall be undertaken strictly in the nature of sub-contracted client sourcing and facilitation services, including identification and introduction of prospective clients and coordination of onboarding processes, and shall not in any manner constitute investment advisory services.</Text>
+                        <Text style={pdfStyles.paragraph}>3.3.3 The Sub-Distributor shall undertake such AIF distribution related activities only in accordance with the regulatory framework prescribed by SEBI or any other authority as may be prescribed.</Text>
+                        <Text style={pdfStyles.paragraph}>3.3.4 Without prejudice to the generality of the foregoing, the following conditions shall apply: (a) The Sub-Distributor may introduce prospective clients interested in AIF offerings to the Principal Distributor or to investment manager specifically approved by the Principal Distributor. (b) The Sub-Distributor shall undertake any marketing, solicitation or client introduction activity relating to AIF offerings only after obtaining prior written approval from the Principal Distributor. The distribution of Alternative Investment Fund, being a privately placed vehicle, shall be subject to guidelines issued by principal distributor for distribution of such privately placed products. (c) Such approval may specify the AIF scheme, scope of marketing activities and commission arrangements applicable to the Sub-Distributor. (d) The Sub-Distributor acknowledges that its role in relation to AIF Offerings shall be limited to marketing support, client introduction, facilitation of meetings and administrative coordination between prospective clients and the Principal Distributor or the relevant investment manager. (e) The Sub-Distributor shall not represent itself as: (i) an investment manager of AIF; (ii) an investment adviser registered with SEBI; (iii) an authorised investment manager or portfolio management entity; or (iv) an entity authorised to provide investment advice or portfolio allocation recommendations. (f) The Sub-Distributor shall not: 1. provide investment advice relating to AIF offerings; 2. recommend specific portfolio strategies or investment allocations; 3. execute investment decisions on behalf of clients; 4. collect or hold client funds or securities. (g) The final decision regarding acceptance of a client, execution of the contribution agreement and management of the investment portfolio shall rest solely with the relevant investment manager. (h) All documentation relating to AIF offerings, including contribution agreement and other client onboarding documentation, shall be executed directly between the client and the investment manager in accordance with the provisions of the SEBI (Alternative Investment Fund) Regulations, 2012. (i) The Sub-Distributor shall ensure that all communications made to prospective clients in relation to AIF offerings are accurate, fair and not misleading and are consistent with disclosures prescribed by applicable regulatory authorities.</Text>
+                        <Text style={pdfStyles.paragraph}>The Parties hereby acknowledge and agree that the Sub-Distributor shall act solely in the capacity of a sub-contracted client sourcing and distribution support intermediary for the limited purpose of identifying and introducing prospective clients and facilitating preliminary coordination in relation to AIF offerings. The Sub-Distributor shall not hold itself out as an authorised representative, agent or affiliate of any investment manager.</Text>
+                    </View>
+
+                    <Text style={pdfStyles.subHeading}>3.4 Appointment for Sub-Distributorship Activities for other financial offerings</Text>
+                    <View style={{ gap: 4 }}>
+                        <Text style={pdfStyles.paragraph}>3.4.1 Subject to the terms and conditions of this Agreement, the Principal Distributor may permit the Sub-Distributor to undertake client sourcing, solicitation support and distribution support activities on a sub-contracted basis in relation to financial offerings as approved by the principal distributor.</Text>
+                        <Text style={pdfStyles.paragraph}>3.4.2 For the purposes of this Agreement, such activities shall be undertaken strictly in the nature of sub-contracted client sourcing and facilitation services, including identification and introduction of prospective clients and coordination of onboarding processes, and shall not in any manner constitute investment advisory services.</Text>
+                        <Text style={pdfStyles.paragraph}>3.4.3 The Sub-Distributor shall undertake such distribution related activities only in accordance with the regulatory framework prescribed by SEBI or any other authority as may be prescribed.</Text>
+                        <Text style={pdfStyles.paragraph}>3.4.4 Without prejudice to the generality of the foregoing, the following conditions shall apply: (a) The Sub-Distributor may introduce prospective clients interested in such other financial offerings to the Principal Distributor or to investment manager specifically approved by the Principal Distributor. (b) The Sub-Distributor shall undertake any marketing, solicitation or client introduction activity relating to such financial offerings only after obtaining prior written approval from the Principal Distributor. The distribution of privately placed products shall be subject to guidelines issued by principal distributor for distribution of such privately placed products. (c) Such approval may specify the financial offering, scope of marketing activities and commission arrangements applicable to the Sub-Distributor. (d) The Sub-Distributor acknowledges that its role in relation to AIF Offerings shall be limited to marketing support, client introduction, facilitation of meetings and administrative coordination between prospective clients and the Principal Distributor or manufacturer. (e) The Sub-Distributor shall not represent itself as: (i) an investment manager or portfolio manager; (ii) an investment adviser registered with SEBI or any other regulatory authority; (iii) an authorised investment manager or portfolio management entity; or (iv) an entity authorised to provide investment advice or portfolio allocation recommendations. (f) The Sub-Distributor shall not: 1. provide investment advice relating to such financial offerings; 2. recommend specific portfolio strategies or investment allocations; 3. execute investment decisions on behalf of clients; 4. collect or hold client funds or securities. (g) The final decision regarding acceptance of a client, execution of the contribution agreement and management of the investment portfolio shall rest solely with the relevant manufacturer of such financial offering. (h) All documentation relating to financial offering, including investment agreement, other client onboarding documentation and any other documentation as may be required, shall be executed directly between the client and the manufacturer in accordance with the provisions of relevant regulatory framework. (i) The Sub-Distributor shall ensure that all communications made to prospective clients in relation to such financial offerings are accurate, fair and not misleading and are consistent with disclosures prescribed by applicable regulatory authorities.</Text>
+                        <Text style={pdfStyles.paragraph}>The Parties hereby acknowledge and agree that the Sub-Distributor shall act solely in the capacity of a sub-contracted client sourcing and distribution support intermediary for the limited purpose of identifying and introducing prospective clients and facilitating preliminary coordination in relation to such financial offerings. The Sub-Distributor shall not hold itself out as an authorised representative, agent or affiliate of any investment manager.</Text>
                     </View>
                 </View>
 
                 {/* Section 4: Prior Approval */}
                 <View style={pdfStyles.section}>
-                    <Text style={pdfStyles.heading}>4. PRIOR APPROVAL FOR PMS DISTRIBUTION</Text>
+                    <Text style={pdfStyles.heading}>4. PRIOR APPROVAL OF PRINCIPAL DISTRIBUTOR</Text>
                     <View style={{ gap: 4 }}>
-                        <Text style={pdfStyles.paragraph}>4.1 Notwithstanding anything contained elsewhere in this Agreement, the Sub-Distributor shall not undertake any client sourcing, solicitation support, distribution support or other sub-contracted facilitation activity in relation to Portfolio Management Services ("PMS Products") unless prior written approval has been obtained from the Principal Distributor and Portfolio Manager (wherever required).</Text>
-                        <Text style={pdfStyles.paragraph}>4.2 Such approval shall be granted at the sole discretion of the Principal Distributor and may specify the portfolio manager whose PMS Products may be introduced to prospective clients, the nature and scope of the permitted client sourcing and distribution support activities, the categories of PMS Products that may be introduced, and any operational procedures, compliance requirements or investor disclosure obligations that must be adhered to by the Sub-Distributor.</Text>
+                        <Text style={pdfStyles.paragraph}>4.1 Notwithstanding anything contained elsewhere in this Agreement, the Sub-Distributor shall not undertake any client sourcing, solicitation support, distribution support or other sub-contracted facilitation activity in relation to PMS Products, AIF Offerings and such other product/ services covered under clause 3 unless prior written approval has been obtained from the Principal Distributor and Manufacturer (wherever required).</Text>
+                        <Text style={pdfStyles.paragraph}>4.2 Such approval shall be granted at the sole discretion of the Principal Distributor and may specify the manufacturer whose products/ services may be introduced to prospective clients, the nature and scope of the permitted client sourcing and distribution support activities, and any operational procedures, compliance requirements or investor disclosure obligations that must be adhered to by the Sub-Distributor.</Text>
                         <Text style={pdfStyles.paragraph}>4.3 The approval may further specify the commission, referral fee or other remuneration structure applicable to such activities, subject to applicable regulatory requirements and internal policies of the Principal Distributor, and the Sub-Distributor shall strictly comply with the terms and conditions specified in such approval and shall not undertake any activity beyond the scope of the authority granted therein.</Text>
-                        <Text style={pdfStyles.paragraph}>4.4 Any activity undertaken by the Sub-Distributor in relation to PMS Products without obtaining the prior written approval of the Principal Distributor, or in contravention of the terms and conditions specified in such approval, shall constitute a material breach of this Agreement, entitling the Principal Distributor to suspend or terminate this Agreement and take such further action as may be permissible under Applicable Laws, including the provisions of the SEBI (Portfolio Managers) Regulations, 2020 and other regulatory directions issued by the Securities and Exchange Board of India.</Text>
+                        <Text style={pdfStyles.paragraph}>4.4 Any activity undertaken by the Sub-Distributor in relation to products/ services covered under clause 3 of the agreement without obtaining the prior written approval of the Principal Distributor, or in contravention of the terms and conditions specified in such approval, shall constitute a material breach of this Agreement, entitling the Principal Distributor to suspend or terminate this Agreement and take such further action as may be permissible under Applicable Laws, including the provisions of the SEBI (Portfolio Managers) Regulations, 2020 and other regulatory directions issued by the Securities and Exchange Board of India.</Text>
                     </View>
                 </View>
 
@@ -260,10 +309,12 @@ const AgreementPDF = ({ data }) => {
                 <View style={pdfStyles.section}>
                     <Text style={pdfStyles.heading}>5. SCOPE OF SERVICES</Text>
                     <View style={{ gap: 4 }}>
-                        <Text style={pdfStyles.paragraph}>5.1 Subject to the terms and conditions of this Agreement, the Sub-Distributor shall undertake client sourcing and distribution support activities in relation to Mutual Fund Products and such PMS Products as may be permitted by the Principal Distributor from time to time, including identifying and approaching prospective investors and facilitating their introduction to the Principal Distributor. Further, Client data obtained in connection with Mutual Fund investments shall not be used for marketing other financial products without the prior consent of the client.</Text>
+                        <Text style={pdfStyles.paragraph}>5.1 Subject to the terms and conditions of this Agreement, the Sub-Distributor shall undertake client sourcing and distribution support activities in relation to services or products mentioned under Clause 3 of this agreement as may be permitted by the Principal Distributor from time to time, including identifying and approaching prospective investors and facilitating their introduction to the Principal Distributor. Further, Client data obtained in connection with Mutual Fund investments shall not be used for marketing other financial products without the prior consent of the client.</Text>
                         <Text style={pdfStyles.paragraph}>5.2 The Sub-Distributor may disseminate to prospective investors only such product literature, scheme-related documents, informational material or communications that have been issued or approved by the Principal Distributor or the relevant product provider, and shall ensure that all communications made to prospective investors are fair, accurate and not misleading.</Text>
                         <Text style={pdfStyles.paragraph}>5.3 The Sub-Distributor may assist prospective investors and Clients in completing onboarding documentation, including Know Your Client (KYC) documentation, application forms and other administrative formalities, and may coordinate administrative communication between the Client and the Principal Distributor for the purpose of facilitating investments in the relevant products.</Text>
                         <Text style={pdfStyles.paragraph}>5.4 Notwithstanding anything contained herein, the Sub-Distributor shall not provide investment advice, recommend specific investment strategies or portfolio allocations, make any representation or guarantee regarding investment performance or returns, represent itself as a portfolio manager or investment adviser, or undertake any activity that may be construed as discretionary portfolio management or investment advisory services.</Text>
+                        <Text style={pdfStyles.paragraph}>5.5 The Sub-Distributor is authorized, on a non-exclusive basis, to identify and approach prospective investors for the purpose of distribution of the Products through private placement, strictly in accordance with applicable laws and this Agreement. The Sub-Distributor shall act solely as an intermediary and shall not bind the Company in any manner.</Text>
+                        <Text style={pdfStyles.paragraph}>5.6 The Sub-Distributor shall ensure that all offers and solicitations are made strictly on a private placement basis and shall not undertake any form of general solicitation, advertisement, public communication, or mass outreach, including through digital or social media platforms.</Text>
                     </View>
                 </View>
 
@@ -271,10 +322,10 @@ const AgreementPDF = ({ data }) => {
                 <View style={pdfStyles.section}>
                     <Text style={pdfStyles.heading}>6. COMPLIANCE WITH DISTRIBUTOR CODE OF CONDUCT</Text>
                     <View style={{ gap: 4 }}>
-                        <Text style={pdfStyles.paragraph}>6.1 The Sub-Distributor shall at all times comply with the Code of Conduct applicable to distributors and sub-distributors prescribed by the Association of Mutual Funds in India and Securities and Exchange Board of India, and with all applicable regulatory guidelines, circulars and directions issued by competent authorities.</Text>
-                        <Text style={pdfStyles.paragraph}>6.2 The Sub-Distributor shall maintain high standards of integrity, fairness and professionalism in all dealings with prospective investors and Clients.</Text>
+                        <Text style={pdfStyles.paragraph}>6.1 The Sub-Distributor shall at all times comply with the Code of Conduct applicable to distributors and sub-distributors prescribed by the Association of Mutual Funds in India and Securities and Exchange Board of India, and with all applicable regulatory guidelines, circulars and directions issued by competent authorities. The code of conduct for distributing AIF offerings is mentioned in Annexure B. Additionally, the code of conduct as issued by the principal distributor shall be complied with for the products or services in respect of which code of conduct is not issued by SEBI or respective financial sector regulatory.</Text>
+                        <Text style={pdfStyles.paragraph}>6.2 The Sub-Distributor shall maintain high standards of integrity, fairness and professionalism in all dealings with prospective investors and Clients. The sub-distributor shall not jeopardise the interest of the interest of clients and manufacturers and in case of any scenario of conflict is identified, the sub-distributor shall inform about the conflict to the principal distributor.</Text>
                         <Text style={pdfStyles.paragraph}>6.3 The Sub-Distributor shall ensure full and transparent disclosure to Clients regarding the nature of its role as an intermediary and any commissions or remuneration that may be received in connection with investments facilitated through it.</Text>
-                        <Text style={pdfStyles.paragraph}>6.4 The Sub-Distributor shall not engage in mis-selling, misleading representations or dissemination of inaccurate information relating to Mutual Fund Products or PMS Products.</Text>
+                        <Text style={pdfStyles.paragraph}>6.4 The Sub-Distributor shall not engage in mis-selling, misleading representations or dissemination of inaccurate information relating to Mutual Fund Products or PMS Products or other products/ services covered under clause 3 of this agreement.</Text>
                         <Text style={pdfStyles.paragraph}>6.5 The Sub-Distributor shall ensure that all information communicated to Clients is accurate, fair and consistent with the official product documentation issued by the relevant product provider or approved by the Principal Distributor.</Text>
                     </View>
                 </View>
@@ -304,12 +355,12 @@ const AgreementPDF = ({ data }) => {
                         <Text style={pdfStyles.paragraph}>8.1.6 The principal distributor also reserves the right to set-off and/or deduct any due amounts by sub-distributor from the accrued commissions or brokerages etc., amounts payable to the sub-distributor at the discretion of principal distributor.</Text>
                     </View>
 
-                    <Text style={pdfStyles.subHeading}>8.2 Remuneration for PMS Client Introductions</Text>
+                    <Text style={pdfStyles.subHeading}>8.2 Remuneration for Client Introductions in respect of other products/ services</Text>
                     <View style={{ gap: 4 }}>
-                        <Text style={pdfStyles.paragraph}>8.2.1 In respect of PMS Products, the Sub-Distributor shall be entitled to receive referral fees or distribution support fees for introducing Clients to the Principal Distributor or to portfolio managers approved by the Principal Distributor.</Text>
+                        <Text style={pdfStyles.paragraph}>8.2.1 In respect of PMS Products, AIF offerings and any other products/ services covered under clause 3 of this agreement, the Sub-Distributor shall be entitled to receive referral fees or distribution support fees for introducing Clients to the Principal Distributor or to portfolio managers approved by the Principal Distributor.</Text>
                         <Text style={pdfStyles.paragraph}>8.2.2 The structure and quantum of such remuneration shall be mutually agreed between the Parties and shall remain subject to applicable regulatory disclosure requirements.</Text>
-                        <Text style={pdfStyles.paragraph}>8.2.3 Any remuneration payable to the Sub-Distributor in relation to PMS Products shall be payable only upon receipt of the corresponding fees by the Principal Distributor from the relevant portfolio manager.</Text>
-                        <Text style={pdfStyles.paragraph}>8.2.4 All payments made under this Clause shall be subject to compliance with Applicable Laws including the provisions of the the SEBI (Portfolio Managers) Regulations, 2020.</Text>
+                        <Text style={pdfStyles.paragraph}>8.2.3 Any remuneration payable to the Sub-Distributor in relation to PMS Products, AIF offering and any other products/ services covered under clause 3 of this agreement shall be payable only upon receipt of the corresponding fees by the Principal Distributor from the relevant portfolio manager.</Text>
+                        <Text style={pdfStyles.paragraph}>8.2.4 All payments made under this Clause shall be subject to compliance with Applicable Laws including the provisions of the SEBI (Portfolio Managers) Regulations, 2020, SEBI (Alternative Investment Funds) Regulations 2012.</Text>
                         <Text style={pdfStyles.paragraph}>8.2.5 Principal distributor reserves the right to claw-back Commissions and/or other amounts already paid to the sub-distributor from future due payments and/or demand return payments from sub-distributor, in compliance with applicable laws or as may be deemed fit & appropriate by principal distributor for valid purposes, including but not limited to reasons of any wrongly processed payments, any charges or dues pending or for any business or Transactions found void or invalid, etc.</Text>
                         <Text style={pdfStyles.paragraph}>8.2.6 The principal distributor also reserves the right to set-off and/or deduct any due amounts by sub-distributor from the accrued commissions or brokerages etc., amounts payable to the sub-distributor at the discretion of principal distributor.</Text>
                     </View>
@@ -336,8 +387,8 @@ const AgreementPDF = ({ data }) => {
                         <Text style={pdfStyles.paragraph}>10.1 The sub-distributor shall maintain all the information of their Clients required for the conduct of its business and as required under applicable Know Your Customer (KYC) and other Applicable Laws and shall make available any such information to principal distributor or the AMC or the portfolio manager upon request.</Text>
                         <Text style={pdfStyles.paragraph}>10.2 The sub-distributor shall not use the nomenclature of 'Independent Financial Adviser' or 'IFA' or 'Wealth Adviser' or any other similar name or any name specifically prohibited by SEBI/AMFI, or any such combination of terms which may be interpreted as providing investment advice or possibilities being identified as an Investment Adviser, in any manner whatsoever. Further, the sub-distributor must always clearly communicate/ showcase to the client that he/she/it is an 'AMFI Registered Mutual Fund Distributor' and that no 'investment advice' is being rendered.</Text>
                         <Text style={pdfStyles.paragraph}>10.3 The sub-distributor engaged in distribution of mutual funds acknowledges that the sub-distributor shall ensure not to contradict its role with the role of investment adviser in compliance with the provisions of the IA Regulations, as amended from time to time. In case the sub-distributor or any of its related party or associate wishes to register or has already registered as an Investment Adviser under IA Regulations, a written communication must be made to Principal advisor. In failure of which, principal advisor reserves a right to terminate this Agreement without prior notice.</Text>
-                        <Text style={pdfStyles.paragraph}>10.4 The sub-distributor shall be solely responsible to co-operate for adhering to the implementation of KYC and Anti Money Laundering (AML) norms, processes, compliances under the PMLA regulations & guidelines given by the regulatory authorities, SEBI, AMCs, SRO and principal advisor from time to time. In case of any non-compliance thereof, the sub-distributor agrees that principal advisor cannot be held responsible for the same. </Text>
-                        <Text style={pdfStyles.paragraph}>10.5. The sub-distributor shall ensure to adhere with all the compliances applicable under PMS regulations, circulars and guidelines for distribution of the portfolio management products offered by any portfolio manager registered with SEBI under applicable regulations.</Text>
+                        <Text style={pdfStyles.paragraph}>10.4 The sub-distributor shall be solely responsible to co-operate for adhering to the implementation of KYC and Anti Money Laundering (AML) norms, processes, compliances under the PMLA regulations & guidelines given by the regulatory authorities, SEBI, AMCs, SRO and principal advisor from time to time. In case of any non-compliance thereof, the sub-distributor agrees that principal advisor cannot be held responsible for the same.</Text>
+                        <Text style={pdfStyles.paragraph}>10.5 The sub-distributor shall ensure to adhere with all the compliances applicable under applicable regulatory guidelines. In case of any differences between the agreement and the regulatory framework then the regulatory framework shall prevail.</Text>
                     </View>
                 </View>
 
@@ -348,7 +399,7 @@ const AgreementPDF = ({ data }) => {
                         <Text style={pdfStyles.paragraph}>11.1 The Sub-Distributor shall fully indemnify, defend and hold harmless the Principal Distributor, its directors, officers, employees, affiliates and representatives from and against any and all losses, damages, liabilities, penalties, claims, demands, costs, expenses or regulatory actions whatsoever, including reasonable legal fees and expenses, arising directly or indirectly from any breach, default or non-performance of the obligations contained in this Agreement.</Text>
                         <Text style={pdfStyles.paragraph}>11.2 Without prejudice to the generality of the foregoing, such indemnity shall extend to any loss or liability arising out of misrepresentation, misleading communication, unauthorised assurances or incorrect disclosures made by the Sub-Distributor to clients or prospective investors.</Text>
                         <Text style={pdfStyles.paragraph}>11.3 The indemnity shall further apply in the event of any violation of Applicable Laws, regulatory guidelines, compliance requirements or investor protection norms by the Sub-Distributor or its personnel in connection with the activities contemplated under this Agreement.</Text>
-                        <Text style={pdfStyles.paragraph}>11.4 The Sub-Distributor shall also indemnify the Principal Distributor against any claims, proceedings, investigations, regulatory penalties or reputational damage arising from negligence, willful misconduct, fraud, mis-selling, breach of confidentiality or misuse of client information by the Sub-Distributor.</Text>
+                        <Text style={pdfStyles.paragraph}>11.4 The Sub-Distributor shall also indemnify the Principal Distributor against any claims, proceedings, investigations, regulatory penalties or reputational damage arising from negligence, wilful misconduct, fraud, mis-selling, breach of confidentiality or misuse of client information by the Sub-Distributor.</Text>
                         <Text style={pdfStyles.paragraph}>11.5 The rights and remedies provided under this Clause shall survive termination or expiry of this Agreement and shall be in addition to any other rights or remedies available to the Principal Distributor under law or equity.</Text>
                     </View>
                 </View>
@@ -361,6 +412,7 @@ const AgreementPDF = ({ data }) => {
                         <Text style={pdfStyles.paragraph}>12.2 The Principal Distributor shall not be liable for the performance, actions, omissions or decisions of portfolio managers, asset management companies, issuers or other product providers whose products may be introduced or distributed under this Agreement.</Text>
                         <Text style={pdfStyles.paragraph}>12.3 The Sub-Distributor acknowledges that all investment decisions shall ultimately be taken by the clients based on their own assessment of risks and suitability and the Principal Distributor shall not be liable for any financial loss or investment outcome arising therefrom.</Text>
                         <Text style={pdfStyles.paragraph}>12.4 Nothing contained in this Clause shall limit liability arising from fraud, wilful misconduct or gross negligence where such limitation is prohibited under Applicable Laws.</Text>
+                        <Text style={pdfStyles.paragraph}>12.5 Subject to the provisions, the aggregate liability of each party arising out of or in connection with this Agreement shall not exceed the total fees or commissions paid or received by the Sub-Distributor as the case may be under this Agreement during the twelve (12) months preceding the event giving rise to such liability.</Text>
                     </View>
                 </View>
 
@@ -416,30 +468,69 @@ const AgreementPDF = ({ data }) => {
                         <Text style={pdfStyles.paragraph}>17.1 The Sub-Distributor represents and warrants that it possesses the necessary competence, expertise, infrastructure, regulatory knowledge and operational capability required to perform its obligations under this Agreement in a professional and diligent manner.</Text>
                         <Text style={pdfStyles.paragraph}>17.2 The Sub-Distributor further represents that it shall at all times comply with all Applicable Laws, regulatory requirements, guidelines and circulars issued by relevant authorities, including those governing distribution of financial products and investor protection.</Text>
                         <Text style={pdfStyles.paragraph}>17.3 The Sub-Distributor shall conduct its activities in a fair, transparent and ethical manner and shall not engage in any practice, act or omission that may adversely affect the reputation, goodwill or regulatory standing of the Principal Distributor.</Text>
-                        <Text style={pdfStyles.paragraph}>17.4 The Sub-Distributor shall not make any statement, commitment, promise, guarantee or representation to clients or prospective investors which is inconsistent with or beyond the information, materials or authorisations provided by the Principal Distributor.</Text>
+                        <Text style={pdfStyles.paragraph}>17.4 The Sub-Distributor shall not make any statement, commitment, promise, guarantee or representation to clients or prospective investors which is inconsistent with or beyond the information, materials or authorisations provided by the Principal Distributor. Additionally, the sub-distributor will not spread any unauthenticated news and will be subject to SEBI (Prohibition of Fraudulent and Unfair Trade Practices relating to Securities Market) Regulations, 2003.</Text>
                         <Text style={pdfStyles.paragraph}>17.5 The sub-distributor is competent to enter into a legally binding contract and this Agreement under Applicable Laws and that it is not incompetent to contract within the meaning of the Indian Contract Act, 1872 as amended from time to time.</Text>
                         <Text style={pdfStyles.paragraph}>17.6 The sub-distributor is a "fit and proper person" as defined under SEBI (Intermediaries) Regulations 2008.</Text>
-                        <Text style={pdfStyles.paragraph}>17.7 Sub-distributor represents that it is not prohibited to act as a mutual fund distributor in accordance with the relevant regulations (if applicable). and shall immediately communicate to principal distributor upon applicability of any prohibitory provisions under the said regulation during the subsistence of this Agreement.</Text>
+                        <Text style={pdfStyles.paragraph}>17.7 Sub-distributor represents that it is not prohibited to distribute products covered under clause 3 of this agreement in accordance with the relevant regulations (if applicable). and shall immediately communicate to principal distributor upon applicability of any prohibitory provisions under the said regulation during the subsistence of this Agreement.</Text>
+                        <Text style={pdfStyles.paragraph}>17.8 The Sub-Distributor represents and warrants that it holds all necessary registrations, approvals, licenses, certification and any other requirements if required under applicable laws and regulations, including those prescribed by the Securities and Exchange Board of India, and shall at all times remain in compliance with such requirements. The sub-distributor further represents and warrants that during the course of engagement, the sub-distributor is incapable i.e not in adherence to necessary registrations, approvals, licenses, certification and any other requirements if required under applicable laws and regulations, it shall forthwith intimate the principal distributor and shall not offer any products or services mentioned under clause 3 of this agreement, unless approved by the principal distributor.</Text>
+                        <Text style={pdfStyles.paragraph}>17.9 The Sub-Distributor represents and warrants that the sub-distributor shall intimate about any changes in its constitution.</Text>
+                        <Text style={pdfStyles.paragraph}>17.10 The sub-distributor represents and warrants that it shall abide by the applicability regulatory framework in force.</Text>
+                        <Text style={pdfStyles.paragraph}>17.11 The sub-distributor represents and warrants that it shall not charge any fees to client in respect of products or services distributed to the clients under this agreement.</Text>
                     </View>
                 </View>
 
                 {/* SIGNATURE SECTION */}
                 <View style={pdfStyles.signatureContainer}>
-                    <Text style={pdfStyles.signBy}>Sign By</Text>
+                    <Text style={pdfStyles.signBy}>Signed by:</Text>
 
                     <View style={pdfStyles.signatureBlock}>
-                        <Text style={pdfStyles.signatureLabel}>For Primary Distributor</Text>
+                        <Text style={pdfStyles.signatureLabel}>Primary Distributor</Text>
                         <View>
-                            <Text style={pdfStyles.signatureValue}>INDUSARTHA FINANCIAL SERVICES PRIVATE LIMITED</Text>
-                            <Text style={pdfStyles.signatureSubText}>Authorised Signatory: MR. MUDDASANI NARENDER REDDY</Text>
+                            <Text style={pdfStyles.signatureValue}>IndusArtha Financial Services Private Limited</Text>
+                            <Text style={pdfStyles.signatureSubText}>Authorised Signatory: Mr. Muddasani Narender Reddy</Text>
                         </View>
                     </View>
 
                     <View style={pdfStyles.signatureBlock}>
-                        <Text style={pdfStyles.signatureLabel}>For Sub-distributor</Text>
+                        <Text style={pdfStyles.signatureLabel}>Sub-distributor</Text>
                         <View>
                             <Text style={[pdfStyles.signatureValue, { textTransform: "uppercase" }]}>{entityName}</Text>
                         </View>
+                    </View>
+                </View>
+
+                {/* ANNEXURE A */}
+                <View style={[pdfStyles.section, { marginTop: 30, paddingTop: 20, borderTop: "0.5pt solid #eee" }]}>
+                    <Text style={pdfStyles.heading}>ANNEXURE A</Text>
+                    <Text style={[pdfStyles.subHeading, { textAlign: "center" }]}>Fee / Commission sharing</Text>
+                    <Text style={pdfStyles.paragraph}>The principal distributor will share ___% of fees earned from Asset Management Companies, Portfolio Manager and such other products covered under this agreement.</Text>
+                </View>
+
+                {/* ANNEXURE B */}
+                <View style={[pdfStyles.section, { marginTop: 20 }]}>
+                    <Text style={pdfStyles.heading}>ANNEXURE B</Text>
+                    <Text style={[pdfStyles.subHeading, { textAlign: "center" }]}>Code of Conduct for Distributors for AIFs</Text>
+                    <View style={{ gap: 4 }}>
+                        <Text style={pdfStyles.paragraph}>1. Adhere to SEBI (Alternative Investment Funds) Regulations, 2012, as amended from time to time, and circulars issued by SEBI relating to distribution, marketing, performance benchmarking and investor reporting requirements of AIFs.</Text>
+                        <Text style={pdfStyles.paragraph}>2. Be fully conversant with key provisions of PPM disclosures, such as Investment Strategy, Fee Structure and key terms of the Contribution Agreement to be signed by an investor and the investment manager.</Text>
+                        <Text style={pdfStyles.paragraph}>3. Inform investors about the key risk factors of each fund/scheme and desist from misrepresentation or exaggeration. Encourage investors to go through the disclosures made in the PPM and all related documents of the fund/scheme before making an investment decision.</Text>
+                        <Text style={pdfStyles.paragraph}>4. Disclose all material information including Hurdle Rate, Management Fees, Additional Returns and Catch-up provisions, if any, expenses chargeable to the Fund and expenses to be borne by the investment manager.</Text>
+                        <Text style={pdfStyles.paragraph}>5. Consider investor's interest, risk profiling and suitability to their financial needs while marketing AIFs and advising on the same.</Text>
+                        <Text style={pdfStyles.paragraph}>6. Highlight all assumptions made by AIF in performance calculation, risk assessment and performance estimation, if any.</Text>
+                        <Text style={pdfStyles.paragraph}>7. Take necessary steps to ensure that the investors' interest is protected. Ensure that commissions or incentives on sale of AIF units shall never form as the basis for recommending a fund/scheme.</Text>
+                        <Text style={pdfStyles.paragraph}>8. Disclose all material information including the details of distribution commissions to be received, on subscription to various classes of units offered by the AIF.</Text>
+                        <Text style={pdfStyles.paragraph}>9. Abstain from assuring returns in any AIF fund/scheme and from any kind of misrepresentation thereon.</Text>
+                        <Text style={pdfStyles.paragraph}>10. Abstain from attracting investors through unethical means such as providing an offer of rebate, pass-back, gifts or other concessions.</Text>
+                        <Text style={pdfStyles.paragraph}>11. Abstain from obfuscating the decision-making process of investors, by omission of material facts or misleading investors about the fund/scheme.</Text>
+                        <Text style={pdfStyles.paragraph}>12. Maintain high standards of integrity, promptitude and fairness in the conduct of business as a Distributor.</Text>
+                        <Text style={pdfStyles.paragraph}>13. Act with required skill, care and diligence in the conduct of business as a Distributor.</Text>
+                        <Text style={pdfStyles.paragraph}>14. Assist clients in completing KYC documentation and verification procedures.</Text>
+                        <Text style={pdfStyles.paragraph}>15. Maintain necessary infrastructure to provide pre-commitment and post-commitment support to investors, investment manager, regulators and third-party service providers. This may include support in terms of providing intimations for draw-downs, capital calls, investor meetings, redemptions, fund-closing, investor grievances, dispatching of performance reports to investors and other important matters from time to time.</Text>
+                        <Text style={pdfStyles.paragraph}>16. Stay updated with latest developments in the AIF markets, changes in the Fund Sponsor, Investment Manager, changes in controlling interest of the fund/scheme, exit of key executives, adverse developments and other material aspects.</Text>
+                        <Text style={pdfStyles.paragraph}>17. Maintain confidentiality of investors' personal data, deals and transactions done by a AIF.</Text>
+                        <Text style={pdfStyles.paragraph}>18. Provide relevant documents of investors to tax authorities and enforcement agencies under the Prevention of Money Laundering Act, including KYC documents, Power of Attorney (PoA), and any other information as may be required from time to time.</Text>
+                        <Text style={pdfStyles.paragraph}>19. Abstain from making negative statements about other AIFs that the distributor is not representing. Ensure that comparison of AIFs is done between similar and comparable AIFs, based on adequate information.</Text>
+                        <Text style={pdfStyles.paragraph}>20. Not indulge in any manipulative, fraudulent or deceptive practices or spread rumours with a view to make personal gain.</Text>
                     </View>
                 </View>
 
@@ -690,7 +781,7 @@ const PatnersSignup = () => {
             }
             alert("Welcome To TieVista!");
             navigate("/");
-            
+
 
         } catch (error) {
             console.error("PDF generation failed:", error);
@@ -740,7 +831,23 @@ const PatnersSignup = () => {
                         >
                             {/* Logo and Header */}
                             <div className="flex flex-col items-start mb-12">
-                                <img src="/TieVistaLogo.png" alt="TieVista Logo" className="h-20 mb-4" />
+                                <div className='flex justify-between items-center w-full'>
+                                    <div className='flex'>
+                                        <img src="/icon.png" alt="TieVista icon" className="h-20 mb-4" />
+                                        <div className='flex flex-col items-center justify-center relative'>
+                                            <img src="/TieVistaVerticalLogo.png" alt="TieVista Vertical Logo" className="h-6 w-30 mb-4" />
+                                            <h3 className='absolute top-13 left-6 text-[8px] font-light'>Global Private Wealth</h3>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-col items-start">
+                                        <div className="flex items-center gap-1">
+                                            <Phone className="rotate-[135deg] text-[#e5bc4b]" size={16} />
+                                            <span className="text-black">+91 9885424473</span>
+                                        </div>
+                                        <div className="flex items-center gap-1"><Mail className="text-[#e5bc4b]" size={16} /><span className="text-black">narender.reddy@tievista.com</span></div>
+                                        <div className="flex items-center gap-1"><Globe className="text-[#e5bc4b]" size={16} /> <span className='text-black'>TieVista.com</span></div>
+                                    </div>
+                                </div>
                                 <h1 className="text-2xl font-bold text-center pt-4 w-full tracking-tight">
                                     Sub-Distributorship Agreement
                                 </h1>
@@ -758,7 +865,7 @@ const PatnersSignup = () => {
                                 </p>
                                 <p className="mb-2 font-bold uppercase">AND</p>
                                 <p className="mb-8 font-bold">
-                                    {entityName}, <span className="font-normal">having its principal place of business at</span> {address} <span className="font-normal">and engaged in the business of financial product marketing and client relationship management (hereinafter referred to as the "Sub-Distributor", which expression shall unless repugnant to the context include its successors and permitted assigns). The sub-distributor holds ARN</span> {arn} <span className="font-normal">and APRN</span> {aprn}
+                                    {entityName}, <span className="font-normal">having its principal place of business at</span> {address} <span className="font-normal">and engaged in the business of financial product marketing and client relationship management (hereinafter referred to as the "Sub-Distributor", which expression shall unless repugnant to the context include its successors and permitted assigns). The sub-distributor holds ARN –</span> {arn} <span className="font-normal">and APRN -</span> {aprn}
                                 </p>
                                 <p className="mb-10">
                                     The Principal Distributor and the Sub-Distributor are hereinafter collectively referred to as the <b>"Parties"</b> and individually as a <b>"Party"</b>.
@@ -829,18 +936,36 @@ const PatnersSignup = () => {
                                     <p>3.2.2 For the purposes of this Agreement, such activities shall be undertaken strictly in the nature of sub-contracted client sourcing and facilitation services, including identification and introduction of prospective clients and coordination of onboarding processes, and shall not in any manner constitute portfolio management services, investment advisory services or discretionary management of client portfolios.</p>
                                     <p>3.2.3 The Sub-Distributor shall undertake such PMS distribution related activities only in accordance with the regulatory framework prescribed under the SEBI (Portfolio Managers) Regulations, 2020 and other applicable SEBI circulars and guidelines.</p>
                                     <p>3.2.4 Without prejudice to the generality of the foregoing, the following conditions shall apply: (a) The Sub-Distributor may introduce prospective clients interested in PMS Products to the Principal Distributor or to portfolio managers specifically approved by the Principal Distributor. (b) The Sub-Distributor shall undertake any marketing, solicitation or client introduction activity relating to PMS Products only after obtaining prior written approval from the Principal Distributor. (c) Such approval may specify the portfolio manager, product category, scope of marketing activities and commission arrangements applicable to the Sub-Distributor. (d) The Sub-Distributor acknowledges that its role in relation to PMS Products shall be limited to marketing support, client introduction, facilitation of meetings and administrative coordination between prospective clients and the Principal Distributor or the relevant portfolio manager. (e) The Sub-Distributor shall not represent itself as: (i) a portfolio manager; (ii) an investment adviser registered with SEBI; (iii) an authorised investment manager or portfolio management entity; or (iv) an entity authorised to provide investment advice or portfolio allocation recommendations. (f) The Sub-Distributor shall not: 1. provide discretionary investment advice relating to PMS Products; 2. recommend specific portfolio strategies or investment allocations; 3. execute investment decisions on behalf of clients; 4. collect or hold client funds or securities. (g) The final decision regarding acceptance of a client, execution of the portfolio management agreement and management of the investment portfolio shall rest solely with the relevant portfolio manager. (h) All documentation relating to PMS investments, including portfolio management agreements, risk disclosure documents and client onboarding documentation, shall be executed directly between the client and the portfolio manager in accordance with the provisions of the SEBI (Portfolio Managers) Regulations, 2020. (i) The Sub-Distributor shall ensure that all communications made to prospective clients in relation to PMS Products are accurate, fair and not misleading and are consistent with disclosures prescribed by applicable regulatory authorities.</p>
-                                    <p className="">The Parties hereby acknowledge and agree that the Sub-Distributor shall act solely in the capacity of a sub-contracted client sourcing and distribution support intermediary for the limited purpose of identifying and introducing prospective clients and facilitating preliminary coordination in relation to PMS Products. The Sub-Distributor shall not hold itself out as an authorised representative, agent or affiliate of any portfolio manager.</p>
+                                    <p>The Parties hereby acknowledge and agree that the Sub-Distributor shall act solely in the capacity of a sub-contracted client sourcing and distribution support intermediary for the limited purpose of identifying and introducing prospective clients and facilitating preliminary coordination in relation to PMS Products. The Sub-Distributor shall not hold itself out as an authorised representative, agent or affiliate of any portfolio manager.</p>
+                                </div>
+
+                                <h3 className="font-bold mt-6 mb-2" style={{ fontFamily: "'PT Serif', serif" }}>3.3 Appointment for AIF Marketing and Sub-Distributorship Activities</h3>
+                                <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    <p>3.3.1 Subject to the terms and conditions of this Agreement, the Principal Distributor may permit the Sub-Distributor to undertake client sourcing, solicitation support and distribution support activities on a sub-contracted basis in relation to Alternative Investment Funds ("AIF Offerings") offered by the investment managers of AIFs which are registered with the Securities and Exchange Board of India.</p>
+                                    <p>3.3.2 For the purposes of this Agreement, such activities shall be undertaken strictly in the nature of sub-contracted client sourcing and facilitation services, including identification and introduction of prospective clients and coordination of onboarding processes, and shall not in any manner constitute investment advisory services.</p>
+                                    <p>3.3.3 The Sub-Distributor shall undertake such AIF distribution related activities only in accordance with the regulatory framework prescribed by SEBI or any other authority as may be prescribed.</p>
+                                    <p>3.3.4 Without prejudice to the generality of the foregoing, the following conditions shall apply: (a) The Sub-Distributor may introduce prospective clients interested in AIF offerings to the Principal Distributor or to investment manager specifically approved by the Principal Distributor. (b) The Sub-Distributor shall undertake any marketing, solicitation or client introduction activity relating to AIF offerings only after obtaining prior written approval from the Principal Distributor. The distribution of Alternative Investment Fund, being a privately placed vehicle, shall be subject to guidelines issued by principal distributor for distribution of such privately placed products. (c) Such approval may specify the AIF scheme, scope of marketing activities and commission arrangements applicable to the Sub-Distributor. (d) The Sub-Distributor acknowledges that its role in relation to AIF Offerings shall be limited to marketing support, client introduction, facilitation of meetings and administrative coordination between prospective clients and the Principal Distributor or the relevant investment manager. (e) The Sub-Distributor shall not represent itself as: (i) an investment manager of AIF; (ii) an investment adviser registered with SEBI; (iii) an authorised investment manager or portfolio management entity; or (iv) an entity authorised to provide investment advice or portfolio allocation recommendations. (f) The Sub-Distributor shall not: 1. provide investment advice relating to AIF offerings; 2. recommend specific portfolio strategies or investment allocations; 3. execute investment decisions on behalf of clients; 4. collect or hold client funds or securities. (g) The final decision regarding acceptance of a client, execution of the contribution agreement and management of the investment portfolio shall rest solely with the relevant investment manager. (h) All documentation relating to AIF offerings, including contribution agreement and other client onboarding documentation, shall be executed directly between the client and the investment manager in accordance with the provisions of the SEBI (Alternative Investment Fund) Regulations, 2012. (i) The Sub-Distributor shall ensure that all communications made to prospective clients in relation to AIF offerings are accurate, fair and not misleading and are consistent with disclosures prescribed by applicable regulatory authorities.</p>
+                                    <p>The Parties hereby acknowledge and agree that the Sub-Distributor shall act solely in the capacity of a sub-contracted client sourcing and distribution support intermediary for the limited purpose of identifying and introducing prospective clients and facilitating preliminary coordination in relation to AIF offerings. The Sub-Distributor shall not hold itself out as an authorised representative, agent or affiliate of any investment manager.</p>
+                                </div>
+
+                                <h3 className="font-bold mt-6 mb-2" style={{ fontFamily: "'PT Serif', serif" }}>3.4 Appointment for Sub-Distributorship Activities for other financial offerings</h3>
+                                <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    <p>3.4.1 Subject to the terms and conditions of this Agreement, the Principal Distributor may permit the Sub-Distributor to undertake client sourcing, solicitation support and distribution support activities on a sub-contracted basis in relation to financial offerings as approved by the principal distributor.</p>
+                                    <p>3.4.2 For the purposes of this Agreement, such activities shall be undertaken strictly in the nature of sub-contracted client sourcing and facilitation services, including identification and introduction of prospective clients and coordination of onboarding processes, and shall not in any manner constitute investment advisory services.</p>
+                                    <p>3.4.3 The Sub-Distributor shall undertake such distribution related activities only in accordance with the regulatory framework prescribed by SEBI or any other authority as may be prescribed.</p>
+                                    <p>3.4.4 Without prejudice to the generality of the foregoing, the following conditions shall apply: (a) The Sub-Distributor may introduce prospective clients interested in such other financial offerings to the Principal Distributor or to investment manager specifically approved by the Principal Distributor. (b) The Sub-Distributor shall undertake any marketing, solicitation or client introduction activity relating to such financial offerings only after obtaining prior written approval from the Principal Distributor. The distribution of privately placed products shall be subject to guidelines issued by principal distributor for distribution of such privately placed products. (c) Such approval may specify the financial offering, scope of marketing activities and commission arrangements applicable to the Sub-Distributor. (d) The Sub-Distributor acknowledges that its role in relation to AIF Offerings shall be limited to marketing support, client introduction, facilitation of meetings and administrative coordination between prospective clients and the Principal Distributor or manufacturer. (e) The Sub-Distributor shall not represent itself as: (i) an investment manager or portfolio manager; (ii) an investment adviser registered with SEBI or any other regulatory authority; (iii) an authorised investment manager or portfolio management entity; or (iv) an entity authorised to provide investment advice or portfolio allocation recommendations. (f) The Sub-Distributor shall not: 1. provide investment advice relating to such financial offerings; 2. recommend specific portfolio strategies or investment allocations; 3. execute investment decisions on behalf of clients; 4. collect or hold client funds or securities. (g) The final decision regarding acceptance of a client, execution of the contribution agreement and management of the investment portfolio shall rest solely with the relevant manufacturer of such financial offering. (h) All documentation relating to financial offering, including investment agreement, other client onboarding documentation and any other documentation as may be required, shall be executed directly between the client and the manufacturer in accordance with the provisions of relevant regulatory framework. (i) The Sub-Distributor shall ensure that all communications made to prospective clients in relation to such financial offerings are accurate, fair and not misleading and are consistent with disclosures prescribed by applicable regulatory authorities.</p>
+                                    <p>The Parties hereby acknowledge and agree that the Sub-Distributor shall act solely in the capacity of a sub-contracted client sourcing and distribution support intermediary for the limited purpose of identifying and introducing prospective clients and facilitating preliminary coordination in relation to such financial offerings. The Sub-Distributor shall not hold itself out as an authorised representative, agent or affiliate of any investment manager.</p>
                                 </div>
                             </div>
 
                             {/* Section 4: Prior Approval */}
                             <div className="mb-8" >
-                                <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>4. PRIOR APPROVAL FOR PMS DISTRIBUTION</h2>
+                                <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>4. PRIOR APPROVAL OF PRINCIPAL DISTRIBUTOR</h2>
                                 <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                                    <p>4.1 Notwithstanding anything contained elsewhere in this Agreement, the Sub-Distributor shall not undertake any client sourcing, solicitation support, distribution support or other sub-contracted facilitation activity in relation to Portfolio Management Services ("PMS Products") unless prior written approval has been obtained from the Principal Distributor and Portfolio Manager (wherever required).</p>
-                                    <p>4.2 Such approval shall be granted at the sole discretion of the Principal Distributor and may specify the portfolio manager whose PMS Products may be introduced to prospective clients, the nature and scope of the permitted client sourcing and distribution support activities, the categories of PMS Products that may be introduced, and any operational procedures, compliance requirements or investor disclosure obligations that must be adhered to by the Sub-Distributor.</p>
+                                    <p>4.1 Notwithstanding anything contained elsewhere in this Agreement, the Sub-Distributor shall not undertake any client sourcing, solicitation support, distribution support or other sub-contracted facilitation activity in relation to PMS Products, AIF Offerings and such other product/ services covered under clause 3 unless prior written approval has been obtained from the Principal Distributor and Manufacturer (wherever required).</p>
+                                    <p>4.2 Such approval shall be granted at the sole discretion of the Principal Distributor and may specify the manufacturer whose products/ services may be introduced to prospective clients, the nature and scope of the permitted client sourcing and distribution support activities, and any operational procedures, compliance requirements or investor disclosure obligations that must be adhered to by the Sub-Distributor.</p>
                                     <p>4.3 The approval may further specify the commission, referral fee or other remuneration structure applicable to such activities, subject to applicable regulatory requirements and internal policies of the Principal Distributor, and the Sub-Distributor shall strictly comply with the terms and conditions specified in such approval and shall not undertake any activity beyond the scope of the authority granted therein.</p>
-                                    <p>4.4 Any activity undertaken by the Sub-Distributor in relation to PMS Products without obtaining the prior written approval of the Principal Distributor, or in contravention of the terms and conditions specified in such approval, shall constitute a material breach of this Agreement, entitling the Principal Distributor to suspend or terminate this Agreement and take such further action as may be permissible under Applicable Laws, including the provisions of the SEBI (Portfolio Managers) Regulations, 2020 and other regulatory directions issued by the Securities and Exchange Board of India.</p>
+                                    <p>4.4 Any activity undertaken by the Sub-Distributor in relation to products/ services covered under clause 3 of the agreement without obtaining the prior written approval of the Principal Distributor, or in contravention of the terms and conditions specified in such approval, shall constitute a material breach of this Agreement, entitling the Principal Distributor to suspend or terminate this Agreement and take such further action as may be permissible under Applicable Laws, including the provisions of the SEBI (Portfolio Managers) Regulations, 2020 and other regulatory directions issued by the Securities and Exchange Board of India.</p>
                                 </div>
                             </div>
 
@@ -848,10 +973,12 @@ const PatnersSignup = () => {
                             <div className="mb-8" >
                                 <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>5. SCOPE OF SERVICES</h2>
                                 <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                                    <p>5.1 Subject to the terms and conditions of this Agreement, the Sub-Distributor shall undertake client sourcing and distribution support activities in relation to Mutual Fund Products and such PMS Products as may be permitted by the Principal Distributor from time to time, including identifying and approaching prospective investors and facilitating their introduction to the Principal Distributor. Further, Client data obtained in connection with Mutual Fund investments shall not be used for marketing other financial products without the prior consent of the client.</p>
+                                    <p>5.1 Subject to the terms and conditions of this Agreement, the Sub-Distributor shall undertake client sourcing and distribution support activities in relation to services or products mentioned under Clause 3 of this agreement as may be permitted by the Principal Distributor from time to time, including identifying and approaching prospective investors and facilitating their introduction to the Principal Distributor. Further, Client data obtained in connection with Mutual Fund investments shall not be used for marketing other financial products without the prior consent of the client.</p>
                                     <p>5.2 The Sub-Distributor may disseminate to prospective investors only such product literature, scheme-related documents, informational material or communications that have been issued or approved by the Principal Distributor or the relevant product provider, and shall ensure that all communications made to prospective investors are fair, accurate and not misleading.</p>
                                     <p>5.3 The Sub-Distributor may assist prospective investors and Clients in completing onboarding documentation, including Know Your Client (KYC) documentation, application forms and other administrative formalities, and may coordinate administrative communication between the Client and the Principal Distributor for the purpose of facilitating investments in the relevant products.</p>
                                     <p>5.4 Notwithstanding anything contained herein, the Sub-Distributor shall not provide investment advice, recommend specific investment strategies or portfolio allocations, make any representation or guarantee regarding investment performance or returns, represent itself as a portfolio manager or investment adviser, or undertake any activity that may be construed as discretionary portfolio management or investment advisory services.</p>
+                                    <p>5.5 The Sub-Distributor is authorized, on a non-exclusive basis, to identify and approach prospective investors for the purpose of distribution of the Products through private placement, strictly in accordance with applicable laws and this Agreement. The Sub-Distributor shall act solely as an intermediary and shall not bind the Company in any manner.</p>
+                                    <p>5.6 The Sub-Distributor shall ensure that all offers and solicitations are made strictly on a private placement basis and shall not undertake any form of general solicitation, advertisement, public communication, or mass outreach, including through digital or social media platforms.</p>
                                 </div>
                             </div>
 
@@ -859,10 +986,10 @@ const PatnersSignup = () => {
                             <div className="mb-8" >
                                 <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>6. COMPLIANCE WITH DISTRIBUTOR CODE OF CONDUCT</h2>
                                 <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                                    <p>6.1 The Sub-Distributor shall at all times comply with the Code of Conduct applicable to distributors and sub-distributors prescribed by the Association of Mutual Funds in India and Securities and Exchange Board of India, and with all applicable regulatory guidelines, circulars and directions issued by competent authorities.</p>
-                                    <p>6.2 The Sub-Distributor shall maintain high standards of integrity, fairness and professionalism in all dealings with prospective investors and Clients.</p>
+                                    <p>6.1 The Sub-Distributor shall at all times comply with the Code of Conduct applicable to distributors and sub-distributors prescribed by the Association of Mutual Funds in India and Securities and Exchange Board of India, and with all applicable regulatory guidelines, circulars and directions issued by competent authorities. The code of conduct for distributing AIF offerings is mentioned in Annexure B. Additionally, the code of conduct as issued by the principal distributor shall be complied with for the products or services in respect of which code of conduct is not issued by SEBI or respective financial sector regulatory.</p>
+                                    <p>6.2 The Sub-Distributor shall maintain high standards of integrity, fairness and professionalism in all dealings with prospective investors and Clients. The sub-distributor shall not jeopardise the interest of the interest of clients and manufacturers and in case of any scenario of conflict is identified, the sub-distributor shall inform about the conflict to the principal distributor.</p>
                                     <p>6.3 The Sub-Distributor shall ensure full and transparent disclosure to Clients regarding the nature of its role as an intermediary and any commissions or remuneration that may be received in connection with investments facilitated through it.</p>
-                                    <p>6.4 The Sub-Distributor shall not engage in mis-selling, misleading representations or dissemination of inaccurate information relating to Mutual Fund Products or PMS Products.</p>
+                                    <p>6.4 The Sub-Distributor shall not engage in mis-selling, misleading representations or dissemination of inaccurate information relating to Mutual Fund Products or PMS Products or other products/ services covered under clause 3 of this agreement.</p>
                                     <p>6.5 The Sub-Distributor shall ensure that all information communicated to Clients is accurate, fair and consistent with the official product documentation issued by the relevant product provider or approved by the Principal Distributor.</p>
                                 </div>
                             </div>
@@ -880,7 +1007,7 @@ const PatnersSignup = () => {
                             </div>
 
                             {/* Section 8: Commission */}
-                            <div className="mb-8 " >
+                            <div className="mb-8" >
                                 <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>8. COMMISSION AND REMUNERATION</h2>
                                 <h3 className="font-bold mb-2" style={{ fontFamily: "'PT Serif', serif" }}>8.1 Commission for Mutual Fund Products</h3>
                                 <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
@@ -888,17 +1015,17 @@ const PatnersSignup = () => {
                                     <p>8.1.2 Such commission shall be payable as a share of the commission or distribution fees received by the Principal Distributor from the relevant Asset Management Companies.</p>
                                     <p>8.1.3 The commission payable to the Sub-Distributor may include upfront commissions, trail commissions, performance incentives or any other distribution-related remuneration payable in accordance with applicable regulatory guidelines.</p>
                                     <p>8.1.4 Any remuneration payable to the Sub-distributor in relation to mutual funds distributed shall be payable only upon receipt of the corresponding fees by the Principal Distributor from the relevant AMCs.</p>
-                                    <p>8.1.5 Principal distributor reserves the right to claw-back Commissions and/or other amounts already paid to the sub-distributor from future due payments and/or demand return payments from sub-distributor, in compliance with applicable laws or as may be deemed fit & appropriate by principal distributor for valid purposes, including but not limited to reasons of any wrongly processed payments, any charges or dues pending or for any business or Transactions found void or invalid, etc.</p>
+                                    <p>8.1.5 Principal distributor reserves the right to claw-back Commissions and/or other amounts already paid to the sub-distributor from future due payments and/or demand return payments from sub-distributor, in compliance with applicable laws or as may be deemed fit &amp; appropriate by principal distributor for valid purposes, including but not limited to reasons of any wrongly processed payments, any charges or dues pending or for any business or Transactions found void or invalid, etc.</p>
                                     <p>8.1.6 The principal distributor also reserves the right to set-off and/or deduct any due amounts by sub-distributor from the accrued commissions or brokerages etc., amounts payable to the sub-distributor at the discretion of principal distributor.</p>
                                 </div>
 
-                                <h3 className="font-bold mt-6 mb-2">8.2 Remuneration for PMS Client Introductions</h3>
-                                <div className="space-y-4 text-justify">
-                                    <p>8.2.1 In respect of PMS Products, the Sub-Distributor shall be entitled to receive referral fees or distribution support fees for introducing Clients to the Principal Distributor or to portfolio managers approved by the Principal Distributor.</p>
+                                <h3 className="font-bold mt-6 mb-2" style={{ fontFamily: "'PT Serif', serif" }}>8.2 Remuneration for Client Introductions in respect of other products/ services</h3>
+                                <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    <p>8.2.1 In respect of PMS Products, AIF offerings and any other products/ services covered under clause 3 of this agreement, the Sub-Distributor shall be entitled to receive referral fees or distribution support fees for introducing Clients to the Principal Distributor or to portfolio managers approved by the Principal Distributor.</p>
                                     <p>8.2.2 The structure and quantum of such remuneration shall be mutually agreed between the Parties and shall remain subject to applicable regulatory disclosure requirements.</p>
-                                    <p>8.2.3 Any remuneration payable to the Sub-Distributor in relation to PMS Products shall be payable only upon receipt of the corresponding fees by the Principal Distributor from the relevant portfolio manager.</p>
-                                    <p>8.2.4 All payments made under this Clause shall be subject to compliance with Applicable Laws including the provisions of the the SEBI (Portfolio Managers) Regulations, 2020.</p>
-                                    <p>8.2.5 Principal distributor reserves the right to claw-back Commissions and/or other amounts already paid to the sub-distributor from future due payments and/or demand return payments from sub-distributor, in compliance with applicable laws or as may be deemed fit & appropriate by principal distributor for valid purposes, including but not limited to reasons of any wrongly processed payments, any charges or dues pending or for any business or Transactions found void or invalid, etc.</p>
+                                    <p>8.2.3 Any remuneration payable to the Sub-Distributor in relation to PMS Products, AIF offering and any other products/ services covered under clause 3 of this agreement shall be payable only upon receipt of the corresponding fees by the Principal Distributor from the relevant portfolio manager.</p>
+                                    <p>8.2.4 All payments made under this Clause shall be subject to compliance with Applicable Laws including the provisions of the SEBI (Portfolio Managers) Regulations, 2020, SEBI (Alternative Investment Funds) Regulations 2012.</p>
+                                    <p>8.2.5 Principal distributor reserves the right to claw-back Commissions and/or other amounts already paid to the sub-distributor from future due payments and/or demand return payments from sub-distributor, in compliance with applicable laws or as may be deemed fit &amp; appropriate by principal distributor for valid purposes, including but not limited to reasons of any wrongly processed payments, any charges or dues pending or for any business or Transactions found void or invalid, etc.</p>
                                     <p>8.2.6 The principal distributor also reserves the right to set-off and/or deduct any due amounts by sub-distributor from the accrued commissions or brokerages etc., amounts payable to the sub-distributor at the discretion of principal distributor.</p>
                                 </div>
                             </div>
@@ -924,8 +1051,8 @@ const PatnersSignup = () => {
                                     <p>10.1 The sub-distributor shall maintain all the information of their Clients required for the conduct of its business and as required under applicable Know Your Customer (KYC) and other Applicable Laws and shall make available any such information to principal distributor or the AMC or the portfolio manager upon request.</p>
                                     <p>10.2 The sub-distributor shall not use the nomenclature of 'Independent Financial Adviser' or 'IFA' or 'Wealth Adviser' or any other similar name or any name specifically prohibited by SEBI/AMFI, or any such combination of terms which may be interpreted as providing investment advice or possibilities being identified as an Investment Adviser, in any manner whatsoever. Further, the sub-distributor must always clearly communicate/ showcase to the client that he/she/it is an 'AMFI Registered Mutual Fund Distributor' and that no 'investment advice' is being rendered.</p>
                                     <p>10.3 The sub-distributor engaged in distribution of mutual funds acknowledges that the sub-distributor shall ensure not to contradict its role with the role of investment adviser in compliance with the provisions of the IA Regulations, as amended from time to time. In case the sub-distributor or any of its related party or associate wishes to register or has already registered as an Investment Adviser under IA Regulations, a written communication must be made to Principal advisor. In failure of which, principal advisor reserves a right to terminate this Agreement without prior notice.</p>
-                                    <p>10.4 The sub-distributor shall be solely responsible to co-operate for adhering to the implementation of KYC and Anti Money Laundering (AML) norms, processes, compliances under the PMLA regulations & guidelines given by the regulatory authorities, SEBI, AMCs, SRO and principal advisor from time to time. In case of any non-compliance thereof, the sub-distributor agrees that principal advisor cannot be held responsible for the same. </p>
-                                    <p>10.5. The sub-distributor shall ensure to adhere with all the compliances applicable under PMS regulations, circulars and guidelines for distribution of the portfolio management products offered by any portfolio manager registered with SEBI under applicable regulations.</p>
+                                    <p>10.4 The sub-distributor shall be solely responsible to co-operate for adhering to the implementation of KYC and Anti Money Laundering (AML) norms, processes, compliances under the PMLA regulations &amp; guidelines given by the regulatory authorities, SEBI, AMCs, SRO and principal advisor from time to time. In case of any non-compliance thereof, the sub-distributor agrees that principal advisor cannot be held responsible for the same.</p>
+                                    <p>10.5 The sub-distributor shall ensure to adhere with all the compliances applicable under applicable regulatory guidelines. In case of any differences between the agreement and the regulatory framework then the regulatory framework shall prevail.</p>
                                 </div>
                             </div>
 
@@ -936,7 +1063,7 @@ const PatnersSignup = () => {
                                     <p>11.1 The Sub-Distributor shall fully indemnify, defend and hold harmless the Principal Distributor, its directors, officers, employees, affiliates and representatives from and against any and all losses, damages, liabilities, penalties, claims, demands, costs, expenses or regulatory actions whatsoever, including reasonable legal fees and expenses, arising directly or indirectly from any breach, default or non-performance of the obligations contained in this Agreement.</p>
                                     <p>11.2 Without prejudice to the generality of the foregoing, such indemnity shall extend to any loss or liability arising out of misrepresentation, misleading communication, unauthorised assurances or incorrect disclosures made by the Sub-Distributor to clients or prospective investors.</p>
                                     <p>11.3 The indemnity shall further apply in the event of any violation of Applicable Laws, regulatory guidelines, compliance requirements or investor protection norms by the Sub-Distributor or its personnel in connection with the activities contemplated under this Agreement.</p>
-                                    <p>11.4 The Sub-Distributor shall also indemnify the Principal Distributor against any claims, proceedings, investigations, regulatory penalties or reputational damage arising from negligence, willful misconduct, fraud, mis-selling, breach of confidentiality or misuse of client information by the Sub-Distributor.</p>
+                                    <p>11.4 The Sub-Distributor shall also indemnify the Principal Distributor against any claims, proceedings, investigations, regulatory penalties or reputational damage arising from negligence, wilful misconduct, fraud, mis-selling, breach of confidentiality or misuse of client information by the Sub-Distributor.</p>
                                     <p>11.5 The rights and remedies provided under this Clause shall survive termination or expiry of this Agreement and shall be in addition to any other rights or remedies available to the Principal Distributor under law or equity.</p>
                                 </div>
                             </div>
@@ -949,6 +1076,7 @@ const PatnersSignup = () => {
                                     <p>12.2 The Principal Distributor shall not be liable for the performance, actions, omissions or decisions of portfolio managers, asset management companies, issuers or other product providers whose products may be introduced or distributed under this Agreement.</p>
                                     <p>12.3 The Sub-Distributor acknowledges that all investment decisions shall ultimately be taken by the clients based on their own assessment of risks and suitability and the Principal Distributor shall not be liable for any financial loss or investment outcome arising therefrom.</p>
                                     <p>12.4 Nothing contained in this Clause shall limit liability arising from fraud, wilful misconduct or gross negligence where such limitation is prohibited under Applicable Laws.</p>
+                                    <p>12.5 Subject to the provisions, the aggregate liability of each party arising out of or in connection with this Agreement shall not exceed the total fees or commissions paid or received by the Sub-Distributor as the case may be under this Agreement during the twelve (12) months preceding the event giving rise to such liability.</p>
                                 </div>
                             </div>
 
@@ -998,42 +1126,83 @@ const PatnersSignup = () => {
                             </div>
 
                             {/* Section 17: Representations */}
-                            <div className="mb-20">
+                            <div className="mb-8">
                                 <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>17. REPRESENTATIONS AND WARRANTIES</h2>
                                 <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
                                     <p>17.1 The Sub-Distributor represents and warrants that it possesses the necessary competence, expertise, infrastructure, regulatory knowledge and operational capability required to perform its obligations under this Agreement in a professional and diligent manner.</p>
                                     <p>17.2 The Sub-Distributor further represents that it shall at all times comply with all Applicable Laws, regulatory requirements, guidelines and circulars issued by relevant authorities, including those governing distribution of financial products and investor protection.</p>
                                     <p>17.3 The Sub-Distributor shall conduct its activities in a fair, transparent and ethical manner and shall not engage in any practice, act or omission that may adversely affect the reputation, goodwill or regulatory standing of the Principal Distributor.</p>
-                                    <p>17.4 The Sub-Distributor shall not make any statement, commitment, promise, guarantee or representation to clients or prospective investors which is inconsistent with or beyond the information, materials or authorisations provided by the Principal Distributor.</p>
+                                    <p>17.4 The Sub-Distributor shall not make any statement, commitment, promise, guarantee or representation to clients or prospective investors which is inconsistent with or beyond the information, materials or authorisations provided by the Principal Distributor. Additionally, the sub-distributor will not spread any unauthenticated news and will be subject to SEBI (Prohibition of Fraudulent and Unfair Trade Practices relating to Securities Market) Regulations, 2003.</p>
                                     <p>17.5 The sub-distributor is competent to enter into a legally binding contract and this Agreement under Applicable Laws and that it is not incompetent to contract within the meaning of the Indian Contract Act, 1872 as amended from time to time.</p>
                                     <p>17.6 The sub-distributor is a "fit and proper person" as defined under SEBI (Intermediaries) Regulations 2008.</p>
-                                    <p>17.7 Sub-distributor represents that it is not prohibited to act as a mutual fund distributor in accordance with the relevant regulations (if applicable). and shall immediately communicate to principal distributor upon applicability of any prohibitory provisions under the said regulation during the subsistence of this Agreement.</p>
+                                    <p>17.7 Sub-distributor represents that it is not prohibited to distribute products covered under clause 3 of this agreement in accordance with the relevant regulations (if applicable). and shall immediately communicate to principal distributor upon applicability of any prohibitory provisions under the said regulation during the subsistence of this Agreement.</p>
+                                    <p>17.8 The Sub-Distributor represents and warrants that it holds all necessary registrations, approvals, licenses, certification and any other requirements if required under applicable laws and regulations, including those prescribed by the Securities and Exchange Board of India, and shall at all times remain in compliance with such requirements. The sub-distributor further represents and warrants that during the course of engagement, the sub-distributor is incapable i.e not in adherence to necessary registrations, approvals, licenses, certification and any other requirements if required under applicable laws and regulations, it shall forthwith intimate the principal distributor and shall not offer any products or services mentioned under clause 3 of this agreement, unless approved by the principal distributor.</p>
+                                    <p>17.9 The Sub-Distributor represents and warrants that the sub-distributor shall intimate about any changes in its constitution.</p>
+                                    <p>17.10 The sub-distributor represents and warrants that it shall abide by the applicability regulatory framework in force.</p>
+                                    <p>17.11 The sub-distributor represents and warrants that it shall not charge any fees to client in respect of products or services distributed to the clients under this agreement.</p>
                                 </div>
                             </div>
 
                             {/* Signatures */}
                             <div className="flex flex-col pt-16 border-t border-gray-100 font-poppins">
-                                <p className="mb-4 text-xs">Sign By</p>
+                                <p className="mb-4 text-xs">Signed by:</p>
 
-                                <div className="flex-1 mb-4">
-                                    <p className="font-bold text-black">For Primary Distributor</p>
+                                <div className="flex-1 mb-6">
+                                    <p className="font-bold text-black">Primary Distributor</p>
                                     <div>
                                         <p className="font-bold text-black text-base">
-                                            INDUSARTHA FINANCIAL SERVICES PRIVATE LIMITED
+                                            IndusArtha Financial Services Private Limited
                                         </p>
                                         <p className="text-black">
-                                            Authorised Signatory: MR. MUDDASANI NARENDER REDDY
+                                            Authorised Signatory: Mr. Muddasani Narender Reddy
                                         </p>
                                     </div>
                                 </div>
 
-                                <div className="flex-1 text-left md:text-left">
-                                    <p className="font-bold text-black">For Sub-distributor</p>
+                                <div className="flex-1 text-left md:text-left mb-8">
+                                    <p className="font-bold text-black">Sub-distributor</p>
                                     <div className="flex flex-col">
                                         <p className="font-bold text-black min-w-[200px] pb-1 text-base uppercase">
                                             {entityName}
                                         </p>
                                     </div>
+                                </div>
+                            </div>
+
+                            {/* Annexure A */}
+                            <div className="mt-12 pt-8 border-t border-gray-200">
+                                <h2 className="font-bold mb-4 uppercase text-center" style={{ fontFamily: "'PT Serif', serif" }}>ANNEXURE A</h2>
+                                <h3 className="font-bold mb-6 text-center" style={{ fontFamily: "'PT Serif', serif" }}>Fee / Commission sharing</h3>
+                                <div className="text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    <p>The principal distributor will share ___% of fees earned from Asset Management Companies, Portfolio Manager and such other products covered under this agreement.</p>
+                                </div>
+                            </div>
+
+                            {/* Annexure B */}
+                            <div className="mt-12 pt-8 border-t border-gray-200 mb-20">
+                                <h2 className="font-bold mb-4 uppercase text-center" style={{ fontFamily: "'PT Serif', serif" }}>ANNEXURE B</h2>
+                                <h3 className="font-bold mb-6 text-center" style={{ fontFamily: "'PT Serif', serif" }}>Code of Conduct for Distributors for AIFs</h3>
+                                <div className="space-y-3 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    <p>1. Adhere to SEBI (Alternative Investment Funds) Regulations, 2012, as amended from time to time, and circulars issued by SEBI relating to distribution, marketing, performance benchmarking and investor reporting requirements of AIFs.</p>
+                                    <p>2. Be fully conversant with key provisions of PPM disclosures, such as Investment Strategy, Fee Structure and key terms of the Contribution Agreement to be signed by an investor and the investment manager.</p>
+                                    <p>3. Inform investors about the key risk factors of each fund/scheme and desist from misrepresentation or exaggeration. Encourage investors to go through the disclosures made in the PPM and all related documents of the fund/scheme before making an investment decision.</p>
+                                    <p>4. Disclose all material information including Hurdle Rate, Management Fees, Additional Returns and Catch-up provisions, if any, expenses chargeable to the Fund and expenses to be borne by the investment manager.</p>
+                                    <p>5. Consider investor's interest, risk profiling and suitability to their financial needs while marketing AIFs and advising on the same.</p>
+                                    <p>6. Highlight all assumptions made by AIF in performance calculation, risk assessment and performance estimation, if any.</p>
+                                    <p>7. Take necessary steps to ensure that the investors' interest is protected. Ensure that commissions or incentives on sale of AIF units shall never form as the basis for recommending a fund/scheme.</p>
+                                    <p>8. Disclose all material information including the details of distribution commissions to be received, on subscription to various classes of units offered by the AIF.</p>
+                                    <p>9. Abstain from assuring returns in any AIF fund/scheme and from any kind of misrepresentation thereon.</p>
+                                    <p>10. Abstain from attracting investors through unethical means such as providing an offer of rebate, pass-back, gifts or other concessions.</p>
+                                    <p>11. Abstain from obfuscating the decision-making process of investors, by omission of material facts or misleading investors about the fund/scheme.</p>
+                                    <p>12. Maintain high standards of integrity, promptitude and fairness in the conduct of business as a Distributor.</p>
+                                    <p>13. Act with required skill, care and diligence in the conduct of business as a Distributor.</p>
+                                    <p>14. Assist clients in completing KYC documentation and verification procedures.</p>
+                                    <p>15. Maintain necessary infrastructure to provide pre-commitment and post-commitment support to investors, investment manager, regulators and third-party service providers. This may include support in terms of providing intimations for draw-downs, capital calls, investor meetings, redemptions, fund-closing, investor grievances, dispatching of performance reports to investors and other important matters from time to time.</p>
+                                    <p>16. Stay updated with latest developments in the AIF markets, changes in the Fund Sponsor, Investment Manager, changes in controlling interest of the fund/scheme, exit of key executives, adverse developments and other material aspects.</p>
+                                    <p>17. Maintain confidentiality of investors' personal data, deals and transactions done by a AIF.</p>
+                                    <p>18. Provide relevant documents of investors to tax authorities and enforcement agencies under the Prevention of Money Laundering Act, including KYC documents, Power of Attorney (PoA), and any other information as may be required from time to time.</p>
+                                    <p>19. Abstain from making negative statements about other AIFs that the distributor is not representing. Ensure that comparison of AIFs is done between similar and comparable AIFs, based on adequate information.</p>
+                                    <p>20. Not indulge in any manipulative, fraudulent or deceptive practices or spread rumours with a view to make personal gain.</p>
                                 </div>
                             </div>
                         </div>
@@ -1252,8 +1421,6 @@ const PatnersSignup = () => {
                                     {errorsReg.phone && <p className="text-[10px] text-red-500 mt-1 font-medium">{errorsReg.phone.message}</p>}
                                 </div>
 
-
-
                                 {/* Email Id */}
                                 <div className="space-y-1.5">
                                     <label className="text-[14px] font-medium text-black tracking-wide uppercase" style={{ fontFamily: "'Poppins', sans-serif" }}>
@@ -1378,7 +1545,7 @@ const PatnersSignup = () => {
                                                 <div className="flex-1 flex flex-col">
                                                     <input
                                                         {...registerRegulatory("arn", {
-                                                            required : "ARN is required",
+                                                            required: "ARN is required",
                                                             pattern: arnRegex,
                                                             maxLength: { value: 6, message: "ARN must be 6 digits" }
                                                         })}
@@ -1391,7 +1558,7 @@ const PatnersSignup = () => {
                                                 <div className="flex-1 flex flex-col">
                                                     <input
                                                         {...registerRegulatory("euinARN", {
-                                                            required : "EUIN is required example E12345",
+                                                            required: "EUIN is required example E12345",
                                                             pattern: euinRegex,
                                                             maxLength: { value: 6, message: "EUIN must be 6 characters" }
                                                         })}
@@ -1406,7 +1573,7 @@ const PatnersSignup = () => {
                                                 <div className="flex-1 flex flex-col">
                                                     <input
                                                         {...registerRegulatory("aprn", {
-                                                            required : "APRN is required",
+                                                            required: "APRN is required",
                                                             pattern: aprnRegex,
                                                             maxLength: { value: 5, message: "APRN must be 5 digits" }
                                                         })}
@@ -1419,7 +1586,7 @@ const PatnersSignup = () => {
                                                 <div className="flex-1 flex flex-col">
                                                     <input
                                                         {...registerRegulatory("euinAprn", {
-                                                            required : "EUIN is required example E12345",
+                                                            required: "EUIN is required example E12345",
                                                             pattern: euinRegex,
                                                             maxLength: { value: 6, message: "EUIN must be 6 characters" }
                                                         })}
@@ -1485,25 +1652,6 @@ const PatnersSignup = () => {
                                         <p className="text-[10px] text-red-500 mt-1 font-medium">{errorsBank.ifscCode.message}</p>
                                     )}
                                 </div>
-
-                                {/* {(entityTypeValue === "pvt-ltd" || entityTypeValue === "public-ltd") && (
-                                    <div className="space-y-1.5">
-                                        <label className="text-[14px] font-medium text-black tracking-wide uppercase">CIN<span className="text-red-500">*</span></label>
-                                        <input
-                                            {...registerBank("cin", {
-                                                required: "CIN is required",
-                                                pattern: { value: /^([LUu][0-9]{5}[A-Za-z]{2}[0-9]{4}[A-Za-z]{3}[0-9]{6})$/, message: "Invalid CIN format (21 characters)" }
-                                            })}
-                                            maxLength={21}
-                                            onChange={(e) => setValueBank("cin", e.target.value.toUpperCase())}
-                                            className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-sm uppercase text-black"
-                                            placeholder="U72900MH2021PTC363102"
-                                        />
-                                        {errorsBank.cin && (
-                                            <p className="text-[10px] text-red-500 mt-1 font-medium">{errorsBank.cin.message}</p>
-                                        )}
-                                    </div>
-                                )} */}
 
                                 <div className="space-y-1.5">
                                     <label className="text-[14px] font-medium text-black tracking-wide uppercase">Bank Name</label>
