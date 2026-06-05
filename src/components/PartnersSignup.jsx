@@ -1154,15 +1154,15 @@ const PatnersSignup = () => {
                                         <img src="/icon.png" alt="TieVista icon" className="h-16 md:h-20 mb-2 md:mb-4" />
                                         <div className='flex flex-col items-center justify-center relative'>
                                             <img src="/TieVistaVerticalLogo.png" alt="TieVista Vertical Logo" className="h-5 md:h-6 w-auto mb-2 md:mb-4" />
-                                            <h3 className='absolute top-5 md:top-13 left-4 md:left-6 text-[6px] md:text-[8px] font-light'>Global Private Wealth</h3>
+                                            <h3 className='absolute top-5 md:top-7 left-4 md:left-3.5 text-[6px] md:text-[8px] font-light'>Global Private Wealth</h3>
                                         </div>
                                     </div>
                                     <div className="flex flex-col items-center md:items-start w-full md:w-auto">
                                         <div className="flex items-center gap-1">
-                                            <CallEndIcon sx={{fontSize: {xs: 14, md: 16}, color:'#e5bc4b'}} />
+                                            <CallEndIcon sx={{ fontSize: { xs: 14, md: 16 }, color: '#e5bc4b' }} />
                                             <span className="text-black text-sm md:text-base">+91 9885424473</span>
                                         </div>
-                                        <div className="flex items-center gap-1"><EmailIcon sx={{fontSize: {xs: 14, md: 16}, color:'#e5bc4b' }} /><span className="text-black text-sm md:text-base break-all sm:break-normal">narender.reddy@tievista.com</span></div>
+                                        <div className="flex items-center gap-1"><EmailIcon sx={{ fontSize: { xs: 14, md: 16 }, color: '#e5bc4b' }} /><span className="text-black text-sm md:text-base break-all sm:break-normal">narender.reddy@tievista.com</span></div>
                                         <div className="flex items-center gap-1"><Globe className="text-[#e5bc4b]" size={16} /> <span className='text-black text-sm md:text-base'>TieVista.com</span></div>
                                     </div>
                                 </div>
@@ -1571,16 +1571,16 @@ const PatnersSignup = () => {
                             <div className="text-center gap-2">
                                 <div className='flex w-full items-center'>
                                     <p className='flex border border-amber-300 w-full h-0'></p>
-                                    <p className="lg:text-[25px] text-[14px] text-black w-500" style={{fontFamily:'PT Serif,serif'}}>Trust . Transparency . Transformation</p>
+                                    <p className="lg:text-[25px] text-[14px] text-black w-500" style={{ fontFamily: 'PT Serif,serif' }}>Trust . Transparency . Transformation</p>
                                     <p className='flex border border-amber-300 w-full h-0'></p>
                                 </div>
 
                             </div>
 
                             <div className="text-center gap-2">
-                                <div className='flex flex-col justify-center items-center' style={{fontFamily : 'Poppins,serif'}}>
+                                <div className='flex flex-col justify-center items-center' style={{ fontFamily: 'Poppins,serif' }}>
                                     <p className='lg:text-[15px] text-[10px] text-black w-500'>CIN No. U66309MH2025PTC453786</p>
-                                    <p className='lg:text-[15px] text-[10px] text-black w-80'><LocationOnOutlinedIcon className="text-amber-300" fontSize="small" />IndusArtha Financial Services Pvt Ltd. 4th Floor, AWFIS, VIOS Tower Wadala, Mumbai-400037 </p>
+                                    <p className='lg:text-[15px] text-[10px] text-black w-80 md:w-500'><LocationOnOutlinedIcon className="text-amber-300" fontSize="small" />IndusArtha Financial Services Pvt Ltd. 4th Floor, AWFIS, VIOS Tower Wadala, Mumbai-400037 </p>
                                 </div>
                             </div>
                         </div>
@@ -1699,15 +1699,14 @@ const PatnersSignup = () => {
                                         <img src="/icon.png" alt="TieVista icon" className="h-16 md:h-20 mb-2 md:mb-4" />
                                         <div className='flex flex-col items-center justify-center relative'>
                                             <img src="/TieVistaVerticalLogo.png" alt="TieVista Vertical Logo" className="h-5 md:h-6 w-auto mb-2 md:mb-4" />
-                                            <h3 className='absolute top-5 md:top-13 left-4 md:left-6 text-[6px] md:text-[8px] font-light'>Global Private Wealth</h3>
-                                        </div>
+                                            <h3 className='absolute top-5 md:top-7 left-4 md:left-3.5 text-[6px] md:text-[8px] font-light'>Global Private Wealth</h3>                                        </div>
                                     </div>
                                     <div className="flex flex-col items-center md:items-start w-full md:w-auto">
                                         <div className="flex items-center gap-1">
-                                            <CallEndIcon sx={{fontSize: {xs: 14, md: 16}, color:'#e5bc4b'}} />
+                                            <CallEndIcon sx={{ fontSize: { xs: 14, md: 16 }, color: '#e5bc4b' }} />
                                             <span className="text-black text-sm md:text-base">+91 9885424473</span>
                                         </div>
-                                        <div className="flex items-center gap-1"><EmailIcon sx={{fontSize: {xs: 14, md: 16}, color:'#e5bc4b' }} /><span className="text-black text-sm md:text-base break-all sm:break-normal">narender.reddy@tievista.com</span></div>
+                                        <div className="flex items-center gap-1"><EmailIcon sx={{ fontSize: { xs: 14, md: 16 }, color: '#e5bc4b' }} /><span className="text-black text-sm md:text-base break-all sm:break-normal">narender.reddy@tievista.com</span></div>
                                         <div className="flex items-center gap-1"><Globe className="text-[#e5bc4b]" size={16} /> <span className='text-black text-sm md:text-base'>TieVista.com</span></div>
                                     </div>
                                 </div>
@@ -2025,16 +2024,16 @@ const PatnersSignup = () => {
                             <div className="text-center gap-2">
                                 <div className='flex w-full items-center'>
                                     <p className='flex border border-amber-300 w-full h-0'></p>
-                                    <p className="lg:text-[25px] text-[14px] text-black w-500" style={{fontFamily:'PT Serif,serif'}}>Trust . Transparency . Transformation</p>
+                                    <p className="lg:text-[25px] text-[14px] text-black w-500" style={{ fontFamily: 'PT Serif,serif' }}>Trust . Transparency . Transformation</p>
                                     <p className='flex border border-amber-300 w-full h-0'></p>
                                 </div>
 
                             </div>
 
                             <div className="text-center gap-2">
-                                <div className='flex flex-col justify-center items-center' style={{fontFamily : 'Poppins,serif'}}>
+                                <div className='flex flex-col justify-center items-center' style={{ fontFamily: 'Poppins,serif' }}>
                                     <p className='lg:text-[15px] text-[10px] text-black w-500'>CIN No. U66309MH2025PTC453786</p>
-                                    <p className='lg:text-[15px] text-[10px] text-black w-80'><LocationOnOutlinedIcon className="text-amber-300" fontSize="small" />IndusArtha Financial Services Pvt Ltd. 4th Floor, AWFIS, VIOS Tower Wadala, Mumbai-400037 </p>
+                                    <p className='lg:text-[15px] text-[10px] text-black w-80 md:w-500'><LocationOnOutlinedIcon className="text-amber-300" fontSize="small" />IndusArtha Financial Services Pvt Ltd. 4th Floor, AWFIS, VIOS Tower Wadala, Mumbai-400037 </p>
                                 </div>
                             </div>
                         </div>
