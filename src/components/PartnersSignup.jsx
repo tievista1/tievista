@@ -2161,7 +2161,7 @@ const PatnersSignup = () => {
                                     </label>
                                     <input
                                         {...registerReg("address", { required: "Address is required" })}
-                                        className={`w-full px-4 py-3 border rounded focus:border-[#d4af37] focus:ring-0 outline-none transition-all placeholder:text-gray-300 text-sm text-black ${errorsReg.address ? "border-red-500" : "border-gray-300"
+                                        className={`w-full px-4 py-3 border rounded focus:border-[#d4af37] focus:ring-0 outline-none transition-all placeholder:text-gray-300 text-[16px] text-black ${errorsReg.address ? "border-red-500" : "border-gray-300"
                                             }`}
                                     />
                                     {errorsReg.address && (
@@ -2187,7 +2187,7 @@ const PatnersSignup = () => {
                                                 pattern: { value: phoneRegex, message: "Invalid 10-digit number" },
                                             })}
                                             onBlur={handlePhoneBlur}
-                                            className={`flex-1 px-2 py-3 border rounded focus:border-[#d4af37] outline-none transition-all placeholder:text-gray-300 text-sm text-black ${errorsReg.phone ? "border-red-500" : "border-gray-300"
+                                            className={`flex-1 px-2 py-3 border rounded focus:border-[#d4af37] outline-none transition-all placeholder:text-gray-300 text-[16px] text-black ${errorsReg.phone ? "border-red-500" : "border-gray-300"
                                                 }`}
                                             maxLength={10}
                                         />
@@ -2206,7 +2206,7 @@ const PatnersSignup = () => {
                                             pattern: { value: emailRegex, message: "Invalid email format" },
                                         })}
                                         onBlur={handleEmailBlur}
-                                        className={`w-full px-4 py-3 border rounded focus:border-[#d4af37] outline-none transition-all placeholder:text-gray-300 text-sm text-black ${errorsReg.email ? "border-red-500" : "border-gray-300"
+                                        className={`w-full px-4 py-3 border rounded focus:border-[#d4af37] outline-none transition-all placeholder:text-gray-300 text-[16px] text-black ${errorsReg.email ? "border-red-500" : "border-gray-300"
                                             }`}
                                     />
                                     {errorsReg.email && <p className="text-[10px] text-red-500 mt-1 font-medium">{errorsReg.email.message}</p>}
@@ -2249,7 +2249,7 @@ const PatnersSignup = () => {
                                                     maxLength: { value: 10, message: "PAN must be 10 characters" }
                                                 })}
                                                 onChange={(e) => setValuePan("pan", e.target.value.toUpperCase(), { shouldValidate: true })}
-                                                className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-sm uppercase text-black"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-[16px] uppercase text-black"
                                                 placeholder="ABCDE1234F"
                                                 maxLength={10}
                                             />
@@ -2266,7 +2266,7 @@ const PatnersSignup = () => {
                                                     else if (value.length > 4) value = value.slice(0, 2) + "/" + value.slice(2, 4) + "/" + value.slice(4, 8);
                                                     setValuePan("dob", value, { shouldValidate: true });
                                                 }}
-                                                className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-sm text-black"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-[16px] text-black"
                                                 placeholder="DD/MM/YYYY"
                                             />
                                         </div>
@@ -2325,7 +2325,7 @@ const PatnersSignup = () => {
                                                         })}
                                                         placeholder="ARN (6 digits)"
                                                         maxLength={6}
-                                                        className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-sm text-black"
+                                                        className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-[16px] text-black"
                                                     />
                                                     {errorsRegulatory.arn && <p className="text-red-500 text-xs mt-2">{errorsRegulatory.arn.message}</p>}
                                                 </div>
@@ -2338,7 +2338,7 @@ const PatnersSignup = () => {
                                                         })}
                                                         placeholder="EUIN (ARN)"
                                                         maxLength={6}
-                                                        className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-sm text-black"
+                                                        className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-[16px] text-black"
                                                     />
                                                     {errorsRegulatory.euinARN && <p className="text-red-500 text-xs mt-2">{errorsRegulatory.euinARN.message}</p>}
                                                 </div>
@@ -2353,7 +2353,7 @@ const PatnersSignup = () => {
                                                         })}
                                                         placeholder="APRN (5 digits)"
                                                         maxLength={5}
-                                                        className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-sm text-black"
+                                                        className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-[16px] text-black"
                                                     />
                                                     {errorsRegulatory.aprn && <p className="text-red-500 text-xs mt-2">{errorsRegulatory.aprn.message}</p>}
                                                 </div>
@@ -2366,7 +2366,7 @@ const PatnersSignup = () => {
                                                         })}
                                                         placeholder="EUIN (APRN)"
                                                         maxLength={6}
-                                                        className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-sm text-black"
+                                                        className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-[16px] text-black"
                                                     />
                                                     {errorsRegulatory.euinAprn && <p className="text-red-500 text-xs mt-2">{errorsRegulatory.euinAprn.message}</p>}
                                                 </div>
@@ -2404,7 +2404,7 @@ const PatnersSignup = () => {
                                     <input
                                         {...registerBank("bankAccountNo", { required: "Account number is required" })}
                                         placeholder="000000000000"
-                                        className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-sm text-black"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-[16px] text-black"
                                     />
                                     {errorsBank.bankAccountNo && (
                                         <p className="text-[10px] text-red-500 mt-1 font-medium">{errorsBank.bankAccountNo.message}</p>
@@ -2419,7 +2419,7 @@ const PatnersSignup = () => {
                                         })}
                                         maxLength={11}
                                         onChange={(e) => setValueBank("ifscCode", e.target.value.toUpperCase())}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-sm uppercase text-black"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-[16px] uppercase text-black"
                                         placeholder="ABCD0123456"
                                     />
                                     {errorsBank.ifscCode && (
@@ -2435,7 +2435,7 @@ const PatnersSignup = () => {
                                         })}
                                         maxLength={150}
                                         onChange={(e) => setValueBank("bankName", e.target.value.toUpperCase())}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-sm uppercase text-black"
+                                        className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-[16px] uppercase text-black"
                                         placeholder="Bank Name"
                                     />
                                     {errorsBank.bankName && (
