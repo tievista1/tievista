@@ -9,7 +9,9 @@ import PTSerifRegular from "../fonts/PTSerif-Regular.ttf";
 import PTSerifBold from "../fonts/PTSerif-Bold.ttf";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import GradientPhone from "./GradientPhone"
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import EmailIcon from '@mui/icons-material/Email';
+import CallEndIcon from '@mui/icons-material/CallEnd';
 
 // Register custom fonts for PDF
 Font.register({
@@ -158,7 +160,7 @@ const AgreementPDF = ({ data }) => {
                             <Text style={{ position: 'absolute', top: 35, left: 16, fontSize: 6.5, fontWeight: 'light', fontFamily: 'Poppins' }}>Global Private Wealth</Text>
                         </View>
                     </View>
-                    
+
                     <View style={{ flexDirection: 'column', alignItems: 'flex-start', gap: 4 }}>
                         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
                             <Svg viewBox="0 0 24 24" width={10} height={10} fill="#ffffff" stroke="#e5bc4b" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" style={{ transform: "rotate(135deg)" }}>
@@ -197,11 +199,11 @@ const AgreementPDF = ({ data }) => {
                     </Text>
                     <Text style={pdfStyles.heading}>BETWEEN</Text>
                     <Text style={pdfStyles.paragraph}>
-                        <Text style={pdfStyles.bold}>IndusArtha Financial Services Private Limited operating under the brand name of TieVista</Text>, a company incorporated under the provisions of the Companies Act, 2013 having its registered office at 4th Floor, AWFIS, VIOS Tower, Wadala, Mumbai 400037 and holding a valid ARN registration issued by the Association of Mutual Funds in India and engaged inter alia in the business of distribution of financial products including mutual fund schemes and portfolio management services (hereinafter referred to as the <Text style={pdfStyles.bold}>"Principal Distributor"</Text>, which expression shall unless repugnant to the context include its successors and permitted assigns);
+                        <Text style={pdfStyles.bold}>INDUSARTHA FINANCIAL SERVICES PRIVATE LIMITED operating under the brand name of TieVista</Text>, a company incorporated under the provisions of the Companies Act, 2013 having its registered office at 4th Floor, AWFIS, VIOS Tower, Wadala, Mumbai 400037 and holding a valid ARN registration issued by the Association of Mutual Funds in India and engaged inter alia in the business of distribution of financial products including mutual fund schemes and portfolio management services (hereinafter referred to as the <Text style={pdfStyles.bold}>"Principal Distributor"</Text>, which expression shall unless repugnant to the context include its successors and permitted assigns);
                     </Text>
                     <Text style={pdfStyles.heading}>AND</Text>
                     <Text style={pdfStyles.paragraph}>
-                        <Text style={pdfStyles.bold}>{entityName}</Text>, <Text style={pdfStyles.italic}>having its principal place of business at</Text> {address} <Text style={pdfStyles.italic}>and engaged in the business of financial product marketing and client relationship management (hereinafter referred to as the "Sub-Distributor", which expression shall unless repugnant to the context include its successors and permitted assigns). The sub-distributor holds ARN –</Text> <Text style={pdfStyles.bold}>{arn}</Text> <Text style={pdfStyles.italic}>and APRN -</Text> <Text style={pdfStyles.bold}>{aprn}</Text>.
+                        <Text style={pdfStyles.bold}>{entityName}</Text>, <Text style={pdfStyles.paragraph}>having its principal place of business at</Text> {address} <Text style={pdfStyles.paragraph}>and engaged in the business of financial product marketing and client relationship management (hereinafter referred to as the "Sub-Distributor", which expression shall unless repugnant to the context include its successors and permitted assigns). The sub-distributor holds ARN –</Text> <Text style={pdfStyles.bold}>{arn}</Text> <Text style={pdfStyles.paragraph}>and APRN -</Text> <Text style={pdfStyles.bold}>{aprn}</Text>.
                     </Text>
                     <Text >
                         The Principal Distributor and the Sub-Distributor are hereinafter collectively referred to as the <Text style={pdfStyles.bold}>"Parties"</Text> and individually as a <Text style={pdfStyles.bold}>"Party"</Text>.
@@ -486,8 +488,8 @@ const AgreementPDF = ({ data }) => {
                     <View style={pdfStyles.signatureBlock}>
                         <Text style={pdfStyles.signatureLabel}>Primary Distributor</Text>
                         <View>
-                            <Text style={pdfStyles.signatureValue}>IndusArtha Financial Services Private Limited</Text>
-                            <Text style={pdfStyles.signatureSubText}>Authorised Signatory: Mr. Muddasani Narender Reddy</Text>
+                            <Text style={pdfStyles.signatureValue}>INDUSARTHA FINANCIAL SERVICES PRIVATE LIMITED</Text>
+                            <Text style={pdfStyles.signatureSubText}>Authorised Signatory: MR. MUDDASANI NARENDER REDDY</Text>
                         </View>
                     </View>
 
@@ -531,6 +533,325 @@ const AgreementPDF = ({ data }) => {
                         <Text style={pdfStyles.paragraph}>18. Provide relevant documents of investors to tax authorities and enforcement agencies under the Prevention of Money Laundering Act, including KYC documents, Power of Attorney (PoA), and any other information as may be required from time to time.</Text>
                         <Text style={pdfStyles.paragraph}>19. Abstain from making negative statements about other AIFs that the distributor is not representing. Ensure that comparison of AIFs is done between similar and comparable AIFs, based on adequate information.</Text>
                         <Text style={pdfStyles.paragraph}>20. Not indulge in any manipulative, fraudulent or deceptive practices or spread rumours with a view to make personal gain.</Text>
+                    </View>
+                </View>
+
+                <Text style={pdfStyles.footer}>
+                    This is a digitally signed document. Generated on {day}/{month}/{year}
+                </Text>
+            </Page>
+        </Document>
+    );
+};
+
+const AgreementPDF2 = ({ data }) => {
+    const { day, month, year, entityName, address, arn, aprn } = data;
+
+    return (
+        <Document>
+            <Page size="A4" style={pdfStyles.page}>
+                <View style={pdfStyles.header}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <Image src={window.location.origin + "/icon.png"} style={{ height: 55, width: 55, objectFit: 'contain' }} />
+                        <View style={{ flexDirection: 'column', position: 'relative', height: 55, justifyContent: 'center' }}>
+                            <Image src={window.location.origin + "/TieVistaVerticalLogo.png"} style={{ height: 16, width: 85, objectFit: 'contain' }} />
+                            <Text style={{ position: 'absolute', top: 35, left: 16, fontSize: 6.5, fontWeight: 'light', fontFamily: 'Poppins' }}>Global Private Wealth</Text>
+                        </View>
+                    </View>
+
+                    <View style={{ flexDirection: 'column', alignItems: 'flex-start', gap: 4 }}>
+                        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
+                            <Svg viewBox="0 0 24 24" width={10} height={10} fill="#ffffff" stroke="#e5bc4b" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" style={{ transform: "rotate(135deg)" }}>
+                                <Path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </Svg>
+                            <Text style={{ fontSize: 10, color: 'black' }}>+91 9885424473</Text>
+                        </View>
+                        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
+                            <Svg viewBox="0 0 24 24" width={10} height={10} fill="#ffffff" stroke="#e5bc4b" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                                <Rect width="20" height="16" x="2" y="4" rx="2" />
+                                <Path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                            </Svg>
+                            <Text style={{ fontSize: 10, color: 'black' }}>narender.reddy@tievista.com</Text>
+                        </View>
+                        <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4 }}>
+                            <Svg viewBox="0 0 24 24" width={10} height={10} fill="#ffffff" stroke="#e5bc4b" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
+                                <Circle cx="12" cy="12" r="10" />
+                                <Path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                <Path d="M2 12h20" />
+                            </Svg>
+                            <Text style={{ fontSize: 10, color: 'black' }}>TieVista.com</Text>
+                        </View>
+                    </View>
+                </View>
+
+                <View style={pdfStyles.titleContainer}>
+                    <Text style={pdfStyles.title}>Sub-Distributorship Agreement</Text>
+                </View>
+
+                <View style={pdfStyles.goldLine} />
+
+                {/* Section 1: Intro */}
+                <View style={pdfStyles.section}>
+                    <Text style={pdfStyles.paragraph}>
+                        This Mutual Fund Sub-Distribution and PMS Sub Distribution (<Text style={pdfStyles.bold}>"Agreement"</Text>) is executed on this <Text style={pdfStyles.bold}>{day}</Text> day of <Text style={pdfStyles.bold}>{month} {year}</Text> (<Text style={pdfStyles.bold}>"Effective Date"</Text>).
+                    </Text>
+                    <Text style={pdfStyles.heading}>BETWEEN</Text>
+                    <Text style={pdfStyles.paragraph}>
+                        <Text style={pdfStyles.bold}>INDUSARTHA FINANCIAL SERVICES PRIVATE LIMITED operating under the brand name of TieVista</Text>, a company incorporated under the provisions of the Companies Act, 2013 having its registered office at 4th Floor, AWFIS, VIOS Tower, Wadala, Mumbai 400037 and holding a valid ARN registration issued by the Association of Mutual Funds in India and engaged inter alia in the business of distribution of financial products including mutual fund schemes and portfolio management services (hereinafter referred to as the <Text style={pdfStyles.bold}>"Principal Distributor"</Text>, which expression shall unless repugnant to the context include its successors and permitted assigns);
+                    </Text>
+                    <Text style={pdfStyles.heading}>AND</Text>
+                    <Text style={pdfStyles.paragraph}>
+                        <Text style={pdfStyles.bold}>{entityName}</Text>, <Text style={pdfStyles.paragraph}>having its principal place of business at</Text> {address} <Text style={pdfStyles.paragraph}>and engaged in the business of financial product marketing and client relationship management (hereinafter referred to as the "Sub-Distributor", which expression shall unless repugnant to the context include its successors and permitted assigns). The sub-distributor holds ARN –</Text> <Text style={pdfStyles.bold}>{arn}</Text> <Text style={pdfStyles.italic}>and APRN -</Text> <Text style={pdfStyles.bold}>{aprn}</Text>.
+                    </Text>
+                    <Text >
+                        The Principal Distributor and the Sub-Distributor are hereinafter collectively referred to as the <Text style={pdfStyles.bold}>"Parties"</Text> and individually as a <Text style={pdfStyles.bold}>"Party"</Text>.
+                    </Text>
+                </View>
+
+                {/* WHEREAS Section */}
+                <View style={pdfStyles.section}>
+                    <Text style={pdfStyles.heading}>WHEREAS:</Text>
+                    <View style={{ paddingLeft: 10 }}>
+                        <Text style={pdfStyles.paragraph}>A. The Principal Distributor is engaged in the business of distribution of mutual fund schemes and allied financial products and operates in accordance with the regulatory framework prescribed under the SEBI (Mutual Funds) Regulations, 1996 and guidelines issued by the Association of Mutual Funds in India.</Text>
+                        <Text style={pdfStyles.paragraph}>B. The Principal Distributor also facilitates marketing and distribution of portfolio management services offered by SEBI registered portfolio managers in accordance with the provisions of the SEBI (Portfolio Managers) Regulations, 2020 and related circulars issued by the Securities and Exchange Board of India.</Text>
+                        <Text style={pdfStyles.paragraph}>C. The Sub-Distributor has represented that it possesses adequate experience, infrastructure, market reach, and client servicing capabilities required for marketing and facilitating investments in financial products.</Text>
+                        <Text style={pdfStyles.paragraph}>D. The Sub-Distributor has expressed its desire to act as a sub-distribution partner for mutual fund products and as a Sub Contractor/ Marketing partner for portfolio management services subject to regulatory restrictions and compliance requirements.</Text>
+                        <Text style={pdfStyles.paragraph}>E. The Principal Distributor has agreed to appoint the Sub-Distributor on a non-exclusive basis, subject to strict adherence to applicable laws, regulatory guidelines, and the terms and conditions set forth in this Agreement.</Text>
+                        <Text style={pdfStyles.paragraph}>F. The Sub-Distributor represents that it holds a valid AMFI Registration Number (ARN), Employee Unique Identification Number (EUIN) and APMI Registration Number (APRN), wherever applicable, and shall maintain the same in good standing during the Term.</Text>
+                    </View>
+                    <Text style={[pdfStyles.bold, { marginTop: 10 }]}>NOW THEREFORE, in consideration of the mutual covenants contained herein, the Parties hereby agree as follows:</Text>
+                </View>
+
+                {/* Section 2: Definitions */}
+                <View style={pdfStyles.section}>
+                    <Text style={pdfStyles.heading}>2. DEFINITIONS</Text>
+                    <Text style={pdfStyles.paragraph}>
+                        In this Agreement, unless the context otherwise requires, the following terms shall have the meanings assigned to them hereunder. Words importing the singular shall include the plural and vice versa, and words importing any gender shall include all genders.
+                    </Text>
+                    <View style={{ gap: 4 }}>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.1 "Applicable Laws"</Text> shall mean and include all applicable statutes, enactments, laws, ordinances, rules, regulations, circulars, notifications, guidelines, directions and policies issued by any governmental authority, regulatory authority, statutory body, self-regulatory organization or court of competent jurisdiction including, without limitation, regulations issued by the Securities and Exchange Board of India and guidelines issued by the Association of Mutual Funds in India, as amended or modified from time to time.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.2 "Business Day"</Text> shall mean any day on which banks and financial institutions are open for general business in India, excluding Saturdays, Sundays and public holidays.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.3 "Client"</Text> shall mean any individual, body corporate, partnership firm, trust, association of persons, institution or any other legal entity who is introduced, referred, or sourced by the Sub-Distributor to the Principal Distributor for the purpose of investment in products/ services covered under clause 3 of the agreement.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.4 "Commission"</Text> shall mean any remuneration, brokerage, trail commission, upfront commission, referral fee, marketing fee or incentive payable to the Sub-Distributor by the Principal Distributor in consideration for Distribution Services or Referral Services performed under this Agreement.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.5 "Confidential Information"</Text> shall mean and include all non-public, proprietary or confidential information disclosed by one Party to the other, whether in written, electronic, oral or any other form, including but not limited to client information and investment details, marketing strategies and business plans, commission structures and commercial arrangements, internal policies and operational procedures, financial information and proprietary databases, and any other information which by its nature ought reasonably to be treated as confidential. Confidential Information shall not include information which is or becomes publicly available without breach of this Agreement, or which was lawfully known to the receiving Party prior to disclosure, or which is required to be disclosed pursuant to Applicable Laws or regulatory directives.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.6 "Distribution Services"</Text> shall mean the activities undertaken for marketing, promotion, facilitation and distribution of financial offerings on behalf of the Principal Distributor, including identification of prospective investors, dissemination of approved marketing material, assistance in client onboarding and facilitation of transaction processing.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.7 "Effective Date"</Text> shall mean the date on which this Agreement is executed by both Parties.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.8 "Financial Offering"</Text> shall mean services or products as may be approved by the principal distributor and which are not regulated by financial sector regulator.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.9 "Manufacturer"</Text> shall mean issuer of security or the entity/ person engaged in servicing the products or services which are regulated by any financial sector regulator.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.10 "Marketing Material"</Text> shall mean brochures, presentations, advertisements, emails, digital communication or any promotional content relating to products or services covered under clause 3 of this agreement that has been approved by the Principal Distributor or the respective product provider.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.11 "Principal Distributor"</Text> shall mean the entity appointing the Sub-Distributor under this Agreement for distribution of products/ services covered under clause 3 of the agreement and shall include its successors and permitted assigns.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.12 "Referral Services"</Text> shall mean activities limited to the introduction of prospective clients to the Principal Distributor for onboarding such clients by the manufacturer solely at their discretion or manufacturer, without providing investment advice or portfolio recommendations.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.13 "Regulatory Authority"</Text> shall mean any governmental, statutory or regulatory authority having jurisdiction over the activities contemplated under this Agreement, including the Securities and Exchange Board of India.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.14 "SEBI"</Text> shall mean the Securities and Exchange Board of India established under the Securities and Exchange Board of India Act, 1992.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.15 "Sub-Distributor"</Text> shall mean the intermediary appointed under this Agreement for the limited purpose of marketing and facilitating investment and referring prospective clients products/ services covered under clause 3 of the agreement, subject to the terms and conditions specified herein.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.16 "Term"</Text> shall mean the duration of this Agreement commencing from the Effective Date and continuing until terminated in accordance with the provisions of this Agreement.</Text>
+                    </View>
+                </View>
+
+                {/* Section 3: Appointment */}
+                <View style={pdfStyles.section}>
+                    <Text style={pdfStyles.heading}>3. APPOINTMENT</Text>
+                    <Text style={pdfStyles.subHeading}>3.1 Appointment for Sub-Distributorship Activities for other financial offerings</Text>
+                    <View style={{ gap: 4 }}>
+                        <Text style={pdfStyles.paragraph}>3.1.1 Subject to the terms and conditions of this Agreement, the Principal Distributor may permit the Sub-Distributor to undertake client sourcing, solicitation support and distribution support activities on a sub-contracted basis in relation to financial offerings as approved by the principal distributor.</Text>
+                        <Text style={pdfStyles.paragraph}>3.1.2 For the purposes of this Agreement, such activities shall be undertaken strictly in the nature of sub-contracted client sourcing and facilitation services, including identification and introduction of prospective clients and coordination of onboarding processes, and shall not in any manner constitute investment advisory services.</Text>
+                        <Text style={pdfStyles.paragraph}>3.1.3 The Sub-Distributor shall undertake such distribution related activities only in accordance with the regulatory framework prescribed by SEBI or any other authority as may be prescribed.</Text>
+                        <Text style={pdfStyles.paragraph}>3.1.4 Without prejudice to the generality of the foregoing, the following conditions shall apply: (a) The Sub-Distributor may introduce prospective clients interested in such other financial offerings to the Principal Distributor or to investment manager specifically approved by the Principal Distributor. (b) The Sub-Distributor shall undertake any marketing, solicitation or client introduction activity relating to such financial offerings only after obtaining prior written approval from the Principal Distributor. The distribution of privately placed products shall be subject to guidelines issued by principal distributor for distribution of such privately placed products. (c) Such approval may specify the financial offering, scope of marketing activities and commission arrangements applicable to the Sub-Distributor. (d) The Sub-Distributor acknowledges that its role in relation to AIF Offerings shall be limited to marketing support, client introduction, facilitation of meetings and administrative coordination between prospective clients and the Principal Distributor or manufacturer. (e) The Sub-Distributor shall not represent itself as: (i) an investment manager or portfolio manager; (ii) an investment adviser registered with SEBI or any other regulatory authority; (iii) an authorised investment manager or portfolio management entity; or (iv) an entity authorised to provide investment advice or portfolio allocation recommendations. (f) The Sub-Distributor shall not: 1. provide investment advice relating to such financial offerings; 2. recommend specific portfolio strategies or investment allocations; 3. execute investment decisions on behalf of clients; 4. collect or hold client funds or securities. (g) The final decision regarding acceptance of a client, execution of the contribution agreement and management of the investment portfolio shall rest solely with the relevant manufacturer of such financial offering. (h) All documentation relating to financial offering, including investment agreement, other client onboarding documentation and any other documentation as may be required, shall be executed directly between the client and the manufacturer in accordance with the provisions of relevant regulatory framework. (i) The Sub-Distributor shall ensure that all communications made to prospective clients in relation to such financial offerings are accurate, fair and not misleading and are consistent with disclosures prescribed by applicable regulatory authorities.</Text>
+                        <Text style={pdfStyles.paragraph}>The Parties hereby acknowledge and agree that the Sub-Distributor shall act solely in the capacity of a sub-contracted client sourcing and distribution support intermediary for the limited purpose of identifying and introducing prospective clients and facilitating preliminary coordination in relation to such financial offerings. The Sub-Distributor shall not hold itself out as an authorised representative, agent or affiliate of any investment manager.</Text>
+                    </View>
+                </View>
+
+                {/* Section 4: Prior Approval */}
+                <View style={pdfStyles.section}>
+                    <Text style={pdfStyles.heading}>4. PRIOR APPROVAL OF PRINCIPAL DISTRIBUTOR</Text>
+                    <View style={{ gap: 4 }}>
+                        <Text style={pdfStyles.paragraph}>4.1 Notwithstanding anything contained elsewhere in this Agreement, the Sub-Distributor shall not undertake any client sourcing, solicitation support, distribution support or other sub-contracted facilitation activity in relation to product/ services covered under clause 3 unless prior written approval has been obtained from the Principal Distributor and Manufacturer (wherever required).</Text>
+                        <Text style={pdfStyles.paragraph}>4.2 Such approval shall be granted at the sole discretion of the Principal Distributor and may specify the manufacturer whose products/ services may be introduced to prospective clients, the nature and scope of the permitted client sourcing and distribution support activities, and any operational procedures, compliance requirements or investor disclosure obligations that must be adhered to by the Sub-Distributor.</Text>
+                        <Text style={pdfStyles.paragraph}>4.3 The approval may further specify the commission, referral fee or other remuneration structure applicable to such activities, subject to applicable regulatory requirements and internal policies of the Principal Distributor, and the Sub-Distributor shall strictly comply with the terms and conditions specified in such approval and shall not undertake any activity beyond the scope of the authority granted therein.</Text>
+                        <Text style={pdfStyles.paragraph}>4.4 Any activity undertaken by the Sub-Distributor in relation to Products without obtaining the prior written approval of the Principal Distributor, or in contravention of the terms and conditions specified in such approval, shall constitute a material breach of this Agreement, entitling the Principal Distributor to suspend or terminate this Agreement and take such further action as may be permissible under Applicable Laws.</Text>
+                    </View>
+                </View>
+
+                {/* Section 5: Scope of Services */}
+                <View style={pdfStyles.section}>
+                    <Text style={pdfStyles.heading}>5. SCOPE OF SERVICES</Text>
+                    <View style={{ gap: 4 }}>
+                        <Text style={pdfStyles.paragraph}>5.1 Subject to the terms and conditions of this Agreement, the Sub-Distributor shall undertake client sourcing and distribution support activities in relation to services or products mentioned under Clause 3 of this agreement as may be permitted by the Principal Distributor from time to time, including identifying and approaching prospective investors and facilitating their introduction to the Principal Distributor. Further, Client data obtained in connection with distribution of products/ services under clause 3 of the agreement shall not be used for marketing other financial products without the prior consent of the client.</Text>
+                        <Text style={pdfStyles.paragraph}>5.2 The Sub-Distributor may disseminate to prospective investors only such product literature, scheme-related documents, informational material or communications that have been issued or approved by the Principal Distributor or the relevant product provider, and shall ensure that all communications made to prospective investors are fair, accurate and not misleading.</Text>
+                        <Text style={pdfStyles.paragraph}>5.3 The Sub-Distributor may assist prospective investors and Clients in completing onboarding documentation, including Know Your Client (KYC) documentation, application forms and other administrative formalities, and may coordinate administrative communication between the Client and the Principal Distributor for the purpose of facilitating investments in the relevant products.</Text>
+                        <Text style={pdfStyles.paragraph}>5.4 Notwithstanding anything contained herein, the Sub-Distributor shall not provide investment advice, recommend specific investment strategies or portfolio allocations, make any representation or guarantee regarding investment performance or returns, represent itself as a portfolio manager or investment adviser, or undertake any activity that may be construed as discretionary portfolio management or investment advisory services.</Text>
+                        <Text style={pdfStyles.paragraph}>5.5 The Sub-Distributor is authorized, on a non-exclusive basis, to identify and approach prospective investors for the purpose of distribution of the Products through private placement, strictly in accordance with applicable laws and this Agreement. The Sub-Distributor shall act solely as an intermediary and shall not bind the Company in any manner.</Text>
+                        <Text style={pdfStyles.paragraph}>5.6 The Sub-Distributor shall ensure that all offers and solicitations are made strictly on a private placement basis and shall not undertake any form of general solicitation, advertisement, public communication, or mass outreach, including through digital or social media platforms</Text>
+                    </View>
+                </View>
+
+                {/* Section 6: Compliance */}
+                <View style={pdfStyles.section}>
+                    <Text style={pdfStyles.heading}>6. COMPLIANCE WITH DISTRIBUTOR CODE OF CONDUCT</Text>
+                    <View style={{ gap: 4 }}>
+                        <Text style={pdfStyles.paragraph}>6.1 The Sub-Distributor shall at all times comply with the Code of Conduct applicable to distributors and sub-distributors prescribed by the regulator (if any) and with all applicable regulatory guidelines, circulars and directions issued by competent authorities. Additionally, the code of conduct as issued by the principal distributor shall be complied with for the products or services in respect of which code of conduct is not issued by SEBI or respective financial sector regulatory,</Text>
+                        <Text style={pdfStyles.paragraph}>6.2 The Sub-Distributor shall maintain high standards of integrity, fairness and professionalism in all dealings with prospective investors and Clients. The sub-distributor shall not jeopardise the interest of the interest of clients and manufacturers and in case of any scenario of conflict is identified, the sub-distributor shall inform about the conflict to the principal distributor.</Text>
+                        <Text style={pdfStyles.paragraph}>6.3 The Sub-Distributor shall ensure full and transparent disclosure to Clients regarding the nature of its role as an intermediary and any commissions or remuneration that may be received in connection with investments facilitated through it.</Text>
+                        <Text style={pdfStyles.paragraph}>6.4 The Sub-Distributor shall not engage in mis-selling, misleading representations or dissemination of inaccurate information relating to products/ services covered under clause 3 of this agreement.</Text>
+                        <Text style={pdfStyles.paragraph}>6.5 The Sub-Distributor shall ensure that all information communicated to Clients is accurate, fair and consistent with the official product documentation issued by the relevant product provider or approved by the Principal Distributor.</Text>
+                    </View>
+                </View>
+
+                {/* Section 7: Client Disclosures */}
+                <View style={pdfStyles.section}>
+                    <Text style={pdfStyles.heading}>7. CLIENT DISCLOSURES</Text>
+                    <View style={{ gap: 4 }}>
+                        <Text style={pdfStyles.paragraph}>7.1 The Sub-Distributor shall ensure that each Client introduced by it receives clear and adequate disclosures regarding the nature of the services being rendered and the roles and responsibilities of the parties involved.</Text>
+                        <Text style={pdfStyles.paragraph}>7.2 The Sub-Distributor shall inform each Client that it acts solely as an intermediary engaged in client sourcing and distribution support activities and does not provide portfolio management or discretionary investment management services.</Text>
+                        <Text style={pdfStyles.paragraph}>7.3 The Sub-Distributor shall ensure and inform the Clients that they understand that the Principal Distributor, Asset Management Company or the relevant portfolio manager, as the case may be, shall be responsible for the management and administration of investments.</Text>
+                        <Text style={pdfStyles.paragraph}>7.4 The Sub-Distributor shall clearly disclose that investments in financial products including products/ services covered under clause 3 of the agreement are subject to market risks and that past performance does not guarantee future results.</Text>
+                        <Text style={pdfStyles.paragraph}>7.5 The Sub-Distributor shall also disclose, where applicable, that commissions, referral fees or other forms of remuneration may be paid to intermediaries in connection with investments facilitated through such intermediaries.</Text>
+                    </View>
+                </View>
+
+                {/* Section 8: Commission */}
+                <View style={pdfStyles.section}>
+                    <Text style={pdfStyles.heading}>8. COMMISSION AND REMUNERATION</Text>
+                    <Text style={pdfStyles.subHeading}>8.1 Remuneration for Client Introductions in respect of other products/ services</Text>
+                    <View style={{ gap: 4 }}>
+                        <Text style={pdfStyles.paragraph}>8.1.1 In respect of products/ services covered under clause 3 of this agreement, the Sub-Distributor shall be entitled to receive referral fees or distribution support fees for introducing Clients to the Principal Distributor or to portfolio managers approved by the Principal Distributor.</Text>
+                        <Text style={pdfStyles.paragraph}>8.1.2 The structure and quantum of such remuneration shall be mutually agreed between the Parties and shall remain subject to applicable regulatory disclosure requirements.</Text>
+                        <Text style={pdfStyles.paragraph}>8.1.3 Any remuneration payable to the Sub-Distributor in relation to products/ services covered under clause 3 of this agreement shall be payable only upon receipt of the corresponding fees by the Principal Distributor from the relevant portfolio manager.</Text>
+                        <Text style={pdfStyles.paragraph}>8.1.4 All payments made under this Clause shall be subject to compliance with Applicable.</Text>
+                        <Text style={pdfStyles.paragraph}>8.1.5 Principal distributor reserves the right to claw-back Commissions and/or other amounts already paid to the sub-distributor from future due payments and/or demand return payments from sub-distributor, in compliance with applicable laws or as may be deemed fit & appropriate by principal distributor for valid purposes, including but not limited to reasons of any wrongly processed payments, any charges or dues pending or for any business or Transactions found void or invalid, etc.</Text>
+                        <Text style={pdfStyles.paragraph}>8.1.6 The principal distributor also reserves the right to set-off and/or deduct any due amounts by sub-distributor from the accrued commissions or brokerages etc., amounts payable to the sub-distributor at the discretion of principal distributor.</Text>
+                    </View>
+                </View>
+
+                {/* Section 9: Confidentiality */}
+                <View style={pdfStyles.section}>
+                    <Text style={pdfStyles.heading}>9. CONFIDENTIALITY AND DATA PROTECTION</Text>
+                    <View style={{ gap: 4 }}>
+                        <Text style={pdfStyles.paragraph}>9.1 Each Party acknowledges that during the course of performance of this Agreement it may have access to or receive certain confidential, proprietary, financial, commercial, technical or client-related information of the other Party, including but not limited to business strategies, client databases, investment information, pricing structures, trade secrets, operational processes, marketing plans and any other information designated as confidential or which by its nature ought reasonably to be regarded as confidential ("Confidential Information").</Text>
+                        <Text style={pdfStyles.paragraph}>9.2 The receiving Party shall maintain the strictest confidentiality in respect of such Confidential Information and shall use such information solely for the limited purpose of performing its obligations under this Agreement and for no other purpose whatsoever.</Text>
+                        <Text style={pdfStyles.paragraph}>9.3 The receiving Party shall implement and maintain appropriate administrative, technical and organisational safeguards to ensure protection of Confidential Information against unauthorised access, disclosure, misuse, loss or alteration and shall ensure that its employees, agents, representatives or affiliates who may have access to such information are bound by obligations of confidentiality no less stringent than those contained herein.</Text>
+                        <Text style={pdfStyles.paragraph}>9.4 The receiving Party shall not disclose, publish, transmit or otherwise make available any Confidential Information to any third party without the prior written consent of the disclosing Party, except where such disclosure is required under Applicable Laws or by any regulatory authority, in which event the receiving Party shall promptly notify the disclosing Party to the extent legally permissible.</Text>
+                        <Text style={pdfStyles.paragraph}>9.5 All client-related information, investor data, contact details, financial information and transaction records obtained during the course of this Agreement shall be treated as strictly confidential and shall not be used for solicitation, marketing, commercial exploitation or any purpose unrelated to this Agreement.</Text>
+                        <Text style={pdfStyles.paragraph}>9.6 Upon termination or expiry of this Agreement, the receiving Party shall promptly return, delete or destroy all Confidential Information in its possession, custody or control, unless retention is required under Applicable Laws.</Text>
+                        <Text style={pdfStyles.paragraph}>9.7 The obligations contained in this Clause shall survive the termination or expiration of this Agreement for a period of five years, and in respect of client data and proprietary information, such obligations shall continue for so long as such information remains confidential in nature.</Text>
+                    </View>
+                </View>
+
+                {/* Section 10: Key Regulatory Aspects */}
+                <View style={pdfStyles.section}>
+                    <Text style={pdfStyles.heading}>10. Key Regulatory Aspects</Text>
+                    <View style={{ gap: 4 }}>
+                        <Text style={pdfStyles.paragraph}>10.1 The sub-distributor shall maintain all the information of their Clients required for the conduct of its business and as required under applicable Know Your Customer (KYC) and other Applicable Laws and shall make available any such information to principal distributor upon request.</Text>
+                        <Text style={pdfStyles.paragraph}>10.3 The sub-distributor engaged in distribution of products/ services under clause 3 of the agreement acknowledges that the sub-distributor shall ensure not to contradict its role with the role of investment adviser in compliance with the provisions of the IA Regulations, as amended from time to time. In case the sub-distributor or any of its related party or associate wishes to register or has already registered as an Investment Adviser under IA Regulations, a written communication must be made to Principal advisor. In failure of which, principal advisor reserves a right to terminate this Agreement without prior notice.</Text>
+                        <Text style={pdfStyles.paragraph}>10.4 The sub-distributor shall be solely responsible to co-operate for adhering to the implementation of KYC and Anti Money Laundering (AML) norms, processes, compliances under the PMLA regulations & guidelines given by the regulatory authorities, SEBI, AMCs, SRO and principal advisor from time to time. In case of any non-compliance thereof, the sub-distributor agrees that principal advisor cannot be held responsible for the same.</Text>
+                        <Text style={pdfStyles.paragraph}>10.5. The sub-distributor shall ensure to adhere with all the compliances applicable under applicable regulatory guidelines. In case of any differences between the agreement and the regulatory framework then the regulatory framework shall prevail.</Text>
+                    </View>
+                </View>
+
+                {/* Section 11: Indemnity */}
+                <View style={pdfStyles.section}>
+                    <Text style={pdfStyles.heading}>11. INDEMNITY</Text>
+                    <View style={{ gap: 4 }}>
+                        <Text style={pdfStyles.paragraph}>11.1 The Sub-Distributor shall fully indemnify, defend and hold harmless the Principal Distributor, its directors, officers, employees, affiliates and representatives from and against any and all losses, damages, liabilities, penalties, claims, demands, costs, expenses or regulatory actions whatsoever, including reasonable legal fees and expenses, arising directly or indirectly from any breach, default or non-performance of the obligations contained in this Agreement.</Text>
+                        <Text style={pdfStyles.paragraph}>11.2 Without prejudice to the generality of the foregoing, such indemnity shall extend to any loss or liability arising out of misrepresentation, misleading communication, unauthorised assurances or incorrect disclosures made by the Sub-Distributor to clients or prospective investors.</Text>
+                        <Text style={pdfStyles.paragraph}>11.3 The indemnity shall further apply in the event of any violation of Applicable Laws, regulatory guidelines, compliance requirements or investor protection norms by the Sub-Distributor or its personnel in connection with the activities contemplated under this Agreement.</Text>
+                        <Text style={pdfStyles.paragraph}>11.4 The Sub-Distributor shall also indemnify the Principal Distributor against any claims, proceedings, investigations, regulatory penalties or reputational damage arising from negligence, wilful misconduct, fraud, mis-selling, breach of confidentiality or misuse of client information by the Sub-Distributor.</Text>
+                        <Text style={pdfStyles.paragraph}>11.5 The rights and remedies provided under this Clause shall survive termination or expiry of this Agreement and shall be in addition to any other rights or remedies available to the Principal Distributor under law or equity.</Text>
+                    </View>
+                </View>
+
+                {/* Section 12: Limitation of Liability */}
+                <View style={pdfStyles.section}>
+                    <Text style={pdfStyles.heading}>12. LIMITATION OF LIABILITY</Text>
+                    <View style={{ gap: 4 }}>
+                        <Text style={pdfStyles.paragraph}>12.1 The Principal Distributor shall not be responsible or liable for any losses, diminution in value, market fluctuations or investment risks arising from investments made by clients in financial products distributed under this Agreement.</Text>
+                        <Text style={pdfStyles.paragraph}>12.2 The Principal Distributor shall not be liable for the performance, actions, omissions or decisions of portfolio managers, asset management companies, issuers or other product providers whose products may be introduced or distributed under this Agreement.</Text>
+                        <Text style={pdfStyles.paragraph}>12.3 The Sub-Distributor acknowledges that all investment decisions shall ultimately be taken by the clients based on their own assessment of risks and suitability and the Principal Distributor shall not be liable for any financial loss or investment outcome arising therefrom.</Text>
+                        <Text style={pdfStyles.paragraph}>12.4 Nothing contained in this Clause shall limit liability arising from fraud, wilful misconduct or gross negligence where such limitation is prohibited under Applicable Laws.</Text>
+                        <Text style={pdfStyles.paragraph}>12.5 Subject to the provisions, the aggregate liability of each party arising out of or in connection with this Agreement shall not exceed the total fees or commissions paid or received by the Sub-Distributor as the case may be under this Agreement during the twelve (12) months preceding the event giving rise to such liability.</Text>
+                    </View>
+                </View>
+
+                {/* Section 13: Term */}
+                <View style={pdfStyles.section}>
+                    <Text style={pdfStyles.heading}>13. TERM AND TERMINATION</Text>
+                    <View style={{ gap: 4 }}>
+                        <Text style={pdfStyles.paragraph}>13.1 This Agreement shall commence on the Effective Date and shall remain valid for a period of three (3) years unless terminated earlier in accordance with the provisions of this Agreement.</Text>
+                        <Text style={pdfStyles.paragraph}>13.2 Either Party may terminate this Agreement at any time, without assigning any reason, by providing the other Party with not less than thirty (30) days' prior written notice.</Text>
+                        <Text style={pdfStyles.paragraph}>13.3 Notwithstanding anything contained herein, the Principal Distributor shall have the right to terminate this Agreement with immediate effect upon written notice if the Sub-Distributor violates any Applicable Laws or regulatory requirements, engages in mis-selling or unethical conduct, breaches the Code of Conduct, or undertakes any act that may adversely affect the reputation, regulatory standing, or business interests of the Principal Distributor.</Text>
+                        <Text style={pdfStyles.paragraph}>13.4 Upon termination or expiration of this Agreement, the Sub-Distributor shall immediately cease representing itself as associated with the Principal Distributor and shall discontinue all activities undertaken pursuant to this Agreement, and such termination shall be without prejudice to any rights, obligations, or liabilities accrued prior to termination, including obligations relating to confidentiality, indemnity, and compliance with Applicable Laws.</Text>
+                    </View>
+                </View>
+
+                {/* Section 14: Governing Law */}
+                <View style={pdfStyles.section}>
+                    <Text style={pdfStyles.heading}>14. GOVERNING LAW AND JURISDICTION</Text>
+                    <View style={{ gap: 4 }}>
+                        <Text style={pdfStyles.paragraph}>14.1 This Agreement shall be governed by and construed in accordance with the laws of India.</Text>
+                        <Text style={pdfStyles.paragraph}>14.2 Subject to the dispute resolution mechanism provided in this Agreement, the courts at Mumbai, India, Maharashtra shall have exclusive jurisdiction in respect of matters arising out of or in connection with this Agreement.</Text>
+                    </View>
+                </View>
+
+                {/* Section 15: Dispute Resolution */}
+                <View style={pdfStyles.section}>
+                    <Text style={pdfStyles.heading}>15. DISPUTE RESOLUTION</Text>
+                    <View style={{ gap: 4 }}>
+                        <Text style={pdfStyles.paragraph}>15.1 The Parties shall endeavour to resolve amicably, through mutual discussions and good faith negotiations, any dispute, controversy or claim arising out of or relating to this Agreement, including its interpretation, performance or termination.</Text>
+                        <Text style={pdfStyles.paragraph}>15.2 In the event such dispute is not resolved amicably within thirty (30) days from the date on which either Party notifies the other Party of the dispute, the same shall be referred to and finally resolved by arbitration in accordance with the provisions of the Arbitration and Conciliation Act, 1996, as amended from time to time.</Text>
+                        <Text style={pdfStyles.paragraph}>15.3 The arbitration shall be conducted by a sole arbitrator mutually appointed by the Parties. In the event the Parties fail to agree upon the appointment of the arbitrator, the appointment shall be made in accordance with the provisions of the Arbitration and Conciliation Act, 1996.</Text>
+                        <Text style={pdfStyles.paragraph}>15.4 The seat and venue of arbitration shall be in Mumbai, Maharashtra, India, and the proceedings shall be conducted in the English language.</Text>
+                        <Text style={pdfStyles.paragraph}>15.5 The arbitral award shall be final and binding upon the Parties and may be enforced in any court of competent jurisdiction.</Text>
+                    </View>
+                </View>
+
+                {/* Section 16: Miscellaneous */}
+                <View style={pdfStyles.section}>
+                    <Text style={pdfStyles.heading}>16. MISCELLANEOUS</Text>
+                    <View style={{ gap: 4 }}>
+                        <Text style={pdfStyles.paragraph}>16.1 This Agreement constitutes the entire understanding between the Parties with respect to the subject matter hereof and supersedes all prior discussions, negotiations, understandings or arrangements, whether written or oral.</Text>
+                        <Text style={pdfStyles.paragraph}>16.2 No modification, amendment or alteration of this Agreement shall be valid unless made in writing and duly executed by authorised representatives of both Parties.</Text>
+                        <Text style={pdfStyles.paragraph}>16.3 The Sub-Distributor shall not assign, transfer or delegate any of its rights or obligations under this Agreement without the prior written consent of the Principal Distributor.</Text>
+                        <Text style={pdfStyles.paragraph}>16.4 Failure or delay by either Party in exercising any right or remedy under this Agreement shall not constitute a waiver of such right or remedy.</Text>
+                        <Text style={pdfStyles.paragraph}>16.5 If any provision of this Agreement is held to be invalid, illegal or unenforceable by a court or arbitral tribunal of competent jurisdiction, the remaining provisions of this Agreement shall continue to remain in full force and effect.</Text>
+                        <Text style={pdfStyles.paragraph}>16.6 The sub-distributor is not entitled to subcontract or transfer any of its rights and obligations under this Agreement without prior written consent of principal distributor. Principal distributor may assign all or part of its obligations under this Agreement.</Text>
+                    </View>
+                </View>
+
+                {/* Section 17: Representations */}
+                <View style={pdfStyles.section}>
+                    <Text style={pdfStyles.heading}>17. REPRESENTATIONS AND WARRANTIES</Text>
+                    <View style={{ gap: 4 }}>
+                        <Text style={pdfStyles.paragraph}>17.1 The Sub-Distributor represents and warrants that it possesses the necessary competence, expertise, infrastructure, regulatory knowledge and operational capability required to perform its obligations under this Agreement in a professional and diligent manner.</Text>
+                        <Text style={pdfStyles.paragraph}>17.2 The Sub-Distributor further represents that it shall at all times comply with all Applicable Laws, regulatory requirements, guidelines and circulars issued by relevant authorities, including those governing distribution of financial products and investor protection.</Text>
+                        <Text style={pdfStyles.paragraph}>17.3 The Sub-Distributor shall conduct its activities in a fair, transparent and ethical manner and shall not engage in any practice, act or omission that may adversely affect the reputation, goodwill or regulatory standing of the Principal Distributor.</Text>
+                        <Text style={pdfStyles.paragraph}>17.4 The Sub-Distributor shall not make any statement, commitment, promise, guarantee or representation to clients or prospective investors which is inconsistent with or beyond the information, materials or authorisations provided by the Principal Distributor. Additionally, the sub-distributor will not spread any unauthenticated news and will be subject to SEBI (Prohibition of Fraudulent and Unfair Trade Practices relating to Securities Market) Regulations, 2003.</Text>
+                        <Text style={pdfStyles.paragraph}>17.5 The sub-distributor is competent to enter into a legally binding contract and this Agreement under Applicable Laws and that it is not incompetent to contract within the meaning of the Indian Contract Act, 1872 as amended from time to time.</Text>
+                        <Text style={pdfStyles.paragraph}>17.6 The sub-distributor is a "fit and proper person" as defined under SEBI (Intermediaries) Regulations 2008.</Text>
+                        <Text style={pdfStyles.paragraph}>17.7 Sub-distributor represents that it is not prohibited to distribute products covered under clause 3 of this agreement in accordance with the relevant regulations (if applicable). and shall immediately communicate to principal distributor upon applicability of any prohibitory provisions under the said regulation during the subsistence of this Agreement.</Text>
+                        <Text style={pdfStyles.paragraph}>17.8 The Sub-Distributor represents and warrants that it holds all necessary registrations, approvals, licenses, certification and any other requirements if required under applicable laws and regulations, including those prescribed by the Securities and Exchange Board of India, and shall at all times remain in compliance with such requirements. The sub-distributor further represents and warrants that during the course of engagement, the sub-distributor is incapable i.e not in adherence to necessary registrations, approvals, licenses, certification and any other requirements if required under applicable laws and regulations, it shall forthwith intimate the principal distributor and shall not offer any products or services mentioned under clause 3 of this agreement, unless approved by the principal distributor.</Text>
+                        <Text style={pdfStyles.paragraph}>17.9 The Sub-Distributor represents and warrants that the sub-distributor shall intimate about any changes in its constitution.</Text>
+                        <Text style={pdfStyles.paragraph}>17.10 The sub-distributor represents and warrants that it shall abide be the applicability regulatory framework in force.</Text>
+                        <Text style={pdfStyles.paragraph}>17.11 The sub-distributor represents and warrants that is shall not charge any fees to client in respect of products or services distributed to the clients under this agreement.</Text>
+                    </View>
+                </View>
+
+                {/* SIGNATURE SECTION */}
+                <View style={pdfStyles.signatureContainer}>
+                    <Text style={pdfStyles.signBy}>Signed by:</Text>
+
+                    <View style={pdfStyles.signatureBlock}>
+                        <Text style={pdfStyles.signatureLabel}>Primary Distributor</Text>
+                        <View>
+                            <Text style={pdfStyles.signatureValue}>INDUSARTHA FINANCIAL SERVICES PRIVATE LIMITED</Text>
+                            <Text style={pdfStyles.signatureSubText}>Authorised Signatory: MR. MUDDASANI NARENDER REDDY</Text>
+                        </View>
+                    </View>
+
+                    <View style={pdfStyles.signatureBlock}>
+                        <Text style={pdfStyles.signatureLabel}>Sub-distributor</Text>
+                        <View>
+                            <Text style={[pdfStyles.signatureValue, { textTransform: "uppercase" }]}>{entityName}</Text>
+                        </View>
                     </View>
                 </View>
 
@@ -596,6 +917,9 @@ const PatnersSignup = () => {
     const [showAgreement, setShowAgreement] = useState(false);
     const [isAgreed, setIsAgreed] = useState(false);
     const [isGeneratingPdf, setIsGeneratingPdf] = useState(false);
+    const [showAgreement2, setShowAgreement2] = useState(false);
+    const [isAgreed2, setIsAgreed2] = useState(false);
+    const [isGeneratingPdf2, setIsGeneratingPdf2] = useState(false);
     const [masterData, setMasterData] = useState({});
 
     // Watchers for validation/behavior
@@ -749,8 +1073,13 @@ const PatnersSignup = () => {
     const navigate = useNavigate();
 
     const handleDownloadPdf = async (autoContinue = false) => {
-        setIsGeneratingPdf(true);
+        if (autoContinue) {
+            setShowAgreement(false);
+            setShowAgreement2(true);
+            return;
+        }
 
+        setIsGeneratingPdf(true);
         try {
             const today = new Date();
             const data = {
@@ -763,10 +1092,7 @@ const PatnersSignup = () => {
                 aprn: watchRegulatory("aprn") || "[aprn]",
             };
 
-            // Generate the PDF as a blob
             const blob = await pdf(<AgreementPDF data={data} />).toBlob();
-
-            // Create a download link
             const url = URL.createObjectURL(blob);
             const link = document.createElement("a");
             link.href = url;
@@ -775,14 +1101,6 @@ const PatnersSignup = () => {
             link.click();
             document.body.removeChild(link);
             URL.revokeObjectURL(url);
-
-            if (autoContinue) {
-                setShowAgreement(false);
-            }
-            alert("Welcome To TieVista!");
-            navigate("/");
-
-
         } catch (error) {
             console.error("PDF generation failed:", error);
             alert("Download failed. Please try again.");
@@ -831,21 +1149,21 @@ const PatnersSignup = () => {
                         >
                             {/* Logo and Header */}
                             <div className="flex flex-col items-start mb-12">
-                                <div className='flex justify-between items-center w-full'>
-                                    <div className='flex'>
-                                        <img src="/icon.png" alt="TieVista icon" className="h-20 mb-4" />
+                                <div className='flex flex-col md:flex-row justify-between items-center w-full gap-6 md:gap-0'>
+                                    <div className='flex items-center justify-center md:justify-start w-full md:w-auto'>
+                                        <img src="/icon.png" alt="TieVista icon" className="h-16 md:h-20 mb-2 md:mb-4" />
                                         <div className='flex flex-col items-center justify-center relative'>
-                                            <img src="/TieVistaVerticalLogo.png" alt="TieVista Vertical Logo" className="h-6 w-30 mb-4" />
-                                            <h3 className='absolute top-13 left-6 text-[8px] font-light'>Global Private Wealth</h3>
+                                            <img src="/TieVistaVerticalLogo.png" alt="TieVista Vertical Logo" className="h-5 md:h-6 w-auto mb-2 md:mb-4" />
+                                            <h3 className='absolute top-5 md:top-13 left-4 md:left-6 text-[6px] md:text-[8px] font-light'>Global Private Wealth</h3>
                                         </div>
                                     </div>
-                                    <div className="flex flex-col items-start">
+                                    <div className="flex flex-col items-center md:items-start w-full md:w-auto">
                                         <div className="flex items-center gap-1">
-                                            <Phone className="rotate-[135deg] text-[#e5bc4b]" size={16} />
-                                            <span className="text-black">+91 9885424473</span>
+                                            <CallEndIcon sx={{fontSize: {xs: 14, md: 16}, color:'#e5bc4b'}} />
+                                            <span className="text-black text-sm md:text-base">+91 9885424473</span>
                                         </div>
-                                        <div className="flex items-center gap-1"><Mail className="text-[#e5bc4b]" size={16} /><span className="text-black">narender.reddy@tievista.com</span></div>
-                                        <div className="flex items-center gap-1"><Globe className="text-[#e5bc4b]" size={16} /> <span className='text-black'>TieVista.com</span></div>
+                                        <div className="flex items-center gap-1"><EmailIcon sx={{fontSize: {xs: 14, md: 16}, color:'#e5bc4b' }} /><span className="text-black text-sm md:text-base break-all sm:break-normal">narender.reddy@tievista.com</span></div>
+                                        <div className="flex items-center gap-1"><Globe className="text-[#e5bc4b]" size={16} /> <span className='text-black text-sm md:text-base'>TieVista.com</span></div>
                                     </div>
                                 </div>
                                 <h1 className="text-2xl font-bold text-center pt-4 w-full tracking-tight">
@@ -861,7 +1179,7 @@ const PatnersSignup = () => {
                                 </p>
                                 <p className="mb-2 font-bold uppercase">BETWEEN</p>
                                 <p className="mb-6">
-                                    <b>IndusArtha Financial Services Private Limited operating under the brand name of TieVista</b>, a company incorporated under the provisions of the Companies Act, 2013 having its registered office at 4th Floor, AWFIS, VIOS Tower, Wadala, Mumbai 400037 and holding a valid ARN registration issued by the Association of Mutual Funds in India and engaged inter alia in the business of distribution of financial products including mutual fund schemes and portfolio management services (hereinafter referred to as the <b>"Principal Distributor"</b>, which expression shall unless repugnant to the context include its successors and permitted assigns);
+                                    <b>INDUSARTHA FINANCIAL SERVICES PRIVATE LIMITED operating under the brand name of TieVista</b>, a company incorporated under the provisions of the Companies Act, 2013 having its registered office at 4th Floor, AWFIS, VIOS Tower, Wadala, Mumbai 400037 and holding a valid ARN registration issued by the Association of Mutual Funds in India and engaged inter alia in the business of distribution of financial products including mutual fund schemes and portfolio management services (hereinafter referred to as the <b>"Principal Distributor"</b>, which expression shall unless repugnant to the context include its successors and permitted assigns);
                                 </p>
                                 <p className="mb-2 font-bold uppercase">AND</p>
                                 <p className="mb-8 font-bold">
@@ -1151,10 +1469,10 @@ const PatnersSignup = () => {
                                     <p className="font-bold text-black">Primary Distributor</p>
                                     <div>
                                         <p className="font-bold text-black text-base">
-                                            IndusArtha Financial Services Private Limited
+                                            INDUSARTHA FINANCIAL SERVICES PRIVATE LIMITED
                                         </p>
                                         <p className="text-black">
-                                            Authorised Signatory: Mr. Muddasani Narender Reddy
+                                            Authorised Signatory: MR. MUDDASANI NARENDER REDDY
                                         </p>
                                     </div>
                                 </div>
@@ -1225,7 +1543,7 @@ const PatnersSignup = () => {
                             </div>
 
                             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-end gap-4 overflow-hidden">
-                                <button
+                                {/* <button
                                     onClick={() => handleDownloadPdf(false)}
                                     disabled={!isAgreed || isGeneratingPdf}
                                     className={`w-full sm:w-auto px-8 py-2.5 border border-black rounded text-xs font-bold flex items-center justify-center gap-2 transition-colors uppercase ${isGeneratingPdf
@@ -1236,7 +1554,7 @@ const PatnersSignup = () => {
                                 >
                                     <Download size={16} />
                                     Download Agreement
-                                </button>
+                                </button> */}
                                 <button
                                     disabled={!isAgreed || isGeneratingPdf}
                                     onClick={() => handleDownloadPdf(true)}
@@ -1246,21 +1564,477 @@ const PatnersSignup = () => {
                                         }`}
                                     style={{ fontFamily: "PT Serif, serif" }}
                                 >
-                                    {isGeneratingPdf ? "Processing..." : "Continue"}
+                                    {isGeneratingPdf ? "Processing..." : "Next"}
                                 </button>
                             </div>
 
-                            <div className="text-center pt-2 flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-8 border-t border-gray-100 mt-2">
-                                <p className="text-[10px] text-gray-400 ">Please connect in case of any questions</p>
-                                <div className="flex items-center gap-6">
-                                    <a href="tel:9167915615" className="text-[10px] text-black hover:text-[#d4af37] flex items-center gap-2">
-                                        <Phone size={12} className="text-[#d4af37]" />
-                                        9167915615
-                                    </a>
-                                    <a href="mailto:connect@tievista.com" className="text-[10px] text-black hover:text-[#d4af37] flex items-center gap-2">
-                                        <Mail size={12} className="text-[#d4af37]" />
-                                        connect@tievista.com
-                                    </a>
+                            <div className="text-center gap-2">
+                                <div className='flex w-full items-center'>
+                                    <p className='flex border border-amber-300 w-full h-0'></p>
+                                    <p className="lg:text-[25px] text-[14px] text-black w-500" style={{fontFamily:'PT Serif,serif'}}>Trust . Transparency . Transformation</p>
+                                    <p className='flex border border-amber-300 w-full h-0'></p>
+                                </div>
+
+                            </div>
+
+                            <div className="text-center gap-2">
+                                <div className='flex flex-col justify-center items-center' style={{fontFamily : 'Poppins,serif'}}>
+                                    <p className='lg:text-[15px] text-[10px] text-black w-500'>CIN No. U66309MH2025PTC453786</p>
+                                    <p className='lg:text-[15px] text-[10px] text-black w-80'><LocationOnOutlinedIcon className="text-amber-300" fontSize="small" />IndusArtha Financial Services Pvt Ltd. 4th Floor, AWFIS, VIOS Tower Wadala, Mumbai-400037 </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    };
+
+    const handleDownloadPdf2 = async (autoContinue = false) => {
+        setIsGeneratingPdf2(true);
+
+        try {
+            const today = new Date();
+            const data = {
+                day: today.getDate(),
+                month: today.toLocaleString("default", { month: "long" }),
+                year: today.getFullYear(),
+                entityName: watchReg("entityName") || "[Sub-Distributor Name]",
+                address: watchReg("address") || "[address]",
+                arn: watchRegulatory("arn") || "[arn]",
+                aprn: watchRegulatory("aprn") || "[aprn]",
+            };
+
+            if (autoContinue) {
+                // Generate both PDFs as blobs
+                const blob1 = await pdf(<AgreementPDF data={data} />).toBlob();
+                const blob2 = await pdf(<AgreementPDF2 data={data} />).toBlob();
+
+                // Create download link for PDF 1
+                const url1 = URL.createObjectURL(blob1);
+                const link1 = document.createElement("a");
+                link1.href = url1;
+                link1.download = `TieVista_Agreement_${watchReg("entityName") || "Partner"}.pdf`;
+                document.body.appendChild(link1);
+                link1.click();
+                document.body.removeChild(link1);
+                URL.revokeObjectURL(url1);
+
+                // Small delay to ensure browser handles multiple downloads
+                await new Promise(resolve => setTimeout(resolve, 500));
+
+                // Create download link for PDF 2
+                const url2 = URL.createObjectURL(blob2);
+                const link2 = document.createElement("a");
+                link2.href = url2;
+                link2.download = `TieVista_Agreement2_${watchReg("entityName") || "Partner"}.pdf`;
+                document.body.appendChild(link2);
+                link2.click();
+                document.body.removeChild(link2);
+                URL.revokeObjectURL(url2);
+
+                setShowAgreement2(false);
+                alert("Welcome To TieVista!");
+                navigate("/");
+            } else {
+                // Only download PDF 2
+                const blob2 = await pdf(<AgreementPDF2 data={data} />).toBlob();
+                const url2 = URL.createObjectURL(blob2);
+                const link2 = document.createElement("a");
+                link2.href = url2;
+                link2.download = `TieVista_Agreement2_${watchReg("entityName") || "Partner"}.pdf`;
+                document.body.appendChild(link2);
+                link2.click();
+                document.body.removeChild(link2);
+                URL.revokeObjectURL(url2);
+            }
+
+        } catch (error) {
+            console.error("PDF generation failed:", error);
+            alert("Download failed. Please try again.");
+        } finally {
+            setIsGeneratingPdf2(false);
+        }
+    };
+
+    // Agreement Modal 2 Section
+    const AgreementModal2 = () => {
+        const today = new Date();
+        const day = today.getDate();
+        const month = today.toLocaleString("default", { month: "long" });
+        const year = today.getFullYear();
+
+        const entityName = watchReg("entityName") || "[Sub-Distributor Name]";
+        const address = watchReg("address") || "[address]";
+        const arn = watchRegulatory("arn") || "[arn]";
+        const aprn = watchRegulatory("aprn") || "[aprn]";
+
+        return (
+            <div className="fixed inset-0 z-[110] flex items-center justify-center p-0 lg:p-10 bg-black/60 shadow-2xl backdrop-blur-sm animate-in fade-in duration-300">
+                <div className="bg-white w-full max-w-6xl h-screen lg:h-[90vh] flex flex-col shadow-2xl overflow-hidden relative border border-gray-300">
+                    {/* Modal Header */}
+                    <div className="flex items-center justify-between px-6 py-3 bg-white border-b border-gray-200 z-10" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                        <div className="flex items-center gap-2">
+                            <img src="/TieVistaLogo.png" alt="Logo" className="h-8" />
+                            <span className="text-sm font-semibold text-black">Agreement Review (2 of 2)</span>
+                        </div>
+                        <button
+                            onClick={() => setShowAgreement2(false)}
+                            className="p-1 hover:bg-gray-100 rounded-full transition-colors text-gray-400"
+                        >
+                            <X size={20} />
+                        </button>
+                    </div>
+
+                    {/* The "Paper" Container */}
+                    <div className="flex-1 overflow-y-auto bg-white flex justify-center py-10 lg:py-16 px-4">
+                        <div
+                            className="bg-white w-full max-w-[850px] min-h-screen p-10 lg:p-16 text-black font-serif leading-[1.6]"
+                            style={{ fontSize: "13px" }}
+                        >
+                            {/* Logo and Header */}
+                            <div className="flex flex-col items-start mb-12">
+                                <div className='flex flex-col md:flex-row justify-between items-center w-full gap-6 md:gap-0'>
+                                    <div className='flex items-center justify-center md:justify-start w-full md:w-auto'>
+                                        <img src="/icon.png" alt="TieVista icon" className="h-16 md:h-20 mb-2 md:mb-4" />
+                                        <div className='flex flex-col items-center justify-center relative'>
+                                            <img src="/TieVistaVerticalLogo.png" alt="TieVista Vertical Logo" className="h-5 md:h-6 w-auto mb-2 md:mb-4" />
+                                            <h3 className='absolute top-5 md:top-13 left-4 md:left-6 text-[6px] md:text-[8px] font-light'>Global Private Wealth</h3>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-col items-center md:items-start w-full md:w-auto">
+                                        <div className="flex items-center gap-1">
+                                            <CallEndIcon sx={{fontSize: {xs: 14, md: 16}, color:'#e5bc4b'}} />
+                                            <span className="text-black text-sm md:text-base">+91 9885424473</span>
+                                        </div>
+                                        <div className="flex items-center gap-1"><EmailIcon sx={{fontSize: {xs: 14, md: 16}, color:'#e5bc4b' }} /><span className="text-black text-sm md:text-base break-all sm:break-normal">narender.reddy@tievista.com</span></div>
+                                        <div className="flex items-center gap-1"><Globe className="text-[#e5bc4b]" size={16} /> <span className='text-black text-sm md:text-base'>TieVista.com</span></div>
+                                    </div>
+                                </div>
+                                <h1 className="text-2xl font-bold text-center pt-4 w-full tracking-tight">
+                                    Sub-Distributorship Agreement
+                                </h1>
+                                <p className="border-[#d4af37] mt-4 border-b-4 w-full"></p>
+                            </div>
+
+                            {/* Section 1 */}
+                            <div className="mb-8 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                <p className="mb-4">
+                                    This Mutual Fund Sub-Distribution and PMS Sub Distribution (<b>"Agreement"</b>) is executed on this <b>{day}</b> day of <b>{month} {year}</b> (<b>"Effective Date"</b>).
+                                </p>
+                                <p className="mb-2 font-bold uppercase">BETWEEN</p>
+                                <p className="mb-6">
+                                    <b>INDUSARTHA FINANCIAL SERVICES PRIVATE LIMITED operating under the brand name of TieVista</b>, a company incorporated under the provisions of the Companies Act, 2013 having its registered office at 4th Floor, AWFIS, VIOS Tower, Wadala, Mumbai 400037 and holding a valid ARN registration issued by the Association of Mutual Funds in India and engaged inter alia in the business of distribution of financial products including mutual fund schemes and portfolio management services (hereinafter referred to as the <b>"Principal Distributor"</b>, which expression shall unless repugnant to the context include its successors and permitted assigns);
+                                </p>
+                                <p className="mb-2 font-bold uppercase">AND</p>
+                                <p className="mb-8 font-bold">
+                                    {entityName}, <span className="font-normal">having its principal place of business at</span> {address} <span className="font-normal">and engaged in the business of financial product marketing and client relationship management (hereinafter referred to as the "Sub-Distributor", which expression shall unless repugnant to the context include its successors and permitted assigns). The sub-distributor holds ARN –</span> {arn} <span className="font-normal">and APRN -</span> {aprn}
+                                </p>
+                                <p className="mb-10">
+                                    The Principal Distributor and the Sub-Distributor are hereinafter collectively referred to as the <b>"Parties"</b> and individually as a <b>"Party"</b>.
+                                </p>
+                            </div>
+
+                            {/* Whereas */}
+                            <div className="mb-8" >
+                                <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>WHEREAS:</h2>
+                                <div className="space-y-4 text-justify pl-4" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    <p>A. The Principal Distributor is engaged in the business of distribution of mutual fund schemes and allied financial products and operates in accordance with the regulatory framework prescribed under the SEBI (Mutual Funds) Regulations, 1996 and guidelines issued by the Association of Mutual Funds in India.</p>
+                                    <p>B. The Principal Distributor also facilitates marketing and distribution of portfolio management services offered by SEBI registered portfolio managers in accordance with the provisions of the SEBI (Portfolio Managers) Regulations, 2020 and related circulars issued by the Securities and Exchange Board of India.</p>
+                                    <p>C. The Sub-Distributor has represented that it possesses adequate experience, infrastructure, market reach, and client servicing capabilities required for marketing and facilitating investments in financial products.</p>
+                                    <p>D. The Sub-Distributor has expressed its desire to act as a sub-distribution partner for mutual fund products and as a Sub Contractor/ Marketing partner for portfolio management services subject to regulatory restrictions and compliance requirements.</p>
+                                    <p>E. The Principal Distributor has agreed to appoint the Sub-Distributor on a non-exclusive basis, subject to strict adherence to applicable laws, regulatory guidelines, and the terms and conditions set forth in this Agreement.</p>
+                                    <p>F. The Sub-Distributor represents that it holds a valid AMFI Registration Number (ARN), Employee Unique Identification Number (EUIN) and APMI Registration Number (APRN), wherever applicable, and shall maintain the same in good standing during the Term.</p>
+                                </div>
+                                <p className="mt-8 font-bold text-justify">NOW THEREFORE, in consideration of the mutual covenants contained herein, the Parties hereby agree as follows:</p>
+                            </div>
+
+                            {/* Section 2: Definitions */}
+                            <div className="mb-8" >
+                                <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>2. DEFINITIONS</h2>
+                                <p className="mb-6 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    In this Agreement, unless the context otherwise requires, the following terms shall have the meanings assigned to them hereunder. Words importing the singular shall include the plural and vice versa, and words importing any gender shall include all genders.
+                                </p>
+                                <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    <p><b>2.1 "Applicable Laws"</b> shall mean and include all applicable statutes, enactments, laws, ordinances, rules, regulations, circulars, notifications, guidelines, directions and policies issued by any governmental authority, regulatory authority, statutory body, self-regulatory organization or court of competent jurisdiction including, without limitation, regulations issued by the Securities and Exchange Board of India and guidelines issued by the Association of Mutual Funds in India, as amended or modified from time to time.</p>
+                                    <p><b>2.2 "Business Day"</b> shall mean any day on which banks and financial institutions are open for general business in India, excluding Saturdays, Sundays and public holidays.</p>
+                                    <p><b>2.3 "Client"</b> shall mean any individual, body corporate, partnership firm, trust, association of persons, institution or any other legal entity who is introduced, referred, or sourced by the Sub-Distributor to the Principal Distributor for the purpose of investment in products/ services covered under clause 3 of the agreement.</p>
+                                    <p><b>2.4 "Commission"</b> shall mean any remuneration, brokerage, trail commission, upfront commission, referral fee, marketing fee or incentive payable to the Sub-Distributor by the Principal Distributor in consideration for Distribution Services or Referral Services performed under this Agreement.</p>
+                                    <p><b>2.5 "Confidential Information"</b> shall mean and include all non-public, proprietary or confidential information disclosed by one Party to the other, whether in written, electronic, oral or any other form, including but not limited to client information and investment details, marketing strategies and business plans, commission structures and commercial arrangements, internal policies and operational procedures, financial information and proprietary databases, and any other information which by its nature ought reasonably to be treated as confidential. Confidential Information shall not include information which is or becomes publicly available without breach of this Agreement, or which was lawfully known to the receiving Party prior to disclosure, or which is required to be disclosed pursuant to Applicable Laws or regulatory directives.</p>
+                                    <p><b>2.6 "Distribution Services"</b> shall mean the activities undertaken for marketing, promotion, facilitation and distribution of financial offerings on behalf of the Principal Distributor, including identification of prospective investors, dissemination of approved marketing material, assistance in client onboarding and facilitation of transaction processing.</p>
+                                    <p><b>2.7 "Effective Date"</b> shall mean the date on which this Agreement is executed by both Parties.</p>
+                                    <p><b>2.8 "Financial Offering"</b> shall mean services or products as may be approved by the principal distributor and which are not regulated by financial sector regulator.</p>
+                                    <p><b>2.9 "Manufacturer"</b> shall mean issuer of security or the entity/ person engaged in servicing the products or services which are regulated by any financial sector regulator.</p>
+                                    <p><b>2.10 "Marketing Material"</b> shall mean brochures, presentations, advertisements, emails, digital communication or any promotional content relating to products or services covered under clause 3 of this agreement that has been approved by the Principal Distributor or the respective product provider.</p>
+                                    <p><b>2.11 "Principal Distributor"</b> shall mean the entity appointing the Sub-Distributor under this Agreement for distribution of products/ services covered under clause 3 of the agreement and shall include its successors and permitted assigns.</p>
+                                    <p><b>2.12 "Referral Services"</b> shall mean activities limited to the introduction of prospective clients to the Principal Distributor for onboarding such clients by the manufacturer solely at their discretion or manufacturer, without providing investment advice or portfolio recommendations.</p>
+                                    <p><b>2.13 "Regulatory Authority"</b> shall mean any governmental, statutory or regulatory authority having jurisdiction over the activities contemplated under this Agreement, including the Securities and Exchange Board of India.</p>
+                                    <p><b>2.14 "SEBI"</b> shall mean the Securities and Exchange Board of India established under the Securities and Exchange Board of India Act, 1992.</p>
+                                    <p><b>2.15 "Sub-Distributor"</b> shall mean the intermediary appointed under this Agreement for the limited purpose of marketing and facilitating investment and referring prospective clients products/ services covered under clause 3 of the agreement, subject to the terms and conditions specified herein.</p>
+                                    <p><b>2.16 "Term"</b> shall mean the duration of this Agreement commencing from the Effective Date and continuing until terminated in accordance with the provisions of this Agreement.</p>
+                                </div>
+                            </div>
+
+                            {/* Section 3: Appointment */}
+                            <div className="mb-8" >
+                                <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>3. APPOINTMENT</h2>
+                                <h3 className="font-bold mb-2" style={{ fontFamily: "'PT Serif', serif" }}>3.1 Appointment for Sub-Distributorship Activities for other financial offerings</h3>
+                                <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    <p>3.1.1 Subject to the terms and conditions of this Agreement, the Principal Distributor may permit the Sub-Distributor to undertake client sourcing, solicitation support and distribution support activities on a sub-contracted basis in relation to financial offerings as approved by the principal distributor.</p>
+                                    <p>3.1.2 For the purposes of this Agreement, such activities shall be undertaken strictly in the nature of sub-contracted client sourcing and facilitation services, including identification and introduction of prospective clients and coordination of onboarding processes, and shall not in any manner constitute investment advisory services.</p>
+                                    <p>3.1.3 The Sub-Distributor shall undertake such distribution related activities only in accordance with the regulatory framework prescribed by SEBI or any other authority as may be prescribed.</p>
+                                    <p>3.1.4 Without prejudice to the generality of the foregoing, the following conditions shall apply: (a) The Sub-Distributor may introduce prospective clients interested in such other financial offerings to the Principal Distributor or to investment manager specifically approved by the Principal Distributor. (b) The Sub-Distributor shall undertake any marketing, solicitation or client introduction activity relating to such financial offerings only after obtaining prior written approval from the Principal Distributor. The distribution of privately placed products shall be subject to guidelines issued by principal distributor for distribution of such privately placed products. (c) Such approval may specify the financial offering, scope of marketing activities and commission arrangements applicable to the Sub-Distributor. (d) The Sub-Distributor acknowledges that its role in relation to AIF Offerings shall be limited to marketing support, client introduction, facilitation of meetings and administrative coordination between prospective clients and the Principal Distributor or manufacturer. (e) The Sub-Distributor shall not represent itself as: (i) an investment manager or portfolio manager; (ii) an investment adviser registered with SEBI or any other regulatory authority; (iii) an authorised investment manager or portfolio management entity; or (iv) an entity authorised to provide investment advice or portfolio allocation recommendations. (f) The Sub-Distributor shall not: 1. provide investment advice relating to such financial offerings; 2. recommend specific portfolio strategies or investment allocations; 3. execute investment decisions on behalf of clients; 4. collect or hold client funds or securities. (g) The final decision regarding acceptance of a client, execution of the contribution agreement and management of the investment portfolio shall rest solely with the relevant manufacturer of such financial offering. (h) All documentation relating to financial offering, including investment agreement, other client onboarding documentation and any other documentation as may be required, shall be executed directly between the client and the manufacturer in accordance with the provisions of relevant regulatory framework. (i) The Sub-Distributor shall ensure that all communications made to prospective clients in relation to such financial offerings are accurate, fair and not misleading and are consistent with disclosures prescribed by applicable regulatory authorities.</p>
+                                    <p>The Parties hereby acknowledge and agree that the Sub-Distributor shall act solely in the capacity of a sub-contracted client sourcing and distribution support intermediary for the limited purpose of identifying and introducing prospective clients and facilitating preliminary coordination in relation to such financial offerings. The Sub-Distributor shall not hold itself out as an authorised representative, agent or affiliate of any investment manager.</p>
+                                </div>
+                            </div>
+
+                            {/* Section 4: Prior Approval */}
+                            <div className="mb-8" >
+                                <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>4. PRIOR APPROVAL OF PRINCIPAL DISTRIBUTOR</h2>
+                                <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    <p>4.1 Notwithstanding anything contained elsewhere in this Agreement, the Sub-Distributor shall not undertake any client sourcing, solicitation support, distribution support or other sub-contracted facilitation activity in relation to product/ services covered under clause 3 unless prior written approval has been obtained from the Principal Distributor and Manufacturer (wherever required).</p>
+                                    <p>4.2 Such approval shall be granted at the sole discretion of the Principal Distributor and may specify the manufacturer whose products/ services may be introduced to prospective clients, the nature and scope of the permitted client sourcing and distribution support activities, and any operational procedures, compliance requirements or investor disclosure obligations that must be adhered to by the Sub-Distributor.</p>
+                                    <p>4.3 The approval may further specify the commission, referral fee or other remuneration structure applicable to such activities, subject to applicable regulatory requirements and internal policies of the Principal Distributor, and the Sub-Distributor shall strictly comply with the terms and conditions specified in such approval and shall not undertake any activity beyond the scope of the authority granted therein.</p>
+                                    <p>4.4 Any activity undertaken by the Sub-Distributor in relation to Products without obtaining the prior written approval of the Principal Distributor, or in contravention of the terms and conditions specified in such approval, shall constitute a material breach of this Agreement, entitling the Principal Distributor to suspend or terminate this Agreement and take such further action as may be permissible under Applicable Laws.</p>
+                                </div>
+                            </div>
+
+                            {/* Section 5: Scope of Services */}
+                            <div className="mb-8" >
+                                <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>5. SCOPE OF SERVICES</h2>
+                                <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    <p>5.1 Subject to the terms and conditions of this Agreement, the Sub-Distributor shall undertake client sourcing and distribution support activities in relation to services or products mentioned under Clause 3 of this agreement as may be permitted by the Principal Distributor from time to time, including identifying and approaching prospective investors and facilitating their introduction to the Principal Distributor. Further, Client data obtained in connection with distribution of products/ services under clause 3 of the agreement shall not be used for marketing other financial products without the prior consent of the client.</p>
+                                    <p>5.2 The Sub-Distributor may disseminate to prospective investors only such product literature, scheme-related documents, informational material or communications that have been issued or approved by the Principal Distributor or the relevant product provider, and shall ensure that all communications made to prospective investors are fair, accurate and not misleading.</p>
+                                    <p>5.3 The Sub-Distributor may assist prospective investors and Clients in completing onboarding documentation, including Know Your Client (KYC) documentation, application forms and other administrative formalities, and may coordinate administrative communication between the Client and the Principal Distributor for the purpose of facilitating investments in the relevant products.</p>
+                                    <p>5.4 Notwithstanding anything contained herein, the Sub-Distributor shall not provide investment advice, recommend specific investment strategies or portfolio allocations, make any representation or guarantee regarding investment performance or returns, represent itself as a portfolio manager or investment adviser, or undertake any activity that may be construed as discretionary portfolio management or investment advisory services.</p>
+                                    <p>5.5 The Sub-Distributor is authorized, on a non-exclusive basis, to identify and approach prospective investors for the purpose of distribution of the Products through private placement, strictly in accordance with applicable laws and this Agreement. The Sub-Distributor shall act solely as an intermediary and shall not bind the Company in any manner.</p>
+                                    <p>5.6 The Sub-Distributor shall ensure that all offers and solicitations are made strictly on a private placement basis and shall not undertake any form of general solicitation, advertisement, public communication, or mass outreach, including through digital or social media platforms</p>
+                                </div>
+                            </div>
+
+                            {/* Section 6: Compliance */}
+                            <div className="mb-8" >
+                                <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>6. COMPLIANCE WITH DISTRIBUTOR CODE OF CONDUCT</h2>
+                                <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    <p>6.1 The Sub-Distributor shall at all times comply with the Code of Conduct applicable to distributors and sub-distributors prescribed by the regulator (if any) and with all applicable regulatory guidelines, circulars and directions issued by competent authorities. Additionally, the code of conduct as issued by the principal distributor shall be complied with for the products or services in respect of which code of conduct is not issued by SEBI or respective financial sector regulatory,</p>
+                                    <p>6.2 The Sub-Distributor shall maintain high standards of integrity, fairness and professionalism in all dealings with prospective investors and Clients. The sub-distributor shall not jeopardise the interest of the interest of clients and manufacturers and in case of any scenario of conflict is identified, the sub-distributor shall inform about the conflict to the principal distributor.</p>
+                                    <p>6.3 The Sub-Distributor shall ensure full and transparent disclosure to Clients regarding the nature of its role as an intermediary and any commissions or remuneration that may be received in connection with investments facilitated through it.</p>
+                                    <p>6.4 The Sub-Distributor shall not engage in mis-selling, misleading representations or dissemination of inaccurate information relating to products/ services covered under clause 3 of this agreement.</p>
+                                    <p>6.5 The Sub-Distributor shall ensure that all information communicated to Clients is accurate, fair and consistent with the official product documentation issued by the relevant product provider or approved by the Principal Distributor.</p>
+                                </div>
+                            </div>
+
+                            {/* Section 7: Client Disclosures */}
+                            <div className="mb-8" >
+                                <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>7. CLIENT DISCLOSURES</h2>
+                                <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    <p>7.1 The Sub-Distributor shall ensure that each Client introduced by it receives clear and adequate disclosures regarding the nature of the services being rendered and the roles and responsibilities of the parties involved.</p>
+                                    <p>7.2 The Sub-Distributor shall inform each Client that it acts solely as an intermediary engaged in client sourcing and distribution support activities and does not provide portfolio management or discretionary investment management services.</p>
+                                    <p>7.3 The Sub-Distributor shall ensure and inform the Clients that they understand that the Principal Distributor, Asset Management Company or the relevant portfolio manager, as the case may be, shall be responsible for the management and administration of investments.</p>
+                                    <p>7.4 The Sub-Distributor shall clearly disclose that investments in financial products including products/ services covered under clause 3 of the agreement are subject to market risks and that past performance does not guarantee future results.</p>
+                                    <p>7.5 The Sub-Distributor shall also disclose, where applicable, that commissions, referral fees or other forms of remuneration may be paid to intermediaries in connection with investments facilitated through such intermediaries.</p>
+                                </div>
+                            </div>
+
+                            {/* Section 8: Commission */}
+                            <div className="mb-8" >
+                                <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>8. COMMISSION AND REMUNERATION</h2>
+                                <h3 className="font-bold mb-2" style={{ fontFamily: "'PT Serif', serif" }}>8.1 Remuneration for Client Introductions in respect of other products/ services</h3>
+                                <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    <p>8.1.1 In respect of products/ services covered under clause 3 of this agreement, the Sub-Distributor shall be entitled to receive referral fees or distribution support fees for introducing Clients to the Principal Distributor or to portfolio managers approved by the Principal Distributor.</p>
+                                    <p>8.1.2 The structure and quantum of such remuneration shall be mutually agreed between the Parties and shall remain subject to applicable regulatory disclosure requirements.</p>
+                                    <p>8.1.3 Any remuneration payable to the Sub-Distributor in relation to products/ services covered under clause 3 of this agreement shall be payable only upon receipt of the corresponding fees by the Principal Distributor from the relevant portfolio manager.</p>
+                                    <p>8.1.4 All payments made under this Clause shall be subject to compliance with Applicable.</p>
+                                    <p>8.1.5 Principal distributor reserves the right to claw-back Commissions and/or other amounts already paid to the sub-distributor from future due payments and/or demand return payments from sub-distributor, in compliance with applicable laws or as may be deemed fit &amp; appropriate by principal distributor for valid purposes, including but not limited to reasons of any wrongly processed payments, any charges or dues pending or for any business or Transactions found void or invalid, etc.</p>
+                                    <p>8.1.6 The principal distributor also reserves the right to set-off and/or deduct any due amounts by sub-distributor from the accrued commissions or brokerages etc., amounts payable to the sub-distributor at the discretion of principal distributor.</p>
+                                </div>
+                            </div>
+
+                            {/* Section 9: Confidentiality */}
+                            <div className="mb-8" >
+                                <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>9. CONFIDENTIALITY AND DATA PROTECTION</h2>
+                                <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    <p>9.1 Each Party acknowledges that during the course of performance of this Agreement it may have access to or receive certain confidential, proprietary, financial, commercial, technical or client-related information of the other Party, including but not limited to business strategies, client databases, investment information, pricing structures, trade secrets, operational processes, marketing plans and any other information designated as confidential or which by its nature ought reasonably to be regarded as confidential <b>("Confidential Information")</b>.</p>
+                                    <p>9.2 The receiving Party shall maintain the strictest confidentiality in respect of such Confidential Information and shall use such information solely for the limited purpose of performing its obligations under this Agreement and for no other purpose whatsoever.</p>
+                                    <p>9.3 The receiving Party shall implement and maintain appropriate administrative, technical and organisational safeguards to ensure protection of Confidential Information against unauthorised access, disclosure, misuse, loss or alteration and shall ensure that its employees, agents, representatives or affiliates who may have access to such information are bound by obligations of confidentiality no less stringent than those contained herein.</p>
+                                    <p>9.4 The receiving Party shall not disclose, publish, transmit or otherwise make available any Confidential Information to any third party without the prior written consent of the disclosing Party, except where such disclosure is required under Applicable Laws or by any regulatory authority, in which event the receiving Party shall promptly notify the disclosing Party to the extent legally permissible.</p>
+                                    <p>9.5 All client-related information, investor data, contact details, financial information and transaction records obtained during the course of this Agreement shall be treated as strictly confidential and shall not be used for solicitation, marketing, commercial exploitation or any purpose unrelated to this Agreement.</p>
+                                    <p>9.6 Upon termination or expiry of this Agreement, the receiving Party shall promptly return, delete or destroy all Confidential Information in its possession, custody or control, unless retention is required under Applicable Laws.</p>
+                                    <p>9.7 The obligations contained in this Clause shall survive the termination or expiration of this Agreement for a period of five years, and in respect of client data and proprietary information, such obligations shall continue for so long as such information remains confidential in nature.</p>
+                                </div>
+                            </div>
+
+                            {/* Section 10: Key Regulatory Aspects */}
+                            <div className="mb-8" >
+                                <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>10. Key Regulatory Aspects</h2>
+                                <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    <p>10.1 The sub-distributor shall maintain all the information of their Clients required for the conduct of its business and as required under applicable Know Your Customer (KYC) and other Applicable Laws and shall make available any such information to principal distributor upon request.</p>
+                                    <p>10.3 The sub-distributor engaged in distribution of products/ services under clause 3 of the agreement acknowledges that the sub-distributor shall ensure not to contradict its role with the role of investment adviser in compliance with the provisions of the IA Regulations, as amended from time to time. In case the sub-distributor or any of its related party or associate wishes to register or has already registered as an Investment Adviser under IA Regulations, a written communication must be made to Principal advisor. In failure of which, principal advisor reserves a right to terminate this Agreement without prior notice.</p>
+                                    <p>10.4 The sub-distributor shall be solely responsible to co-operate for adhering to the implementation of KYC and Anti Money Laundering (AML) norms, processes, compliances under the PMLA regulations &amp; guidelines given by the regulatory authorities, SEBI, AMCs, SRO and principal advisor from time to time. In case of any non-compliance thereof, the sub-distributor agrees that principal advisor cannot be held responsible for the same.</p>
+                                    <p>10.5. The sub-distributor shall ensure to adhere with all the compliances applicable under applicable regulatory guidelines. In case of any differences between the agreement and the regulatory framework then the regulatory framework shall prevail.</p>
+                                </div>
+                            </div>
+
+                            {/* Section 11: Indemnity */}
+                            <div className="mb-8" >
+                                <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>11. INDEMNITY</h2>
+                                <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    <p>11.1 The Sub-Distributor shall fully indemnify, defend and hold harmless the Principal Distributor, its directors, officers, employees, affiliates and representatives from and against any and all losses, damages, liabilities, penalties, claims, demands, costs, expenses or regulatory actions whatsoever, including reasonable legal fees and expenses, arising directly or indirectly from any breach, default or non-performance of the obligations contained in this Agreement.</p>
+                                    <p>11.2 Without prejudice to the generality of the foregoing, such indemnity shall extend to any loss or liability arising out of misrepresentation, misleading communication, unauthorised assurances or incorrect disclosures made by the Sub-Distributor to clients or prospective investors.</p>
+                                    <p>11.3 The indemnity shall further apply in the event of any violation of Applicable Laws, regulatory guidelines, compliance requirements or investor protection norms by the Sub-Distributor or its personnel in connection with the activities contemplated under this Agreement.</p>
+                                    <p>11.4 The Sub-Distributor shall also indemnify the Principal Distributor against any claims, proceedings, investigations, regulatory penalties or reputational damage arising from negligence, wilful misconduct, fraud, mis-selling, breach of confidentiality or misuse of client information by the Sub-Distributor.</p>
+                                    <p>11.5 The rights and remedies provided under this Clause shall survive termination or expiry of this Agreement and shall be in addition to any other rights or remedies available to the Principal Distributor under law or equity.</p>
+                                </div>
+                            </div>
+
+                            {/* Section 12: Limitation of Liability */}
+                            <div className="mb-8" >
+                                <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>12. LIMITATION OF LIABILITY</h2>
+                                <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    <p>12.1 The Principal Distributor shall not be responsible or liable for any losses, diminution in value, market fluctuations or investment risks arising from investments made by clients in financial products distributed under this Agreement.</p>
+                                    <p>12.2 The Principal Distributor shall not be liable for the performance, actions, omissions or decisions of portfolio managers, asset management companies, issuers or other product providers whose products may be introduced or distributed under this Agreement.</p>
+                                    <p>12.3 The Sub-Distributor acknowledges that all investment decisions shall ultimately be taken by the clients based on their own assessment of risks and suitability and the Principal Distributor shall not be liable for any financial loss or investment outcome arising therefrom.</p>
+                                    <p>12.4 Nothing contained in this Clause shall limit liability arising from fraud, wilful misconduct or gross negligence where such limitation is prohibited under Applicable Laws.</p>
+                                    <p>12.5 Subject to the provisions, the aggregate liability of each party arising out of or in connection with this Agreement shall not exceed the total fees or commissions paid or received by the Sub-Distributor as the case may be under this Agreement during the twelve (12) months preceding the event giving rise to such liability.</p>
+                                </div>
+                            </div>
+
+                            {/* Section 13: Term */}
+                            <div className="mb-8" >
+                                <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>13. TERM AND TERMINATION</h2>
+                                <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    <p>13.1 This Agreement shall commence on the Effective Date and shall remain valid for a period of three (3) years unless terminated earlier in accordance with the provisions of this Agreement.</p>
+                                    <p>13.2 Either Party may terminate this Agreement at any time, without assigning any reason, by providing the other Party with not less than thirty (30) days' prior written notice.</p>
+                                    <p>13.3 Notwithstanding anything contained herein, the Principal Distributor shall have the right to terminate this Agreement with immediate effect upon written notice if the Sub-Distributor violates any Applicable Laws or regulatory requirements, engages in mis-selling or unethical conduct, breaches the Code of Conduct, or undertakes any act that may adversely affect the reputation, regulatory standing, or business interests of the Principal Distributor.</p>
+                                    <p>13.4 Upon termination or expiration of this Agreement, the Sub-Distributor shall immediately cease representing itself as associated with the Principal Distributor and shall discontinue all activities undertaken pursuant to this Agreement, and such termination shall be without prejudice to any rights, obligations, or liabilities accrued prior to termination, including obligations relating to confidentiality, indemnity, and compliance with Applicable Laws.</p>
+                                </div>
+                            </div>
+
+                            {/* Section 14: Governing Law */}
+                            <div className="mb-8" >
+                                <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>14. GOVERNING LAW AND JURISDICTION</h2>
+                                <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    <p>14.1 This Agreement shall be governed by and construed in accordance with the laws of India.</p>
+                                    <p>14.2 Subject to the dispute resolution mechanism provided in this Agreement, the courts at Mumbai, India, Maharashtra shall have exclusive jurisdiction in respect of matters arising out of or in connection with this Agreement.</p>
+                                </div>
+                            </div>
+
+                            {/* Section 15: Dispute Resolution */}
+                            <div className="mb-8" >
+                                <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>15. DISPUTE RESOLUTION</h2>
+                                <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    <p>15.1 The Parties shall endeavour to resolve amicably, through mutual discussions and good faith negotiations, any dispute, controversy or claim arising out of or relating to this Agreement, including its interpretation, performance or termination.</p>
+                                    <p>15.2 In the event such dispute is not resolved amicably within thirty (30) days from the date on which either Party notifies the other Party of the dispute, the same shall be referred to and finally resolved by arbitration in accordance with the provisions of the Arbitration and Conciliation Act, 1996, as amended from time to time.</p>
+                                    <p>15.3 The arbitration shall be conducted by a sole arbitrator mutually appointed by the Parties. In the event the Parties fail to agree upon the appointment of the arbitrator, the appointment shall be made in accordance with the provisions of the Arbitration and Conciliation Act, 1996.</p>
+                                    <p>15.4 The seat and venue of arbitration shall be in Mumbai, Maharashtra, India, and the proceedings shall be conducted in the English language.</p>
+                                    <p>15.5 The arbitral award shall be final and binding upon the Parties and may be enforced in any court of competent jurisdiction.</p>
+                                </div>
+                            </div>
+
+                            {/* Section 16: Miscellaneous */}
+                            <div className="mb-8" >
+                                <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>16. MISCELLANEOUS</h2>
+                                <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    <p>16.1 This Agreement constitutes the entire understanding between the Parties with respect to the subject matter hereof and supersedes all prior discussions, negotiations, understandings or arrangements, whether written or oral.</p>
+                                    <p>16.2 No modification, amendment or alteration of this Agreement shall be valid unless made in writing and duly executed by authorised representatives of both Parties.</p>
+                                    <p>16.3 The Sub-Distributor shall not assign, transfer or delegate any of its rights or obligations under this Agreement without the prior written consent of the Principal Distributor.</p>
+                                    <p>16.4 Failure or delay by either Party in exercising any right or remedy under this Agreement shall not constitute a waiver of such right or remedy.</p>
+                                    <p>16.5 If any provision of this Agreement is held to be invalid, illegal or unenforceable by a court or arbitral tribunal of competent jurisdiction, the remaining provisions of this Agreement shall continue to remain in full force and effect.</p>
+                                    <p>16.6 The sub-distributor is not entitled to subcontract or transfer any of its rights and obligations under this Agreement without prior written consent of principal distributor. Principal distributor may assign all or part of its obligations under this Agreement.</p>
+                                </div>
+                            </div>
+
+                            {/* Section 17: Representations */}
+                            <div className="mb-8" >
+                                <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "'PT Serif', serif" }}>17. REPRESENTATIONS AND WARRANTIES</h2>
+                                <div className="space-y-4 text-justify" style={{ fontFamily: "'Poppins', sans-serif" }}>
+                                    <p>17.1 The Sub-Distributor represents and warrants that it possesses the necessary competence, expertise, infrastructure, regulatory knowledge and operational capability required to perform its obligations under this Agreement in a professional and diligent manner.</p>
+                                    <p>17.2 The Sub-Distributor further represents that it shall at all times comply with all Applicable Laws, regulatory requirements, guidelines and circulars issued by relevant authorities, including those governing distribution of financial products and investor protection.</p>
+                                    <p>17.3 The Sub-Distributor shall conduct its activities in a fair, transparent and ethical manner and shall not engage in any practice, act or omission that may adversely affect the reputation, goodwill or regulatory standing of the Principal Distributor.</p>
+                                    <p>17.4 The Sub-Distributor shall not make any statement, commitment, promise, guarantee or representation to clients or prospective investors which is inconsistent with or beyond the information, materials or authorisations provided by the Principal Distributor. Additionally, the sub-distributor will not spread any unauthenticated news and will be subject to SEBI (Prohibition of Fraudulent and Unfair Trade Practices relating to Securities Market) Regulations, 2003.</p>
+                                    <p>17.5 The sub-distributor is competent to enter into a legally binding contract and this Agreement under Applicable Laws and that it is not incompetent to contract within the meaning of the Indian Contract Act, 1872 as amended from time to time.</p>
+                                    <p>17.6 The sub-distributor is a &quot;fit and proper person&quot; as defined under SEBI (Intermediaries) Regulations 2008.</p>
+                                    <p>17.7 Sub-distributor represents that it is not prohibited to distribute products covered under clause 3 of this agreement in accordance with the relevant regulations (if applicable). and shall immediately communicate to principal distributor upon applicability of any prohibitory provisions under the said regulation during the subsistence of this Agreement.</p>
+                                    <p>17.8 The Sub-Distributor represents and warrants that it holds all necessary registrations, approvals, licenses, certification and any other requirements if required under applicable laws and regulations, including those prescribed by the Securities and Exchange Board of India, and shall at all times remain in compliance with such requirements. The sub-distributor further represents and warrants that during the course of engagement, the sub-distributor is incapable i.e not in adherence to necessary registrations, approvals, licenses, certification and any other requirements if required under applicable laws and regulations, it shall forthwith intimate the principal distributor and shall not offer any products or services mentioned under clause 3 of this agreement, unless approved by the principal distributor.</p>
+                                    <p>17.9 The Sub-Distributor represents and warrants that the sub-distributor shall intimate about any changes in its constitution.</p>
+                                    <p>17.10 The sub-distributor represents and warrants that it shall abide be the applicability regulatory framework in force.</p>
+                                    <p>17.11 The sub-distributor represents and warrants that is shall not charge any fees to client in respect of products or services distributed to the clients under this agreement.</p>
+                                </div>
+                            </div>
+
+                            {/* Signature Section */}
+                            <div className="mt-12 pt-8 border-t border-gray-200">
+                                <p className="text-xs text-gray-500 mb-6" style={{ fontFamily: "'Poppins', sans-serif" }}>Signed by:</p>
+
+                                <div className="mb-6">
+                                    <p className="font-bold text-sm">Primary Distributor</p>
+                                    <p className="font-bold text-base">INDUSARTHA FINANCIAL SERVICES PRIVATE LIMITED</p>
+                                    <p className="text-sm text-gray-700" style={{ fontFamily: "'Poppins', sans-serif" }}>Authorised Signatory: Mr. Muddasani Narender Reddy</p>
+                                </div>
+
+                                <div className="mb-6">
+                                    <p className="font-bold text-sm">Sub-distributor</p>
+                                    <p className="font-bold text-base uppercase">{entityName}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Fixed Action Footer */}
+                    <div className="bg-white border-t border-gray-300 p-6 lg:p-8 shrink-0 shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">
+                        <div className="max-w-[850px] mx-auto flex flex-col gap-6">
+                            <div className="flex items-center gap-3 self-center lg:self-start">
+                                <input
+                                    type="checkbox"
+                                    id="agree-modal-2"
+                                    checked={isAgreed2}
+                                    onChange={(e) => setIsAgreed2(e.target.checked)}
+                                    className="w-5 h-5 accent-[#d4af37] border-gray-300 rounded cursor-pointer"
+                                />
+                                <label htmlFor="agree-modal-2" className="text-sm font-medium text-black cursor-pointer select-none">
+                                    I have read and agree to the <span className="text-[#d4af37] font-bold">Terms & Conditions</span>
+                                </label>
+                            </div>
+
+                            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-end gap-4 overflow-hidden">
+                                <button
+                                    onClick={() => handleDownloadPdf2(false)}
+                                    disabled={!isAgreed2 || isGeneratingPdf2}
+                                    className={`w-full sm:w-auto px-8 py-2.5 border border-black rounded text-xs font-bold flex items-center justify-center gap-2 transition-colors uppercase ${isGeneratingPdf2
+                                        ? "bg-white text-black cursor-not-allowed"
+                                        : "text-black hover:bg-gray-50"
+                                        }`}
+                                    style={{ fontFamily: "PT Serif, serif" }}
+                                >
+                                    <Download size={16} />
+                                    Download Agreement
+                                </button>
+                                <button
+                                    disabled={!isAgreed2 || isGeneratingPdf2}
+                                    onClick={() => handleDownloadPdf2(true)}
+                                    className={`w-full sm:w-auto px-16 py-3 rounded text-xs font-bold uppercase transition-all shadow-md active:translate-y-0.5 ${isAgreed2 && !isGeneratingPdf2
+                                        ? "bg-gradient-to-r from-[#e5bc4b] via-[#d4af37] to-[#b78628] text-white hover:shadow-lg hover:-translate-y-0.5"
+                                        : "bg-gray-100 text-gray-400 cursor-not-allowed"
+                                        }`}
+                                    style={{ fontFamily: "PT Serif, serif" }}
+                                >
+                                    {isGeneratingPdf2 ? "Processing..." : "Continue"}
+                                </button>
+                            </div>
+
+                            <div className="text-center gap-2">
+                                <div className='flex w-full items-center'>
+                                    <p className='flex border border-amber-300 w-full h-0'></p>
+                                    <p className="lg:text-[25px] text-[14px] text-black w-500" style={{fontFamily:'PT Serif,serif'}}>Trust . Transparency . Transformation</p>
+                                    <p className='flex border border-amber-300 w-full h-0'></p>
+                                </div>
+
+                            </div>
+
+                            <div className="text-center gap-2">
+                                <div className='flex flex-col justify-center items-center' style={{fontFamily : 'Poppins,serif'}}>
+                                    <p className='lg:text-[15px] text-[10px] text-black w-500'>CIN No. U66309MH2025PTC453786</p>
+                                    <p className='lg:text-[15px] text-[10px] text-black w-80'><LocationOnOutlinedIcon className="text-amber-300" fontSize="small" />IndusArtha Financial Services Pvt Ltd. 4th Floor, AWFIS, VIOS Tower Wadala, Mumbai-400037 </p>
                                 </div>
                             </div>
                         </div>
@@ -1685,6 +2459,7 @@ const PatnersSignup = () => {
 
             {/* Agreement Modal */}
             {showAgreement && <AgreementModal />}
+            {showAgreement2 && <AgreementModal2 />}
         </div>
     );
 };
