@@ -2103,7 +2103,7 @@ const PatnersSignup = () => {
                                     </label>
                                     <input
                                         {...registerReg("entityName", { required: "Entity name is required" })}
-                                        className={`w-full px-4 py-3 border rounded focus:border-[#d4af37] focus:ring-0 outline-none transition-all placeholder:text-gray-300 text-sm text-black ${errorsReg.entityName ? "border-red-500" : "border-gray-300"
+                                        className={`w-full px-4 py-3 border rounded focus:border-[#d4af37] focus:ring-0 outline-none transition-all placeholder:text-gray-300 text-[16px] text-black ${errorsReg.entityName ? "border-red-500" : "border-gray-300"
                                             }`}
                                     />
                                     {errorsReg.entityName && (
