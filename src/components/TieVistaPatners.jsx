@@ -82,13 +82,13 @@ const TieVistaPatners = () => {
   return (
     <div className="bg-white min-h-screen font-sans selection:bg-[#D4AF37] selection:text-white">
 
-      {/* Hero Section */}
+      {/* Section */}
       <section className="min-h-screen w-full relative flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
             className="h-full w-full object-cover scale-105"
             src="https://res.cloudinary.com/dck5jgfix/image/upload/v1777033100/AlliendServices_kq8s4v.png"
-            alt="Partners Hero"
+            alt="TieVista Partners"
             loading='lazy'
           />
           <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/40 to-black/80" />
