@@ -503,14 +503,14 @@ const AgreementPDF = ({ data }) => {
 
                 {/* ANNEXURE A */}
                 <View style={[pdfStyles.section, { marginTop: 30, paddingTop: 20, borderTop: "0.5pt solid #eee" }]}>
-                    <Text style={[pdfStyles.heading, {textAlign:"center"}] }>ANNEXURE A</Text>
+                    <Text style={[pdfStyles.heading, { textAlign: "center" }]}>ANNEXURE A</Text>
                     <Text style={[pdfStyles.subHeading, { textAlign: "center" }]}>Fee / Commission sharing</Text>
                     <Text style={pdfStyles.paragraph}>The principal distributor will share ___% of fees earned from Asset Management Companies, Portfolio Manager and such other products covered under this agreement.</Text>
                 </View>
 
                 {/* ANNEXURE B */}
                 <View style={[pdfStyles.section, { marginTop: 20 }]}>
-                    <Text style={[pdfStyles.heading, {textAlign:"center"}]}>ANNEXURE B</Text>
+                    <Text style={[pdfStyles.heading, { textAlign: "center" }]}>ANNEXURE B</Text>
                     <Text style={[pdfStyles.subHeading, { textAlign: "center" }]}>Code of Conduct for Distributors for AIFs</Text>
                     <View style={{ gap: 4 }}>
                         <Text style={pdfStyles.paragraph}>1. Adhere to SEBI (Alternative Investment Funds) Regulations, 2012, as amended from time to time, and circulars issued by SEBI relating to distribution, marketing, performance benchmarking and investor reporting requirements of AIFs.</Text>
@@ -2279,8 +2279,7 @@ const PatnersSignup = () => {
                                                 onChange={(e) => setIsAuthorized(e.target.checked)}
                                             />
                                             <label htmlFor="auth-check" className="text-[11px] text-gray-600 leading-relaxed cursor-pointer select-none">
-                                                I Authorize TieVista (IndusArtha Financial Services Private Limited) to view my KYC data from KRA for the purpose of availing Financial Products Distribution service and to become a registered partner with TieVista (IndusArtha Financial Services Private Limited).
-                                            </label>
+                                                I consent to share my PAN and Aadhaar obtained via digilocker with Indusartha Financial Services Private Limited for the purpose of adhering to KYC and regulatory requirements with the third party product manufacturers/ service providers. This information shall be retained by the company only if there is a transaction proposed to be completed on the platform with third party product manufacturers/service providers.</label>
                                         </div>
 
                                         {/* Fetch Data Button - Acts as Submit for Identity Form */}
