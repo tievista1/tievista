@@ -751,7 +751,7 @@ const PatnersSignup = () => {
                 contact_no: data.phone,
                 email: data.email,
             };
-            const response = await axios.post("https://partner.tievista.com/api/partners/register", payload, AUTH_CONFIG);
+            const response = await axios.post("https://partners.tievista.com/api/partners/register", payload, AUTH_CONFIG);
             if (response.status === 201 || response.status === 200) {
                 setMasterData(prev => ({ ...prev, ...data }));
                 setShowIdentity(true);
@@ -772,7 +772,7 @@ const PatnersSignup = () => {
         try {
             const identifier = masterData.email || masterData.phone;
             const payload = { dob: data.dob, pan_no: data.pan };
-            await axios.put(`https://partnerregistration.duckdns.org/api/partners/update/${identifier}`, payload, AUTH_CONFIG);
+            await axios.put(`https://partners.tievista.com/api/partners/update/${identifier}`, payload, AUTH_CONFIG);
             setMasterData(prev => ({ ...prev, ...data }));
             setShowRegulatory(true);
             alert("PAN Details synced!");
@@ -791,7 +791,7 @@ const PatnersSignup = () => {
                 aprn: data.aprn || null,
                 euin_aprn: data.euinAprn || null
             };
-            await axios.put(`https://partnerregistration.duckdns.org/api/partners/update/${identifier}`, payload, AUTH_CONFIG);
+            await axios.put(`https://partners.tievista.com/api/partners/update/${identifier}`, payload, AUTH_CONFIG);
             setMasterData(prev => ({ ...prev, ...data }));
             setShowBankDetails(true);
         } catch (error) {
@@ -808,7 +808,7 @@ const PatnersSignup = () => {
                 ifsc_code: data.ifscCode,
                 bank_name: data.bankName,
             };
-            await axios.put(`https://partnerregistration.duckdns.org/api/partners/update/${identifier}`, payload, AUTH_CONFIG);
+            await axios.put(`https://partners.tievista.com/api/partners/update/${identifier}`, payload, AUTH_CONFIG);
             setMasterData(prev => ({ ...prev, ...data }));
             setShowAgreement(true);
         } catch (error) {
