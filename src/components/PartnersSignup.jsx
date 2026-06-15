@@ -751,7 +751,7 @@ const PatnersSignup = () => {
                 contact_no: data.phone,
                 email: data.email,
             };
-            const response = await axios.post("https://partnerregistration.duckdns.org/api/partners/register", payload, AUTH_CONFIG);
+            const response = await axios.post("https://partner.tievista.com/api/partners/register", payload, AUTH_CONFIG);
             if (response.status === 201 || response.status === 200) {
                 setMasterData(prev => ({ ...prev, ...data }));
                 setShowIdentity(true);
