@@ -202,7 +202,7 @@ const InvestmentAccess = () => {
                         <span className="text-[#D4AF37] text-xs font-bold tracking-[0.3em] uppercase" style={{ fontFamily: 'PT Serif, serif' }}>We don’t just manage wealth, We future-proof it.</span>
                     </div>
                     <motion.h1 variants={animationSettings.item} className="text-6xl md:text-9xl mb-8 text-white tracking-tighter leading-[0.95]" style={{ fontFamily: "PT Serif" }}>
-                        Investment <span className="gold-text ">Access1</span>
+                        Investment <span className="gold-text ">Access</span>
                     </motion.h1>
                     <motion.p variants={animationSettings.item} className="text-xl md:text-2xl text-white font-light max-w-3xl mx-auto leading-relaxed mb-12">
                         Navigating the complexities of global wealth through bespoke selection, rigorous discipline, and a borderless perspective.
