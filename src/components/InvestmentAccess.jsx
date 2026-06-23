@@ -24,7 +24,7 @@ const ASSET_CATEGORIES = [
         title: "Growth",
         italicTitle: "Assets",
         subtitle: "",
-        description: "At TieVista, we build enduring financial success through disciplined, equity-centric investment strategies. Our approach is rooted in long-term growth and thoughtful risk management to generate capital appreciation globally.",
+        description: "At TieVista, we build enduring financial success through disciplined, equity-centric investment strategies. Our approach is rooted in long-term growth, backed by rigorous research and thoughtful risk management to generate capital appreciation globally.",
         includes: ["Public Equities", "Equity Mutual Funds (including ELSS)", "Equity PMS", "Equity ETFs"],
         image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1774346035/GrowthAsset_yffmlk.png",
         icon: TrendingUp,
@@ -62,111 +62,170 @@ const NAV_ELEMENTS = [
 
 // --- Sub-components ---
 
+// Reusable image card with gold accent and overlay label
+const ImageCard = ({ name, image, delay = 0, className = "" }) => (
+    <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay }}
+        viewport={{ once: true, margin: '-60px' }}
+        className={`relative overflow-hidden group shadow-md ${className}`}
+    >
+        {/* Gold left border accent */}
+        <div
+            className="absolute left-0 top-0 bottom-0 w-[5px] z-20"
+            style={{ background: GOLD }}
+        />
+        {/* Image */}
+        <img
+            src={image}
+            alt={name}
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            loading="lazy"
+        />
+        {/* Bottom semi-transparent overlay */}
+        <div className="absolute bottom-0 left-0 right-0 h-[32%] px-6 md:px-8 bg-black/40 backdrop-blur-[3px] z-10 flex items-center">
+            <h3
+                className="text-white text-lg md:text-xl lg:text-2xl font-light tracking-tight leading-tight"
+                style={{ fontFamily: 'PT Serif, serif' }}
+            >
+                {name}
+            </h3>
+        </div>
+    </motion.div>
+);
+
+// Section header with title, gold divider, and description
+const SectionHeader = ({ title, description, delay = 0.1 }) => (
+    <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay }}
+        viewport={{ once: true, margin: '-60px' }}
+        className="mb-10 text-left"
+    >
+        <h2
+            className="text-5xl md:text-6xl tracking-tighter leading-tight text-black"
+            style={{ fontFamily: 'PT Serif, serif' }}
+        >
+            {title}
+        </h2>
+        <div className="w-16 h-0.5 mt-4 mb-6" style={{ background: GOLD }} />
+        <p className="text-lg text-black leading-relaxed font-light max-w-4xl" style={{ fontFamily: "'Poppins', sans-serif" }}>
+            {description}
+        </p>
+    </motion.div>
+);
+
 const CategorySection = ({ cat, index }) => {
     const bg = index % 2 === 0 ? 'bg-white' : 'bg-[#FAFAFA]'
-    const Icon = cat.icon
 
-    return (
-        <section id={cat.id} className={`w-full py-14 border-b border-gray-100 ${bg}`}>
-            <div className="container mx-auto px-6 lg:px-16">
-                <div className={`flex flex-col ${cat.reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-16 md:gap-20`}>
+    if (cat.id === 'Growth') {
+        const growthCards = [
+            { name: "Public Equities", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781593855/PublicEquities_nezjmi.png" },
+            { name: "Equities Mutual Funds (Including ELSS)", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781593853/EquitiesMutualFunds_pme7kb.jpg" },
+            { name: "Equity PMS", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781593853/EquityPMS_jvmgrq.jpg" },
+            { name: "Equity ETFs", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781593855/EquityEFTs_ph2p90.png" }
+        ];
 
-                    {/* ── Image ── */}
-                    <motion.div
-                        {...fadeUp(0.1)}
-                        className="w-full md:w-1/2 overflow-hidden relative group"
-                        style={{ aspectRatio: '4/3' }}
-                    >
-                        <motion.img
-                            initial={{ scale: 1.08 }}
-                            whileInView={{ scale: 1 }}
-                            transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
-                            viewport={{ once: true }}
-                            src={cat.image}
-                            alt={cat.title}
-                            className="w-full h-full object-cover"
-                            loading='lazy'
-                        />
-                        {/* Gold corner accent */}
-                        <div
-                            className="absolute bottom-0 left-0 w-16 h-16 opacity-80"
-                            style={{ background: `linear-gradient(135deg, ${GOLD} 50%, transparent 50%)` }}
-                        />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-500" />
-                        {/* Hover overlay */}
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-500" />
-                    </motion.div>
+        return (
+            <section id={cat.id} className={`w-full min-h-screen flex flex-col justify-center border-b border-gray-100 ${bg}`}>
+                <div className="container mx-auto px-6 lg:px-16 py-16">
+                    <SectionHeader title="Growth Assets" description={cat.description} />
 
-                    {/* ── Content ── */}
-                    <div className="w-full md:w-1/2">
-                        <motion.div {...fadeUp(0.2)}>
-
-                            {/* Icon + category label */}
-                            <div className="flex items-center gap-3 mb-5">
-                                <div
-                                    className="w-10 h-10 flex items-center justify-center"
-                                    style={{ background: `${GOLD}18` }}
-                                >
-                                    <Icon size={20} color={GOLD} />
-                                </div>
-                                <span className="text-gray-400 text-xs font-semibold tracking-[0.35em] uppercase">
-                                    {cat.label}
-                                </span>
+                    {/* 2x2 Flex Layout */}
+                    <div className="max-w-4xl mx-auto flex flex-col gap-6 md:gap-8">
+                        {/* Top Row */}
+                        <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+                            <div className="flex-1">
+                                <ImageCard name={growthCards[0].name} image={growthCards[0].image} delay={0.2} className="w-full aspect-[3/2]" />
                             </div>
-
-                            {/* Heading */}
-                            <h2
-                                className="text-5xl md:text-6xl lg:text-7xl mb-6 tracking-tighter leading-tight"
-                                style={{ fontFamily: 'PT Serif, serif' }}
-                            >
-                                {cat.title}{' '}
-                                <span className="gold-text" >{cat.italicTitle}</span> {/* italicTitle style={{ color: GOLD }}*/}
-                            </h2>
-
-                            {/* Gold divider */}
-                            <div className="w-12 h-px mb-6" style={{ background: GOLD }} />
-
-                            {/* Description */}
-                            <p className="text-lg text-black leading-relaxed font-light mb-10" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                                {cat.description}
-                            </p>
-
-                            {/* Includes list */}
-                            <div>
-                                <p className="text-xs font-semibold text-black uppercase mb-4" style={{ fontFamily: 'PT Serif, serif' }}>
-                                    Institutional Offerings
-                                </p>
-                                <div className="space-y-0">
-                                    {cat.includes.map((item, i) => (
-                                        <motion.div
-                                            key={i}
-                                            initial={{ opacity: 0, x: -20 }}
-                                            whileInView={{ opacity: 1, x: 0 }}
-                                            transition={{ duration: 0.5, delay: i * 0.08 }}
-                                            viewport={{ once: true }}
-                                            className="group flex items-center gap-4 py-4 border-b border-gray-100 cursor-default"
-                                        >
-                                            <div
-                                                className="w-9 h-9 rounded-full border flex items-center justify-center shrink-0 transition-all duration-300 group-hover:bg-[#D4AF37] group-hover:border-[#D4AF37] group-hover:text-white"
-                                                style={{ borderColor: 'black', color: 'black' }}
-                                            >
-                                                <ArrowRight size={15} />
-                                            </div>
-                                            <span className="text-base md:text-lg font-light text-black group-hover:text-black transition-colors" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                                                {item}
-                                            </span>
-                                        </motion.div>
-                                    ))}
-                                </div>
+                            <div className="flex-1">
+                                <ImageCard name={growthCards[1].name} image={growthCards[1].image} delay={0.25} className="w-full aspect-[3/2]" />
                             </div>
-
-                        </motion.div>
+                        </div>
+                        {/* Bottom Row */}
+                        <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+                            <div className="flex-1">
+                                <ImageCard name={growthCards[2].name} image={growthCards[2].image} delay={0.3} className="w-full aspect-[3/2]" />
+                            </div>
+                            <div className="flex-1">
+                                <ImageCard name={growthCards[3].name} image={growthCards[3].image} delay={0.35} className="w-full aspect-[3/2]" />
+                            </div>
+                        </div>
                     </div>
-
                 </div>
-            </div>
-        </section>
-    )
+            </section>
+        );
+    }
+
+    if (cat.id === 'Income') {
+        const incomeCards = [
+            { name: "Debt Mutual Funds", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781594078/DebtMutualFunds_ixqfa3.jpg" },
+            { name: "Debt PMS", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781594079/DebtPMS_toipk8.png" },
+            { name: "Physical Bonds (Govt, Corp, Credit)", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781594078/PhyscialBonds_ofpbm7.png" },
+            { name: "Fixed Income ETFs", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781594077/FixedIncomeETFs_he0dx8.jpg" }
+        ];
+
+        return (
+            <section id={cat.id} className={`w-full min-h-screen flex flex-col justify-center border-b border-gray-100 ${bg}`}>
+                <div className="container mx-auto px-6 lg:px-16 py-16">
+                    <SectionHeader title="Income & Capital Preservation" description={cat.description} />
+
+                    {/* 2x2 Flex Layout */}
+                    <div className="max-w-4xl mx-auto flex flex-col gap-6 md:gap-8">
+                        {/* Top Row */}
+                        <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+                            <div className="flex-1">
+                                <ImageCard name={incomeCards[0].name} image={incomeCards[0].image} delay={0.2} className="w-full aspect-[3/2]" />
+                            </div>
+                            <div className="flex-1">
+                                <ImageCard name={incomeCards[1].name} image={incomeCards[1].image} delay={0.25} className="w-full aspect-[3/2]" />
+                            </div>
+                        </div>
+                        {/* Bottom Row */}
+                        <div className="flex flex-col md:flex-row gap-6 md:gap-8">
+                            <div className="flex-1">
+                                <ImageCard name={incomeCards[2].name} image={incomeCards[2].image} delay={0.3} className="w-full aspect-[3/2]" />
+                            </div>
+                            <div className="flex-1">
+                                <ImageCard name={incomeCards[3].name} image={incomeCards[3].image} delay={0.35} className="w-full aspect-[3/2]" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        );
+    }
+
+    if (cat.id === 'Private') {
+        const privateCards = [
+            { name: "AIFs (Category I, II & III)", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781607152/AIFs_crj4ik.png" },
+            { name: "Private Equity & Venture Capital", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781607151/PrivateEquity_VentureCaptial_cuwwrv.jpg" },
+            { name: "Real Estate Opportunities", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781607151/RealEstate_lrdmop.jpg" },
+            { name: "Commodities", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781607151/Commodity_i90dz5.png" }
+        ];
+
+        return (
+            <section id={cat.id} className={`w-full min-h-screen flex flex-col justify-center border-b border-gray-100 ${bg}`}>
+                <div className="container mx-auto px-6 lg:px-16 py-16">
+                    <SectionHeader title="Private & Alternative Investments." description={cat.description} />
+
+                    {/* 4 Portrait Cards in a Single Row */}
+                    <div className="flex flex-col sm:flex-row gap-6">
+                        {privateCards.map((card, i) => (
+                            <div key={i} className="flex-1">
+                                <ImageCard name={card.name} image={card.image} delay={0.2 + i * 0.08} className="w-full h-[360px] sm:h-[420px] md:h-[480px]" />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        );
+    }
+
+    // Fallback (won't be reached with current data)
+    return null;
 }
 
 // --- Main Component ---
@@ -192,68 +251,25 @@ const InvestmentAccess = () => {
             {/* Hero Section */}
             <section className="h-[90vh] w-full relative flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 z-0">
-                    <img className="h-full w-full object-cover scale-105" src="https://res.cloudinary.com/dck5jgfix/image/upload/v1774250145/Global_GIFT_City_Solutions_BG_rndi8p.png" alt="Hero" />
+                    <img className="h-full w-full object-cover scale-105" src="https://res.cloudinary.com/dck5jgfix/image/upload/v1777033664/HomeBG_jbaa4u.png" alt="Hero" />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70" />
                 </div>
 
-                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={animationSettings.container} className="relative z-10 text-center px-6">
-                    <div className="inline-flex items-center gap-3 px-4 py-1 mb-6 border border-[#D4AF37]/50 rounded-full bg-black/20 backdrop-blur-sm">
-                        <span className="w-1.5 h-1.5 rounded-full" style={{ background: GOLD }} />
-                        <span className="text-[#D4AF37] text-xs font-bold tracking-[0.3em] uppercase" style={{ fontFamily: 'PT Serif, serif' }}>We don’t just manage wealth, We future-proof it.</span>
-                    </div>
-                    <motion.h1 variants={animationSettings.item} className="text-6xl md:text-9xl mb-8 text-white tracking-tighter leading-[0.95]" style={{ fontFamily: "PT Serif" }}>
-                        Investment <span className="gold-text ">Access</span>
+                <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={animationSettings.container} className="absolute bottom-28 left-6 md:left-16 lg:left-24 text-left z-10 max-w-3xl pr-6">
+                    {/* <div className="inline-flex items-center gap-3 px-4 py-1 mb-6 border border-[#D4AF37]/50  bg-black/20 ">
+                        {/* <span className="w-1.5 h-1.5 rounded-full" style={{ background: GOLD }} /> */}
+                    {/* <span className="text-[#D4AF37] text-xs font-bold tracking-[0.3em] uppercase" style={{ fontFamily: 'PT Serif, serif' }}>We don’t just manage wealth, We future-proof it.</span> */}
+                    {/* </div> */}
+                    <motion.h1 variants={animationSettings.item} className="text-6xl md:text-6xl mb-8 text-white tracking-tighter leading-[0.95]" style={{ fontFamily: "PT Serif" }}>
+                        Investment Access
                     </motion.h1>
-                    <motion.p variants={animationSettings.item} className="text-xl md:text-2xl text-white font-light max-w-3xl mx-auto leading-relaxed mb-12">
+                    <motion.p variants={animationSettings.item} className="text-lg md:text-xl text-white font-light max-w-3xl leading-relaxed mb-12">
                         Navigating the complexities of global wealth through bespoke selection, rigorous discipline, and a borderless perspective.
                     </motion.p>
                 </motion.div>
 
                 {/* Quick Nav Bar */}
-                <div className="absolute bottom-0 left-0 w-full bg-white border-t border-gray-100 z-20 flex">
-                    {NAV_ELEMENTS.map((el, i) => {
-                        const Icon = el.icon
-                        return (
-                            <a
-                                key={i}
-                                href={el.href}
-                                className="group relative flex-1 flex flex-col justify-center px-5 py-5 border-r border-gray-100 last:border-r-0 overflow-hidden transition-all duration-300 hover:bg-[#FFFDF5]"
-                            >
-                                {/* Gold top-border reveal on hover */}
-                                <div
-                                    className="absolute top-0 left-0 h-[2px] w-0 group-hover:w-full transition-all duration-500"
-                                    style={{ background: GOLD, fontFamily: 'PT Serif, serif' }}
-                                />
 
-                                {/* Row: index + icon */}
-                                <div className="flex items-center gap-2 mb-1.5">
-                                    {/* <span
-                                        className="text-[10px] font-bold tabular-nums leading-none"
-                                        style={{ color: GOLD, fontFamily: 'PT Serif, serif' }}
-                                    >
-                                        {String(i + 1).padStart(2, '0')}
-                                    </span> */}
-                                    <Icon
-                                        size={13}
-                                        className="text-gray-400 group-hover:text-[#D4AF37] transition-colors duration-300"
-                                    />
-                                </div>
-
-                                {/* Title */}
-                                <span className="text-[11px] md:text-sm font-semibold text-black group-hover:text-black tracking-tight leading-tight transition-colors duration-300 line-clamp-1" >
-                                    {el.title}
-                                </span>
-
-                                {/* Slide-in arrow */}
-                                <ArrowRight
-                                    size={13}
-                                    className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
-                                    style={{ color: GOLD }}
-                                />
-                            </a>
-                        )
-                    })}
-                </div>
             </section>
 
             {/* Asset Category Sections */}
