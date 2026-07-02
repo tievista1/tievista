@@ -231,26 +231,24 @@ const AgreementPDF = ({ data }) => {
                         In this Agreement, unless the context otherwise requires, the following terms shall have the meanings assigned to them hereunder. Words importing the singular shall include the plural and vice versa, and words importing any gender shall include all genders.
                     </Text>
                     <View style={{ gap: 4 }}>
-                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.1 "AMC" or "Asset Management Company"</Text> shall mean a company incorporated under the Companies Act, 2013 and approved by the Securities and Exchange Board of India to act as an asset management company for a mutual fund in accordance with the provisions of the SEBI (Mutual Funds) Regulations, 1996.</Text>
-                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.2 "AMFI"</Text> shall mean the Association of Mutual Funds in India, being the self-regulatory organization of mutual funds and intermediaries in India responsible for issuing guidelines, codes of conduct and AMFI Registration Numbers to mutual fund distributors and intermediaries.</Text>
-                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.3 "Applicable Laws"</Text> shall mean and include all applicable statutes, enactments, laws, ordinances, rules, regulations, circulars, notifications, guidelines, directions and policies issued by any governmental authority, regulatory authority, statutory body, self-regulatory organization or court of competent jurisdiction including, without limitation, regulations issued by the Securities and Exchange Board of India and guidelines issued by the Association of Mutual Funds in India, as amended or modified from time to time.</Text>
-                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.4 "ARN" or "AMFI Registration Number"</Text> shall mean the registration number allotted by AMFI to an intermediary or distributor authorising such entity to distribute mutual fund products in accordance with the applicable AMFI guidelines and regulatory framework.</Text>
-                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.5 "Business Day"</Text> shall mean any day on which banks and financial institutions are open for general business in India, excluding Saturdays, Sundays and public holidays.</Text>
-                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.6 "Client"</Text> shall mean any individual, body corporate, partnership firm, trust, association of persons, institution or any other legal entity who is introduced, referred, or sourced by the Sub-Distributor to the Principal Distributor for the purpose of investment in Mutual Fund Products or PMS Products.</Text>
-                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.7 "Commission"</Text> shall mean any remuneration, brokerage, trail commission, upfront commission, referral fee, marketing fee or incentive payable to the Sub-Distributor by the Principal Distributor in consideration for Distribution Services or Referral Services performed under this Agreement.</Text>
-                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.8 "Confidential Information"</Text> shall mean and include all non-public, proprietary or confidential information disclosed by one Party to the other, whether in written, electronic, oral or any other form, including but not limited to client information and investment details, marketing strategies and business plans, commission structures and commercial arrangements, internal policies and operational procedures, financial information and proprietary databases, and any other information which by its nature ought reasonably to be treated as confidential. Confidential Information shall not include information which is or becomes publicly available without breach of this Agreement, or which was lawfully known to the receiving Party prior to disclosure, or which is required to be disclosed pursuant to Applicable Laws or regulatory directives.</Text>
-                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.9 "Distribution Services"</Text> shall mean the activities undertaken for marketing, promotion, facilitation and distribution of Mutual Fund Products on behalf of the Principal Distributor, including identification of prospective investors, dissemination of approved marketing material, assistance in client onboarding and facilitation of transaction processing.</Text>
-                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.10 "Effective Date"</Text> shall mean the date on which this Agreement is executed by both Parties.</Text>
-                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.11 "Marketing Material"</Text> shall mean brochures, presentations, advertisements, emails, digital communication or any promotional content relating to Mutual Fund Products or PMS Products that has been approved by the Principal Distributor or the respective product provider.</Text>
-                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.12 "Mutual Fund Products"</Text> shall mean units or schemes offered by mutual funds established and registered with the Securities and Exchange Board of India and managed by Asset Management Companies in accordance with the provisions of the SEBI (Mutual Funds) Regulations, 1996.</Text>
-                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.13 "PMS Products"</Text> shall mean discretionary, non-discretionary or advisory portfolio management services provided by portfolio managers registered with the Securities and Exchange Board of India under the provisions of the SEBI (Portfolio Managers) Regulations, 2020.</Text>
-                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.14 "Portfolio Manager"</Text> shall mean a body corporate registered with SEBI and authorised to provide portfolio management services in accordance with the provisions of the SEBI (Portfolio Managers) Regulations, 2020.</Text>
-                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.15 "Principal Distributor"</Text> shall mean the entity appointing the Sub-Distributor under this Agreement for distribution of Mutual Fund Products and facilitation of PMS Products and shall include its successors and permitted assigns.</Text>
-                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.16 "Referral Services"</Text> shall mean activities limited to the introduction of prospective clients to the Principal Distributor or SEBI registered portfolio managers, facilitation of meetings between such clients and the Principal Distributor or portfolio managers, and assistance in administrative documentation, without providing investment advice or portfolio recommendations.</Text>
-                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.17 "Regulatory Authority"</Text> shall mean any governmental, statutory or regulatory authority having jurisdiction over the activities contemplated under this Agreement, including the Securities and Exchange Board of India.</Text>
-                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.18 "SEBI"</Text> shall mean the Securities and Exchange Board of India established under the Securities and Exchange Board of India Act, 1992.</Text>
-                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.19 "Sub-Distributor"</Text> shall mean the intermediary appointed under this Agreement for the limited purpose of marketing and facilitating investment in Mutual Fund Products and referring prospective clients for PMS Products, subject to the terms and conditions specified herein.</Text>
-                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.20 "Term"</Text> shall mean the duration of this Agreement commencing from the Effective Date and continuing until terminated in accordance with the provisions of this Agreement.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.1. "AMC" or "Asset Management Company"</Text> shall mean a company incorporated under the Companies Act, 2013 and approved by the Securities and Exchange Board of India to act as an asset management company for a mutual fund in accordance with the provisions of the SEBI (Mutual Funds) Regulations, 1996.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.2. "AIF Offering"</Text> shall mean offering units of alternative investment fund registered with the Securities and Exchange Board of India under the provisions of the SEBI (Alternative Investment Funds) Regulations, 2012.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.3. "Applicable Laws"</Text> shall mean and include all applicable statutes, enactments, laws, ordinances, rules, regulations, circulars, notifications, guidelines, directions and policies issued by any governmental authority, regulatory authority, statutory body, self-regulatory organization or court of competent jurisdiction including, without limitation, regulations issued by the Securities and Exchange Board of India and guidelines issued by the Association of Mutual Funds in India, as amended or modified from time to time.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.4. "Business Day"</Text> shall mean any day on which banks and financial institutions are open for general business in India, excluding Saturdays, Sundays and public holidays.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.5. "Client"</Text> shall mean any individual, body corporate, partnership firm, trust, association of persons, institution or any other legal entity who is introduced, referred, or sourced by the Sub-Distributor to the Principal Distributor for the purpose of investment in Mutual Fund Products or PMS Products or other products/ services covered under clause 3 of the agreement.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.6. "Commission"</Text> shall mean any remuneration, brokerage, trail commission, upfront commission, referral fee, marketing fee or incentive payable to the Sub-Distributor by the Principal Distributor in consideration for Distribution Services or Referral Services performed under this Agreement.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.7. "Confidential Information"</Text> shall mean and include all non-public, proprietary or confidential information disclosed by one Party to the other, whether in written, electronic, oral or any other form, including but not limited to client information and investment details, marketing strategies and business plans, commission structures and commercial arrangements, internal policies and operational procedures, financial information and proprietary databases, and any other information which by its nature ought reasonably to be treated as confidential. Confidential Information shall not include information which is or becomes publicly available without breach of this Agreement, or which was lawfully known to the receiving Party prior to disclosure, or which is required to be disclosed pursuant to Applicable Laws or regulatory directives.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.8. "Distribution Services"</Text> shall mean the activities undertaken for marketing, promotion, facilitation and distribution of Mutual Fund Products on behalf of the Principal Distributor, including identification of prospective investors, dissemination of approved marketing material, assistance in client onboarding and facilitation of transaction processing.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.9. "Effective Date"</Text> shall mean the date on which this Agreement is executed by both Parties.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.10. "Financial Offering"</Text> shall mean services or products as may be approved by the principal distributor and regulated by any financial sector regulator.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.11. "Manufacturer"</Text> shall mean issuer of security or the entity/ person engaged in servicing the products or services which are regulated by any financial sector regulator.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.12. "Marketing Material"</Text> shall mean brochures, presentations, advertisements, emails, digital communication or any promotional content relating to Mutual Fund Products or PMS Products or other products/ services covered under clause 3 of the agreement that has been approved by the Principal Distributor or the respective product provider.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.13. "Principal Distributor"</Text> shall mean the entity appointing the Sub-Distributor under this Agreement for distribution of Mutual Fund Products and facilitation of PMS Products or any other products/ services covered under clause 3 of the agreement and shall include its successors and permitted assigns.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.14. "Referral Services"</Text> shall mean activities limited to the introduction of prospective clients to the Principal Distributor for onboarding such clients by the manufacturer solely at their discretion or manufacturer, without providing investment advice or portfolio recommendations.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.15. "Regulatory Authority"</Text> shall mean any governmental, statutory or regulatory authority having jurisdiction over the activities contemplated under this Agreement, including the Securities and Exchange Board of India.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.16. "SEBI"</Text> shall mean the Securities and Exchange Board of India established under the Securities and Exchange Board of India Act, 1992.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.17. "Sub-Distributor"</Text> shall mean the intermediary appointed under this Agreement for the limited purpose of marketing and facilitating investment in Mutual Fund Products and referring prospective clients for PMS Products or any other products/ services covered under clause 3 of the agreement, subject to the terms and conditions specified herein.</Text>
+                        <Text style={pdfStyles.paragraph}><Text style={pdfStyles.bold}>2.18. "Term"</Text> shall mean the duration of this Agreement commencing from the Effective Date and continuing until terminated in accordance with the provisions of this Agreement.</Text>
                     </View>
                 </View>
 
@@ -473,7 +471,7 @@ const AgreementPDF = ({ data }) => {
                         <Text style={pdfStyles.paragraph}>17.4 The Sub-Distributor shall not make any statement, commitment, promise, guarantee or representation to clients or prospective investors which is inconsistent with or beyond the information, materials or authorisations provided by the Principal Distributor. Additionally, the sub-distributor will not spread any unauthenticated news and will be subject to SEBI (Prohibition of Fraudulent and Unfair Trade Practices relating to Securities Market) Regulations, 2003.</Text>
                         <Text style={pdfStyles.paragraph}>17.5 The sub-distributor is competent to enter into a legally binding contract and this Agreement under Applicable Laws and that it is not incompetent to contract within the meaning of the Indian Contract Act, 1872 as amended from time to time.</Text>
                         <Text style={pdfStyles.paragraph}>17.6 The sub-distributor is a "fit and proper person" as defined under SEBI (Intermediaries) Regulations 2008.</Text>
-                        <Text style={pdfStyles.paragraph}>17.7 Sub-distributor represents that it is not prohibited to distribute products covered under clause 3 of this agreement in accordance with the relevant regulations (if applicable). and shall immediately communicate to principal distributor upon applicability of any prohibitory provisions under the said regulation during the subsistence of this Agreement.</Text>
+                        <Text style={pdfStyles.paragraph}>17.7 Sub-distributor represents that it is not prohibited to to distribute products covered under clause 3 of this agreement in accordance with the relevant regulations (if applicable). and shall immediately communicate to principal distributor upon applicability of any prohibitory provisions under the said regulation during the subsistence of this Agreement.</Text>
                         <Text style={pdfStyles.paragraph}>17.8 The Sub-Distributor represents and warrants that it holds all necessary registrations, approvals, licenses, certification and any other requirements if required under applicable laws and regulations, including those prescribed by the Securities and Exchange Board of India, and shall at all times remain in compliance with such requirements. The sub-distributor further represents and warrants that during the course of engagement, the sub-distributor is incapable i.e not in adherence to necessary registrations, approvals, licenses, certification and any other requirements if required under applicable laws and regulations, it shall forthwith intimate the principal distributor and shall not offer any products or services mentioned under clause 3 of this agreement, unless approved by the principal distributor.</Text>
                         <Text style={pdfStyles.paragraph}>17.9 The Sub-Distributor represents and warrants that the sub-distributor shall intimate about any changes in its constitution.</Text>
                         <Text style={pdfStyles.paragraph}>17.10 The sub-distributor represents and warrants that it shall abide by the applicability regulatory framework in force.</Text>
@@ -505,7 +503,7 @@ const AgreementPDF = ({ data }) => {
                 <View style={[pdfStyles.section, { marginTop: 30, paddingTop: 20, borderTop: "0.5pt solid #eee" }]}>
                     <Text style={[pdfStyles.heading, { textAlign: "center" }]}>ANNEXURE A</Text>
                     <Text style={[pdfStyles.subHeading, { textAlign: "center" }]}>Fee / Commission sharing</Text>
-                    <Text style={pdfStyles.paragraph}>The principal distributor will share ___% of fees earned from Asset Management Companies, Portfolio Manager and such other products covered under this agreement.</Text>
+                    <Text style={pdfStyles.paragraph}>The principal distributor will share 90% of fees earned from Asset Management Companies, Portfolio Manager and such other products covered under this agreement.</Text>
                 </View>
 
                 {/* ANNEXURE B */}
@@ -533,6 +531,286 @@ const AgreementPDF = ({ data }) => {
                         <Text style={pdfStyles.paragraph}>18. Provide relevant documents of investors to tax authorities and enforcement agencies under the Prevention of Money Laundering Act, including KYC documents, Power of Attorney (PoA), and any other information as may be required from time to time.</Text>
                         <Text style={pdfStyles.paragraph}>19. Abstain from making negative statements about other AIFs that the distributor is not representing. Ensure that comparison of AIFs is done between similar and comparable AIFs, based on adequate information.</Text>
                         <Text style={pdfStyles.paragraph}>20. Not indulge in any manipulative, fraudulent or deceptive practices or spread rumours with a view to make personal gain.</Text>
+                    </View>
+                </View>
+                <View style={[pdfStyles.section, { marginTop: 20 }]}>
+                    <Text style={[pdfStyles.subHeading, { textAlign: "center" }]}>Code of Conduct for Distributors for PMSs</Text>
+                    <View style={{ gap: 4 }}>
+                        <Text style={pdfStyles.paragraph}>21. Adhere to the Securities and Exchange Board of India (Portfolio Managers) Regulations, 2020 and circulars issued from time to time related to distributors, distribution, advertising practices of Portfolio Management Services, etc.</Text>
+                        <Text style={pdfStyles.paragraph}>22. Maintain high standards of integrity, promptitude and fairness in the conduct of all their business.</Text>
+                        <Text style={pdfStyles.paragraph}>23. Act with due skill, care and diligence in the conduct of all their business.</Text>
+                        <Text style={pdfStyles.paragraph}>24. Consider investor's interest, risk profiling and suitability to their financial needs while marketing Portfolio Management Services.</Text>
+                        <Text style={pdfStyles.paragraph}>25. Take necessary steps to ensure that the clients' interest is protected.</Text>
+                        <Text style={pdfStyles.paragraph}>26. Ensure that commission or incentive shall never form the basis for recommending Portfolio Management Services.</Text>
+                        <Text style={pdfStyles.paragraph}>27. Be fully conversant with the Disclosure Document, Investment Approaches, fees and charges and the terms of agreement to be entered between the client and the Portfolio Manager.</Text>
+                        <Text style={pdfStyles.paragraph}>28. Disclose to the clients all material information including the details of distribution commissions for various Investment Approaches.</Text>
+                        <Text style={pdfStyles.paragraph}>29. Assist clients in completing Know Your Client ("KYC") and In-Person Verification related procedures.</Text>
+                        <Text style={pdfStyles.paragraph}>30. Provide full and latest information about investment approaches and also highlight the assumptions made in performance calculations, risk assessments, performance projections etc., if any, for such investment approaches.</Text>
+                        <Text style={pdfStyles.paragraph}>31. Inform the clients about the risks and level of control over the administration of Portfolio associated with the type of Portfolio Management Services offered (i.e. Discretionary, Non-discretionary or Advisory).</Text>
+                        <Text style={pdfStyles.paragraph}>32. Abstain from assuring returns in any type of Investment Approach and from any kind of mis-representation.</Text>
+                        <Text style={pdfStyles.paragraph}>33. Abstain from attracting clients through unethical means such as offer of rebate/gifts etc.</Text>
+                        <Text style={pdfStyles.paragraph}>34. Maintain necessary infrastructure to provide support to clients in timely receipt of disclosure document, statement of portfolio and performance, statement of fees, audit report, etc.</Text>
+                        <Text style={pdfStyles.paragraph}>35. Maintain confidentiality of clients' details, deals and transactions, which they come to know in their business relationship.</Text>
+                        <Text style={pdfStyles.paragraph}>36. Abstain from making negative statements about other Portfolio Managers or Investment Approaches. Make comparisons, if any, only with the similar and comparable products along with complete facts.</Text>
+                        <Text style={pdfStyles.paragraph}>37. Not indulge in any manipulative, fraudulent or deceptive practices or spread rumours with a view to make personal gain.</Text>
+                        <Text style={pdfStyles.paragraph}>38. Hold valid NISM-Series-XXI-A: Portfolio Management Services (PMS) Distributors Certification, as specified by SEBI, at all times.</Text>
+                    </View>
+                </View>
+
+                {/* Code of Conduct for Distributors for MFs */}
+                <View style={[pdfStyles.section, { marginTop: 20 }]}>
+                    <Text style={[pdfStyles.heading, { textAlign: "center" }]}>Code of Conduct for Distributors for MFs</Text>
+
+                    <Text style={[pdfStyles.subHeading, { textDecoration: "underline", marginTop: 10 }]}>Purpose and Scope of the Code</Text>
+                    <View style={{ paddingLeft: 10, gap: 4 }}>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>a.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>This Code of Conduct (<Text style={pdfStyles.bold}>"Code"</Text>) requires Mutual Fund Distributors to demonstrate the core values of being a fiduciary by establishing professional standards in their dealings with the investors, Asset Management Companies (<Text style={pdfStyles.bold}>"AMCs"</Text>), and other distributors so as to exemplify the values of transparency, competency, fairness, integrity and thereby seek to inspire and maintain trustworthiness in the profession of distribution of Mutual Fund schemes.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>b.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>This Code applies to all persons and entities who are registered with the Association of Mutual Funds in India (AMFI) as mutual fund distributors i.e. holders of AMFI Registration Number (<Text style={pdfStyles.bold}>"ARN"</Text>) (referred to as <Text style={pdfStyles.bold}>"MFDs"</Text> in this Code) and is binding on all the Directors/partners, members, sub-distributors, employees and representatives of the MFDs (collectively referred to as <Text style={pdfStyles.bold}>"Representatives"</Text> in this Code). The term <Text style={pdfStyles.bold}>"MFDs"</Text> is deemed to include the sales personnel of the MFDs engaged in marketing, sale and distribution of mutual fund products.</Text>
+                        </View>
+                    </View>
+
+                    <Text style={[pdfStyles.subHeading, { textDecoration: "underline", marginTop: 12 }]}>II. Obligations of the MFDs</Text>
+
+                    <Text style={[pdfStyles.subHeading, { marginTop: 10 }]}>1. Fiduciary Duty</Text>
+                    <View style={{ paddingLeft: 10, gap: 4 }}>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>a.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs must consider investor's interest as paramount and exercise due diligence, take proper care and exercise independent professional judgment in the best interest of the investor.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>b.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs should try to avoid conflict of interest as far as possible, and when it cannot be avoided, they shall ensure that appropriate disclosures are made to the investors, and that the investors are treated fairly. Further, while selling Mutual Fund products of their group/affiliate/associates, MFDs shall make appropriate disclosures to the investors regarding the conflict of interest arising from distribution of such Mutual Fund scheme.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>c.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall ensure that financial incentive should not form the basis for recommending any particular scheme or transaction to any investor. MFDs shall promote a culture of ethics and integrity within the organization, so as to dissuade unfair practices, conflicts, aggressive sales tactics and other inappropriate conduct directed to achieve sales targets in disregard of its fiduciary duty of care, diligence and loyalty.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>d.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall not rebate or pass-back commission to investors and shall refrain from attracting investors through inducement of rebate or gifts / gift-vouchers etc.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>e.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall not collude or undertake malpractices such as:</Text>
+                        </View>
+                        <View style={{ paddingLeft: 20, gap: 4 }}>
+                            <View style={{ flexDirection: "row" }}>
+                                <Text style={{ width: 25 }}>i.</Text>
+                                <Text style={[pdfStyles.paragraph, { flex: 1 }]}>encouraging over transacting and churning of investments to earn higher commissions.</Text>
+                            </View>
+                            <View style={{ flexDirection: "row" }}>
+                                <Text style={{ width: 25 }}>ii.</Text>
+                                <Text style={[pdfStyles.paragraph, { flex: 1 }]}>splitting applications to earn higher transaction charges / commissions.</Text>
+                            </View>
+                            <View style={{ flexDirection: "row" }}>
+                                <Text style={{ width: 25 }}>iii.</Text>
+                                <Text style={[pdfStyles.paragraph, { flex: 1 }]}>participating in payment defaults (such as dishonoring of cheques) or diversion of funds.</Text>
+                            </View>
+                            <View style={{ flexDirection: "row" }}>
+                                <Text style={{ width: 25 }}>iv.</Text>
+                                <Text style={[pdfStyles.paragraph, { flex: 1 }]}>making false claims for or participating in wrongful dividend / redemption payouts.</Text>
+                            </View>
+                            <View style={{ flexDirection: "row" }}>
+                                <Text style={{ width: 25 }}>v.</Text>
+                                <Text style={[pdfStyles.paragraph, { flex: 1 }]}>carrying out unethical practices such as churning, selling unsuitable products to clients, selling of units of schemes of any mutual fund, directly or indirectly, by making false or misleading statements, concealing or omitting material facts of the scheme, concealing the associated risk factors of the schemes, etc.</Text>
+                            </View>
+                        </View>
+                    </View>
+
+                    <Text style={[pdfStyles.subHeading, { marginTop: 10 }]}>2. Compliance related obligations</Text>
+                    <View style={{ paddingLeft: 10, gap: 4 }}>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>a.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall adhere to Securities and Exchange Board of India (Mutual Funds) Regulations, 1996 (<Text style={pdfStyles.bold}>"Mutual Fund Regulations"</Text>) and guidelines/circulars issued by Securities and Exchange Board of India (<Text style={pdfStyles.bold}>"SEBI"</Text>) and AMFI, from time to time, pertaining to distributors, selling, distribution and advertising practices (including the preparation of sales promotional literature and content) and code of conduct. Performance disclosures should also comply with the requirements specified by SEBI. MFDs must also adhere to restrictions prescribed under other SEBI Regulations as may be applicable to their marketing, selling and distribution activities, for example, obligation on segregation of distribution and advisory services mandated under SEBI (Investment Advisers) Regulations, 2013.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>b.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall comply with the Know Your Distributor (<Text style={pdfStyles.bold}>"KYD"</Text>) norms prescribed by AMFI. MFDs shall be diligent in attesting / certifying investor documents and performing InPerson Verification (<Text style={pdfStyles.bold}>"IPV"</Text>) of investors for the KYC process in accordance with the guidelines prescribed by AMFI / KYC Registration Agency (<Text style={pdfStyles.bold}>"KRA"</Text>) from time to time.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>c.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs should endeavor to be fully conversant with the key provisions of the Scheme Information Document (<Text style={pdfStyles.bold}>"SID"</Text>), Statement of Additional Information (<Text style={pdfStyles.bold}>"SAI"</Text>) and Key Information Memorandum (<Text style={pdfStyles.bold}>"KIM"</Text>) as well as the operational requirements of various schemes and should explain to the investors the key features (including fundamental attributes) of the schemes and any risk associated therein.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>d.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>In order to assess suitability of the Mutual Fund scheme being marketed, the MFDs should seek information from their clients about their financial status, investment experience and investment objectives.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>e.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall ensure that their Representatives have the necessary education and experience to perform their respective services.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>f.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs and their Representatives shall maintain confidentiality of all information relating to the AMCs and investors, and shall not:</Text>
+                        </View>
+                        <View style={{ paddingLeft: 20, gap: 4 }}>
+                            <View style={{ flexDirection: "row" }}>
+                                <Text style={{ width: 25 }}>i.</Text>
+                                <Text style={[pdfStyles.paragraph, { flex: 1 }]}>share or publish such information in any private or public forum without prior written consent of the concerned AMC/investor</Text>
+                            </View>
+                            <View style={{ flexDirection: "row" }}>
+                                <Text style={{ width: 25 }}>ii.</Text>
+                                <Text style={[pdfStyles.paragraph, { flex: 1 }]}>share or make any disclosure to any third party except pursuant to any filings or disclosures as may be required under applicable law or order of any court or regulatory body.</Text>
+                            </View>
+                            <View style={{ flexDirection: "row" }}>
+                                <Text style={{ width: 25 }}>iii.</Text>
+                                <Text style={[pdfStyles.paragraph, { flex: 1 }]}>share data with Group Companies for cross marketing.</Text>
+                            </View>
+                        </View>
+                        <Text style={[pdfStyles.paragraph, { paddingLeft: 20 }]}>MFDs and their Representatives shall comply with the Data Sharing Principles prescribed by AMFI and the applicable laws on Personal Data Protection.</Text>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>g.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall adhere to contractual agreements with AMC relating to data privacy to ensure that the data is always protected, used only for the purpose for which it was obtained and purged as soon as the data is no longer required to be stored for rendering services for which it was collected or stored securely.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>h.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall ensure that they and their sub-distributors are compliant with SEBI regulations, AMFI guidelines and code of conduct at all times and also that all their sub-distributors have a valid ARN. In other words, principal MFD should not engage or continue to engage a subdistributor whose ARN is rendered invalid.</Text>
+                        </View>
+                    </View>
+
+                    <Text style={[pdfStyles.subHeading, { marginTop: 10 }]}>3. Infrastructure, record keeping and other related obligations</Text>
+                    <View style={{ paddingLeft: 10, gap: 4 }}>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>a.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}><Text style={pdfStyles.bold}>Physical Infrastructure:</Text> MFDs should maintain necessary infrastructure to support the AMCs in maintaining high service standards to investors and ensure that critical operations such as forwarding /submission of forms and cheques etc. to AMCs/RTAs are appropriately supported.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>b.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}><Text style={pdfStyles.bold}>Digital Infrastructure:</Text> In view of increased initiatives towards digitization of mode of performance of services, including new client on-boarding, transaction processing and ongoing servicing for investors, MFDs should adopt adequate information technology related infrastructure, including in relation to cyber security measures to maintain confidentiality of electronic data during collection, transmission and storage as well as to mitigate risks related to execution of Mutual Fund transactions through digital platforms.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>c.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}><Text style={pdfStyles.bold}>Internal control, financial and operational resources:</Text> The MFDs should have internal control procedures and financial and operational systems and processes which can be reasonably expected to detect and prevent mis-selling as well as mitigate financial loss arising from fraud and other dishonest acts, professional misconduct or omissions, theft, or force majeure events. MFDs are encouraged to take up appropriate insurance coverage for their activities.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>d.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}><Text style={pdfStyles.bold}>Record keeping:</Text> MFDs should maintain adequate records in relation to clients, whether in physical or digital form, as applicable, in compliance with the applicable laws and SEBI regulations, including KYC records as well as correspondence with the investors on particular scheme or transaction suitability and consent/dissent of the investors.</Text>
+                        </View>
+                    </View>
+
+                    <Text style={[pdfStyles.subHeading, { marginTop: 10 }]}>4. Client related obligations</Text>
+                    <View style={{ paddingLeft: 10, gap: 4 }}>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>a.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall provide full and updated information on schemes, as provided to them by the AMCs, to the investors including SAI, SID, addenda, performance reports, fact sheets, portfolio disclosures and brochures. MFDs shall not deliberately withhold or omit any material fact or information supplied to them by the AMCs from any investor that the investor should know or may want to know, including information about particular scheme or transaction not being appropriate for the investor.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>b.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall highlight risk factors of each scheme to their investors, desist from making any misrepresentation or exaggerated statements or conceal associated risk factors of a scheme and shall advise and urge their investors to go through SAI/SID/KIM before deciding to make investments.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>c.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall disclose to the investors all material information including all commissions (in the form of trail commission or any other mode) received or receivable by them for the different competing schemes of various Mutual Funds from amongst which the scheme is being recommended to the investor.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>d.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall disclose to their clients the list of mutual funds they are affiliated with and inform to the clients that the information provided is limited to the mutual fund products that are being distributed/promoted by the MFDs and also inform the clients that the clients may also consider other alternate products, which are not being offered by the MFDs before making investment decision.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>e.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>If the MFD is an associate/group company/ sponsor of AMC of a mutual fund, the MFD shall, while providing suggestions to investor, disclose all material information about its association with the concerned AMC and the total amount of commission received/receivable.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>f.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>In terms of SEBI letter no. SEBI/IMD1/DoF-1/SK/2021/25517/1 dated September 06, 2021, MFDs cannot deal in Direct Plans. MFDs shall ensure that on any digital platform provided by MFD for offering investment facility to investor, it is categorically disclosed that the scheme the investor is subscribing to is of Regular Plan which involves payment of commission to MFD. The link for the rate of commission received or receivable by the MFD for the different competing schemes of various Mutual Funds shall be prominently displayed on the platform indicating the same as a hyperlink. Further, a link to the scheme offer documents (SID/SAI/KIM) shall also be prominently displayed on the concerned page.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>g.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall (i) not provide any indicative portfolio or indicative yield or indicative return for any particular scheme or transaction and (ii) abstain from indicating or assuring returns for any particular scheme or transaction.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>h.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs engaged in providing other financial services in addition to distribution of mutual fund products, where other financial products with assured return are being offered to clients, MFDs and their employees shall ensure that they do not mis-sell mutual fund products on the basis of indicative or assured return or regular income to the customers seeking to make investments. It shall be explained to the clients that MF investments are not guaranteed or assured return products and that the principal amount may be exposed to risk of loss.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>i.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>To prevent submission of fraudulent, incomplete, tampered or incorrect forms or applications, MFDs shall set up adequate training and processes to ensure that:</Text>
+                        </View>
+                        <View style={{ paddingLeft: 20, gap: 4 }}>
+                            <View style={{ flexDirection: "row" }}>
+                                <Text style={{ width: 25 }}>(i)</Text>
+                                <Text style={[pdfStyles.paragraph, { flex: 1 }]}>information in the application forms (including address and contact details) is filled diligently with the investor's own, accurate and complete information. Whether requested by the investor or not, the contact details / information of the MFDs' Representatives or any other third party is not filled in the application forms, so as to pass-off as the information relating to the investor;</Text>
+                            </View>
+                            <View style={{ flexDirection: "row" }}>
+                                <Text style={{ width: 25 }}>(ii)</Text>
+                                <Text style={[pdfStyles.paragraph, { flex: 1 }]}>any additions, revisions to the investor's contact details /information is done only upon receipt of such information from the investor or the investor's authorized person,</Text>
+                            </View>
+                            <View style={{ flexDirection: "row" }}>
+                                <Text style={{ width: 25 }}>(iii)</Text>
+                                <Text style={[pdfStyles.paragraph, { flex: 1 }]}>application forms submitted by the investor are not tampered with, whether by inserting, deleting or modifying any information / field in the application forms,</Text>
+                            </View>
+                            <View style={{ flexDirection: "row" }}>
+                                <Text style={{ width: 25 }}>(iv)</Text>
+                                <Text style={[pdfStyles.paragraph, { flex: 1 }]}>EUIN of the concerned employee of the MFD is written on the application forms for identification.</Text>
+                            </View>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>j.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall endeavor to resolve investor grievances/ complaints arising out of marketing, sale and distribution activities and shall provide complete assistance to the AMCs for redressal of grievances/ complaints.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>k.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall use marketing material as is provided to them by the AMCs and shall not design their own marketing materials in respect of any scheme or display the name, logo, mark of any AMC without the prior written approval of the AMC.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>l.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall draw attention of their clients to the disclosures made in the SID/SAI/ /KIM relating to general risks of investing through mutual fund schemes as well as scheme specific risks such as (i) returns being subject to market risk including loss of capital on account of market volatility, force majeure events, changes in political and economic environment, default by issuers of securities to mutual funds, bankruptcy or insolvency of issuers and potential segregation of portfolio by AMC in such circumstances; (ii) suspension of redemption facility in case the scheme faces liquidity crisis; (iii) risks associated with subscription to new fund offering of the scheme such as price volatility risk, liquidity risk and delisting risk; (iv) winding up of schemes on account of illiquid instruments, higher volume of redemption requests from the investors or on account of unforeseen market events.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>m.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall ensure that comparisons, if any, are made with similar and comparable schemes/ products along with complete facts.</Text>
+                        </View>
+                    </View>
+
+                    <Text style={[pdfStyles.subHeading, { textDecoration: "underline", marginTop: 12 }]}>5. Other obligations</Text>
+                    <View style={{ paddingLeft: 10, gap: 4 }}>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>a.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>Individual MFDs shall obtain NISM certification and register themselves with AMFI and obtain ARN and Employee Unique Identification Number (EUIN) from AMFI. The NISM certification and AMFI registration shall be renewed on a timely basis. Non-individual MFDs shall register themselves with AMFI and obtain the ARN, and shall ensure that their sales personnel or Representatives engaged in marketing, sale and distribution of mutual fund products hold a valid NISM certificate (i.e NISM-Series-V-A) and AMFI registration / EUIN. Employees of the MFD in other functional areas should also be encouraged to obtain appropriate NISM certification. MFDs shall quote a valid ARN and EUIN in the client's application / transaction feed, in order to place transactions in Regular Plan and receive commissions</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>b.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall ensure that their Representatives undergo training on proper conduct for their sales, marketing and distribution activities and focusing on (i) awareness and understanding of their fiduciary obligations towards investors, (ii) adequate procedures to be followed in performance of their functions so as to prevent and detect any frauds and errors, and (iii) responsible usage of social media platform with respect to content standards, authenticity and approval for the information , frequency of usage and other ethical practices.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>c.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall co-operate with and provide assistance, to AMCs, AMFI, SEBI, competent authorities, due diligence agencies appointed by AMFI/AMCs (as applicable) in relation to their services to the AMCs including by providing copies of relevant documents of the investors in their possession as may be required by AMCs from time to time or as may be called for by SEBI/AMFI / competent authority pursuant to any investigation or other proceeding.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>d.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall promptly intimate the AMC and AMFI any change in the MFD's status, constitution, address, contact details or any other information provided at the time of obtaining ARN.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>e.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall refund to the AMCs, (either by set off against future commissions or by payment) all incentives of any nature, including commissions received, that are subject to clawback as per SEBI regulations or the terms and conditions issued by the respective AMC.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>f.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall immediately notify the AMC and AMFI, in writing, if any of its Representatives has committed any act amounting to moral turpitude, financial irregularities or has been arrested by the police or whose employment/service has been terminated on account of any of the aforesaid bad acts.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>g.</Text>
+                            <View style={{ flex: 1 }}>
+                                <Text style={pdfStyles.paragraph}>Pursuant to Regulation 3 (3) of the SEBI (Investment Advisers) Regulations, 2013, MFDs shall not use terms such as Adviser / Advisor / Financial Adviser/ Investment Adviser/ Wealth Adviser/Wealth Manager/Wealth Managers, Consultant/s, etc. or any other similar name in their name, unless registered with SEBI as an Investment Adviser. The name of an MFD should reflect the registration held by the entity and should not in any way create an impression of performing a role for which the entity is not registered. The registered name of the MFD shall not contain any misleading phrase about the role of the entity. Thus, every MFD, while dealing in distribution of mutual fund schemes/products, should clearly specify to the client that he /she is acting as a MFD.</Text>
+                                <Text style={pdfStyles.paragraph}>MFDs shall mention/display a tagline, "AMFI-registered Mutual Fund Distributor" along with / below their name, in a clear and legible font of at least font size 12, in all forms of printed communication. MFD shall display their name and tagline in a clear and legible font in all forms of communication i.e., website, mobile app, printed or electronic materials, business card, sign board etc.</Text>
+                            </View>
+                        </View>
+                    </View>
+
+                    <Text style={[pdfStyles.subHeading, { textDecoration: "underline", marginTop: 12 }]}>6. Obligations towards integrity of the Mutual Fund industry</Text>
+                    <View style={{ paddingLeft: 10, gap: 4 }}>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>a.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs shall not indulge in fraudulent or unfair trade practices of any kind while marketing, selling or distributing any Mutual Fund scheme. MFDs and their Representatives must observe high standards of integrity and consistently conduct their dealings in a manner to uphold the professional image of the Mutual Fund industry.</Text>
+                        </View>
+                        <View style={{ flexDirection: "row" }}>
+                            <Text style={{ width: 20 }}>b.</Text>
+                            <Text style={[pdfStyles.paragraph, { flex: 1 }]}>MFDs, shall refrain from making false or defamatory statements about any AMC, AMFI, Mutual Fund schemes or other MFDs in any private or public forum (including chat groups, social media, print or electronic press, conferences etc.). MFDs shall maintain professional decorum, provide fair and balanced perspective and not participate in transmitting untrue statements or rumors so as to malign any AMC or Mutual Fund scheme or bring disrepute to any AMC, AMFI or the Mutual Fund industry. Any written or oral communication should be based on facts and be presented in an unbiased manner so as not to mislead the public.</Text>
+                        </View>
                     </View>
                 </View>
 
@@ -952,7 +1230,7 @@ const PatnersSignup = () => {
                                     <p>E. The Principal Distributor has agreed to appoint the Sub-Distributor on a non-exclusive basis, subject to strict adherence to applicable laws, regulatory guidelines, and the terms and conditions set forth in this Agreement.</p>
                                     <p>F. The Sub-Distributor represents that it holds a valid AMFI Registration Number (ARN), Employee Unique Identification Number (EUIN) and APMI Registration Number (APRN), wherever applicable, and shall maintain the same in good standing during the Term.</p>
                                 </div>
-                                <p className="mt-8 font-bold text-justify" style={{ fontFamily: PoppinsRegular }}>NOW THEREFORE, in consideration of the mutual covenants contained herein, the Parties hereby agree as follows:</p>
+                                <p className="mt-8 font-bold text-justify" style={{ fontFamily: PoppinsRegular }}>NOW THEREFORE, <span className="font-normal" style={{ fontFamily: PoppinsRegular }} > in consideration of the mutual covenants contained herein, the Parties hereby agree as follows:</span></p>
                             </div>
 
                             {/* Section 2: Definitions */}
@@ -963,25 +1241,23 @@ const PatnersSignup = () => {
                                 </p>
                                 <div className="space-y-4 text-justify" style={{ fontFamily: PoppinsRegular }}>
                                     <p><b>2.1 "AMC" or "Asset Management Company"</b> shall mean a company incorporated under the Companies Act, 2013 and approved by the Securities and Exchange Board of India to act as an asset management company for a mutual fund in accordance with the provisions of the SEBI (Mutual Funds) Regulations, 1996.</p>
-                                    <p><b>2.2 "AMFI"</b> shall mean the Association of Mutual Funds in India, being the self-regulatory organization of mutual funds and intermediaries in India responsible for issuing guidelines, codes of conduct and AMFI Registration Numbers to mutual fund distributors and intermediaries.</p>
+                                    <p><b>2.2 "AIF Offering"</b> shall mean offering units of alternative investment fund registered with the Securities and Exchange Board of India under the provisions of the SEBI (AlternativeInvestment Funds) Regulations, 2012.</p>
                                     <p><b>2.3 "Applicable Laws"</b> shall mean and include all applicable statutes, enactments, laws, ordinances, rules, regulations, circulars, notifications, guidelines, directions and policies issued by any governmental authority, regulatory authority, statutory body, self-regulatory organization or court of competent jurisdiction including, without limitation, regulations issued by the Securities and Exchange Board of India and guidelines issued by the Association of Mutual Funds in India, as amended or modified from time to time.</p>
-                                    <p><b>2.4 "ARN" or "AMFI Registration Number"</b> shall mean the registration number allotted by AMFI to an intermediary or distributor authorising such entity to distribute mutual fund products in accordance with the applicable AMFI guidelines and regulatory framework.</p>
-                                    <p><b>2.5 "Business Day"</b> shall mean any day on which banks and financial institutions are open for general business in India, excluding Saturdays, Sundays and public holidays.</p>
-                                    <p><b>2.6 "Client"</b> shall mean any individual, body corporate, partnership firm, trust, association of persons, institution or any other legal entity who is introduced, referred, or sourced by the Sub-Distributor to the Principal Distributor for the purpose of investment in Mutual Fund Products or PMS Products.</p>
-                                    <p><b>2.7 "Commission"</b> shall mean any remuneration, brokerage, trail commission, upfront commission, referral fee, marketing fee or incentive payable to the Sub-Distributor by the Principal Distributor in consideration for Distribution Services or Referral Services performed under this Agreement.</p>
-                                    <p><b>2.8 "Confidential Information"</b> shall mean and include all non-public, proprietary or confidential information disclosed by one Party to the other, whether in written, electronic, oral or any other form, including but not limited to client information and investment details, marketing strategies and business plans, commission structures and commercial arrangements, internal policies and operational procedures, financial information and proprietary databases, and any other information which by its nature ought reasonably to be treated as confidential.</p>
-                                    <p><b>2.9 "Distribution Services"</b> shall mean the activities undertaken for marketing, promotion, facilitation and distribution of Mutual Fund Products on behalf of the Principal Distributor, including identification of prospective investors, dissemination of approved marketing material, assistance in client onboarding and facilitation of transaction processing.</p>
-                                    <p><b>2.10 "Effective Date"</b> shall mean the date on which this Agreement is executed by both Parties.</p>
-                                    <p><b>2.11 "Marketing Material"</b> shall mean brochures, presentations, advertisements, emails, digital communication or any promotional content relating to Mutual Fund Products or PMS Products that has been approved by the Principal Distributor or the respective product provider.</p>
-                                    <p><b>2.12 "Mutual Fund Products"</b> shall mean units or schemes offered by mutual funds established and registered with the Securities and Exchange Board of India and managed by Asset Management Companies in accordance with the provisions of the SEBI (Mutual Funds) Regulations, 1996.</p>
-                                    <p><b>2.13 "PMS Products"</b> shall mean discretionary, non-discretionary or advisory portfolio management services provided by portfolio managers registered with the Securities and Exchange Board of India under the provisions of the SEBI (Portfolio Managers) Regulations, 2020.</p>
-                                    <p><b>2.14 "Portfolio Manager"</b> shall mean a body corporate registered with SEBI and authorised to provide portfolio management services in accordance with the provisions of the SEBI (Portfolio Managers) Regulations, 2020.</p>
-                                    <p><b>2.15 "Principal Distributor"</b> shall mean the entity appointing the Sub-Distributor under this Agreement for distribution of Mutual Fund Products and facilitation of PMS Products and shall include its successors and permitted assigns.</p>
-                                    <p><b>2.16 "Referral Services"</b> shall mean activities limited to the introduction of prospective clients to the Principal Distributor or SEBI registered portfolio managers, facilitation of meetings between such clients and the Principal Distributor or portfolio managers, and assistance in administrative documentation, without providing investment advice or portfolio recommendations.</p>
-                                    <p><b>2.17 "Regulatory Authority"</b> shall mean any governmental, statutory or regulatory authority having jurisdiction over the activities contemplated under this Agreement, including the Securities and Exchange Board of India.</p>
-                                    <p><b>2.18 "SEBI"</b> shall mean the Securities and Exchange Board of India established under the Securities and Exchange Board of India Act, 1992.</p>
-                                    <p><b>2.19 "Sub-Distributor"</b> shall mean the intermediary appointed under this Agreement for the limited purpose of marketing and facilitating investment in Mutual Fund Products and referring prospective clients for PMS Products, subject to the terms and conditions specified herein.</p>
-                                    <p><b>2.20 "Term"</b> shall mean the duration of this Agreement commencing from the Effective Date and continuing until terminated in accordance with the provisions of this Agreement.</p>
+                                    <p><b>2.4 "Business Day"</b> shall mean any day on which banks and financial institutions are open for general business in India, excluding Saturdays, Sundays and public holidays.</p>
+                                    <p><b>2.5 "Client"</b> shall mean any individual, body corporate, partnership firm, trust, association of persons, institution or any other legal entity who is introduced, referred, or sourced by the Sub-Distributor to the Principal Distributor for the purpose of investment in Mutual Fund Products or PMS Products or other products/ services covered under clause 3 of the agreement.</p>
+                                    <p><b>2.6 "Commission"</b> shall mean any remuneration, brokerage, trail commission, upfront commission, referral fee, marketing fee or incentive payable to the Sub-Distributor by the Principal Distributor in consideration for Distribution Services or Referral Services performed under this Agreement.</p>
+                                    <p><b>2.7 "Confidential Information"</b>shall mean and include all non-public, proprietary or confidential information disclosed by one Party to the other, whether in written, electronic, oral or any other form, including but not limited to client information and investment details, marketing strategies and business plans, commission structures and commercial arrangements, internal policies and operational procedures, financial information and proprietary databases, and any other information which by its nature ought reasonably to be treated as confidential. Confidential Information shall no include information which is or becomes publicly available without breach of this Agreement, or which was lawfully known to the receiving Party prior to disclosure, or which is required to be disclosed pursuant to Applicable Laws or regulatory directives.</p>
+                                    <p><b>2.8 "Distribution Services"</b> shall mean the activities undertaken for marketing, promotion, facilitation and distribution of Mutual Fund Products on behalf of the Principal Distributor, including identification of prospective investors, dissemination of approved marketing material, assistance in client onboarding and facilitation of transaction processing.</p>
+                                    <p><b>2.9 "Effective Date"</b> shall mean the date on which this Agreement is executed by both Parties.</p>
+                                    <p><b>2.10 "Financial Offering"</b> shall mean services or products as may be approved by the principal distributor and regulated by any financial sector regulator.</p>
+                                    <p><b>2.11 "Manufacturer"</b> shall mean issuer of security or the entity/ person engaged in servicing the products or services which are regulated by any financial sector regulator.</p>
+                                    <p><b>2.12 "Marketing Material"</b> shall mean brochures, presentations, advertisements, emails, digital communication or any promotional content relating to Mutual Fund Products or PMS Products or other products/ services covered under clause 3 of the agreement that has been approved by the Principal Distributor or the respective product provider.</p>
+                                    <p><b>2.13 "Principal Distributor"</b> shall mean the entity appointing the Sub-Distributor under this Agreement for distribution of Mutual Fund Products and facilitation of PMS Products or any other products/ services covered under clause 3 of the agreement and shall include its successors and permitted assigns.</p>
+                                    <p><b>2.14 "Referral Services"</b> shall mean activities limited to the introduction of prospective clients to the Principal Distributor for onboarding such clients by the manufacturer solely at their discretion or manufacturer, without providing investment advice or portfolio recommendations.</p>
+                                    <p><b>2.15 "Regulatory Authority"</b> shall mean any governmental, statutory or regulatory authority having jurisdiction over the activities contemplated under this Agreement, including the Securities and Exchange Board of India.</p>
+                                    <p><b>2.16 "SEBI"</b> shall mean the Securities and Exchange Board of India established under the Securities and Exchange Board of India Act, 1992.</p>
+                                    <p><b>2.17 "Sub-Distributor"</b> shall mean the intermediary appointed under this Agreement for the limited purpose of marketing and facilitating investment in Mutual Fund Products and referring prospective clients for PMS Products or any other products/ services covered under clause 3 of the agreement, subject to the terms and conditions specified herein.</p>
+                                    <p><b>2.18 "Term"</b> shall mean the duration of this Agreement commencing from the Effective Date and continuing until terminated in accordance with the provisions of this Agreement.</p>
                                 </div>
                             </div>
 
@@ -992,9 +1268,22 @@ const PatnersSignup = () => {
                                 <div className="space-y-4 text-justify" style={{ fontFamily: PoppinsRegular }}>
                                     <p>3.1.1 Subject to the terms and conditions of this Agreement, the Principal Distributor hereby appoints the Sub-Distributor, on a non-exclusive and non-transferable basis, as a Sub-Distributor for the limited purpose of marketing, promoting and facilitating investments in Mutual Fund Products distributed by the Principal Distributor.</p>
                                     <p>3.1.2 The Sub-Distributor acknowledges and agrees that such appointment is limited to distribution activities and does not confer upon the Sub-Distributor any authority to bind the Principal Distributor, any Asset Management Company, or any mutual fund in any contractual or legal capacity.</p>
-                                    <p>3.1.3 The Sub-Distributor shall perform its obligations under this Agreement strictly in accordance with: (a) the provisions of the SEBI (Mutual Funds) Regulations, 1996 and any amendments or modifications thereto; (b) all circulars, guidelines and directives issued by the Securities and Exchange Board of India from time to time; (c) the guidelines, circulars and code of conduct prescribed by the Association of Mutual Funds in India including the AMFI Code of Conduct applicable to intermediaries, distributors and sub-distributors; (d) the internal policies, compliance procedures and operational guidelines prescribed by the Principal Distributor.</p>
-                                    <p>3.1.4 Without prejudice to the generality of the foregoing, the Sub-Distributor shall: 1. identify and approach prospective investors for investment in Mutual Fund Products; 2. disseminate only such marketing materials, scheme information documents, key information memoranda, advertisements, presentations or communications as may have been approved by the relevant Asset Management Company or the Principal Distributor; 3. assist prospective investors in completing client onboarding documentation including Know Your Client (KYC) documentation and other regulatory requirements; 4. facilitate submission of investment applications, transaction forms and other documents through authorised channels; 5. ensure that all communications made to investors are fair, accurate and not misleading.</p>
-                                    <p>3.1.5 The Sub-Distributor shall not: (i) make any representation, warranty or guarantee regarding investment performance or returns; (ii) provide personalised investment advice unless separately authorised under Applicable Laws; (iii) represent itself as an authorised representative, agent or employee of any Asset Management Company unless expressly permitted; (iv) alter, modify or misrepresent any scheme documentation, marketing communication or disclosure document issued by an Asset Management Company or the Principal Distributor.</p>
+                                    <p>3.1.3 The Sub-Distributor shall perform its obligations under this Agreement strictly in accordance with:<br />
+                                        (a) the provisions of the SEBI (Mutual Funds) Regulations, 1996 and any amendments or modifications thereto;<br />
+                                        (b) all circulars, guidelines and directives issued by the Securities and Exchange Board of India from time to time;<br />
+                                        (c) the guidelines, circulars and code of conduct prescribed by the Association of Mutual Funds in India including the AMFI Code of Conduct applicable to intermediaries, distributors and sub-distributors;<br />
+                                        (d) the internal policies, compliance procedures and operational guidelines prescribed by the Principal Distributor.</p>
+                                    <p>3.1.4 Without prejudice to the generality of the foregoing, the Sub-Distributor shall:<br />
+                                        1. identify and approach prospective investors for investment in Mutual Fund Products;<br />
+                                        2. disseminate only such marketing materials, scheme information documents, key information memoranda, advertisements, presentations or communications as may have been approved by the relevant Asset Management Company or the Principal Distributor;<br />
+                                        3. assist prospective investors in completing client onboarding documentation including Know Your Client (KYC) documentation and other regulatory requirements;<br />
+                                        4. facilitate submission of investment applications, transaction forms and other documents through authorised channels;<br />
+                                        5. ensure that all communications made to investors are fair, accurate and not misleading.</p>
+                                    <p>3.1.5 The Sub-Distributor shall not:<br />
+                                        (i) make any representation, warranty or guarantee regarding investment performance or returns;<br />
+                                        (ii) provide personalised investment advice unless separately authorised under Applicable Laws;<br />
+                                        (iii) represent itself as an authorised representative, agent or employee of any Asset Management Company unless expressly permitted;<br />
+                                        (iv) alter, modify or misrepresent any scheme documentation, marketing communication or disclosure document issued by an Asset Management Company or the Principal Distributor.</p>
                                     <p>3.1.6 The Sub-Distributor acknowledges that the ultimate acceptance of any investor application and the allotment of units shall remain subject to the discretion of the concerned Asset Management Company.</p>
                                     <p>3.1.7 The Sub-distributor entering into this Agreement and intending to distribute units of mutual funds is qualified and eligible as per the applicable laws to carry out such business.</p>
                                 </div>
@@ -1004,7 +1293,24 @@ const PatnersSignup = () => {
                                     <p>3.2.1 Subject to the terms and conditions of this Agreement, the Principal Distributor may permit the Sub-Distributor to undertake client sourcing, solicitation support and distribution support activities on a sub-contracted basis in relation to Portfolio Management Services ("PMS Products") offered by portfolio managers registered with the Securities and Exchange Board of India.</p>
                                     <p>3.2.2 For the purposes of this Agreement, such activities shall be undertaken strictly in the nature of sub-contracted client sourcing and facilitation services, including identification and introduction of prospective clients and coordination of onboarding processes, and shall not in any manner constitute portfolio management services, investment advisory services or discretionary management of client portfolios.</p>
                                     <p>3.2.3 The Sub-Distributor shall undertake such PMS distribution related activities only in accordance with the regulatory framework prescribed under the SEBI (Portfolio Managers) Regulations, 2020 and other applicable SEBI circulars and guidelines.</p>
-                                    <p>3.2.4 Without prejudice to the generality of the foregoing, the following conditions shall apply: (a) The Sub-Distributor may introduce prospective clients interested in PMS Products to the Principal Distributor or to portfolio managers specifically approved by the Principal Distributor. (b) The Sub-Distributor shall undertake any marketing, solicitation or client introduction activity relating to PMS Products only after obtaining prior written approval from the Principal Distributor. (c) Such approval may specify the portfolio manager, product category, scope of marketing activities and commission arrangements applicable to the Sub-Distributor. (d) The Sub-Distributor acknowledges that its role in relation to PMS Products shall be limited to marketing support, client introduction, facilitation of meetings and administrative coordination between prospective clients and the Principal Distributor or the relevant portfolio manager. (e) The Sub-Distributor shall not represent itself as: (i) a portfolio manager; (ii) an investment adviser registered with SEBI; (iii) an authorised investment manager or portfolio management entity; or (iv) an entity authorised to provide investment advice or portfolio allocation recommendations. (f) The Sub-Distributor shall not: 1. provide discretionary investment advice relating to PMS Products; 2. recommend specific portfolio strategies or investment allocations; 3. execute investment decisions on behalf of clients; 4. collect or hold client funds or securities. (g) The final decision regarding acceptance of a client, execution of the portfolio management agreement and management of the investment portfolio shall rest solely with the relevant portfolio manager. (h) All documentation relating to PMS investments, including portfolio management agreements, risk disclosure documents and client onboarding documentation, shall be executed directly between the client and the portfolio manager in accordance with the provisions of the SEBI (Portfolio Managers) Regulations, 2020. (i) The Sub-Distributor shall ensure that all communications made to prospective clients in relation to PMS Products are accurate, fair and not misleading and are consistent with disclosures prescribed by applicable regulatory authorities.</p>
+                                    <p>3.2.4 Without prejudice to the generality of the foregoing, the following conditions shall apply:<br />
+                                        (a) The Sub-Distributor may introduce prospective clients interested in PMS Products to the Principal Distributor or to portfolio managers specifically approved by the Principal Distributor.<br />
+                                        (b) The Sub-Distributor shall undertake any marketing, solicitation or client introduction activity relating to PMS Products only after obtaining prior written approval from the Principal Distributor.<br />
+                                        (c) Such approval may specify the portfolio manager, product category, scope of marketing activities and commission arrangements applicable to the Sub-Distributor.<br />
+                                        (d) The Sub-Distributor acknowledges that its role in relation to PMS Products shall be limited to marketing support, client introduction, facilitation of meetings and administrative coordination between prospective clients and the Principal Distributor or the relevant portfolio manager.<br />
+                                        (e) The Sub-Distributor shall not represent itself as:<br />
+                                        (i) a portfolio manager;<br />
+                                        (ii) an investment adviser registered with SEBI;<br />
+                                        (iii) an authorised investment manager or portfolio management entity; or<br />
+                                        (iv) an entity authorised to provide investment advice or portfolio allocation recommendations.<br />
+                                        (f) The Sub-Distributor shall not:<br />
+                                        1. provide discretionary investment advice relating to PMS Products;<br />
+                                        2. recommend specific portfolio strategies or investment allocations;<br />
+                                        3. execute investment decisions on behalf of clients;<br />
+                                        4. collect or hold client funds or securities.<br />
+                                        (g) The final decision regarding acceptance of a client, execution of the portfolio management agreement and management of the investment portfolio shall rest solely with the relevant portfolio manager.<br />
+                                        (h) All documentation relating to PMS investments, including portfolio management agreements, risk disclosure documents and client onboarding documentation, shall be executed directly between the client and the portfolio manager in accordance with the provisions of the SEBI (Portfolio Managers) Regulations, 2020.<br />
+                                        (i) The Sub-Distributor shall ensure that all communications made to prospective clients in relation to PMS Products are accurate, fair and not misleading and are consistent with disclosures prescribed by applicable regulatory authorities.</p>
                                     <p>The Parties hereby acknowledge and agree that the Sub-Distributor shall act solely in the capacity of a sub-contracted client sourcing and distribution support intermediary for the limited purpose of identifying and introducing prospective clients and facilitating preliminary coordination in relation to PMS Products. The Sub-Distributor shall not hold itself out as an authorised representative, agent or affiliate of any portfolio manager.</p>
                                 </div>
 
@@ -1013,7 +1319,24 @@ const PatnersSignup = () => {
                                     <p>3.3.1 Subject to the terms and conditions of this Agreement, the Principal Distributor may permit the Sub-Distributor to undertake client sourcing, solicitation support and distribution support activities on a sub-contracted basis in relation to Alternative Investment Funds ("AIF Offerings") offered by the investment managers of AIFs which are registered with the Securities and Exchange Board of India.</p>
                                     <p>3.3.2 For the purposes of this Agreement, such activities shall be undertaken strictly in the nature of sub-contracted client sourcing and facilitation services, including identification and introduction of prospective clients and coordination of onboarding processes, and shall not in any manner constitute investment advisory services.</p>
                                     <p>3.3.3 The Sub-Distributor shall undertake such AIF distribution related activities only in accordance with the regulatory framework prescribed by SEBI or any other authority as may be prescribed.</p>
-                                    <p>3.3.4 Without prejudice to the generality of the foregoing, the following conditions shall apply: (a) The Sub-Distributor may introduce prospective clients interested in AIF offerings to the Principal Distributor or to investment manager specifically approved by the Principal Distributor. (b) The Sub-Distributor shall undertake any marketing, solicitation or client introduction activity relating to AIF offerings only after obtaining prior written approval from the Principal Distributor. The distribution of Alternative Investment Fund, being a privately placed vehicle, shall be subject to guidelines issued by principal distributor for distribution of such privately placed products. (c) Such approval may specify the AIF scheme, scope of marketing activities and commission arrangements applicable to the Sub-Distributor. (d) The Sub-Distributor acknowledges that its role in relation to AIF Offerings shall be limited to marketing support, client introduction, facilitation of meetings and administrative coordination between prospective clients and the Principal Distributor or the relevant investment manager. (e) The Sub-Distributor shall not represent itself as: (i) an investment manager of AIF; (ii) an investment adviser registered with SEBI; (iii) an authorised investment manager or portfolio management entity; or (iv) an entity authorised to provide investment advice or portfolio allocation recommendations. (f) The Sub-Distributor shall not: 1. provide investment advice relating to AIF offerings; 2. recommend specific portfolio strategies or investment allocations; 3. execute investment decisions on behalf of clients; 4. collect or hold client funds or securities. (g) The final decision regarding acceptance of a client, execution of the contribution agreement and management of the investment portfolio shall rest solely with the relevant investment manager. (h) All documentation relating to AIF offerings, including contribution agreement and other client onboarding documentation, shall be executed directly between the client and the investment manager in accordance with the provisions of the SEBI (Alternative Investment Fund) Regulations, 2012. (i) The Sub-Distributor shall ensure that all communications made to prospective clients in relation to AIF offerings are accurate, fair and not misleading and are consistent with disclosures prescribed by applicable regulatory authorities.</p>
+                                    <p>3.3.4 Without prejudice to the generality of the foregoing, the following conditions shall apply:<br />
+                                        (a) The Sub-Distributor may introduce prospective clients interested in AIF offerings to the Principal Distributor or to investment manager specifically approved by the Principal Distributor.<br />
+                                        (b) The Sub-Distributor shall undertake any marketing, solicitation or client introduction activity relating to AIF offerings only after obtaining prior written approval from the Principal Distributor. The distribution of Alternative Investment Fund, being a privately placed vehicle, shall be subject to guidelines issued by principal distributor for distribution of such privately placed products.<br />
+                                        (c) Such approval may specify the AIF scheme, scope of marketing activities and commission arrangements applicable to the Sub-Distributor.<br />
+                                        (d) The Sub-Distributor acknowledges that its role in relation to AIF Offerings shall be limited to marketing support, client introduction, facilitation of meetings and administrative coordination between prospective clients and the Principal Distributor or the relevant investment manager.<br />
+                                        (e) The Sub-Distributor shall not represent itself as:<br />
+                                        (i) an investment manager of AIF;<br />
+                                        (ii) an investment adviser registered with SEBI;<br />
+                                        (iii) an authorised investment manager or portfolio management entity; or<br />
+                                        (iv) an entity authorised to provide investment advice or portfolio allocation recommendations.<br />
+                                        (f) The Sub-Distributor shall not:<br />
+                                        1. provide investment advice relating to AIF offerings;<br />
+                                        2. recommend specific portfolio strategies or investment allocations;<br />
+                                        3. execute investment decisions on behalf of clients;<br />
+                                        4. collect or hold client funds or securities.<br />
+                                        (g) The final decision regarding acceptance of a client, execution of the contribution agreement and management of the investment portfolio shall rest solely with the relevant investment manager.<br />
+                                        (h) All documentation relating to AIF offerings, including contribution agreement and other client onboarding documentation, shall be executed directly between the client and the investment manager in accordance with the provisions of the SEBI (Alternative Investment Fund) Regulations, 2012.<br />
+                                        (i) The Sub-Distributor shall ensure that all communications made to prospective clients in relation to AIF offerings are accurate, fair and not misleading and are consistent with disclosures prescribed by applicable regulatory authorities.</p>
                                     <p>The Parties hereby acknowledge and agree that the Sub-Distributor shall act solely in the capacity of a sub-contracted client sourcing and distribution support intermediary for the limited purpose of identifying and introducing prospective clients and facilitating preliminary coordination in relation to AIF offerings. The Sub-Distributor shall not hold itself out as an authorised representative, agent or affiliate of any investment manager.</p>
                                 </div>
 
@@ -1022,7 +1345,24 @@ const PatnersSignup = () => {
                                     <p>3.4.1 Subject to the terms and conditions of this Agreement, the Principal Distributor may permit the Sub-Distributor to undertake client sourcing, solicitation support and distribution support activities on a sub-contracted basis in relation to financial offerings as approved by the principal distributor.</p>
                                     <p>3.4.2 For the purposes of this Agreement, such activities shall be undertaken strictly in the nature of sub-contracted client sourcing and facilitation services, including identification and introduction of prospective clients and coordination of onboarding processes, and shall not in any manner constitute investment advisory services.</p>
                                     <p>3.4.3 The Sub-Distributor shall undertake such distribution related activities only in accordance with the regulatory framework prescribed by SEBI or any other authority as may be prescribed.</p>
-                                    <p>3.4.4 Without prejudice to the generality of the foregoing, the following conditions shall apply: (a) The Sub-Distributor may introduce prospective clients interested in such other financial offerings to the Principal Distributor or to investment manager specifically approved by the Principal Distributor. (b) The Sub-Distributor shall undertake any marketing, solicitation or client introduction activity relating to such financial offerings only after obtaining prior written approval from the Principal Distributor. The distribution of privately placed products shall be subject to guidelines issued by principal distributor for distribution of such privately placed products. (c) Such approval may specify the financial offering, scope of marketing activities and commission arrangements applicable to the Sub-Distributor. (d) The Sub-Distributor acknowledges that its role in relation to AIF Offerings shall be limited to marketing support, client introduction, facilitation of meetings and administrative coordination between prospective clients and the Principal Distributor or manufacturer. (e) The Sub-Distributor shall not represent itself as: (i) an investment manager or portfolio manager; (ii) an investment adviser registered with SEBI or any other regulatory authority; (iii) an authorised investment manager or portfolio management entity; or (iv) an entity authorised to provide investment advice or portfolio allocation recommendations. (f) The Sub-Distributor shall not: 1. provide investment advice relating to such financial offerings; 2. recommend specific portfolio strategies or investment allocations; 3. execute investment decisions on behalf of clients; 4. collect or hold client funds or securities. (g) The final decision regarding acceptance of a client, execution of the contribution agreement and management of the investment portfolio shall rest solely with the relevant manufacturer of such financial offering. (h) All documentation relating to financial offering, including investment agreement, other client onboarding documentation and any other documentation as may be required, shall be executed directly between the client and the manufacturer in accordance with the provisions of relevant regulatory framework. (i) The Sub-Distributor shall ensure that all communications made to prospective clients in relation to such financial offerings are accurate, fair and not misleading and are consistent with disclosures prescribed by applicable regulatory authorities.</p>
+                                    <p>3.4.4 Without prejudice to the generality of the foregoing, the following conditions shall apply:<br />
+                                        (a) The Sub-Distributor may introduce prospective clients interested in such other financial offerings to the Principal Distributor or to investment manager specifically approved by the Principal Distributor.<br />
+                                        (b) The Sub-Distributor shall undertake any marketing, solicitation or client introduction activity relating to such financial offerings only after obtaining prior written approval from the Principal Distributor. The distribution of privately placed products shall be subject to guidelines issued by principal distributor for distribution of such privately placed products.<br />
+                                        (c) Such approval may specify the financial offering, scope of marketing activities and commission arrangements applicable to the Sub-Distributor.<br />
+                                        (d) The Sub-Distributor acknowledges that its role in relation to AIF Offerings shall be limited to marketing support, client introduction, facilitation of meetings and administrative coordination between prospective clients and the Principal Distributor or manufacturer.<br />
+                                        (e) The Sub-Distributor shall not represent itself as:<br />
+                                        (i) an investment manager or portfolio manager;<br />
+                                        (ii) an investment adviser registered with SEBI or any other regulatory authority;<br />
+                                        (iii) an authorised investment manager or portfolio management entity; or<br />
+                                        (iv) an entity authorised to provide investment advice or portfolio allocation recommendations.<br />
+                                        (f) The Sub-Distributor shall not:<br />
+                                        1. provide investment advice relating to such financial offerings;<br />
+                                        2. recommend specific portfolio strategies or investment allocations;<br />
+                                        3. execute investment decisions on behalf of clients;<br />
+                                        4. collect or hold client funds or securities.<br />
+                                        (g) The final decision regarding acceptance of a client, execution of the contribution agreement and management of the investment portfolio shall rest solely with the relevant manufacturer of such financial offering.<br />
+                                        (h) All documentation relating to financial offering, including investment agreement, other client onboarding documentation and any other documentation as may be required, shall be executed directly between the client and the manufacturer in accordance with the provisions of relevant regulatory framework.<br />
+                                        (i) The Sub-Distributor shall ensure that all communications made to prospective clients in relation to such financial offerings are accurate, fair and not misleading and are consistent with disclosures prescribed by applicable regulatory authorities.</p>
                                     <p>The Parties hereby acknowledge and agree that the Sub-Distributor shall act solely in the capacity of a sub-contracted client sourcing and distribution support intermediary for the limited purpose of identifying and introducing prospective clients and facilitating preliminary coordination in relation to such financial offerings. The Sub-Distributor shall not hold itself out as an authorised representative, agent or affiliate of any investment manager.</p>
                                 </div>
                             </div>
@@ -1033,10 +1373,29 @@ const PatnersSignup = () => {
                             <div className="mb-8">
                                 <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "PT Serif" }}>4. PRIOR APPROVAL OF PRINCIPAL DISTRIBUTOR</h2>
                                 <div className="space-y-4 text-justify" style={{ fontFamily: PoppinsRegular }}>
-                                    <p>4.1 Notwithstanding anything contained elsewhere in this Agreement, the Sub-Distributor shall not undertake any client sourcing, solicitation support, distribution support or other sub-contracted facilitation activity in relation to PMS Products, AIF Offerings and such other product/ services covered under clause 3 unless prior written approval has been obtained from the Principal Distributor and Manufacturer (wherever required).</p>
-                                    <p>4.2 Such approval shall be granted at the sole discretion of the Principal Distributor and may specify the manufacturer whose products/ services may be introduced to prospective clients, the nature and scope of the permitted client sourcing and distribution support activities, and any operational procedures, compliance requirements or investor disclosure obligations that must be adhered to by the Sub-Distributor.</p>
-                                    <p>4.3 The approval may further specify the commission, referral fee or other remuneration structure applicable to such activities, subject to applicable regulatory requirements and internal policies of the Principal Distributor, and the Sub-Distributor shall strictly comply with the terms and conditions specified in such approval and shall not undertake any activity beyond the scope of the authority granted therein.</p>
-                                    <p>4.4 Any activity undertaken by the Sub-Distributor in relation to products/ services covered under clause 3 of the agreement without obtaining the prior written approval of the Principal Distributor, or in contravention of the terms and conditions specified in such approval, shall constitute a material breach of this Agreement, entitling the Principal Distributor to suspend or terminate this Agreement and take such further action as may be permissible under Applicable Laws, including the provisions of the SEBI (Portfolio Managers) Regulations, 2020 and other regulatory directions issued by the Securities and Exchange Board of India.</p>
+                                    <p>4.1 Notwithstanding anything contained elsewhere in this Agreement, the Sub-Distributor
+                                        shall not undertake any client sourcing, solicitation support, distribution support or other
+                                        sub-contracted facilitation activity in relation to PMS Products, AIF Offerings and such other
+                                        product/ services covered under clause 3 unless prior written approval has been obtained
+                                        from the Principal Distributor and Manufacturer (wherever required).</p>
+                                    <p>4.2 Such approval shall be granted at the sole discretion of the Principal Distributor and may
+                                        specify the manufacturer whose products/ services may be introduced to prospective
+                                        clients, the nature and scope of the permitted client sourcing and distribution support
+                                        activities, and any operational procedures, compliance requirements or investor disclosure
+                                        obligations that must be adhered to by the Sub-Distributor.</p>
+                                    <p>4.3 The approval may further specify the commission, referral fee or other remuneration
+                                        structure applicable to such activities, subject to applicable regulatory requirements and
+                                        internal policies of the Principal Distributor, and the Sub-Distributor shall strictly comply with
+                                        the terms and conditions specified in such approval and shall not undertake any activity
+                                        beyond the scope of the authority granted therein.</p>
+                                    <p>4.4 Any activity undertaken by the Sub-Distributor in relation to products/ services covered
+                                        under clause 3 of the agreement without obtaining the prior written approval of the
+                                        Principal Distributor, or in contravention of the terms and conditions specified in such
+                                        approval, shall constitute a material breach of this Agreement, entitling the Principal
+                                        Distributor to suspend or terminate this Agreement and take such further action as may be
+                                        permissible under Applicable Laws, including the provisions of the SEBI (Portfolio Managers)
+                                        Regulations, 2020 and other regulatory directions issued by the Securities and Exchange
+                                        Board of India.</p>
                                 </div>
                             </div>
 
@@ -1044,12 +1403,35 @@ const PatnersSignup = () => {
                             <div className="mb-8">
                                 <h2 className="font-bold mb-4 uppercase" style={{ fontFamily: "PT Serif" }}>5. SCOPE OF SERVICES</h2>
                                 <div className="space-y-4 text-justify" style={{ fontFamily: PoppinsRegular }}>
-                                    <p>5.1 Subject to the terms and conditions of this Agreement, the Sub-Distributor shall undertake client sourcing and distribution support activities in relation to services or products mentioned under Clause 3 of this agreement as may be permitted by the Principal Distributor from time to time, including identifying and approaching prospective investors and facilitating their introduction to the Principal Distributor. Further, Client data obtained in connection with Mutual Fund investments shall not be used for marketing other financial products without the prior consent of the client.</p>
-                                    <p>5.2 The Sub-Distributor may disseminate to prospective investors only such product literature, scheme-related documents, informational material or communications that have been issued or approved by the Principal Distributor or the relevant product provider, and shall ensure that all communications made to prospective investors are fair, accurate and not misleading.</p>
-                                    <p>5.3 The Sub-Distributor may assist prospective investors and Clients in completing onboarding documentation, including Know Your Client (KYC) documentation, application forms and other administrative formalities, and may coordinate administrative communication between the Client and the Principal Distributor for the purpose of facilitating investments in the relevant products.</p>
-                                    <p>5.4 Notwithstanding anything contained herein, the Sub-Distributor shall not provide investment advice, recommend specific investment strategies or portfolio allocations, make any representation or guarantee regarding investment performance or returns, represent itself as a portfolio manager or investment adviser, or undertake any activity that may be construed as discretionary portfolio management or investment advisory services.</p>
-                                    <p>5.5 The Sub-Distributor is authorized, on a non-exclusive basis, to identify and approach prospective investors for the purpose of distribution of the Products through private placement, strictly in accordance with applicable laws and this Agreement. The Sub-Distributor shall act solely as an intermediary and shall not bind the Company in any manner.</p>
-                                    <p>5.6 The Sub-Distributor shall ensure that all offers and solicitations are made strictly on a private placement basis and shall not undertake any form of general solicitation, advertisement, public communication, or mass outreach, including through digital or social media platforms.</p>
+                                    <p>5.1 Subject to the terms and conditions of this Agreement, the Sub-Distributor shall
+                                        undertake client sourcing and distribution support activities in relation to services or
+                                        products mentioned under Clause 3 of this agreement as may be permitted by the Principal
+                                        Distributor from time to time, including identifying and approaching prospective investors
+                                        and facilitating their introduction to the Principal Distributor. Further, Client data obtained in
+                                        connection with Mutual Fund investments shall not be used for marketing other financial
+                                        products without the prior consent of the client.</p>
+                                    <p>5.2 The Sub-Distributor may disseminate to prospective investors only such product
+                                        literature, scheme-related documents, informational material or communications that
+                                        have been issued or approved by the Principal Distributor or the relevant product provider,
+                                        and shall ensure that all communications made to prospective investors are fair, accurate
+                                        and not misleading.</p>
+                                    <p>5.3 The Sub-Distributor may assist prospective investors and Clients in completing
+                                        onboarding documentation, including Know Your Client (KYC) documentation, application
+                                        forms and other administrative formalities, and may coordinate administrative
+                                        communication between the Client and the Principal Distributor for the purpose of
+                                        facilitating investments in the relevant products.</p>
+                                    <p>5.4 Notwithstanding anything contained herein, the Sub-Distributor shall not provide
+                                        investment advice, recommend specific investment strategies or portfolio allocations,
+                                        make any representation or guarantee regarding investment performance or returns,represent itself as a portfolio manager or investment adviser, or undertake any activity that
+                                        may be construed as discretionary portfolio management or investment advisory services.</p>
+                                    <p>5.5 The Sub-Distributor is authorized, on a non-exclusive basis, to identify and approach
+                                        prospective investors for the purpose of distribution of the Products through private
+                                        placement, strictly in accordance with applicable laws and this Agreement. The Sub-Distributor shall act solely as an intermediary and shall not bind the Company in any
+                                        manner.</p>
+                                    <p>5.6 The Sub-Distributor shall ensure that all offers and solicitations are made strictly on a
+                                        private placement basis and shall not undertake any form of general solicitation,
+                                        advertisement, public communication, or mass outreach, including through digital or social
+                                        media platforms.</p>
                                 </div>
                             </div>
 
@@ -1231,7 +1613,7 @@ const PatnersSignup = () => {
                             <div className="mt-12 pt-8 border-t border-gray-200">
                                 <h2 className="font-bold mb-4 uppercase text-center" style={{ fontFamily: "PT Serif" }}>ANNEXURE A</h2>
                                 <h3 className="font-bold mb-6 text-center" style={{ fontFamily: "PT Serif" }}>Fee / Commission sharing</h3>
-                                <p className="text-justify" style={{ fontFamily: PoppinsRegular }}>The principal distributor will share ___% of fees earned from Asset Management Companies, Portfolio Manager and such other products covered under this agreement.</p>
+                                <p className="text-justify" style={{ fontFamily: PoppinsRegular }}>The principal distributor will share 90% of fees earned from Asset Management Companies, Portfolio Manager and such other products covered under this agreement.</p>
                             </div>
 
                             {/* Annexure B */}
@@ -1253,12 +1635,306 @@ const PatnersSignup = () => {
                                     <p>12. Maintain high standards of integrity, promptitude and fairness in the conduct of business as a Distributor.</p>
                                     <p>13. Act with required skill, care and diligence in the conduct of business as a Distributor.</p>
                                     <p>14. Assist clients in completing KYC documentation and verification procedures.</p>
-                                    <p>15. Maintain necessary infrastructure to provide pre-commitment and post-commitment support to investors, investment manager, regulators and third-party service providers.</p>
+                                    <p>15. Maintain necessary infrastructure to provide pre-commitment and post-commitment support to investors, investment manager, regulators and third-party service providers This may include support in terms of providing intimations for draw-downs, capital calls, investor meetings, redemptions, fund-closing, investor grievances, dispatching of performance reports to investors and other important matters from time to time.</p>
                                     <p>16. Stay updated with latest developments in the AIF markets, changes in the Fund Sponsor, Investment Manager, changes in controlling interest of the fund/scheme, exit of key executives, adverse developments and other material aspects.</p>
                                     <p>17. Maintain confidentiality of investors' personal data, deals and transactions done by a AIF.</p>
                                     <p>18. Provide relevant documents of investors to tax authorities and enforcement agencies under the Prevention of Money Laundering Act, including KYC documents, Power of Attorney (PoA), and any other information as may be required from time to time.</p>
                                     <p>19. Abstain from making negative statements about other AIFs that the distributor is not representing. Ensure that comparison of AIFs is done between similar and comparable AIFs, based on adequate information.</p>
                                     <p>20. Not indulge in any manipulative, fraudulent or deceptive practices or spread rumours with a view to make personal gain.</p>
+                                </div>
+                            </div>
+                            <div className="mt-12 pt-8 mb-20">
+                                <h3 className="font-bold mb-6 text-center" style={{ fontFamily: "PT Serif" }}>Code of Conduct for Distributors for PMSs</h3>
+                                <div className="space-y-3 text-justify" style={{ fontFamily: PoppinsRegular }}>
+                                    <p>21. Adhere to the Securities and Exchange Board of India (Portfolio Managers) Regulations, 2020 and circulars issued from time to time related to distributors, distribution, advertising practices of Portfolio Management Services, etc.</p>
+                                    <p>22. Maintain high standards of integrity, promptitude and fairness in the conduct of all their business.</p>
+                                    <p>23. Act with due skill, care and diligence in the conduct of all their business.</p>
+                                    <p>24. Consider investor's interest, risk profiling and suitability to their financial needs while marketing Portfolio Management Services.</p>
+                                    <p>25. Take necessary steps to ensure that the clients’ interest is protected.</p>
+                                    <p>26. Ensure that commission or incentive shall never form the basis for recommending Portfolio Management Services.</p>
+                                    <p>27. Be fully conversant with the Disclosure Document, Investment Approaches, fees and charges and the terms of agreement to be entered between the client and the Portfolio Manager.</p>
+                                    <p>28. Disclose to the clients all material information including the details of distribution commissions for various Investment Approaches.</p>
+                                    <p>29. Assist clients in completing Know Your Client (“KYC”) and In-Person Verification related procedures.</p>
+                                    <p>30. Provide full and latest information about investment approaches and also highlight the assumptions made in performance calculations, risk assessments, performance projections etc., if any, for such investment approaches.</p>
+                                    <p>31. Inform the clients about the risks and level of control over the administration of Portfolio associated with the type of Portfolio Management Services offered (i.e. Discretionary, Non-discretionary or Advisory).</p>
+                                    <p>32. Abstain from assuring returns in any type of Investment Approach and from any kind of mis-representation.</p>
+                                    <p>33. Abstain from attracting clients through unethical means such as offer of rebate/gifts etc.</p>
+                                    <p>34. Maintain necessary infrastructure to provide support to clients in timely receipt of disclosure document, statement of portfolio and performance, statement of fees, audit report, etc.</p>
+                                    <p>35. Maintain confidentiality of clients’ details, deals and transactions, which they come to know in their business relationship.</p>
+                                    <p>36. Abstain from making negative statements about other Portfolio Managers or Investment Approaches. Make comparisons, if any, only with the similar and comparable products along with complete facts.</p>
+                                    <p>37. Not indulge in any manipulative, fraudulent or deceptive practices or spread rumours with a view to make personal gain.</p>
+                                    <p>38. Hold valid NISM-Series-XXI-A: Portfolio Management Services (PMS) Distributors Certification, as specified by SEBI, at all times.</p>
+                                </div>
+                            </div>
+                            {/* Code of Conduct for Distributors for MFs */}
+                            <div className="mt-12 pt-8 mb-20">
+                                <h3 className="font-bold mb-6 text-center" style={{ fontFamily: "PT Serif" }}>Code of Conduct for Distributors for MFs</h3>
+                                
+                                <div className="space-y-4 text-justify" style={{ fontFamily: PoppinsRegular }}>
+                                    <h4 className="font-bold underline mt-6">Purpose and Scope of the Code</h4>
+                                    
+                                    <div className="pl-6 space-y-3">
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">a.</span>
+                                            <p>This Code of Conduct (“<span className="font-bold">Code</span>”) requires Mutual Fund Distributors to demonstrate the core values of being a fiduciary by establishing professional standards in their dealings with the investors, Asset Management Companies (“<span className="font-bold">AMCs</span>”), and other distributors so as to exemplify the values of transparency, competency, fairness, integrity and thereby seek to inspire and maintain trustworthiness in the profession of distribution of Mutual Fund schemes.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">b.</span>
+                                            <p>This Code applies to all persons and entities who are registered with the Association of Mutual Funds in India (AMFI) as mutual fund distributors i.e. holders of AMFI Registration Number (“<span className="font-bold">ARN</span>”) (referred to as “<span className="font-bold">MFDs</span>” in this Code) and is binding on all the Directors/partners, members, sub-distributors, employees and representatives of the MFDs (collectively referred to as “<span className="font-bold">Representatives</span>” in this Code). The term “<span className="font-bold">MFDs</span>” is deemed to include the sales personnel of the MFDs engaged in marketing, sale and distribution of mutual fund products.</p>
+                                        </div>
+                                    </div>
+
+                                    <h4 className="font-bold underline mt-8">II. Obligations of the MFDs</h4>
+                                    
+                                    <h5 className="font-bold mt-6">1. Fiduciary Duty</h5>
+                                    
+                                    <div className="pl-6 space-y-3 mt-3">
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">a.</span>
+                                            <p>MFDs must consider investor’s interest as paramount and exercise due diligence, take proper care and exercise independent professional judgment in the best interest of the investor.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">b.</span>
+                                            <p>MFDs should try to avoid conflict of interest as far as possible, and when it cannot be avoided, they shall ensure that appropriate disclosures are made to the investors, and that the investors are treated fairly. Further, while selling Mutual Fund products of their group/affiliate/associates, MFDs shall make appropriate disclosures to the investors regarding the conflict of interest arising from distribution of such Mutual Fund scheme.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">c.</span>
+                                            <p>MFDs shall ensure that financial incentive should not form the basis for recommending any particular scheme or transaction to any investor. MFDs shall promote a culture of ethics and integrity within the organization, so as to dissuade unfair practices, conflicts, aggressive sales tactics and other inappropriate conduct directed to achieve sales targets in disregard of its fiduciary duty of care, diligence and loyalty.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">d.</span>
+                                            <p>MFDs shall not rebate or pass-back commission to investors and shall refrain from attracting investors through inducement of rebate or gifts / gift-vouchers etc.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">e.</span>
+                                            <div>
+                                                <p className="mb-3">MFDs shall not collude or undertake malpractices such as:</p>
+                                                <div className="pl-6 space-y-3">
+                                                    <div className="flex">
+                                                        <span className="w-8 shrink-0">i.</span>
+                                                        <p>encouraging over transacting and churning of investments to earn higher commissions.</p>
+                                                    </div>
+                                                    <div className="flex">
+                                                        <span className="w-8 shrink-0">ii.</span>
+                                                        <p>splitting applications to earn higher transaction charges / commissions.</p>
+                                                    </div>
+                                                    <div className="flex">
+                                                        <span className="w-8 shrink-0">iii.</span>
+                                                        <p>participating in payment defaults (such as dishonoring of cheques) or diversion of funds.</p>
+                                                    </div>
+                                                    <div className="flex">
+                                                        <span className="w-8 shrink-0">iv.</span>
+                                                        <p>making false claims for or participating in wrongful dividend / redemption payouts.</p>
+                                                    </div>
+                                                    <div className="flex">
+                                                        <span className="w-8 shrink-0">v.</span>
+                                                        <p>carrying out unethical practices such as churning, selling unsuitable products to clients, selling of units of schemes of any mutual fund, directly or indirectly, by making false or misleading statements, concealing or omitting material facts of the scheme, concealing the associated risk factors of the schemes, etc.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h5 className="font-bold mt-8">2. Compliance related obligations</h5>
+                                    
+                                    <div className="pl-6 space-y-3 mt-3">
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">a.</span>
+                                            <p>MFDs shall adhere to Securities and Exchange Board of India (Mutual Funds) Regulations, 1996 (“<span className="font-bold">Mutual Fund Regulations</span>”) and guidelines/circulars issued by Securities and Exchange Board of India (“<span className="font-bold">SEBI</span>”) and AMFI, from time to time, pertaining to distributors, selling, distribution and advertising practices (including the preparation of sales promotional literature and content) and code of conduct. Performance disclosures should also comply with the requirements specified by SEBI. MFDs must also adhere to restrictions prescribed under other SEBI Regulations as may be applicable to their marketing, selling and distribution activities, for example, obligation on segregation of distribution and advisory services mandated under SEBI (Investment Advisers) Regulations, 2013.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">b.</span>
+                                            <p>MFDs shall comply with the Know Your Distributor (“<span className="font-bold">KYD</span>”) norms prescribed by AMFI. MFDs shall be diligent in attesting / certifying investor documents and performing InPerson Verification (“<span className="font-bold">IPV</span>”) of investors for the KYC process in accordance with the guidelines prescribed by AMFI / KYC Registration Agency (“<span className="font-bold">KRA</span>”) from time to time.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">c.</span>
+                                            <p>MFDs should endeavor to be fully conversant with the key provisions of the Scheme Information Document (“<span className="font-bold">SID</span>”), Statement of Additional Information (“<span className="font-bold">SAI</span>”) and Key Information Memorandum (“<span className="font-bold">KIM</span>”) as well as the operational requirements of various schemes and should explain to the investors the key features (including fundamental attributes) of the schemes and any risk associated therein.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">d.</span>
+                                            <p>In order to assess suitability of the Mutual Fund scheme being marketed, the MFDs should seek information from their clients about their financial status, investment experience and investment objectives.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">e.</span>
+                                            <p>MFDs shall ensure that their Representatives have the necessary education and experience to perform their respective services.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">f.</span>
+                                            <div>
+                                                <p className="mb-3">MFDs and their Representatives shall maintain confidentiality of all information relating to the AMCs and investors, and shall not:</p>
+                                                <div className="pl-6 space-y-3 mb-3">
+                                                    <div className="flex">
+                                                        <span className="w-8 shrink-0">i.</span>
+                                                        <p>share or publish such information in any private or public forum without prior written consent of the concerned AMC/investor</p>
+                                                    </div>
+                                                    <div className="flex">
+                                                        <span className="w-8 shrink-0">ii.</span>
+                                                        <p>share or make any disclosure to any third party except pursuant to any filings or disclosures as may be required under applicable law or order of any court or regulatory body.</p>
+                                                    </div>
+                                                    <div className="flex">
+                                                        <span className="w-8 shrink-0">iii.</span>
+                                                        <p>share data with Group Companies for cross marketing.</p>
+                                                    </div>
+                                                </div>
+                                                <p>MFDs and their Representatives shall comply with the Data Sharing Principles prescribed by AMFI and the applicable laws on Personal Data Protection.</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">g.</span>
+                                            <p>MFDs shall adhere to contractual agreements with AMC relating to data privacy to ensure that the data is always protected, used only for the purpose for which it was obtained and purged as soon as the data is no longer required to be stored for rendering services for which it was collected or stored securely.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">h.</span>
+                                            <p>MFDs shall ensure that they and their sub-distributors are compliant with SEBI regulations, AMFI guidelines and code of conduct at all times and also that all their sub-distributors have a valid ARN. In other words, principal MFD should not engage or continue to engage a subdistributor whose ARN is rendered invalid.</p>
+                                        </div>
+                                    </div>
+
+                                    <h5 className="font-bold mt-8">3. Infrastructure, record keeping and other related obligations</h5>
+                                    
+                                    <div className="pl-6 space-y-3 mt-3">
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">a.</span>
+                                            <p><span className="font-bold">Physical Infrastructure:</span> MFDs should maintain necessary infrastructure to support the AMCs in maintaining high service standards to investors and ensure that critical operations such as forwarding /submission of forms and cheques etc. to AMCs/RTAs are appropriately supported.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">b.</span>
+                                            <p><span className="font-bold">Digital Infrastructure:</span> In view of increased initiatives towards digitization of mode of performance of services, including new client on-boarding, transaction processing and ongoing servicing for investors, MFDs should adopt adequate information technology related infrastructure, including in relation to cyber security measures to maintain confidentiality of electronic data during collection, transmission and storage as well as to mitigate risks related to execution of Mutual Fund transactions through digital platforms.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">c.</span>
+                                            <p><span className="font-bold">Internal control, financial and operational resources:</span> The MFDs should have internal control procedures and financial and operational systems and processes which can be reasonably expected to detect and prevent mis-selling as well as mitigate financial loss arising from fraud and other dishonest acts, professional misconduct or omissions, theft, or force majeure events. MFDs are encouraged to take up appropriate insurance coverage for their activities.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">d.</span>
+                                            <p><span className="font-bold">Record keeping:</span> MFDs should maintain adequate records in relation to clients, whether in physical or digital form, as applicable, in compliance with the applicable laws and SEBI regulations, including KYC records as well as correspondence with the investors on particular scheme or transaction suitability and consent/dissent of the investors.</p>
+                                        </div>
+                                    </div>
+
+                                    <h5 className="font-bold mt-8">4. Client related obligations</h5>
+                                    
+                                    <div className="pl-6 space-y-3 mt-3">
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">a.</span>
+                                            <p>MFDs shall provide full and updated information on schemes, as provided to them by the AMCs, to the investors including SAI, SID, addenda, performance reports, fact sheets, portfolio disclosures and brochures. MFDs shall not deliberately withhold or omit any material fact or information supplied to them by the AMCs from any investor that the investor should know or may want to know, including information about particular scheme or transaction not being appropriate for the investor.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">b.</span>
+                                            <p>MFDs shall highlight risk factors of each scheme to their investors, desist from making any misrepresentation or exaggerated statements or conceal associated risk factors of a scheme and shall advise and urge their investors to go through SAI/SID/KIM before deciding to make investments.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">c.</span>
+                                            <p>MFDs shall disclose to the investors all material information including all commissions (in the form of trail commission or any other mode) received or receivable by them for the different competing schemes of various Mutual Funds from amongst which the scheme is being recommended to the investor.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">d.</span>
+                                            <p>MFDs shall disclose to their clients the list of mutual funds they are affiliated with and inform to the clients that the information provided is limited to the mutual fund products that are being distributed/promoted by the MFDs and also inform the clients that the clients may also consider other alternate products, which are not being offered by the MFDs before making investment decision.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">e.</span>
+                                            <p>If the MFD is an associate/group company/ sponsor of AMC of a mutual fund, the MFD shall, while providing suggestions to investor, disclose all material information about its association with the concerned AMC and the total amount of commission received/receivable.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">f.</span>
+                                            <p>In terms of SEBI letter no. SEBI/IMD1/DoF-1/SK/2021/25517/1 dated September 06, 2021, MFDs cannot deal in Direct Plans. MFDs shall ensure that on any digital platform provided by MFD for offering investment facility to investor, it is categorically disclosed that the scheme the investor is subscribing to is of Regular Plan which involves payment of commission to MFD. The link for the rate of commission received or receivable by the MFD for the different competing schemes of various Mutual Funds shall be prominently displayed on the platform indicating the same as a hyperlink. Further, a link to the scheme offer documents (SID/SAI/KIM) shall also be prominently displayed on the concerned page.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">g.</span>
+                                            <p>MFDs shall (i) not provide any indicative portfolio or indicative yield or indicative return for any particular scheme or transaction and (ii) abstain from indicating or assuring returns for any particular scheme or transaction.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">h.</span>
+                                            <p>MFDs engaged in providing other financial services in addition to distribution of mutual fund products, where other financial products with assured return are being offered to clients, MFDs and their employees shall ensure that they do not mis-sell mutual fund products on the basis of indicative or assured return or regular income to the customers seeking to make investments. It shall be explained to the clients that MF investments are not guaranteed or assured return products and that the principal amount may be exposed to risk of loss.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">i.</span>
+                                            <div>
+                                                <p className="mb-3">To prevent submission of fraudulent, incomplete, tampered or incorrect forms or applications, MFDs shall set up adequate training and processes to ensure that:</p>
+                                                <div className="pl-6 space-y-3">
+                                                    <div className="flex">
+                                                        <span className="w-8 shrink-0">(i)</span>
+                                                        <p>information in the application forms (including address and contact details) is filled diligently with the investor’s own, accurate and complete information. Whether requested by the investor or not, the contact details / information of the MFDs’ Representatives or any other third party is not filled in the application forms, so as to pass-off as the information relating to the investor;</p>
+                                                    </div>
+                                                    <div className="flex">
+                                                        <span className="w-8 shrink-0">(ii)</span>
+                                                        <p>any additions, revisions to the investor’s contact details /information is done only upon receipt of such information from the investor or the investor’s authorized person,</p>
+                                                    </div>
+                                                    <div className="flex">
+                                                        <span className="w-8 shrink-0">(iii)</span>
+                                                        <p>application forms submitted by the investor are not tampered with, whether by inserting, deleting or modifying any information / field in the application forms,</p>
+                                                    </div>
+                                                    <div className="flex">
+                                                        <span className="w-8 shrink-0">(iv)</span>
+                                                        <p>EUIN of the concerned employee of the MFD is written on the application forms for identification.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">j.</span>
+                                            <p>MFDs shall endeavor to resolve investor grievances/ complaints arising out of marketing, sale and distribution activities and shall provide complete assistance to the AMCs for redressal of grievances/ complaints.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">k.</span>
+                                            <p>MFDs shall use marketing material as is provided to them by the AMCs and shall not design their own marketing materials in respect of any scheme or display the name, logo, mark of any AMC without the prior written approval of the AMC.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">l.</span>
+                                            <p>MFDs shall draw attention of their clients to the disclosures made in the SID/SAI/ /KIM relating to general risks of investing through mutual fund schemes as well as scheme specific risks such as (i) returns being subject to market risk including loss of capital on account of market volatility, force majeure events, changes in political and economic environment, default by issuers of securities to mutual funds, bankruptcy or insolvency of issuers and potential segregation of portfolio by AMC in such circumstances; (ii) suspension of redemption facility in case the scheme faces liquidity crisis; (iii) risks associated with subscription to new fund offering of the scheme such as price volatility risk, liquidity risk and delisting risk; (iv) winding up of schemes on account of illiquid instruments, higher volume of redemption requests from the investors or on account of unforeseen market events.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">m.</span>
+                                            <p>MFDs shall ensure that comparisons, if any, are made with similar and comparable schemes/ products along with complete facts.</p>
+                                        </div>
+                                    </div>
+
+                                    <h5 className="font-bold underline mt-8">5. Other obligations</h5>
+                                    
+                                    <div className="pl-6 space-y-3 mt-3">
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">a.</span>
+                                            <p>Individual MFDs shall obtain NISM certification and register themselves with AMFI and obtain ARN and Employee Unique Identification Number (EUIN) from AMFI. The NISM certification and AMFI registration shall be renewed on a timely basis. Non-individual MFDs shall register themselves with AMFI and obtain the ARN, and shall ensure that their sales personnel or Representatives engaged in marketing, sale and distribution of mutual fund products hold a valid NISM certificate (i.e NISM-Series-V-A) and AMFI registration / EUIN. Employees of the MFD in other functional areas should also be encouraged to obtain appropriate NISM certification. MFDs shall quote a valid ARN and EUIN in the client’s application / transaction feed, in order to place transactions in Regular Plan and receive commissions</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">b.</span>
+                                            <p>MFDs shall ensure that their Representatives undergo training on proper conduct for their sales, marketing and distribution activities and focusing on (i) awareness and understanding of their fiduciary obligations towards investors, (ii) adequate procedures to be followed in performance of their functions so as to prevent and detect any frauds and errors, and (iii) responsible usage of social media platform with respect to content standards, authenticity and approval for the information , frequency of usage and other ethical practices.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">c.</span>
+                                            <p>MFDs shall co-operate with and provide assistance, to AMCs, AMFI, SEBI, competent authorities, due diligence agencies appointed by AMFI/AMCs (as applicable) in relation to their services to the AMCs including by providing copies of relevant documents of the investors in their possession as may be required by AMCs from time to time or as may be called for by SEBI/AMFI / competent authority pursuant to any investigation or other proceeding.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">d.</span>
+                                            <p>MFDs shall promptly intimate the AMC and AMFI any change in the MFD's status, constitution, address, contact details or any other information provided at the time of obtaining ARN.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">e.</span>
+                                            <p>MFDs shall refund to the AMCs, (either by set off against future commissions or by payment) all incentives of any nature, including commissions received, that are subject to clawback as per SEBI regulations or the terms and conditions issued by the respective AMC.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">f.</span>
+                                            <p>MFDs shall immediately notify the AMC and AMFI, in writing, if any of its Representatives has committed any act amounting to moral turpitude, financial irregularities or has been arrested by the police or whose employment/service has been terminated on account of any of the aforesaid bad acts.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">g.</span>
+                                            <div>
+                                                <p className="mb-3">Pursuant to Regulation 3 (3) of the SEBI (Investment Advisers) Regulations, 2013, MFDs shall not use terms such as Adviser / Advisor / Financial Adviser/ Investment Adviser/ Wealth Adviser/Wealth Manager/Wealth Managers, Consultant/s, etc. or any other similar name in their name, unless registered with SEBI as an Investment Adviser. The name of an MFD should reflect the registration held by the entity and should not in any way create an impression of performing a role for which the entity is not registered. The registered name of the MFD shall not contain any misleading phrase about the role of the entity. Thus, every MFD, while dealing in distribution of mutual fund schemes/products, should clearly specify to the client that he /she is acting as a MFD.</p>
+                                                <p>MFDs shall mention/display a tagline, “AMFI-registered Mutual Fund Distributor” along with / below their name, in a clear and legible font of at least font size 12, in all forms of printed communication. MFD shall display their name and tagline in a clear and legible font in all forms of communication i.e., website, mobile app, printed or electronic materials, business card, sign board etc.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h5 className="font-bold underline mt-8">6. Obligations towards integrity of the Mutual Fund industry</h5>
+                                    
+                                    <div className="pl-6 space-y-3 mt-3">
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">a.</span>
+                                            <p>MFDs shall not indulge in fraudulent or unfair trade practices of any kind while marketing, selling or distributing any Mutual Fund scheme. MFDs and their Representatives must observe high standards of integrity and consistently conduct their dealings in a manner to uphold the professional image of the Mutual Fund industry.</p>
+                                        </div>
+                                        <div className="flex">
+                                            <span className="w-6 shrink-0">b.</span>
+                                            <p>MFDs, shall refrain from making false or defamatory statements about any AMC, AMFI, Mutual Fund schemes or other MFDs in any private or public forum (including chat groups, social media, print or electronic press, conferences etc.). MFDs shall maintain professional decorum, provide fair and balanced perspective and not participate in transmitting untrue statements or rumors so as to malign any AMC or Mutual Fund scheme or bring disrepute to any AMC, AMFI or the Mutual Fund industry. Any written or oral communication should be based on facts and be presented in an unbiased manner so as not to mislead the public.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
