@@ -962,6 +962,26 @@ const OtpSection = ({ onResend, onFilled, onVerify, isVerified, isLoading }) => 
         }
     };
 
+    const handlePaste = (index, e) => {
+        e.preventDefault();
+        const pasted = e.clipboardData.getData("text").replace(/\D/g, ""); // digits only
+        if (!pasted) return;
+
+        const newOtp = [...otp];
+        let nextIndex = index;
+
+        for (let i = 0; i < pasted.length && index + i < 6; i++) {
+            newOtp[index + i] = pasted[i];
+            nextIndex = index + i;
+        }
+
+        setOtp(newOtp);
+
+        // focus the next empty box, or the last filled one
+        const focusIndex = Math.min(nextIndex + 1, 5);
+        inputRefs.current[focusIndex]?.focus();
+    };
+
     return (
         <div className="flex flex-col gap-2 my-2 animate-in fade-in slide-in-from-top-2 duration-500">
             <div className="flex items-center gap-2 sm:gap-3">
@@ -970,12 +990,16 @@ const OtpSection = ({ onResend, onFilled, onVerify, isVerified, isLoading }) => 
                         <input
                             key={idx}
                             ref={(el) => (inputRefs.current[idx] = el)}
-                            type="text"
+                            type="tel"
+                            inputMode="numeric"
+                            pattern="[0-9]*"
+                            autoComplete={idx === 0 ? "one-time-code" : "off"}
                             maxLength={1}
                             value={digit}
                             disabled={isVerified}
                             onChange={(e) => handleChange(idx, e.target.value)}
                             onKeyDown={(e) => handleKeyDown(idx, e)}
+                            onPaste={(e) => handlePaste(idx, e)}
                             className={`w-8 h-8 sm:w-10 sm:h-10 border rounded-md text-center text-base sm:text-lg focus:ring-1 outline-none transition-all shadow-sm flex-shrink-0 text-black ${
                                 isVerified 
                                 ? "bg-green-50 border-green-500 text-green-700" 
