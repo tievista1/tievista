@@ -173,7 +173,7 @@ export const Footer = () => {
               <Link to="/terms" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Terms of Use</Link>
             </div>
             <div className="flex gap-8">
-              <a href="https://docs.google.com/spreadsheets/d/1LUaC-L_qcPlNQnT6idMsbTEcp4VFEFay/export?format=xlsx" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Product List</a>
+              <a href="https://docs.google.com/spreadsheets/d/1WfMZxhjV2KQYqx9q458ylRMYRCnCHzKI/export?format=xlsx" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Product List</a>
               <Link to="/account-closure" className="hover:text-white transition-colors" style={{ fontFamily: 'PT Serif, serif' }}>Account Closure</Link>
             </div>
           </div>
