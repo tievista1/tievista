@@ -1000,15 +1000,14 @@ const OtpSection = ({ onResend, onFilled, onVerify, isVerified, isLoading }) => 
                             onChange={(e) => handleChange(idx, e.target.value)}
                             onKeyDown={(e) => handleKeyDown(idx, e)}
                             onPaste={(e) => handlePaste(idx, e)}
-                            className={`w-8 h-8 sm:w-10 sm:h-10 border rounded-md text-center text-base sm:text-lg focus:ring-1 outline-none transition-all shadow-sm flex-shrink-0 text-black ${
-                                isVerified 
-                                ? "bg-green-50 border-green-500 text-green-700" 
-                                : "border-gray-300 focus:border-[#d4af37] focus:ring-[#d4af37]"
-                            }`}
+                            className={`w-8 h-8 sm:w-10 sm:h-10 border rounded-md text-center text-base sm:text-lg focus:ring-1 outline-none transition-all shadow-sm flex-shrink-0 text-black ${isVerified
+                                    ? "bg-green-50 border-green-500 text-green-700"
+                                    : "border-gray-300 focus:border-[#d4af37] focus:ring-[#d4af37]"
+                                }`}
                         />
                     ))}
                 </div>
-                
+
                 {!isVerified ? (
                     <div className="flex gap-2">
                         {onVerify && (
@@ -1016,9 +1015,8 @@ const OtpSection = ({ onResend, onFilled, onVerify, isVerified, isLoading }) => 
                                 type="button"
                                 onClick={() => onVerify(otp.join(""))}
                                 disabled={otp.some(d => d === "") || isLoading}
-                                className={`flex items-center justify-center bg-[#d4af37] text-white px-3 sm:px-4 py-2 rounded shadow-sm text-[10px] sm:text-[11px] font-bold transition-all uppercase tracking-wider ${
-                                    otp.some(d => d === "") || isLoading ? "opacity-50 cursor-not-allowed" : "hover:scale-105 active:scale-95"
-                                }`}
+                                className={`flex items-center justify-center bg-[#d4af37] text-white px-3 sm:px-4 py-2 rounded shadow-sm text-[10px] sm:text-[11px] font-bold transition-all uppercase tracking-wider ${otp.some(d => d === "") || isLoading ? "opacity-50 cursor-not-allowed" : "hover:scale-105 active:scale-95"
+                                    }`}
                             >
                                 {isLoading ? "..." : "Verify"}
                             </button>
@@ -1026,11 +1024,10 @@ const OtpSection = ({ onResend, onFilled, onVerify, isVerified, isLoading }) => 
                         <button
                             type="button"
                             onClick={onResend}
-                            className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded border text-[10px] sm:text-[11px] font-bold transition-all active:scale-95 uppercase tracking-wider ${
-                                onVerify 
-                                ? "bg-gray-100 hover:bg-gray-200 text-gray-700 border-gray-200" 
-                                : "bg-gradient-to-r from-[#e5bc4b] to-[#d4af37] text-white border-transparent shadow-md hover:scale-105"
-                            }`}
+                            className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded border text-[10px] sm:text-[11px] font-bold transition-all active:scale-95 uppercase tracking-wider ${onVerify
+                                    ? "bg-gray-100 hover:bg-gray-200 text-gray-700 border-gray-200"
+                                    : "bg-gradient-to-r from-[#e5bc4b] to-[#d4af37] text-white border-transparent shadow-md hover:scale-105"
+                                }`}
                         >
                             <Send size={12} className={onVerify ? "text-gray-500" : "fill-white"} />
                             RESEND
@@ -1183,8 +1180,8 @@ const PatnersSignup = () => {
         }
     };
 
-    const handleEmailBlur = async () => { 
-        await triggerReg("email"); 
+    const handleEmailBlur = async () => {
+        await triggerReg("email");
     };
 
     // Submission Handlers
@@ -1309,7 +1306,7 @@ const PatnersSignup = () => {
                 };
                 const verifyResponse = await axios.post(`https://partners.tievista.com/api/verify-bank`, verifyPayload, AUTH_CONFIG);
                 if (verifyResponse.data.success) {
-                } 
+                }
             } catch (err) {
                 console.error("Bank verification request failed:", err);
             }
@@ -1356,7 +1353,7 @@ const PatnersSignup = () => {
                 // Send identifier and entityName in body
                 await axios.post(
                     `https://partners.tievista.com/api/partners/confirm`,
-                    { 
+                    {
                         identifier: identifier,
                         entityName: watchReg("entityName") || "Partner"
                     },
@@ -1913,10 +1910,10 @@ const PatnersSignup = () => {
                             {/* Code of Conduct for Distributors for MFs */}
                             <div className="mt-12 pt-8 mb-20">
                                 <h3 className="font-bold mb-6 text-center" style={{ fontFamily: "PT Serif" }}>Code of Conduct for Distributors for MFs</h3>
-                                
+
                                 <div className="space-y-4 text-justify" style={{ fontFamily: PoppinsRegular }}>
                                     <h4 className="font-bold underline mt-6">Purpose and Scope of the Code</h4>
-                                    
+
                                     <div className="pl-6 space-y-3">
                                         <div className="flex">
                                             <span className="w-6 shrink-0">a.</span>
@@ -1929,9 +1926,9 @@ const PatnersSignup = () => {
                                     </div>
 
                                     <h4 className="font-bold underline mt-8">II. Obligations of the MFDs</h4>
-                                    
+
                                     <h5 className="font-bold mt-6">1. Fiduciary Duty</h5>
-                                    
+
                                     <div className="pl-6 space-y-3 mt-3">
                                         <div className="flex">
                                             <span className="w-6 shrink-0">a.</span>
@@ -1980,7 +1977,7 @@ const PatnersSignup = () => {
                                     </div>
 
                                     <h5 className="font-bold mt-8">2. Compliance related obligations</h5>
-                                    
+
                                     <div className="pl-6 space-y-3 mt-3">
                                         <div className="flex">
                                             <span className="w-6 shrink-0">a.</span>
@@ -2034,7 +2031,7 @@ const PatnersSignup = () => {
                                     </div>
 
                                     <h5 className="font-bold mt-8">3. Infrastructure, record keeping and other related obligations</h5>
-                                    
+
                                     <div className="pl-6 space-y-3 mt-3">
                                         <div className="flex">
                                             <span className="w-6 shrink-0">a.</span>
@@ -2055,7 +2052,7 @@ const PatnersSignup = () => {
                                     </div>
 
                                     <h5 className="font-bold mt-8">4. Client related obligations</h5>
-                                    
+
                                     <div className="pl-6 space-y-3 mt-3">
                                         <div className="flex">
                                             <span className="w-6 shrink-0">a.</span>
@@ -2132,7 +2129,7 @@ const PatnersSignup = () => {
                                     </div>
 
                                     <h5 className="font-bold underline mt-8">5. Other obligations</h5>
-                                    
+
                                     <div className="pl-6 space-y-3 mt-3">
                                         <div className="flex">
                                             <span className="w-6 shrink-0">a.</span>
@@ -2168,7 +2165,7 @@ const PatnersSignup = () => {
                                     </div>
 
                                     <h5 className="font-bold underline mt-8">6. Obligations towards integrity of the Mutual Fund industry</h5>
-                                    
+
                                     <div className="pl-6 space-y-3 mt-3">
                                         <div className="flex">
                                             <span className="w-6 shrink-0">a.</span>
@@ -2387,11 +2384,10 @@ const PatnersSignup = () => {
                                                 type="button"
                                                 onClick={sendEmailOtp}
                                                 disabled={isSendingOtp || showEmailOtp}
-                                                className={`px-4 py-2 rounded text-xs font-bold transition-all uppercase tracking-wider ${
-                                                    (isSendingOtp || showEmailOtp)
-                                                    ? "bg-gray-200 text-gray-500 cursor-not-allowed"
-                                                    : "bg-gradient-to-r from-[#e5bc4b] via-[#d4af37] to-[#b78628] text-white"
-                                                }`}
+                                                className={`px-4 py-2 rounded text-xs font-bold transition-all uppercase tracking-wider ${(isSendingOtp || showEmailOtp)
+                                                        ? "bg-gray-200 text-gray-500 cursor-not-allowed"
+                                                        : "bg-gradient-to-r from-[#e5bc4b] via-[#d4af37] to-[#b78628] text-white"
+                                                    }`}
                                             >
                                                 {isSendingOtp ? "..." : (showEmailOtp ? "OTP Sent" : "Send OTP")}
                                             </button>
@@ -2401,9 +2397,9 @@ const PatnersSignup = () => {
                                 </div>
                                 {/* Email OTP */}
                                 {showEmailOtp && (
-                                    <OtpSection 
-                                        onResend={sendEmailOtp} 
-                                        onFilled={setIsEmailOtpFilled} 
+                                    <OtpSection
+                                        onResend={sendEmailOtp}
+                                        onFilled={setIsEmailOtpFilled}
                                         onVerify={handleVerifyEmailOtp}
                                         isVerified={isEmailVerified}
                                         isLoading={isVerifyingOtp}
@@ -2467,8 +2463,7 @@ const PatnersSignup = () => {
                                                 checked={isAuthorized} onChange={(e) => setIsAuthorized(e.target.checked)} />
                                             <label htmlFor="auth-check" className="text-[11px] text-gray-600 leading-relaxed cursor-pointer select-none"
                                                 style={{ fontFamily: PoppinsRegular }}>
-                                                I consent to share my PAN and Aadhaar obtained via digilocker with Indusartha Financial Services Private Limited for the purpose of adhering to KYC and regulatory requirements with the third party product manufacturers/ service providers. This information shall be retained by the company only if there is a transaction proposed to be completed on the platform with third party product manufacturers/service providers.
-                                            </label>
+                                                I authorize TieVista Global Private Wealth (IndusArtha Finance Services Private Limited) to access and view my KYC data from the KRA for the purpose of availing financial product distribution services and becoming a registered partner with TieVista Global Private Wealth (IndusArtha Finance Services Private Limited).                                            </label>
                                         </div>
                                         <div className="flex justify-center pt-2">
                                             <button
