@@ -503,7 +503,7 @@ const AgreementPDF = ({ data }) => {
                 <View style={[pdfStyles.section, { marginTop: 30, paddingTop: 20, borderTop: "0.5pt solid #eee" }]}>
                     <Text style={[pdfStyles.heading, { textAlign: "center" }]}>ANNEXURE A</Text>
                     <Text style={[pdfStyles.subHeading, { textAlign: "center" }]}>Fee / Commission sharing</Text>
-                    <Text style={pdfStyles.paragraph}>The principal distributor will share 90% of fees earned from Asset Management Companies, Portfolio Manager and such other products covered under this agreement.</Text>
+                    <Text style={pdfStyles.paragraph}>The principal distributor will share fees (As mutually agreed) earned from Asset Management Companies, Portfolio Manager and such other products covered under this agreement.</Text>
                 </View>
 
                 {/* ANNEXURE B */}
@@ -1613,7 +1613,7 @@ const PatnersSignup = () => {
                             <div className="mt-12 pt-8 border-t border-gray-200">
                                 <h2 className="font-bold mb-4 uppercase text-center" style={{ fontFamily: "PT Serif" }}>ANNEXURE A</h2>
                                 <h3 className="font-bold mb-6 text-center" style={{ fontFamily: "PT Serif" }}>Fee / Commission sharing</h3>
-                                <p className="text-justify" style={{ fontFamily: PoppinsRegular }}>The principal distributor will share 90% of fees earned from Asset Management Companies, Portfolio Manager and such other products covered under this agreement.</p>
+                                <p className="text-justify" style={{ fontFamily: PoppinsRegular }}>The principal distributor will share fees (As mutually agreed) earned from Asset Management Companies, Portfolio Manager and such other products covered under this agreement.</p>
                             </div>
 
                             {/* Annexure B */}
