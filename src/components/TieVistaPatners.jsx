@@ -119,7 +119,7 @@ const TieVistaPatners = () => {
             variants={animationSettings.item}
             className="text-lg md:text-xl lg:text-2xl text-white font-light max-w-3xl mx-auto leading-relaxed px-4"
           >
-            A next-generation partnership platform designed to institutionalize independent financial patnership practices globally.
+            A next-generation partnership platform designed to institutionalize independent financial partnership practices globally.
           </motion.p>
         </motion.div>
 
