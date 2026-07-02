@@ -934,6 +934,94 @@ const AUTH_CONFIG = {
     }
 };
 
+const OtpSection = ({ onResend, onFilled, onVerify, isVerified, isLoading }) => {
+    const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+    const inputRefs = useRef([]);
+
+    useEffect(() => {
+        const allFilled = otp.every((digit) => digit !== "");
+        onFilled(allFilled);
+    }, [otp, onFilled]);
+
+    const handleChange = (index, value) => {
+        if (value.length > 1) value = value[0];
+        if (!/^\d*$/.test(value)) return; // Only allow digits
+
+        const newOtp = [...otp];
+        newOtp[index] = value;
+        setOtp(newOtp);
+
+        if (value && index < 5) {
+            inputRefs.current[index + 1]?.focus();
+        }
+    };
+
+    const handleKeyDown = (index, e) => {
+        if (e.key === "Backspace" && !otp[index] && index > 0) {
+            inputRefs.current[index - 1]?.focus();
+        }
+    };
+
+    return (
+        <div className="flex flex-col gap-2 my-2 animate-in fade-in slide-in-from-top-2 duration-500">
+            <div className="flex items-center gap-2 sm:gap-3">
+                <div className="flex gap-1.5 sm:gap-2">
+                    {otp.map((digit, idx) => (
+                        <input
+                            key={idx}
+                            ref={(el) => (inputRefs.current[idx] = el)}
+                            type="text"
+                            maxLength={1}
+                            value={digit}
+                            disabled={isVerified}
+                            onChange={(e) => handleChange(idx, e.target.value)}
+                            onKeyDown={(e) => handleKeyDown(idx, e)}
+                            className={`w-8 h-8 sm:w-10 sm:h-10 border rounded-md text-center text-base sm:text-lg focus:ring-1 outline-none transition-all shadow-sm flex-shrink-0 text-black ${
+                                isVerified 
+                                ? "bg-green-50 border-green-500 text-green-700" 
+                                : "border-gray-300 focus:border-[#d4af37] focus:ring-[#d4af37]"
+                            }`}
+                        />
+                    ))}
+                </div>
+                
+                {!isVerified ? (
+                    <div className="flex gap-2">
+                        {onVerify && (
+                            <button
+                                type="button"
+                                onClick={() => onVerify(otp.join(""))}
+                                disabled={otp.some(d => d === "") || isLoading}
+                                className={`flex items-center justify-center bg-[#d4af37] text-white px-3 sm:px-4 py-2 rounded shadow-sm text-[10px] sm:text-[11px] font-bold transition-all uppercase tracking-wider ${
+                                    otp.some(d => d === "") || isLoading ? "opacity-50 cursor-not-allowed" : "hover:scale-105 active:scale-95"
+                                }`}
+                            >
+                                {isLoading ? "..." : "Verify"}
+                            </button>
+                        )}
+                        <button
+                            type="button"
+                            onClick={onResend}
+                            className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded border text-[10px] sm:text-[11px] font-bold transition-all active:scale-95 uppercase tracking-wider ${
+                                onVerify 
+                                ? "bg-gray-100 hover:bg-gray-200 text-gray-700 border-gray-200" 
+                                : "bg-gradient-to-r from-[#e5bc4b] to-[#d4af37] text-white border-transparent shadow-md hover:scale-105"
+                            }`}
+                        >
+                            <Send size={12} className={onVerify ? "text-gray-500" : "fill-white"} />
+                            RESEND
+                        </button>
+                    </div>
+                ) : (
+                    <div className="flex items-center gap-2 text-green-600 font-bold text-xs uppercase tracking-wider px-3 py-2 bg-green-50 rounded border border-green-100">
+                        <CheckCircle2 size={16} />
+                        Verified
+                    </div>
+                )}
+            </div>
+        </div>
+    );
+};
 
 const PatnersSignup = () => {
     const {
@@ -978,18 +1066,30 @@ const PatnersSignup = () => {
     const [showAgreement, setShowAgreement] = useState(false);
     const [isAgreed, setIsAgreed] = useState(false);
     const [isGeneratingPdf, setIsGeneratingPdf] = useState(false);
-
     const [masterData, setMasterData] = useState({});
+    const [showEmailOtp, setShowEmailOtp] = useState(false);
+    const [isEmailOtpFilled, setIsEmailOtpFilled] = useState(false);
+    const [isEmailVerified, setIsEmailVerified] = useState(false);
+    const [isSendingOtp, setIsSendingOtp] = useState(false);
+    const [isVerifyingOtp, setIsVerifyingOtp] = useState(false);
+    const [isFetchingPan, setIsFetchingPan] = useState(false);
+    const [kycExist, setKycExist] = useState(null);
+    const [kycStatus, setKycStatus] = useState(null);
 
+    // Watchers for validation/behavior
     const phoneValue = watchReg("phone");
     const emailValue = watchReg("email");
+    const passwordValue = watchReg("password");
     const entityTypeValue = watchReg("entityType");
+    const entityNameValue = watchReg("entityName");
 
     const panValue = watchPan("pan");
     const dobValue = watchPan("dob");
 
+    // Regex patterns
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phoneRegex = /^[6-9]\d{9}$/;
+    const passwordRegex = /^[A-Z](?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*(),.?":{}|<>])(?!.*\s).{7,}$/;
     const panRegex = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
     const dobRegex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/;
     const arnRegex = /^\d{6}$/;
@@ -1018,9 +1118,57 @@ const PatnersSignup = () => {
     const selectedEntityLabel = entityOptions.find((opt) => opt.value === entityTypeValue)?.label || "Select your entity";
 
     const handlePhoneBlur = async () => { await triggerReg("phone"); };
-    const handleEmailBlur = async () => { await triggerReg("email"); };
 
+    // Email OTP
+    const sendEmailOtp = async () => {
+        if (!emailValue || !emailRegex.test(emailValue)) {
+            alert("Invalid email for OTP");
+            return;
+        }
+        setIsSendingOtp(true);
+        try {
+            await axios.post("https://partners.tievista.com/api/send-otp", { email: emailValue, entityName: entityNameValue }, AUTH_CONFIG);
+            alert("OTP sent to " + emailValue);
+            setShowEmailOtp(true);
+        } catch (error) {
+            alert("Failed to send OTP. Please try again.");
+            setShowEmailOtp(true);
+        } finally {
+            setIsSendingOtp(false);
+        }
+    };
+
+    // Email OTP Verify
+    const handleVerifyEmailOtp = async (otp) => {
+        setIsVerifyingOtp(true);
+        try {
+            const response = await axios.post("https://partners.tievista.com/api/verify-otp", {
+                email: emailValue,
+                otp: otp
+            }, AUTH_CONFIG);
+            if (response.data.success) {
+                setIsEmailVerified(true);
+                alert("Email verified successfully!");
+            } else {
+                alert("Invalid OTP. Please try again.");
+            }
+        } catch (error) {
+            alert(error.response?.data?.message || "Verification failed.");
+        } finally {
+            setIsVerifyingOtp(false);
+        }
+    };
+
+    const handleEmailBlur = async () => { 
+        await triggerReg("email"); 
+    };
+
+    // Submission Handlers
     const getUserRegister = async (data) => {
+        if (!isEmailVerified) {
+            alert("Please verify your email with OTP before proceeding.");
+            return;
+        }
         try {
             const payload = {
                 entity_name: data.entityName,
@@ -1028,6 +1176,7 @@ const PatnersSignup = () => {
                 address: data.address,
                 contact_no: data.phone,
                 email: data.email,
+                password: data.password
             };
             const response = await axios.post("https://partners.tievista.com/api/partners/register", payload, AUTH_CONFIG);
             if (response.status === 201 || response.status === 200) {
@@ -1041,22 +1190,54 @@ const PatnersSignup = () => {
                 setMasterData(prev => ({ ...prev, ...data, ...error.response.data.partner }));
                 setShowIdentity(true);
             } else {
-                alert("Registration failed: " + (error.response?.data?.error || error.message));
+                alert("Registration failed. Please Try Again." + (error.response?.data?.error || error.message));
             }
         }
     };
 
+    /**
+     * Handles PAN and DOB submission.
+     * 1. Calls backend /api/check-pan which performs Digio checkPAN.
+     * 2. Backend then saves initial status to DB.
+     * 3. Backend then performs downloadPAN if verified and saves full details to DB.
+     */
     const getPan = async (data) => {
         try {
+            setIsFetchingPan(true);
+            setKycExist(null);
+            setKycStatus(null);
             const identifier = masterData.email || masterData.phone;
-            const payload = { dob: data.dob, pan_no: data.pan };
-            await axios.put(`https://partners.tievista.com/api/partners/update/${identifier}`, payload, AUTH_CONFIG);
-            setMasterData(prev => ({ ...prev, ...data }));
-            setShowRegulatory(true);
-            alert("PAN Details synced!");
+            const payload = {
+                pan: data.pan,
+                dob: data.dob,
+                mobile: masterData.phone || identifier
+            };
+
+            const response = await axios.post(`https://partners.tievista.com/api/check-pan`, payload, AUTH_CONFIG);
+
+            setKycExist(response.data.kycExists ? "True" : "False");
+            setKycStatus(response.data.panStatus);
+
+            if (response.data.success) {
+                setMasterData(prev => ({
+                    ...prev,
+                    ...data,
+                    pan_name: response.data.panStatus?.name || prev.pan_name,
+                    kyc_exists: response.data.kycExists
+                }));
+                setShowRegulatory(true);
+            } else {
+                alert(response.data.message || "Failed to verify PAN details.");
+            }
         } catch (error) {
             console.error("Identity update failed:", error);
-            alert("Failed to sync identity details.");
+            if (error.response && error.response.data) {
+                alert("PAN already exist");
+            } else {
+                alert("PAN already exist");
+            }
+        } finally {
+            setIsFetchingPan(false);
         }
     };
 
@@ -1073,25 +1254,47 @@ const PatnersSignup = () => {
             setMasterData(prev => ({ ...prev, ...data }));
             setShowBankDetails(true);
         } catch (error) {
-            console.error("Regulatory update failed:", error);
-            alert("Failed to sync regulatory details.");
+            alert("Failed to sync regulatory details. Try Again");
         }
     };
 
     const getBankDetails = async (data) => {
         try {
+            const finalBankData = {
+                ...data,
+                gstin: data.gstin?.trim() ? data.gstin.trim() : "0",
+                cin_no: data.cin || "0"
+            };
+
             const identifier = masterData.email || masterData.phone;
             const payload = {
-                bank_account_no: data.bankAccountNo,
-                ifsc_code: data.ifscCode,
-                bank_name: data.bankName,
+                bank_account_no: finalBankData.bankAccountNo,
+                ifsc_code: finalBankData.ifscCode,
+                gst_in: finalBankData.gstin,
+                cin_no: finalBankData.cin_no
             };
+
+            // Bank verification
+            try {
+                const verifyPayload = {
+                    accountNumber: finalBankData.bankAccountNo,
+                    ifscCode: finalBankData.ifscCode,
+                    beneficiaryName: masterData.entityName || "Partner",
+                    email: masterData.email,
+                    phone: masterData.phone
+                };
+                const verifyResponse = await axios.post(`https://partners.tievista.com/api/verify-bank`, verifyPayload, AUTH_CONFIG);
+                if (verifyResponse.data.success) {
+                } 
+            } catch (err) {
+                console.error("Bank verification request failed:", err);
+            }
+
             await axios.put(`https://partners.tievista.com/api/partners/update/${identifier}`, payload, AUTH_CONFIG);
-            setMasterData(prev => ({ ...prev, ...data }));
+            setMasterData(prev => ({ ...prev, ...finalBankData }));
             setShowAgreement(true);
         } catch (error) {
-            console.error("Bank details update failed:", error);
-            alert("Failed to sync bank details.");
+            alert("Bank Account Alreay exist!.");
         }
     };
 
@@ -1121,6 +1324,23 @@ const PatnersSignup = () => {
             URL.revokeObjectURL(url);
             alert('Welcome To TieVista');
             navigate('/');
+
+            const identifier = masterData.email;
+            console.log(identifier);
+
+            if (identifier) {
+                // Send identifier and entityName in body
+                await axios.post(
+                    `https://partners.tievista.com/api/partners/confirm`,
+                    { 
+                        identifier: identifier,
+                        entityName: watchReg("entityName") || "Partner"
+                    },
+                    AUTH_CONFIG
+                );
+
+                alert("Registration confirmed! A welcome email has been sent to your registered email address.");
+            }
         } catch (error) {
             console.error("PDF generation failed:", error);
             alert("Download failed. Please try again.");
@@ -2129,16 +2349,42 @@ const PatnersSignup = () => {
                                         style={{ fontFamily: PoppinsRegular }}>
                                         EMAIL ID<span className="text-red-500">*</span>
                                     </label>
-                                    <input
-                                        {...registerReg("email", {
-                                            required: "Email is required",
-                                            pattern: { value: emailRegex, message: "Invalid email format" },
-                                        })}
-                                        onBlur={handleEmailBlur}
-                                        className={`w-full px-4 py-3 border rounded focus:border-[#d4af37] outline-none transition-all placeholder:text-gray-300 text-[16px] text-black ${errorsReg.email ? "border-red-500" : "border-gray-300"}`}
-                                    />
+                                    <div className="flex gap-2">
+                                        <input
+                                            {...registerReg("email", {
+                                                required: "Email is required",
+                                                pattern: { value: emailRegex, message: "Invalid email format" },
+                                            })}
+                                            onBlur={handleEmailBlur}
+                                            className={`flex-1 px-4 py-3 border rounded focus:border-[#d4af37] outline-none transition-all placeholder:text-gray-300 text-[16px] text-black ${errorsReg.email ? "border-red-500" : "border-gray-300"}`}
+                                        />
+                                        {(!isEmailVerified && emailValue && emailRegex.test(emailValue)) && (
+                                            <button
+                                                type="button"
+                                                onClick={sendEmailOtp}
+                                                disabled={isSendingOtp || showEmailOtp}
+                                                className={`px-4 py-2 rounded text-xs font-bold transition-all uppercase tracking-wider ${
+                                                    (isSendingOtp || showEmailOtp)
+                                                    ? "bg-gray-200 text-gray-500 cursor-not-allowed"
+                                                    : "bg-gradient-to-r from-[#e5bc4b] via-[#d4af37] to-[#b78628] text-white"
+                                                }`}
+                                            >
+                                                {isSendingOtp ? "..." : (showEmailOtp ? "OTP Sent" : "Send OTP")}
+                                            </button>
+                                        )}
+                                    </div>
                                     {errorsReg.email && <p className="text-[10px] text-red-500 mt-1 font-medium">{errorsReg.email.message}</p>}
                                 </div>
+                                {/* Email OTP */}
+                                {showEmailOtp && (
+                                    <OtpSection 
+                                        onResend={sendEmailOtp} 
+                                        onFilled={setIsEmailOtpFilled} 
+                                        onVerify={handleVerifyEmailOtp}
+                                        isVerified={isEmailVerified}
+                                        isLoading={isVerifyingOtp}
+                                    />
+                                )}
 
                                 {!showIdentity && (
                                     <div className="py-5 flex justify-center my-3.5">
