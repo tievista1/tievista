@@ -194,7 +194,7 @@ export const Navbar = () => {
             ],
         },
         {
-            label: 'Insights',
+            label: 'literature',
             href: '#',
             hasDropdown: true,
             dropdownItems: [

@@ -2463,7 +2463,7 @@ const PatnersSignup = () => {
                                                 checked={isAuthorized} onChange={(e) => setIsAuthorized(e.target.checked)} />
                                             <label htmlFor="auth-check" className="text-[11px] text-gray-600 leading-relaxed cursor-pointer select-none"
                                                 style={{ fontFamily: PoppinsRegular }}>
-                                                I authorize TieVista Global Private Wealth (IndusArtha Finance Services Private Limited) to access and view my KYC data from the KRA for the purpose of availing financial product distribution services and becoming a registered partner with TieVista Global Private Wealth (IndusArtha Finance Services Private Limited).                                            </label>
+                                                I authorize TieVista Global Private Wealth (IndusArtha Financial Services Private Limited) to access and view my KYC data from the KRA for the purpose of availing financial product distribution services and becoming a registered partner with TieVista Global Private Wealth (IndusArtha Financial Services Private Limited).                                            </label>
                                         </div>
                                         <div className="flex justify-center pt-2">
                                             <button

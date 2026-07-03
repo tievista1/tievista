@@ -209,7 +209,7 @@ const CategorySection = ({ cat, index }) => {
         return (
             <section id={cat.id} className={`w-full min-h-screen flex flex-col justify-center border-b border-gray-100 ${bg}`}>
                 <div className="container mx-auto px-6 lg:px-16 py-16">
-                    <SectionHeader title="Alternate Investments." description={cat.description} />
+                    <SectionHeader title="Alternate Investments" description={cat.description} />
 
                     {/* 4 Portrait Cards in a Single Row */}
                     <div className="flex flex-col sm:flex-row gap-6">
