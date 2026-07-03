@@ -1197,7 +1197,7 @@ const PatnersSignup = () => {
                 address: data.address,
                 contact_no: data.phone,
                 email: data.email,
-                password: data.password
+                password: 0
             };
             const response = await axios.post("https://partners.tievista.com/api/partners/register", payload, AUTH_CONFIG);
             if (response.status === 201 || response.status === 200) {
