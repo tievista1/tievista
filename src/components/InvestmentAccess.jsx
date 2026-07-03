@@ -36,7 +36,7 @@ const ASSET_CATEGORIES = [
         italicTitle: "Capital Preservation",
         subtitle: "",
         description: "We understand that protecting hard-earned capital is as essential as growth. Our Income & Capital Preservation strategies prioritize safety and steady income generation, crafted for investors who seek predictable cash flows and shield their portfolios from undue volatility.",
-        includes: ["Debt Mutual Funds", "Debt PMS", "Physical Bonds (Govt, Corp, Credit)", "Fixed Income ETFs"],
+        includes: ["Debt Mutual Funds", "Debt PMS", "Bonds", "Fixed Income ETFs"],
         image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1774352512/Income_Capital_Preservation_gryvit.png",
         icon: Database,
         reverse: true
@@ -163,7 +163,7 @@ const CategorySection = ({ cat, index }) => {
         const incomeCards = [
             { name: "Debt Mutual Funds", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781594078/DebtMutualFunds_ixqfa3.jpg" },
             { name: "Debt PMS", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781594079/DebtPMS_toipk8.png" },
-            { name: "Physical Bonds", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781594078/PhyscialBonds_ofpbm7.png" },
+            { name: "Bonds", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781594078/PhyscialBonds_ofpbm7.png" },
             { name: "Fixed Income ETFs", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781594077/FixedIncomeETFs_he0dx8.jpg" }
         ];
 
