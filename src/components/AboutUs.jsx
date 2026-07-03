@@ -26,8 +26,8 @@ const narratives = [
   {
     icon: Target,
     label: '',
-    heading: 'Insights into',
-    accent: 'Action.',
+    heading: 'Foundation for',
+    accent: 'Decision.',
     body: 'Our engagement begins with a deep understanding of each client\'s context, personal and family objectives, risk preferences, and financial complexity. These insights are translated into a financial risk analysis, compiled into a single page which serves as the foundation for informed decision-making.',
     img: 'https://res.cloudinary.com/dck5jgfix/image/upload/v1774246792/InsightsIntoActions_q24uay.png',
     reverse: true,
