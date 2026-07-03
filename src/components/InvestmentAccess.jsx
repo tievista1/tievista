@@ -44,7 +44,7 @@ const ASSET_CATEGORIES = [
     {
         id: "Private",
         title: "Private &",
-        italicTitle: "Alternative Investments",
+        italicTitle: "Alternate Investments",
         subtitle: "",
         description: "Sophisticated portfolios blend traditional and alternative investments to capture broad market potential while uncovering unique value. We provide access to differentiated opportunities that go beyond conventional public markets to enhance returns and reduce correlation.",
         includes: ["AIFs (Category I, II & III)", "Venture Capital", "Real Estate Opportunities", "Commodities"],
@@ -209,7 +209,7 @@ const CategorySection = ({ cat, index }) => {
         return (
             <section id={cat.id} className={`w-full min-h-screen flex flex-col justify-center border-b border-gray-100 ${bg}`}>
                 <div className="container mx-auto px-6 lg:px-16 py-16">
-                    <SectionHeader title="Alternative Investments." description={cat.description} />
+                    <SectionHeader title="Alternate Investments." description={cat.description} />
 
                     {/* 4 Portrait Cards in a Single Row */}
                     <div className="flex flex-col sm:flex-row gap-6">
