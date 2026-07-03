@@ -49,7 +49,7 @@ const Blogs = () => {
                         className='flex items-center gap-4'
                     >
                         <h1 className='text-xl md:text-2xl text-white font-bold tracking-tight mb-0 flex items-center gap-2' style={{ fontFamily: 'PT Serif, serif' }}>
-                            INSIGHTS & <span className='gold-text'>BLOGS</span>
+                            INSIGHTS & BLOGS
                         </h1>
                         <div className='hidden md:block w-px h-6 bg-white/20' />
                     </motion.div>
@@ -109,7 +109,7 @@ const Blogs = () => {
                                                 style={{ fontFamily: 'PT Serif, serif' }}
                                             >
                                                 <span className='text-black block mb-0.5'>{blog.title}</span>
-                                                <span className='gold-text block' style={{ fontFamily: 'Lora, serif' }}>{blog.goldtitle}</span>
+                                                <span className='text-black block' style={{ fontFamily: 'Lora, serif' }}>{blog.goldtitle}</span>
                                             </h3>
                                         </div>
 
@@ -144,7 +144,7 @@ const Blogs = () => {
 
                                             <a
                                                 href={blog.url}
-                                                className='inline-flex items-center gap-2 text-[11px] font-bold tracking-widest uppercase text-[#D4AF37] group/link mt-auto' style={{ fontFamily: 'PT Serif, serif' }}
+                                                className='inline-flex items-center gap-2 text-[11px] font-bold tracking-widest uppercase text-black group/link mt-auto' style={{ fontFamily: 'PT Serif, serif' }}
                                             >
                                                 Read More
                                                 <ArrowRight className='size-3 transition-transform duration-300 group-hover/link:translate-x-1' />

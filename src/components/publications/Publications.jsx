@@ -166,7 +166,7 @@ const Publications = () => {
 
                                                 <a
                                                     onClick={() => handleDownload(publication.url)}
-                                                    className='ml-auto inline-flex items-center gap-2 text-[12px] font-bold tracking-widest uppercase text-[#D4AF37] group/link mt-auto' style={{ fontFamily: 'PT Serif, serif' }}
+                                                    className='ml-auto inline-flex items-center gap-2 text-[12px] font-bold tracking-widest uppercase text-black group/link mt-auto' style={{ fontFamily: 'PT Serif, serif' }}
                                                 >
                                                     Download
                                                     <ArrowRight className='size-3 transition-transform duration-300 group-hover/link:translate-x-1' />

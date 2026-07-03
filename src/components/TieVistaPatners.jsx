@@ -105,15 +105,15 @@ const TieVistaPatners = () => {
             variants={animationSettings.item}
             className="inline-flex items-center gap-3 px-4 py-1.5 mb-8 border border-[#D4AF37]/40 rounded-full bg-black/30 backdrop-blur-md"
           >
-            <span className="w-1.5 h-1.5 rounded-full" style={{ background: GOLD }} />
-            <span className="text-[#D4AF37] text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase" style={{ fontFamily: 'PT Serif, serif' }}>Empowering Independent Partners</span>
+            <span className="w-1.5 h-1.5 rounded-full" style={{ background: 'white' }} />
+            <span className="text-white text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase" style={{ fontFamily: 'PT Serif, serif' }}>Empowering Independent Partners</span>
           </motion.div>
           <motion.h1
             variants={animationSettings.item}
             className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl mb-8 text-white tracking-tighter leading-[0.9] md:leading-none"
             style={{ fontFamily: 'PT Serif, serif' }}
           >
-            TieVista <span className="gold-text">Partners</span>
+            TieVista <span className="text-white">Partners</span>
           </motion.h1>
           <motion.p
             variants={animationSettings.item}
@@ -191,7 +191,7 @@ const TieVistaPatners = () => {
               Frequently Asked
             </h2>
             <h2
-              className="text-4xl sm:text-5xl md:text-6xl tracking-tight mb-6 gold-text"
+              className="text-4xl sm:text-5xl md:text-6xl tracking-tight mb-6 text-black"
               style={{ fontFamily: 'PT Serif, serif' }}
             >
               Questions

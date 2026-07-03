@@ -109,7 +109,7 @@ export const Footer = () => {
           <div className="flex flex-wrap gap-12 lg:gap-24">
 
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-[0.3em] mb-6 gold-text" style={{ fontFamily: 'PT Serif, serif' }}>
+              <h4 className="text-xs font-bold uppercase tracking-[0.3em] mb-6 text-white" style={{ fontFamily: 'PT Serif, serif' }}>
                 Investment Partners
               </h4>
               <ul className="space-y-4 font-light text-white">
@@ -123,7 +123,7 @@ export const Footer = () => {
 
             {/* Column 1 */}
             <div>
-              <h4 className="text-xs font-bold uppercase tracking-[0.3em] mb-6 gold-text" style={{ fontFamily: 'PT Serif, serif' }}>
+              <h4 className="text-xs font-bold uppercase tracking-[0.3em] mb-6 text-white" style={{ fontFamily: 'PT Serif, serif' }}>
                 Quick Links
               </h4>
               <ul className="space-y-4 font-light text-white">

@@ -106,7 +106,7 @@ function NarrativeSection({ sec, index }) {
                 style={{ fontFamily: 'PT Serif, serif' }}
               >
                 {heading}{' '}
-                <span className="gold-text" >{accent}</span> {/*style={{ color: GOLD }} */}
+                <span className="text-black" >{accent}</span> {/*style={{ color: GOLD }} */}
               </h2>
 
               <div className="w-12 h-px mb-7" style={{ background: GOLD }} />
@@ -153,7 +153,7 @@ const AboutUs = () => {
               style={{ fontFamily: 'PT Serif, serif' }}
             >
               What to{' '}
-              <span className="gold-text" >Expect</span>
+              <span className="text-black" >Expect</span>
             </h2>
           </motion.div>
 

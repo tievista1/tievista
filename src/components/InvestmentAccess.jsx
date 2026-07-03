@@ -24,7 +24,7 @@ const ASSET_CATEGORIES = [
         title: "Growth",
         italicTitle: "Assets",
         subtitle: "",
-        description: "At TieVista, we build enduring financial success through disciplined, equity-centric investment strategies. Our approach is rooted in long-term growth, backed by rigorous research and thoughtful risk management to generate capital appreciation globally.",
+        description: "At TieVista, we build enduring financial success through disciplined centric strategies. Our approach is rooted in long-term growth and thoughtful risk management to generate capital appreciation globally.",
         includes: ["Public Equities", "Equity Mutual Funds (including ELSS)", "Equity PMS", "Equity ETFs"],
         image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1774346035/GrowthAsset_yffmlk.png",
         icon: TrendingUp,
@@ -110,7 +110,7 @@ const SectionHeader = ({ title, description, delay = 0.1 }) => (
         >
             {title}
         </h2>
-        <div className="w-16 h-0.5 mt-4 mb-6" style={{ background: GOLD }} />
+        <div className="w-16 h-0.5 mt-4 mb-6" />
         <p className="text-lg text-black leading-relaxed font-light max-w-4xl" style={{ fontFamily: "'Poppins', sans-serif" }}>
             {description}
         </p>
@@ -123,7 +123,7 @@ const CategorySection = ({ cat, index }) => {
     if (cat.id === 'Growth') {
         const growthCards = [
             { name: "Public Equities", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781593855/PublicEquities_nezjmi.png" },
-            { name: "Equities Mutual Funds (Including ELSS)", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781593853/EquitiesMutualFunds_pme7kb.jpg" },
+            { name: "Equity Mutual Funds (Including ELSS)", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781593853/EquitiesMutualFunds_pme7kb.jpg" },
             { name: "Equity PMS", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781593853/EquityPMS_jvmgrq.jpg" },
             { name: "Equity ETFs", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781593855/EquityEFTs_ph2p90.png" }
         ];
@@ -163,7 +163,7 @@ const CategorySection = ({ cat, index }) => {
         const incomeCards = [
             { name: "Debt Mutual Funds", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781594078/DebtMutualFunds_ixqfa3.jpg" },
             { name: "Debt PMS", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781594079/DebtPMS_toipk8.png" },
-            { name: "Physical Bonds (Govt, Corp, Credit)", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781594078/PhyscialBonds_ofpbm7.png" },
+            { name: "Physical Bonds", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781594078/PhyscialBonds_ofpbm7.png" },
             { name: "Fixed Income ETFs", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781594077/FixedIncomeETFs_he0dx8.jpg" }
         ];
 
@@ -201,7 +201,7 @@ const CategorySection = ({ cat, index }) => {
     if (cat.id === 'Private') {
         const privateCards = [
             { name: "AIFs (Category I, II & III)", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781607152/AIFs_crj4ik.png" },
-            { name: "Private Equity & Venture Capital", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781607151/PrivateEquity_VentureCaptial_cuwwrv.jpg" },
+            { name: "Venture Capital", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781607151/PrivateEquity_VentureCaptial_cuwwrv.jpg" },
             { name: "Real Estate Opportunities", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781607151/RealEstate_lrdmop.jpg" },
             { name: "Commodities", image: "https://res.cloudinary.com/dck5jgfix/image/upload/v1781607151/Commodity_i90dz5.png" }
         ];
@@ -284,7 +284,7 @@ const InvestmentAccess = () => {
                 </div>
                 <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }} className="text-center z-10 px-6">
                     <h2 className="text-6xl md:text-7xl font-bold mb-12 leading-[0.9] tracking-tighter text-gray-900 font-serif">
-                        Future-proof Your <br /> <span className="gold-text italic">Legacy.</span>
+                        Future-proof Your <br /> <span className="text-black ">Legacy.</span>
                     </h2>
                     <Link to="/contact">
                         <button className="bg-black text-white px-16 py-6 rounded-full font-bold uppercase text-sm hover:bg-[#D4AF37] transition-all shadow-2xl hover:shadow-[#D4AF37]/40">
