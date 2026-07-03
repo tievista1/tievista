@@ -115,7 +115,7 @@ export const Footer = () => {
               <ul className="space-y-4 font-light text-white">
                 <li><Link to="/investmentpartners/mutualfunds" className="hover:text-white transition-colors">Mutual Funds</Link></li>
                 <li><Link to="/investmentpartners/pms" className="hover:text-white transition-colors">PMS</Link></li>
-                <li><Link to="/investmentpartners/aif" className="hover:text-white transition-colors">AIFS</Link></li>
+                <li><Link to="/investmentpartners/aif" className="hover:text-white transition-colors">AIF</Link></li>
                 <li><Link to="/investmentpartners/giftcity" className="hover:text-white transition-colors">GIFT City</Link></li>
                 <li><Link to="/investmentpartners/privatecredit" className="hover:text-white transition-colors">Private Credit</Link></li>
               </ul>
