@@ -18,7 +18,9 @@ const PMS = () => {
     { name: "ABSL", src: "https://res.cloudinary.com/dck5jgfix/image/upload/v1777019073/ABSL_PMS_ohdc2z.png" },
     { name: "Marcellus", src: "https://res.cloudinary.com/dck5jgfix/image/upload/v1777019072/MARCELLUS_PMS_iypk0a.jpg" },
     { name: "Abakkus", src: "https://res.cloudinary.com/dck5jgfix/image/upload/v1777019071/ABAKKUS_PMS_z8xirz.jpg" },
-    { name: "Rostrum Grand", src: "https://res.cloudinary.com/dck5jgfix/image/upload/v1777025314/ROSTRUMGRAND_PMS_jpzpjs.png" },
+    { name: "The Investment Trust of India (ITI)", src: "https://res.cloudinary.com/dck5jgfix/image/upload/v1777019088/TITOI_PC_awv6o0.png" },
+    { name: "Valentis Advisors", src: "https://res.cloudinary.com/dck5jgfix/image/upload/v1777019087/VALENTISADVISORS_PC_s2tffu.jpg" }
+    // { name: "Rostrum Grand", src: "https://res.cloudinary.com/dck5jgfix/image/upload/v1777025314/ROSTRUMGRAND_PMS_jpzpjs.png" },
   ];
 
   return (

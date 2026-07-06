@@ -5,8 +5,6 @@ const PrivateCredit = () => {
     { name: "Varanium", src: "https://res.cloudinary.com/dck5jgfix/image/upload/v1777019092/VARANIUM_PC_pbw9y2.jpg" },
     { name: "True North", src: "https://res.cloudinary.com/dck5jgfix/image/upload/v1777019091/TRUENORTH_PC_ujtegf.png" },
     { name: "Mosaic", src: "https://res.cloudinary.com/dck5jgfix/image/upload/v1777019089/MOSAIC_PC_tqle6d.jpg" },
-    { name: "The Investment Trust of India (ITI)", src: "https://res.cloudinary.com/dck5jgfix/image/upload/v1777019088/TITOI_PC_awv6o0.png" },
-    { name: "Valentis Advisors", src: "https://res.cloudinary.com/dck5jgfix/image/upload/v1777019087/VALENTISADVISORS_PC_s2tffu.jpg" }
   ];
 
   return (
