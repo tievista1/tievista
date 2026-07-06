@@ -33,7 +33,7 @@ const TermsAndConditions = () => {
             className="text-5xl md:text-7xl tracking-tighter leading-none mb-8"
             style={{ fontFamily: 'PT Serif, serif' }}
           >
-            Terms of <span className="gold-text">Use</span>
+            Terms of <span className="text-black">Use</span>
           </h1>
           <p className="text-xl text-black font-light leading-relaxed max-w-3xl" style={{ fontFamily: 'PT Serif, serif' }}>
             IndusArtha Financial Services Pvt. Ltd., its subsidiaries and affiliates (collectively, “IndusArtha”,“TieVista”,  “we”, “us” or “our”), require all visitors to this website and any other websites owned, operated, or controlled by IndusArtha to adhere to the following Terms of Use.

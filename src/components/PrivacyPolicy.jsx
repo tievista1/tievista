@@ -27,7 +27,7 @@ const PrivacyPolicy = () => {
             className="text-5xl md:text-7xl tracking-tighter leading-none mb-8"
             style={{ fontFamily: 'PT Serif, serif' }}
           >
-            Privacy <span className="gold-text">Policy</span>
+            Privacy <span className="text-black">Policy</span>
           </h1>
           <p className="text-xl text-black font-light leading-relaxed max-w-3xl" style={{ fontFamily: 'PT Serif, serif' }}>
             IndusArtha Financial Services Pvt. Ltd., its subsidiaries and affiliates (collectively, “IndusArtha”, “TieVista”, “we”, “us”, or “our”) are committed to protecting the privacy and confidentiality of the information entrusted to us.
