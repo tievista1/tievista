@@ -342,7 +342,7 @@ const TermsAndConditions = () => {
               <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-black" style={{ fontFamily: 'PT Serif, serif' }}>21. Privacy Commitment</h2>
             </div>
             <div className="pl-14 text-black font-light leading-relaxed" style={{ fontFamily: 'PT Serif, serif' }}>
-              <p>IndusArtha is committed to protecting your privacy. Please review our <Link to="/privacypolicy" className="text-[#D4AF37] hover:underline">Privacy Policy</Link> for details on how information is collected, used, and safeguarded.</p>
+              <p>IndusArtha is committed to protecting your privacy. Please review our <Link to="/privacypolicy" className="text-black hover:underline">Privacy Policy</Link> for details on how information is collected, used, and safeguarded.</p>
             </div>
           </motion.section>
 
