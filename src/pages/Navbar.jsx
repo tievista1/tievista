@@ -194,7 +194,7 @@ export const Navbar = () => {
             ],
         },
         {
-            label: 'literature',
+            label: 'Literature',
             href: '#',
             hasDropdown: true,
             dropdownItems: [
