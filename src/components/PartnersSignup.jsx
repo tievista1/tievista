@@ -2527,8 +2527,8 @@ const PatnersSignup = () => {
                                                 </div>
                                                 <div className="flex-1 flex flex-col">
                                                     <input
-                                                        {...registerRegulatory("euinAprn", { required: "EUIN is required example E12345", pattern: euinRegex, maxLength: { value: 6, message: "EUIN must be 6 characters" } })}
-                                                        placeholder="EUIN (APRN)" maxLength={6}
+                                                        {...registerRegulatory("euinAprn", { required: "EUIN is required example E123456", pattern: euinRegex, maxLength: { value: 7, message: "EUIN must be 7 characters" } })}
+                                                        placeholder="EUIN (APRN)" maxLength={7}
                                                         className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-[16px] text-black"
                                                     />
                                                     {errorsRegulatory.euinAprn && <p className="text-red-500 text-xs mt-2">{errorsRegulatory.euinAprn.message}</p>}
