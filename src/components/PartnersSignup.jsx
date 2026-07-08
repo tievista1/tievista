@@ -2496,23 +2496,26 @@ const PatnersSignup = () => {
                                         </div>
                                         <div className="flex flex-col gap-4">
                                             <div className="flex gap-4 w-full">
+                                                {/* ARN EUIN 1 */}
                                                 <div className="flex-1 flex flex-col">
                                                     <input
                                                         {...registerRegulatory("arn", { required: "ARN is required", pattern: arnRegex, maxLength: { value: 6, message: "ARN must be 6 digits" } })}
-                                                        placeholder="ARN (6 digits)" maxLength={7}
+                                                        placeholder="ARN (6 digits)" maxLength={6}
                                                         className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-[16px] text-black"
                                                     />
                                                     {errorsRegulatory.arn && <p className="text-red-500 text-xs mt-2">{errorsRegulatory.arn.message}</p>}
                                                 </div>
                                                 <div className="flex-1 flex flex-col">
                                                     <input
-                                                        {...registerRegulatory("euinARN", { required: "EUIN is required example E12345", pattern: euinRegex, maxLength: { value: 6, message: "EUIN must be 6 characters" } })}
+                                                        {...registerRegulatory("euinARN", { required: "EUIN is required example E123456", pattern: euinRegex, maxLength: { value: 7, message: "EUIN must be 7 characters" } })}
                                                         placeholder="EUIN (ARN)" maxLength={7}
                                                         className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-[16px] text-black"
                                                     />
                                                     {errorsRegulatory.euinARN && <p className="text-red-500 text-xs mt-2">{errorsRegulatory.euinARN.message}</p>}
                                                 </div>
                                             </div>
+
+                                            {/* APRN EUIN 2 */}
                                             <div className="flex gap-4 w-full">
                                                 <div className="flex-1 flex flex-col">
                                                     <input
