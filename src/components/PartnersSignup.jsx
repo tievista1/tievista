@@ -1001,8 +1001,8 @@ const OtpSection = ({ onResend, onFilled, onVerify, isVerified, isLoading }) => 
                             onKeyDown={(e) => handleKeyDown(idx, e)}
                             onPaste={(e) => handlePaste(idx, e)}
                             className={`w-8 h-8 sm:w-10 sm:h-10 border rounded-md text-center text-base sm:text-lg focus:ring-1 outline-none transition-all shadow-sm flex-shrink-0 text-black ${isVerified
-                                    ? "bg-green-50 border-green-500 text-green-700"
-                                    : "border-gray-300 focus:border-[#d4af37] focus:ring-[#d4af37]"
+                                ? "bg-green-50 border-green-500 text-green-700"
+                                : "border-gray-300 focus:border-[#d4af37] focus:ring-[#d4af37]"
                                 }`}
                         />
                     ))}
@@ -1025,8 +1025,8 @@ const OtpSection = ({ onResend, onFilled, onVerify, isVerified, isLoading }) => 
                             type="button"
                             onClick={onResend}
                             className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 rounded border text-[10px] sm:text-[11px] font-bold transition-all active:scale-95 uppercase tracking-wider ${onVerify
-                                    ? "bg-gray-100 hover:bg-gray-200 text-gray-700 border-gray-200"
-                                    : "bg-gradient-to-r from-[#e5bc4b] to-[#d4af37] text-white border-transparent shadow-md hover:scale-105"
+                                ? "bg-gray-100 hover:bg-gray-200 text-gray-700 border-gray-200"
+                                : "bg-gradient-to-r from-[#e5bc4b] to-[#d4af37] text-white border-transparent shadow-md hover:scale-105"
                                 }`}
                         >
                             <Send size={12} className={onVerify ? "text-gray-500" : "fill-white"} />
@@ -1148,6 +1148,19 @@ const PatnersSignup = () => {
         }
         setIsSendingOtp(true);
         try {
+            // ── Pre-check: block if registration is already complete ────────────────
+            // Uses a read-only GET endpoint — creates NO DB records.
+            const statusRes = await axios.get(
+                `https://partners.tievista.com/api/partners/check-status?email=${encodeURIComponent(emailValue)}`,
+                AUTH_CONFIG
+            );
+            if (statusRes.data.registrationComplete) {
+                alert(statusRes.data.message ||
+                    "Registration already complete. Please mail to connect@tievista.com for any changes.");
+                setIsSendingOtp(false);
+                return; // ← Hard stop — do NOT send OTP
+            }
+
             await axios.post("https://partners.tievista.com/api/send-otp", { email: emailValue, entityName: entityNameValue }, AUTH_CONFIG);
             alert("OTP sent to " + emailValue);
             setShowEmailOtp(true);
@@ -1158,6 +1171,7 @@ const PatnersSignup = () => {
             setIsSendingOtp(false);
         }
     };
+
 
     // Email OTP Verify
     const handleVerifyEmailOtp = async (otp) => {
@@ -1207,11 +1221,29 @@ const PatnersSignup = () => {
         } catch (error) {
             console.error("Initial registration failed:", error);
             if (error.response?.status === 409) {
-                alert("Partner already exists. Resuming registration...");
-                setMasterData(prev => ({ ...prev, ...data, ...error.response.data.partner }));
+                const responseData = error.response.data;
+
+                // ── Case 1: Registration COMPLETE — hard block, do NOT proceed ──────
+                // Backend returns 409 with NO `partner` field when registration_complete = 1
+                if (!responseData.partner) {
+                    alert(responseData.message ||
+                        "Registration already complete. Please mail to connect@tievista.com for any changes.");
+                    return; // Stay on Step 1, do not advance
+                }
+
+                // ── Case 2: Registration INCOMPLETE — allow resume ────────────────
+                const partnerFromDB = responseData.partner;
+                setMasterData(prev => ({
+                    ...prev,
+                    ...data,                  // user's typed values (has 'phone')
+                    ...partnerFromDB,          // DB fields (has 'contact_no', not 'phone')
+                    // Always ensure 'phone' is set — DB uses 'contact_no', form uses 'phone'
+                    phone: data.phone || partnerFromDB.contact_no || prev.phone,
+                    email: data.email || partnerFromDB.email || prev.email,
+                }));
                 setShowIdentity(true);
             } else {
-                alert("Registration failed. Please Try Again." + (error.response?.data?.error || error.message));
+                alert("Registration failed. Please Try Again. " + (error.response?.data?.error || error.message));
             }
         }
     };
@@ -1238,7 +1270,8 @@ const PatnersSignup = () => {
 
             setKycExist(response.data.kycExists ? "True" : "False");
             setKycStatus(response.data.panStatus);
-
+            const bankStatus = response.data.panStatus.status
+            console.log(bankStatus);
             if (response.data.success) {
                 setMasterData(prev => ({
                     ...prev,
@@ -1287,37 +1320,67 @@ const PatnersSignup = () => {
                 cin_no: data.cin || "0"
             };
 
+            // Validate required fields before hitting the API
+            if (!finalBankData.bankAccountNo || !finalBankData.ifscCode) {
+                alert("Please enter both Bank Account Number and IFSC Code.");
+                return;
+            }
+
             const identifier = masterData.email || masterData.phone;
-            const payload = {
+
+            // ── Step 1: Save bank fields to DB FIRST ──────────────────────────────
+            // This MUST happen before /verify-bank because verifyBankAccount sets
+            // registration_complete = 1, after which PUT /partners/update is blocked.
+            const savePayload = {
                 bank_account_no: finalBankData.bankAccountNo,
                 ifsc_code: finalBankData.ifscCode,
                 gst_in: finalBankData.gstin,
-                cin_no: finalBankData.cin_no
+                cin_no: finalBankData.cin_no,
+                bank_name: finalBankData.bankName,
             };
-
-            // Bank verification
             try {
-                const verifyPayload = {
-                    accountNumber: finalBankData.bankAccountNo,
-                    ifscCode: finalBankData.ifscCode,
-                    beneficiaryName: masterData.entityName || "Partner",
-                    email: masterData.email,
-                    phone: masterData.phone
-                };
-                const verifyResponse = await axios.post(`https://partners.tievista.com/api/verify-bank`, verifyPayload, AUTH_CONFIG);
-                if (verifyResponse.data.success) {
-                }
-            } catch (err) {
-                console.error("Bank verification request failed:", err);
+                await axios.put(`https://partners.tievista.com/api/partners/update/${identifier}`, savePayload, AUTH_CONFIG);
+            } catch (saveErr) {
+                const errMsg = saveErr.response?.data?.message || "Failed to save bank details. Please try again.";
+                alert(errMsg);
+                return;
             }
 
-            await axios.put(`https://partners.tievista.com/api/partners/update/${identifier}`, payload, AUTH_CONFIG);
+            // ── Step 2: Verify bank with Digio (sets registration_complete = 1) ───
+            const verifyPayload = {
+                accountNumber: finalBankData.bankAccountNo,
+                ifscCode: finalBankData.ifscCode,
+                beneficiaryName: masterData.entityName,
+                email: masterData.email,
+                phone: masterData.phone
+            };
+
+            let verifyResponse;
+            try {
+                verifyResponse = await axios.post(`https://partners.tievista.com/api/verify-bank`, verifyPayload, AUTH_CONFIG);
+            } catch (verifyErr) {
+                const errMsg = verifyErr.response?.data?.message || "Bank verification failed. Please check your account number and IFSC code.";
+                alert(errMsg);
+                return; // ← STOP, do NOT show agreement
+            }
+
+            if (!verifyResponse.data.success) {
+                alert(verifyResponse.data.message || "Bank verification failed. Please check your details.");
+                return; // ← STOP, do NOT show agreement
+            }
+
+            // ── Step 3: Both saves succeeded → proceed to agreement ───────────────
+            alert("Bank Account Verified Successfully.");
             setMasterData(prev => ({ ...prev, ...finalBankData }));
             setShowAgreement(true);
+
         } catch (error) {
-            alert("Bank Account Alreay exist!.");
+            console.error("Bank details submission error:", error);
+            alert(error.response?.data?.message || "Failed to save bank details. Please try again.");
         }
     };
+
+
 
     const navigate = useNavigate();
 
@@ -2385,8 +2448,8 @@ const PatnersSignup = () => {
                                                 onClick={sendEmailOtp}
                                                 disabled={isSendingOtp || showEmailOtp}
                                                 className={`px-4 py-2 rounded text-xs font-bold transition-all uppercase tracking-wider ${(isSendingOtp || showEmailOtp)
-                                                        ? "bg-gray-200 text-gray-500 cursor-not-allowed"
-                                                        : "bg-gradient-to-r from-[#e5bc4b] via-[#d4af37] to-[#b78628] text-white"
+                                                    ? "bg-gray-200 text-gray-500 cursor-not-allowed"
+                                                    : "bg-gradient-to-r from-[#e5bc4b] via-[#d4af37] to-[#b78628] text-white"
                                                     }`}
                                             >
                                                 {isSendingOtp ? "..." : (showEmailOtp ? "OTP Sent" : "Send OTP")}
@@ -2496,7 +2559,6 @@ const PatnersSignup = () => {
                                         </div>
                                         <div className="flex flex-col gap-4">
                                             <div className="flex gap-4 w-full">
-                                                {/* ARN EUIN 1 */}
                                                 <div className="flex-1 flex flex-col">
                                                     <input
                                                         {...registerRegulatory("arn", { required: "ARN is required", pattern: arnRegex, maxLength: { value: 6, message: "ARN must be 6 digits" } })}
@@ -2514,8 +2576,6 @@ const PatnersSignup = () => {
                                                     {errorsRegulatory.euinARN && <p className="text-red-500 text-xs mt-2">{errorsRegulatory.euinARN.message}</p>}
                                                 </div>
                                             </div>
-
-                                            {/* APRN EUIN 2 */}
                                             <div className="flex gap-4 w-full">
                                                 <div className="flex-1 flex flex-col">
                                                     <input
