@@ -1338,6 +1338,7 @@ const PatnersSignup = () => {
             // This MUST happen before /verify-bank because verifyBankAccount sets
             // registration_complete = 1, after which PUT /partners/update is blocked.
             const savePayload = {
+                account_holder_name: finalBankData.accountHolderName,
                 bank_account_no: finalBankData.bankAccountNo,
                 ifsc_code: finalBankData.ifscCode,
                 gst_in: finalBankData.gstin,
@@ -2629,6 +2630,24 @@ const PatnersSignup = () => {
                             <form onSubmit={handleSubmitBank(getBankDetails)} className="space-y-6">
                                 <div className="space-y-1.5">
                                     <label className="text-[14px] font-medium text-black tracking-wide uppercase"
+                                        style={{ fontFamily: PoppinsRegular }}>ACCOUNT HOLDER NAME<span className="text-red-500">*</span></label>
+                                    <input
+                                        {...registerBank("accountHolderName", { required: "Account holder name is required" })}
+                                        placeholder="Enter Account Holder Name"
+                                        className="peer w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-[16px] text-black"
+                                    />
+                                    <div className="hidden peer-focus:flex items-start mt-2 space-x-2 text-[14px] text-[#1a1a1a]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        <p style={{ fontFamily: PoppinsRegular }}>
+                                            Please enter a bank account where you are the primary or authorized joint holder. The name on the account must match your registered name. Using any other account will result in registration failure.
+                                        </p>
+                                    </div>
+                                    {errorsBank.accountHolderName && <p className="text-[10px] text-red-500 mt-1 font-medium">{errorsBank.accountHolderName.message}</p>}
+                                </div>
+                                <div className="space-y-1.5">
+                                    <label className="text-[14px] font-medium text-black tracking-wide uppercase"
                                         style={{ fontFamily: PoppinsRegular }}>BANK ACCOUNT NO<span className="text-red-500">*</span></label>
                                     <input
                                         {...registerBank("bankAccountNo", { required: "Account number is required" })}
@@ -2654,9 +2673,9 @@ const PatnersSignup = () => {
                                 </div>
                                 <div className="space-y-1.5">
                                     <label className="text-[14px] font-medium text-black tracking-wide uppercase"
-                                        style={{ fontFamily: PoppinsRegular }}>Bank Name</label>
+                                        style={{ fontFamily: PoppinsRegular }}>Bank Name<span className="text-red-500">*</span></label>
                                     <input
-                                        {...registerBank("bankName", { pattern: { value: /^[a-zA-Z\s]+$/, message: "Invalid Bank Name" } })}
+                                        {...registerBank("bankName", { required: "Bank Name is required", pattern: { value: /^[a-zA-Z\s]+$/, message: "Invalid Bank Name" } })}
                                         maxLength={150}
                                         onChange={(e) => setValueBank("bankName", e.target.value.toUpperCase())}
                                         className="w-full px-4 py-3 border border-gray-300 rounded focus:border-[#d4af37] outline-none text-[16px] uppercase text-black"
