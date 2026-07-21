@@ -1151,7 +1151,7 @@ const PatnersSignup = () => {
             // ── Pre-check: block if registration is already complete ────────────────
             // Uses a read-only GET endpoint — creates NO DB records.
             const statusRes = await axios.get(
-                `http://localhost:5000/api/partners/check-status?email=${encodeURIComponent(emailValue)}`,
+                `https://partners.tievista.com/api/partners/check-status?email=${encodeURIComponent(emailValue)}`,
                 AUTH_CONFIG
             );
             if (statusRes.data.registrationComplete) {
@@ -1161,7 +1161,7 @@ const PatnersSignup = () => {
                 return; // ← Hard stop — do NOT send OTP
             }
 
-            await axios.post("http://localhost:5000/api/send-otp", { email: emailValue, entityName: entityNameValue }, AUTH_CONFIG);
+            await axios.post("https://partners.tievista.com/api/send-otp", { email: emailValue, entityName: entityNameValue }, AUTH_CONFIG);
             alert("OTP sent to " + emailValue);
             setShowEmailOtp(true);
         } catch (error) {
@@ -1177,7 +1177,7 @@ const PatnersSignup = () => {
     const handleVerifyEmailOtp = async (otp) => {
         setIsVerifyingOtp(true);
         try {
-            const response = await axios.post("http://localhost:5000/api/verify-otp", {
+            const response = await axios.post("https://partners.tievista.com/api/verify-otp", {
                 email: emailValue,
                 otp: otp
             }, AUTH_CONFIG);
@@ -1213,7 +1213,7 @@ const PatnersSignup = () => {
                 email: data.email,
                 password: 0
             };
-            const response = await axios.post("http://localhost:5000/api/partners/register", payload, AUTH_CONFIG);
+            const response = await axios.post("https://partners.tievista.com/api/partners/register", payload, AUTH_CONFIG);
             if (response.status === 201 || response.status === 200) {
                 setMasterData(prev => ({ ...prev, ...data }));
                 setShowIdentity(true);
@@ -1266,7 +1266,7 @@ const PatnersSignup = () => {
                 mobile: masterData.phone || identifier
             };
 
-            const response = await axios.post(`http://localhost:5000/api/check-pan`, payload, AUTH_CONFIG);
+            const response = await axios.post(`https://partners.tievista.com/api/check-pan`, payload, AUTH_CONFIG);
 
             // ❌ API-level or Digio error — block UI, show message, do NOT advance
             if (!response.data.success) {
@@ -1310,7 +1310,7 @@ const PatnersSignup = () => {
                 aprn: data.aprn || null,
                 euin_aprn: data.euinAprn || null
             };
-            await axios.put(`http://localhost:5000/api/partners/update/${identifier}`, payload, AUTH_CONFIG);
+            await axios.put(`https://partners.tievista.com/api/partners/update/${identifier}`, payload, AUTH_CONFIG);
             setMasterData(prev => ({ ...prev, ...data }));
             setShowBankDetails(true);
         } catch (error) {
@@ -1345,7 +1345,7 @@ const PatnersSignup = () => {
                 bank_name: finalBankData.bankName,
             };
             try {
-                await axios.put(`http://localhost:5000/api/partners/update/${identifier}`, savePayload, AUTH_CONFIG);
+                await axios.put(`https://partners.tievista.com/api/partners/update/${identifier}`, savePayload, AUTH_CONFIG);
             } catch (saveErr) {
                 const errMsg = saveErr.response?.data?.message || "Failed to save bank details. Please try again.";
                 alert(errMsg);
@@ -1363,7 +1363,7 @@ const PatnersSignup = () => {
 
             let verifyResponse;
             try {
-                verifyResponse = await axios.post(`http://localhost:5000/api/verify-bank`, verifyPayload, AUTH_CONFIG);
+                verifyResponse = await axios.post(`https://partners.tievista.com/api/verify-bank`, verifyPayload, AUTH_CONFIG);
             } catch (verifyErr) {
                 const errMsg = verifyErr.response?.data?.message || "Bank verification failed. Please check your account number and IFSC code.";
                 alert(errMsg);
@@ -1421,7 +1421,7 @@ const PatnersSignup = () => {
             if (identifier) {
                 // Send identifier and entityName in body
                 await axios.post(
-                    `http://localhost:5000/api/partners/confirm`,
+                    `https://partners.tievista.com/api/partners/confirm`,
                     {
                         identifier: identifier,
                         entityName: watchReg("entityName") || "Partner"
